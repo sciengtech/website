@@ -1,0 +1,1990 @@
+{
+  "version": 1,
+  "updated": "2026-06-29",
+  "count": 74,
+  "products": [
+    {
+      "id": "pedestal-fork",
+      "sku": "SET-PEDESTAL-FORK",
+      "name": "Pedestal Fork",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "Pedestal Fork - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "pedestal fork"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/pedestal-fork/",
+      "_search": "pedestal-fork set-pedestal-fork pedestal fork optomechanics posts-rails-hardware optomechanics pedestal fork - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware pedestal fork procurement request technical quote"
+    },
+    {
+      "id": "collars",
+      "sku": "SET-COLLARS",
+      "name": "Collars",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "Collars - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "collars"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/collars/",
+      "_search": "collars set-collars collars optomechanics posts-rails-hardware optomechanics collars - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware collars procurement request technical quote"
+    },
+    {
+      "id": "post-base",
+      "sku": "SET-POST-BASE",
+      "name": "Post Base",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "Post Base - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "post base"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/post-base/",
+      "_search": "post-base set-post-base post base optomechanics posts-rails-hardware optomechanics post base - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware post base procurement request technical quote"
+    },
+    {
+      "id": "cotton-tipped-applicators",
+      "sku": "SET-COTTON-TIPPED-APPLICATORS",
+      "name": "Cotton Tipped Applicators",
+      "category": "utilities",
+      "categoryLabel": "Lab Utilities",
+      "subcategory": "cleanroom-cleaning",
+      "categoryPath": "/components/utilities/cleanroom-cleaning/",
+      "summary": "Cotton Tipped Applicators - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "utilities",
+        "cleanroom-cleaning",
+        "cotton tipped applicators"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/cotton-tipped-applicators/",
+      "_search": "cotton-tipped-applicators set-cotton-tipped-applicators cotton tipped applicators utilities cleanroom-cleaning lab utilities cotton tipped applicators - specify dimensions and coating for rfq. rfq | full spec sheet on request utilities cleanroom-cleaning cotton tipped applicators procurement request technical quote"
+    },
+    {
+      "id": "optics-cleaning-tissues",
+      "sku": "SET-OPTICS-CLEANING-TISSUES",
+      "name": "Optics Cleaning Tissues",
+      "category": "utilities",
+      "categoryLabel": "Lab Utilities",
+      "subcategory": "cleanroom-cleaning",
+      "categoryPath": "/components/utilities/cleanroom-cleaning/",
+      "summary": "Optics Cleaning Tissues - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "utilities",
+        "cleanroom-cleaning",
+        "optics cleaning tissues"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/optics-cleaning-tissues/",
+      "_search": "optics-cleaning-tissues set-optics-cleaning-tissues optics cleaning tissues utilities cleanroom-cleaning lab utilities optics cleaning tissues - specify dimensions and coating for rfq. rfq | full spec sheet on request utilities cleanroom-cleaning optics cleaning tissues procurement request technical quote"
+    },
+    {
+      "id": "lens-mount",
+      "sku": "SET-LENS-MOUNT",
+      "name": "Lens Mount",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "kinematic-mounts",
+      "categoryPath": "/components/optomechanics/kinematic-mounts/",
+      "summary": "Lens Mount - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "kinematic-mounts",
+        "lens mount"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/lens-mount/",
+      "_search": "lens-mount set-lens-mount lens mount optomechanics kinematic-mounts optomechanics lens mount - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics kinematic-mounts lens mount procurement request technical quote"
+    },
+    {
+      "id": "post-holder",
+      "sku": "SET-POST-HOLDER",
+      "name": "Post Holder",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "Post Holder - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "post holder"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/post-holder/",
+      "_search": "post-holder set-post-holder post holder optomechanics posts-rails-hardware optomechanics post holder - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware post holder procurement request technical quote"
+    },
+    {
+      "id": "pedestal-post-holder",
+      "sku": "SET-PEDESTAL-POST-HOLDER",
+      "name": "Pedestal Post Holder",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "Pedestal Post Holder - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "pedestal post holder"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/pedestal-post-holder/",
+      "_search": "pedestal-post-holder set-pedestal-post-holder pedestal post holder optomechanics posts-rails-hardware optomechanics pedestal post holder - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware pedestal post holder procurement request technical quote"
+    },
+    {
+      "id": "translation-stage",
+      "sku": "SET-TS-25",
+      "name": "25mm Translation Stage",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "translation-stages",
+      "categoryPath": "/components/optomechanics/translation-stages/",
+      "summary": "Manual micrometer-driven translation stage for precision optical alignment.",
+      "specHighlight": "TRAVEL: 25mm | RESOLUTION: 10 um | LOAD: 5kgf",
+      "specs": [
+        {
+          "value": "25 mm",
+          "label": "Travel"
+        },
+        {
+          "value": "10 um",
+          "label": "Resolution"
+        },
+        {
+          "value": "5 kgf",
+          "label": "Load capacity"
+        }
+      ],
+      "tags": [
+        "translation",
+        "stage",
+        "micrometer",
+        "25mm",
+        "optomechanics"
+      ],
+      "image": "assets/slides/01-translation-stage.png",
+      "featured": true,
+      "legacyUrl": "https://sciengtech.in/product/translation-stage/",
+      "_search": "translation-stage set-ts-25 25mm translation stage optomechanics translation-stages optomechanics manual micrometer-driven translation stage for precision optical alignment. travel: 25mm | resolution: 10 um | load: 5kgf translation stage micrometer 25mm optomechanics travel 25 mm resolution 10 um load capacity 5 kgf"
+    },
+    {
+      "id": "rotation-mount",
+      "sku": "SET-ROTATION-MOUNT",
+      "name": "Rotation Mount",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "kinematic-mounts",
+      "categoryPath": "/components/optomechanics/kinematic-mounts/",
+      "summary": "Rotation Mount - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "kinematic-mounts",
+        "rotation mount"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/rotation-mount/",
+      "_search": "rotation-mount set-rotation-mount rotation mount optomechanics kinematic-mounts optomechanics rotation mount - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics kinematic-mounts rotation mount procurement request technical quote"
+    },
+    {
+      "id": "precision-kinematic-mirror-mount",
+      "sku": "SET-KMM-25",
+      "name": "Precision Kinematic Mirror Mount",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "kinematic-mounts",
+      "categoryPath": "/components/optomechanics/kinematic-mounts/",
+      "summary": "High-stability kinematic mirror mount with fine adjustment screws.",
+      "specHighlight": "APERTURE: 25mm | ADJUST: +/-4 deg | MAT: ANODIZED AL",
+      "specs": [
+        {
+          "value": "25 mm",
+          "label": "Clear aperture"
+        },
+        {
+          "value": "+/-4 deg",
+          "label": "Adjustment range"
+        },
+        {
+          "value": "Anodized aluminum",
+          "label": "Material"
+        }
+      ],
+      "tags": [
+        "kinematic",
+        "mirror",
+        "mount",
+        "25mm"
+      ],
+      "image": "assets/slides/02-kinematic-mirror-mount.png",
+      "featured": true,
+      "legacyUrl": "https://sciengtech.in/product/precision-kinematic-mirror-mount/",
+      "_search": "precision-kinematic-mirror-mount set-kmm-25 precision kinematic mirror mount optomechanics kinematic-mounts optomechanics high-stability kinematic mirror mount with fine adjustment screws. aperture: 25mm | adjust: +/-4 deg | mat: anodized al kinematic mirror mount 25mm clear aperture 25 mm adjustment range +/-4 deg material anodized aluminum"
+    },
+    {
+      "id": "kinematic-mirror-mount",
+      "sku": "SET-KM-25",
+      "name": "Kinematic Mirror Mount",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "kinematic-mounts",
+      "categoryPath": "/components/optomechanics/kinematic-mounts/",
+      "summary": "Standard kinematic mirror mount for lab optical benches.",
+      "specHighlight": "APERTURE: 25mm | ADJUST: +/-4 deg",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "kinematic",
+        "mirror",
+        "mount"
+      ],
+      "image": "assets/slides/02-kinematic-mirror-mount.png",
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/kinematic-mirror-mount/",
+      "_search": "kinematic-mirror-mount set-km-25 kinematic mirror mount optomechanics kinematic-mounts optomechanics standard kinematic mirror mount for lab optical benches. aperture: 25mm | adjust: +/-4 deg kinematic mirror mount procurement request technical quote"
+    },
+    {
+      "id": "breadboards",
+      "sku": "SET-BB-M6",
+      "name": "Optical Breadboard",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "breadboards-tables",
+      "categoryPath": "/components/optomechanics/breadboards-tables/",
+      "summary": "Aluminum optical breadboard with M6 tapped grid.",
+      "specHighlight": "GRID: M6 | FLATNESS: +/-0.1mm | MAT: ALUMINUM",
+      "specs": [
+        {
+          "value": "M6",
+          "label": "Hole grid"
+        },
+        {
+          "value": "+/-0.1 mm",
+          "label": "Flatness"
+        },
+        {
+          "value": "Aluminum",
+          "label": "Material"
+        }
+      ],
+      "tags": [
+        "breadboard",
+        "optical",
+        "table",
+        "M6"
+      ],
+      "image": "assets/slides/06-optical-breadboard.png",
+      "featured": true,
+      "legacyUrl": "https://sciengtech.in/product/breadboards/",
+      "_search": "breadboards set-bb-m6 optical breadboard optomechanics breadboards-tables optomechanics aluminum optical breadboard with m6 tapped grid. grid: m6 | flatness: +/-0.1mm | mat: aluminum breadboard optical table m6 hole grid m6 flatness +/-0.1 mm material aluminum"
+    },
+    {
+      "id": "angle-clamps",
+      "sku": "SET-ANGLE-CLAMPS",
+      "name": "Angle Clamps",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "Angle Clamps - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "angle clamps"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/angle-clamps/",
+      "_search": "angle-clamps set-angle-clamps angle clamps optomechanics posts-rails-hardware optomechanics angle clamps - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware angle clamps procurement request technical quote"
+    },
+    {
+      "id": "12-7-mm-posts",
+      "sku": "SET-12-7-MM-POSTS",
+      "name": "12 7 Mm Posts",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "12 7 Mm Posts - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "12 7 mm posts"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/12-7-mm-posts/",
+      "_search": "12-7-mm-posts set-12-7-mm-posts 12 7 mm posts optomechanics posts-rails-hardware optomechanics 12 7 mm posts - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware 12 7 mm posts procurement request technical quote"
+    },
+    {
+      "id": "plano-convex",
+      "sku": "SET-PLANO-CONVEX",
+      "name": "Plano-Convex Lens",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex/",
+      "_search": "plano-convex set-plano-convex plano-convex lens precision-optics lenses precision optics plano-convex lens - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-2",
+      "sku": "SET-PLANO-CONVEX-2",
+      "name": "Plano-Convex Lens (2 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (2 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 2"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-2/",
+      "_search": "plano-convex-2 set-plano-convex-2 plano-convex lens (2 mm) precision-optics lenses precision optics plano-convex lens (2 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 2 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-6",
+      "sku": "SET-PLANO-CONVEX-6",
+      "name": "Plano-Convex Lens (6 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (6 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 6"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-6/",
+      "_search": "plano-convex-6 set-plano-convex-6 plano-convex lens (6 mm) precision-optics lenses precision optics plano-convex lens (6 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 6 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-5",
+      "sku": "SET-PLANO-CONVEX-5",
+      "name": "Plano-Convex Lens (5 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (5 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 5"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-5/",
+      "_search": "plano-convex-5 set-plano-convex-5 plano-convex lens (5 mm) precision-optics lenses precision optics plano-convex lens (5 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 5 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-4",
+      "sku": "SET-PLANO-CONVEX-4",
+      "name": "Plano-Convex Lens (4 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (4 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 4"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-4/",
+      "_search": "plano-convex-4 set-plano-convex-4 plano-convex lens (4 mm) precision-optics lenses precision optics plano-convex lens (4 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 4 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-3",
+      "sku": "SET-PLANO-CONVEX-3",
+      "name": "Plano-Convex Lens (3 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (3 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 3"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-3/",
+      "_search": "plano-convex-3 set-plano-convex-3 plano-convex lens (3 mm) precision-optics lenses precision optics plano-convex lens (3 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 3 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-34",
+      "sku": "SET-PLANO-CONVEX-34",
+      "name": "Plano-Convex Lens (34 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (34 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 34"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-34/",
+      "_search": "plano-convex-34 set-plano-convex-34 plano-convex lens (34 mm) precision-optics lenses precision optics plano-convex lens (34 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 34 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-44",
+      "sku": "SET-PLANO-CONVEX-44",
+      "name": "Plano-Convex Lens (44 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (44 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 44"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-44/",
+      "_search": "plano-convex-44 set-plano-convex-44 plano-convex lens (44 mm) precision-optics lenses precision optics plano-convex lens (44 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 44 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-43",
+      "sku": "SET-PLANO-CONVEX-43",
+      "name": "Plano-Convex Lens (43 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (43 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 43"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-43/",
+      "_search": "plano-convex-43 set-plano-convex-43 plano-convex lens (43 mm) precision-optics lenses precision optics plano-convex lens (43 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 43 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-42",
+      "sku": "SET-PLANO-CONVEX-42",
+      "name": "Plano-Convex Lens (42 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (42 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 42"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-42/",
+      "_search": "plano-convex-42 set-plano-convex-42 plano-convex lens (42 mm) precision-optics lenses precision optics plano-convex lens (42 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 42 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-41",
+      "sku": "SET-PLANO-CONVEX-41",
+      "name": "Plano-Convex Lens (41 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (41 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 41"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-41/",
+      "_search": "plano-convex-41 set-plano-convex-41 plano-convex lens (41 mm) precision-optics lenses precision optics plano-convex lens (41 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 41 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-40",
+      "sku": "SET-PLANO-CONVEX-40",
+      "name": "Plano-Convex Lens (40 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (40 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 40"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-40/",
+      "_search": "plano-convex-40 set-plano-convex-40 plano-convex lens (40 mm) precision-optics lenses precision optics plano-convex lens (40 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 40 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-39",
+      "sku": "SET-PLANO-CONVEX-39",
+      "name": "Plano-Convex Lens (39 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (39 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 39"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-39/",
+      "_search": "plano-convex-39 set-plano-convex-39 plano-convex lens (39 mm) precision-optics lenses precision optics plano-convex lens (39 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 39 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-38",
+      "sku": "SET-PLANO-CONVEX-38",
+      "name": "Plano-Convex Lens (38 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (38 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 38"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-38/",
+      "_search": "plano-convex-38 set-plano-convex-38 plano-convex lens (38 mm) precision-optics lenses precision optics plano-convex lens (38 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 38 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-37",
+      "sku": "SET-PLANO-CONVEX-37",
+      "name": "Plano-Convex Lens (37 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (37 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 37"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-37/",
+      "_search": "plano-convex-37 set-plano-convex-37 plano-convex lens (37 mm) precision-optics lenses precision optics plano-convex lens (37 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 37 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-36",
+      "sku": "SET-PLANO-CONVEX-36",
+      "name": "Plano-Convex Lens (36 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (36 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 36"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-36/",
+      "_search": "plano-convex-36 set-plano-convex-36 plano-convex lens (36 mm) precision-optics lenses precision optics plano-convex lens (36 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 36 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-35",
+      "sku": "SET-PLANO-CONVEX-35",
+      "name": "Plano-Convex Lens (35 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (35 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 35"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-35/",
+      "_search": "plano-convex-35 set-plano-convex-35 plano-convex lens (35 mm) precision-optics lenses precision optics plano-convex lens (35 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 35 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-45",
+      "sku": "SET-PLANO-CONVEX-45",
+      "name": "Plano-Convex Lens (45 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (45 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 45"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-45/",
+      "_search": "plano-convex-45 set-plano-convex-45 plano-convex lens (45 mm) precision-optics lenses precision optics plano-convex lens (45 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 45 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-7",
+      "sku": "SET-PLANO-CONVEX-7",
+      "name": "Plano-Convex Lens (7 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (7 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 7"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-7/",
+      "_search": "plano-convex-7 set-plano-convex-7 plano-convex lens (7 mm) precision-optics lenses precision optics plano-convex lens (7 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 7 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-8",
+      "sku": "SET-PLANO-CONVEX-8",
+      "name": "Plano-Convex Lens (8 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (8 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 8"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-8/",
+      "_search": "plano-convex-8 set-plano-convex-8 plano-convex lens (8 mm) precision-optics lenses precision optics plano-convex lens (8 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 8 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-9",
+      "sku": "SET-PLANO-CONVEX-9",
+      "name": "Plano-Convex Lens (9 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (9 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 9"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-9/",
+      "_search": "plano-convex-9 set-plano-convex-9 plano-convex lens (9 mm) precision-optics lenses precision optics plano-convex lens (9 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 9 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-10",
+      "sku": "SET-PLANO-CONVEX-10",
+      "name": "Plano-Convex Lens (10 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (10 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 10"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-10/",
+      "_search": "plano-convex-10 set-plano-convex-10 plano-convex lens (10 mm) precision-optics lenses precision optics plano-convex lens (10 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 10 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-11",
+      "sku": "SET-PLANO-CONVEX-11",
+      "name": "Plano-Convex Lens (11 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (11 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 11"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-11/",
+      "_search": "plano-convex-11 set-plano-convex-11 plano-convex lens (11 mm) precision-optics lenses precision optics plano-convex lens (11 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 11 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-13",
+      "sku": "SET-PLANO-CONVEX-13",
+      "name": "Plano-Convex Lens (13 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (13 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 13"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-13/",
+      "_search": "plano-convex-13 set-plano-convex-13 plano-convex lens (13 mm) precision-optics lenses precision optics plano-convex lens (13 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 13 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-14",
+      "sku": "SET-PLANO-CONVEX-14",
+      "name": "Plano-Convex Lens (14 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (14 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 14"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-14/",
+      "_search": "plano-convex-14 set-plano-convex-14 plano-convex lens (14 mm) precision-optics lenses precision optics plano-convex lens (14 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 14 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-15",
+      "sku": "SET-PLANO-CONVEX-15",
+      "name": "Plano-Convex Lens (15 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (15 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 15"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-15/",
+      "_search": "plano-convex-15 set-plano-convex-15 plano-convex lens (15 mm) precision-optics lenses precision optics plano-convex lens (15 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 15 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-16",
+      "sku": "SET-PLANO-CONVEX-16",
+      "name": "Plano-Convex Lens (16 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (16 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 16"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-16/",
+      "_search": "plano-convex-16 set-plano-convex-16 plano-convex lens (16 mm) precision-optics lenses precision optics plano-convex lens (16 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 16 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-17",
+      "sku": "SET-PLANO-CONVEX-17",
+      "name": "Plano-Convex Lens (17 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (17 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 17"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-17/",
+      "_search": "plano-convex-17 set-plano-convex-17 plano-convex lens (17 mm) precision-optics lenses precision optics plano-convex lens (17 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 17 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-18",
+      "sku": "SET-PLANO-CONVEX-18",
+      "name": "Plano-Convex Lens (18 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (18 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 18"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-18/",
+      "_search": "plano-convex-18 set-plano-convex-18 plano-convex lens (18 mm) precision-optics lenses precision optics plano-convex lens (18 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 18 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-19",
+      "sku": "SET-PLANO-CONVEX-19",
+      "name": "Plano-Convex Lens (19 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (19 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 19"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-19/",
+      "_search": "plano-convex-19 set-plano-convex-19 plano-convex lens (19 mm) precision-optics lenses precision optics plano-convex lens (19 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 19 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-20",
+      "sku": "SET-PLANO-CONVEX-20",
+      "name": "Plano-Convex Lens (20 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (20 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 20"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-20/",
+      "_search": "plano-convex-20 set-plano-convex-20 plano-convex lens (20 mm) precision-optics lenses precision optics plano-convex lens (20 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 20 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-22",
+      "sku": "SET-PLANO-CONVEX-22",
+      "name": "Plano-Convex Lens (22 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (22 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 22"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-22/",
+      "_search": "plano-convex-22 set-plano-convex-22 plano-convex lens (22 mm) precision-optics lenses precision optics plano-convex lens (22 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 22 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-23",
+      "sku": "SET-PLANO-CONVEX-23",
+      "name": "Plano-Convex Lens (23 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (23 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 23"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-23/",
+      "_search": "plano-convex-23 set-plano-convex-23 plano-convex lens (23 mm) precision-optics lenses precision optics plano-convex lens (23 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 23 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-24",
+      "sku": "SET-PLANO-CONVEX-24",
+      "name": "Plano-Convex Lens (24 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (24 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 24"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-24/",
+      "_search": "plano-convex-24 set-plano-convex-24 plano-convex lens (24 mm) precision-optics lenses precision optics plano-convex lens (24 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 24 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-25",
+      "sku": "SET-PLANO-CONVEX-25",
+      "name": "Plano-Convex Lens (25 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (25 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 25"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-25/",
+      "_search": "plano-convex-25 set-plano-convex-25 plano-convex lens (25 mm) precision-optics lenses precision optics plano-convex lens (25 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 25 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-26",
+      "sku": "SET-PLANO-CONVEX-26",
+      "name": "Plano-Convex Lens (26 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (26 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 26"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-26/",
+      "_search": "plano-convex-26 set-plano-convex-26 plano-convex lens (26 mm) precision-optics lenses precision optics plano-convex lens (26 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 26 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-27",
+      "sku": "SET-PLANO-CONVEX-27",
+      "name": "Plano-Convex Lens (27 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (27 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 27"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-27/",
+      "_search": "plano-convex-27 set-plano-convex-27 plano-convex lens (27 mm) precision-optics lenses precision optics plano-convex lens (27 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 27 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-28",
+      "sku": "SET-PLANO-CONVEX-28",
+      "name": "Plano-Convex Lens (28 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (28 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 28"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-28/",
+      "_search": "plano-convex-28 set-plano-convex-28 plano-convex lens (28 mm) precision-optics lenses precision optics plano-convex lens (28 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 28 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-29",
+      "sku": "SET-PLANO-CONVEX-29",
+      "name": "Plano-Convex Lens (29 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (29 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 29"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-29/",
+      "_search": "plano-convex-29 set-plano-convex-29 plano-convex lens (29 mm) precision-optics lenses precision optics plano-convex lens (29 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 29 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-30",
+      "sku": "SET-PLANO-CONVEX-30",
+      "name": "Plano-Convex Lens (30 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (30 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 30"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-30/",
+      "_search": "plano-convex-30 set-plano-convex-30 plano-convex lens (30 mm) precision-optics lenses precision optics plano-convex lens (30 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 30 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-31",
+      "sku": "SET-PLANO-CONVEX-31",
+      "name": "Plano-Convex Lens (31 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (31 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 31"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-31/",
+      "_search": "plano-convex-31 set-plano-convex-31 plano-convex lens (31 mm) precision-optics lenses precision optics plano-convex lens (31 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 31 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-32",
+      "sku": "SET-PLANO-CONVEX-32",
+      "name": "Plano-Convex Lens (32 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (32 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 32"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-32/",
+      "_search": "plano-convex-32 set-plano-convex-32 plano-convex lens (32 mm) precision-optics lenses precision optics plano-convex lens (32 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 32 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-12",
+      "sku": "SET-PLANO-CONVEX-12",
+      "name": "Plano-Convex Lens (12 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (12 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 12"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-12/",
+      "_search": "plano-convex-12 set-plano-convex-12 plano-convex lens (12 mm) precision-optics lenses precision optics plano-convex lens (12 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 12 procurement request technical quote"
+    },
+    {
+      "id": "plano-convex-33",
+      "sku": "SET-PLANO-CONVEX-33",
+      "name": "Plano-Convex Lens (33 mm)",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "lenses",
+      "categoryPath": "/components/precision-optics/lenses/",
+      "summary": "Plano-Convex Lens (33 mm) - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "precision-optics",
+        "lenses",
+        "plano convex 33"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plano-convex-33/",
+      "_search": "plano-convex-33 set-plano-convex-33 plano-convex lens (33 mm) precision-optics lenses precision optics plano-convex lens (33 mm) - specify dimensions and coating for rfq. rfq | full spec sheet on request precision-optics lenses plano convex 33 procurement request technical quote"
+    },
+    {
+      "id": "16-mm-posts",
+      "sku": "SET-16-MM-POSTS",
+      "name": "16 Mm Posts",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "16 Mm Posts - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "16 mm posts"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/16-mm-posts/",
+      "_search": "16-mm-posts set-16-mm-posts 16 mm posts optomechanics posts-rails-hardware optomechanics 16 mm posts - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware 16 mm posts procurement request technical quote"
+    },
+    {
+      "id": "12-mm-posts",
+      "sku": "SET-12-MM-POSTS",
+      "name": "12 Mm Posts",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "12 Mm Posts - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "12 mm posts"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/12-mm-posts/",
+      "_search": "12-mm-posts set-12-mm-posts 12 mm posts optomechanics posts-rails-hardware optomechanics 12 mm posts - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware 12 mm posts procurement request technical quote"
+    },
+    {
+      "id": "8-mm-posts",
+      "sku": "SET-8-MM-POSTS",
+      "name": "8 Mm Posts",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "8 Mm Posts - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "8 mm posts"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/8-mm-posts/",
+      "_search": "8-mm-posts set-8-mm-posts 8 mm posts optomechanics posts-rails-hardware optomechanics 8 mm posts - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware 8 mm posts procurement request technical quote"
+    },
+    {
+      "id": "allen-bolts",
+      "sku": "SET-ALLEN-BOLTS",
+      "name": "Allen Bolts",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "Allen Bolts - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "allen bolts"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/allen-bolts/",
+      "_search": "allen-bolts set-allen-bolts allen bolts optomechanics posts-rails-hardware optomechanics allen bolts - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware allen bolts procurement request technical quote"
+    },
+    {
+      "id": "spring-washers",
+      "sku": "SET-SPRING-WASHERS",
+      "name": "Spring Washers",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "Spring Washers - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "spring washers"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/spring-washers/",
+      "_search": "spring-washers set-spring-washers spring washers optomechanics posts-rails-hardware optomechanics spring washers - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware spring washers procurement request technical quote"
+    },
+    {
+      "id": "hex-nut-din-934-is-1363",
+      "sku": "SET-HEX-NUT-DIN-934-IS-1363",
+      "name": "Hex Nut Din 934 Is 1363",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "Hex Nut Din 934 Is 1363 - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "hex nut din 934 is 1363"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/hex-nut-din-934-is-1363/",
+      "_search": "hex-nut-din-934-is-1363 set-hex-nut-din-934-is-1363 hex nut din 934 is 1363 optomechanics posts-rails-hardware optomechanics hex nut din 934 is 1363 - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware hex nut din 934 is 1363 procurement request technical quote"
+    },
+    {
+      "id": "plain-flat-washers",
+      "sku": "SET-PLAIN-FLAT-WASHERS",
+      "name": "Plain Flat Washers",
+      "category": "optomechanics",
+      "categoryLabel": "Optomechanics",
+      "subcategory": "posts-rails-hardware",
+      "categoryPath": "/components/optomechanics/posts-rails-hardware/",
+      "summary": "Plain Flat Washers - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "optomechanics",
+        "posts-rails-hardware",
+        "plain flat washers"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/plain-flat-washers/",
+      "_search": "plain-flat-washers set-plain-flat-washers plain flat washers optomechanics posts-rails-hardware optomechanics plain flat washers - specify dimensions and coating for rfq. rfq | full spec sheet on request optomechanics posts-rails-hardware plain flat washers procurement request technical quote"
+    },
+    {
+      "id": "optics-cleaning-cloth",
+      "sku": "SET-OPTICS-CLEANING-CLOTH",
+      "name": "Optics Cleaning Cloth",
+      "category": "utilities",
+      "categoryLabel": "Lab Utilities",
+      "subcategory": "cleanroom-cleaning",
+      "categoryPath": "/components/utilities/cleanroom-cleaning/",
+      "summary": "Optics Cleaning Cloth - specify dimensions and coating for RFQ.",
+      "specHighlight": "RFQ | Full spec sheet on request",
+      "specs": [
+        {
+          "value": "Request Technical Quote",
+          "label": "Procurement"
+        }
+      ],
+      "tags": [
+        "utilities",
+        "cleanroom-cleaning",
+        "optics cleaning cloth"
+      ],
+      "image": null,
+      "featured": false,
+      "legacyUrl": "https://sciengtech.in/product/optics-cleaning-cloth/",
+      "_search": "optics-cleaning-cloth set-optics-cleaning-cloth optics cleaning cloth utilities cleanroom-cleaning lab utilities optics cleaning cloth - specify dimensions and coating for rfq. rfq | full spec sheet on request utilities cleanroom-cleaning optics cleaning cloth procurement request technical quote"
+    },
+    {
+      "id": "dielectric-laser-mirror-800nm",
+      "sku": "SET-MIR-HR800",
+      "name": "Dielectric Laser Mirror",
+      "category": "precision-optics",
+      "categoryLabel": "Precision Optics",
+      "subcategory": "mirrors",
+      "categoryPath": "/components/precision-optics/mirrors/",
+      "summary": "High-reflectivity dielectric mirror optimized for ultrafast laser systems at 800 nm.",
+      "specHighlight": "COATING: HR @ 800nm | SURFACE: lambda/10 | DIA: 25mm",
+      "specs": [
+        {
+          "value": "HR @ 800 nm",
+          "label": "Coating"
+        },
+        {
+          "value": "lambda/10",
+          "label": "Surface quality"
+        },
+        {
+          "value": "25 mm",
+          "label": "Diameter"
+        }
+      ],
+      "tags": [
+        "mirror",
+        "dielectric",
+        "800nm",
+        "HR",
+        "laser"
+      ],
+      "image": "assets/slides/03-dielectric-mirror.png",
+      "featured": true,
+      "legacyUrl": "https://sciengtech.in/optics/",
+      "_search": "dielectric-laser-mirror-800nm set-mir-hr800 dielectric laser mirror precision-optics mirrors precision optics high-reflectivity dielectric mirror optimized for ultrafast laser systems at 800 nm. coating: hr @ 800nm | surface: lambda/10 | dia: 25mm mirror dielectric 800nm hr laser coating hr @ 800 nm surface quality lambda/10 diameter 25 mm"
+    },
+    {
+      "id": "cf-vacuum-flange-cf63",
+      "sku": "SET-VAC-CF63",
+      "name": "CF Vacuum Flange",
+      "category": "vacuum-hv",
+      "categoryLabel": "Vacuum & HV",
+      "subcategory": "chambers-flanges",
+      "categoryPath": "/components/vacuum-hv/chambers-flanges/",
+      "summary": "ConFlat vacuum flange assembly for UHV beamlines and experimental chambers.",
+      "specHighlight": "FLANGE: CF63 | LEAK: <1e-9 Torr | MAT: 304L SS",
+      "specs": [
+        {
+          "value": "CF63",
+          "label": "Flange type"
+        },
+        {
+          "value": "<1e-9 Torr L/s",
+          "label": "Leak rate"
+        },
+        {
+          "value": "304L stainless steel",
+          "label": "Material"
+        }
+      ],
+      "tags": [
+        "vacuum",
+        "CF",
+        "flange",
+        "UHV",
+        "CF63"
+      ],
+      "image": "assets/slides/04-vacuum-flange.png",
+      "featured": true,
+      "legacyUrl": "https://sciengtech.in/vacuum/",
+      "_search": "cf-vacuum-flange-cf63 set-vac-cf63 cf vacuum flange vacuum-hv chambers-flanges vacuum & hv conflat vacuum flange assembly for uhv beamlines and experimental chambers. flange: cf63 | leak: <1e-9 torr | mat: 304l ss vacuum cf flange uhv cf63 flange type cf63 leak rate <1e-9 torr l/s material 304l stainless steel"
+    },
+    {
+      "id": "photodetector-ultrafast-1ghz",
+      "sku": "SET-PD-1GHZ",
+      "name": "Ultrafast Photodetector Module",
+      "category": "lasers-photonics",
+      "categoryLabel": "Lasers & Photonics",
+      "subcategory": "metrology-diagnostics",
+      "categoryPath": "/components/lasers-photonics/metrology-diagnostics/",
+      "summary": "1 GHz bandwidth photodetector module with SMA output for pulse diagnostics.",
+      "specHighlight": "BW: 1 GHz | RESP: 0.8 A/W | CONNECTOR: SMA",
+      "specs": [
+        {
+          "value": "1 GHz",
+          "label": "Bandwidth"
+        },
+        {
+          "value": "0.8 A/W",
+          "label": "Responsivity"
+        },
+        {
+          "value": "SMA",
+          "label": "Connector"
+        }
+      ],
+      "tags": [
+        "photodetector",
+        "1GHz",
+        "ultrafast",
+        "SMA",
+        "diagnostics"
+      ],
+      "image": "assets/slides/05-photodetector-module.png",
+      "featured": true,
+      "legacyUrl": "https://sciengtech.in/our-oem-products-photodetector-modules-ultrafast-photodetector-modules-1ghz/",
+      "_search": "photodetector-ultrafast-1ghz set-pd-1ghz ultrafast photodetector module lasers-photonics metrology-diagnostics lasers & photonics 1 ghz bandwidth photodetector module with sma output for pulse diagnostics. bw: 1 ghz | resp: 0.8 a/w | connector: sma photodetector 1ghz ultrafast sma diagnostics bandwidth 1 ghz responsivity 0.8 a/w connector sma"
+    },
+    {
+      "id": "laser-diode-module-5mw",
+      "sku": "SET-LD-5MW",
+      "name": "5 mW Laser Diode Module",
+      "category": "lasers-photonics",
+      "categoryLabel": "Lasers & Photonics",
+      "subcategory": "active-sources-diodes",
+      "categoryPath": "/components/lasers-photonics/active-sources-diodes/",
+      "summary": "Compact laser diode module with integrated driver for alignment and metrology.",
+      "specHighlight": "POWER: 5 mW | WAVELENGTH: Specify on RFQ",
+      "specs": [
+        {
+          "value": "5 mW",
+          "label": "Output power"
+        }
+      ],
+      "tags": [
+        "laser",
+        "diode",
+        "5mW",
+        "alignment"
+      ],
+      "legacyUrl": "https://sciengtech.in/our-oem-products-laser-diode-module-5mw-laser-diode-module/",
+      "featured": false,
+      "_search": "laser-diode-module-5mw set-ld-5mw 5 mw laser diode module lasers-photonics active-sources-diodes lasers & photonics compact laser diode module with integrated driver for alignment and metrology. power: 5 mw | wavelength: specify on rfq laser diode 5mw alignment output power 5 mw"
+    },
+    {
+      "id": "photodetector-slow-10mhz",
+      "sku": "SET-PD-10MHZ",
+      "name": "Photodetector Module - 10 MHz",
+      "category": "lasers-photonics",
+      "categoryLabel": "Lasers & Photonics",
+      "subcategory": "metrology-diagnostics",
+      "categoryPath": "/components/lasers-photonics/metrology-diagnostics/",
+      "summary": "Low-bandwidth photodetector for CW and low-repetition-rate laser monitoring.",
+      "specHighlight": "BW: 10 MHz",
+      "specs": [
+        {
+          "value": "10 MHz",
+          "label": "Bandwidth"
+        }
+      ],
+      "tags": [
+        "photodetector",
+        "10MHz",
+        "CW"
+      ],
+      "legacyUrl": "https://sciengtech.in/our-oem-products-photodetector-modules-slow-photodetector-modules-10mhz/",
+      "featured": false,
+      "_search": "photodetector-slow-10mhz set-pd-10mhz photodetector module - 10 mhz lasers-photonics metrology-diagnostics lasers & photonics low-bandwidth photodetector for cw and low-repetition-rate laser monitoring. bw: 10 mhz photodetector 10mhz cw bandwidth 10 mhz"
+    },
+    {
+      "id": "photodetector-ultrafast-2ghz",
+      "sku": "SET-PD-2GHZ",
+      "name": "Ultrafast Photodetector Module - 2 GHz",
+      "category": "lasers-photonics",
+      "categoryLabel": "Lasers & Photonics",
+      "subcategory": "metrology-diagnostics",
+      "categoryPath": "/components/lasers-photonics/metrology-diagnostics/",
+      "summary": "2 GHz bandwidth photodetector for ultrafast pulse characterization.",
+      "specHighlight": "BW: 2 GHz",
+      "specs": [
+        {
+          "value": "2 GHz",
+          "label": "Bandwidth"
+        }
+      ],
+      "tags": [
+        "photodetector",
+        "2GHz",
+        "ultrafast"
+      ],
+      "legacyUrl": "https://sciengtech.in/our-oem-products-photodetector-modules-ultrafast-photodetector-modules-2ghz/",
+      "featured": false,
+      "_search": "photodetector-ultrafast-2ghz set-pd-2ghz ultrafast photodetector module - 2 ghz lasers-photonics metrology-diagnostics lasers & photonics 2 ghz bandwidth photodetector for ultrafast pulse characterization. bw: 2 ghz photodetector 2ghz ultrafast bandwidth 2 ghz"
+    },
+    {
+      "id": "entangled-photon-source-kit",
+      "sku": "SET-TK-EPS",
+      "name": "Entangled Photon Source Training Kit",
+      "category": "solutions",
+      "categoryLabel": "Solutions",
+      "subcategory": "quantum-optical-research",
+      "categoryPath": "/solutions/quantum-optical-research/",
+      "summary": "Classroom-ready entangled photon demonstration system for quantum optics education.",
+      "specHighlight": "SYSTEM | RFQ | Training kit",
+      "specs": [
+        [
+          {
+            "value": "Training / demonstration system",
+            "label": "Type"
+          }
+        ]
+      ],
+      "tags": [
+        "quantum",
+        "training",
+        "entangled",
+        "photon",
+        "education"
+      ],
+      "legacyUrl": "https://sciengtech.in/our-oem-products-training-kits-entangled-photon-source/",
+      "featured": false,
+      "_search": "entangled-photon-source-kit set-tk-eps entangled photon source training kit solutions quantum-optical-research solutions classroom-ready entangled photon demonstration system for quantum optics education. system | rfq | training kit quantum training entangled photon education type training / demonstration system"
+    }
+  ]
+}

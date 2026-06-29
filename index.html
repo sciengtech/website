@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/catalog.css" />
   <style>
     :root {
       --bg: #0E1118;
@@ -433,6 +434,9 @@
 
     @media (max-width: 1024px) {
       .main-nav { display: none; }
+      .search-trigger span:not(.search-icon) { display: none; }
+      .search-trigger kbd { display: none; }
+      .search-trigger { min-width: 44px; }
     }
     @media (max-width: 900px) {
       .hero-grid, .data-inner, .pillar-grid { grid-template-columns: 1fr; }
@@ -445,7 +449,7 @@
 
   <header class="site-header">
     <div class="wrap nav-bar">
-      <a class="logo" href="#">SciEngTech <span>Solutions</span></a>
+      <a class="logo" href="index.html">SciEngTech <span>Solutions</span></a>
 
       <nav class="main-nav" aria-label="Main navigation">
         <!-- SOLUTIONS -->
@@ -518,7 +522,7 @@
                 </div>
               </div>
               <div class="mega-footer">
-                <a href="#">→ View Complete Technical Catalog</a>
+                <a href="products.html">→ View Complete Technical Catalog</a>
                 <span>Every component · full spec sheet · Request Technical Quote</span>
               </div>
             </div>
@@ -583,6 +587,14 @@
           </div>
         </div>
       </nav>
+
+      <div class="nav-search">
+        <button type="button" class="search-trigger" id="searchTrigger" aria-label="Open search">
+          <span class="search-icon">⌕</span>
+          <span>Search components, specs…</span>
+          <kbd>Ctrl K</kbd>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -594,7 +606,7 @@
         <p>Sourcing certified optics, optomechanics, laser diagnostic instruments, and vacuum systems designed to withstand absolute tolerances.</p>
         <div class="hero-ctas">
           <a class="btn btn-ruby" href="#">Request Technical Quote</a>
-          <a class="btn btn-outline" href="#">Browse Components</a>
+          <a class="btn btn-outline" href="products.html">Browse Components</a>
         </div>
       </div>
       <div class="hero-carousel" id="heroCarousel" aria-label="Product showcase">
@@ -640,18 +652,18 @@
   <section class="hardware-strip" aria-label="Featured hardware">
     <div class="wrap">
       <h2>Field-tested hardware · spec-verified</h2>
-      <a class="strip-link" href="#">View complete catalog →</a>
+      <a class="strip-link" href="products.html">View complete catalog →</a>
     </div>
     <div class="hardware-strip-wrap">
       <button type="button" class="strip-scroll-btn prev" id="stripPrev" aria-label="Scroll hardware left">‹</button>
       <button type="button" class="strip-scroll-btn next" id="stripNext" aria-label="Scroll hardware right">›</button>
       <div class="hardware-scroll" id="hardwareScroll">
-      <a class="hardware-card" href="#"><img src="assets/slides/01-translation-stage.png" alt="" /><figcaption><strong>Translation Stage</strong><span>TRAVEL: 25mm</span></figcaption></a>
-      <a class="hardware-card" href="#"><img src="assets/slides/02-kinematic-mirror-mount.png" alt="" /><figcaption><strong>Kinematic Mount</strong><span>APERTURE: 25mm</span></figcaption></a>
-      <a class="hardware-card" href="#"><img src="assets/slides/03-dielectric-mirror.png" alt="" /><figcaption><strong>Dielectric Mirror</strong><span>HR @ 800nm</span></figcaption></a>
-      <a class="hardware-card" href="#"><img src="assets/slides/04-vacuum-flange.png" alt="" /><figcaption><strong>Vacuum Flange</strong><span>CF63</span></figcaption></a>
-      <a class="hardware-card" href="#"><img src="assets/slides/05-photodetector-module.png" alt="" /><figcaption><strong>Photodetector</strong><span>1 GHz</span></figcaption></a>
-      <a class="hardware-card" href="#"><img src="assets/slides/06-optical-breadboard.png" alt="" /><figcaption><strong>Breadboard</strong><span>M6 GRID</span></figcaption></a>
+      <a class="hardware-card" href="product.html?id=translation-stage"><img src="assets/slides/01-translation-stage.png" alt="" /><figcaption><strong>Translation Stage</strong><span>TRAVEL: 25mm</span></figcaption></a>
+      <a class="hardware-card" href="product.html?id=precision-kinematic-mirror-mount"><img src="assets/slides/02-kinematic-mirror-mount.png" alt="" /><figcaption><strong>Kinematic Mount</strong><span>APERTURE: 25mm</span></figcaption></a>
+      <a class="hardware-card" href="product.html?id=dielectric-laser-mirror-800nm"><img src="assets/slides/03-dielectric-mirror.png" alt="" /><figcaption><strong>Dielectric Mirror</strong><span>HR @ 800nm</span></figcaption></a>
+      <a class="hardware-card" href="product.html?id=cf-vacuum-flange-cf63"><img src="assets/slides/04-vacuum-flange.png" alt="" /><figcaption><strong>Vacuum Flange</strong><span>CF63</span></figcaption></a>
+      <a class="hardware-card" href="product.html?id=photodetector-ultrafast-1ghz"><img src="assets/slides/05-photodetector-module.png" alt="" /><figcaption><strong>Photodetector</strong><span>1 GHz</span></figcaption></a>
+      <a class="hardware-card" href="product.html?id=breadboards"><img src="assets/slides/06-optical-breadboard.png" alt="" /><figcaption><strong>Breadboard</strong><span>M6 GRID</span></figcaption></a>
       </div>
     </div>
   </section>
@@ -741,7 +753,7 @@
         </div>
         <div>
           <h4>Catalog</h4>
-          <a href="#">Components</a>
+          <a href="products.html">Components</a>
           <a href="#">Solutions</a>
           <a href="#">Utilities</a>
         </div>
@@ -755,6 +767,21 @@
     </div>
   </footer>
 
+  <div class="search-panel" id="searchPanel" aria-hidden="true" role="dialog" aria-label="Search catalog">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-dialog">
+      <div class="search-dialog-head">
+        <span aria-hidden="true">⌕</span>
+        <input type="search" id="globalSearchInput" placeholder="Search components, specifications, wavelengths…" autocomplete="off" />
+        <button type="button" class="search-close" id="searchClose" aria-label="Close search">×</button>
+      </div>
+      <div id="searchStatus"></div>
+      <div class="search-results-wrap" id="searchResults"></div>
+    </div>
+  </div>
+
+  <script src="js/catalog-search.js"></script>
+  <script src="js/header-search.js"></script>
   <script>
     (function () {
       const slides = [...document.querySelectorAll('.carousel-slide')];

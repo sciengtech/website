@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Component Spec | SciEngTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/catalog.css" />
+  <style>
+    :root {
+      --bg: #0E1118; --bg-elevated: #161B26; --bg-light: #1C2230;
+      --text: #FFFFFF; --text-muted: #64748B; --accent: #E11D48;
+      --accent-hover: #BE123C; --border: #2A3142;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .site-header {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(14, 17, 24, 0.96); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 20px; }
+    .logo {
+      font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem;
+      text-decoration: none; color: #fff; white-space: nowrap;
+    }
+    .logo span { color: var(--text-muted); font-weight: 500; font-size: 0.85rem; margin-left: 6px; }
+    .nav-back { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; }
+    .nav-back:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav-bar">
+      <a class="logo" href="index.html">SciEngTech <span>Solutions</span></a>
+      <div class="nav-search">
+        <button type="button" class="search-trigger" id="searchTrigger" aria-label="Open search">
+          <span class="search-icon">⌕</span>
+          <span>Search components, specs…</span>
+          <kbd>Ctrl K</kbd>
+        </button>
+      </div>
+      <a class="nav-back" href="products.html">← Catalog</a>
+    </div>
+  </header>
+
+  <main class="product-detail" id="productMain">
+    <div class="wrap">
+      <p class="catalog-meta">Loading specification…</p>
+    </div>
+  </main>
+
+  <div class="search-panel" id="searchPanel" aria-hidden="true" role="dialog" aria-label="Search catalog">
+    <div class="search-backdrop" id="searchBackdrop"></div>
+    <div class="search-dialog">
+      <div class="search-dialog-head">
+        <span aria-hidden="true">⌕</span>
+        <input type="search" id="globalSearchInput" placeholder="Search components, specifications, wavelengths…" autocomplete="off" />
+        <button type="button" class="search-close" id="searchClose" aria-label="Close search">×</button>
+      </div>
+      <div id="searchStatus"></div>
+      <div class="search-results-wrap" id="searchResults"></div>
+    </div>
+  </div>
+
+  <script src="js/catalog-search.js"></script>
+  <script src="js/header-search.js"></script>
+  <script>
+    (function () {
+      function esc(s) {
+        return String(s)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+
+      function renderNotFound() {
+        document.title = 'Component Not Found | SciEngTech';
+        document.getElementById('productMain').innerHTML =
+          '<div class="wrap product-not-found">' +
+          '<h1>Specification not found</h1>' +
+          '<p style="color:var(--text-muted);margin-bottom:24px">Browse the technical catalog or submit an RFQ for custom requirements.</p>' +
+          '<div class="product-ctas" style="justify-content:center">' +
+          '<a class="btn btn-ruby" href="products.html">Browse Catalog</a>' +
+          '<a class="btn btn-outline" href="index.html">Back to Home</a>' +
+          '</div></div>';
+      }
+
+      function renderProduct(p) {
+        document.title = p.name + ' | SciEngTech';
+        var specsHtml = '';
+        for (var i = 0; i < (p.specs || []).length; i++) {
+          var row = p.specs[i];
+          specsHtml +=
+            '<div class="spec-row"><span>' +
+            esc(row.label) +
+            '</span><span>' +
+            esc(row.value) +
+            '</span></div>';
+        }
+        var media = p.image
+          ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + ' — ' + esc(p.specHighlight) + '" />'
+          : '<span class="placeholder" aria-hidden="true">◇</span>';
+
+        document.getElementById('productMain').innerHTML =
+          '<div class="wrap">' +
+          '<nav class="product-breadcrumb" aria-label="Breadcrumb">' +
+          '<a href="index.html">Home</a> / <a href="products.html">Catalog</a> / ' +
+          '<a href="products.html?category=' +
+          encodeURIComponent(p.category) +
+          '">' +
+          esc(p.categoryLabel) +
+          '</a> / <span>' +
+          esc(p.name) +
+          '</span></nav>' +
+          '<div class="product-detail-grid">' +
+          '<div class="product-detail-media">' +
+          media +
+          '</div>' +
+          '<div>' +
+          '<p class="product-overline">' +
+          esc(p.categoryLabel) +
+          '</p>' +
+          '<h1>' +
+          esc(p.name) +
+          '</h1>' +
+          '<p class="product-sku-line mono">SKU: ' +
+          esc(p.sku) +
+          '</p>' +
+          '<p class="product-highlight mono">' +
+          esc(p.specHighlight) +
+          '</p>' +
+          '<p class="product-summary">' +
+          esc(p.summary) +
+          '</p>' +
+          '<div class="spec-table-detail">' +
+          '<header>SPECIFICATION SHEET</header>' +
+          specsHtml +
+          '</div>' +
+          '<div class="product-ctas">' +
+          '<a class="btn btn-ruby" href="index.html#rfq">Request Technical Quote</a>' +
+          '<a class="btn btn-outline" href="products.html?q=' +
+          encodeURIComponent(p.name.split(' ')[0]) +
+          '">Related Components</a>' +
+          '</div></div></div></div>';
+      }
+
+      var params = new URLSearchParams(window.location.search);
+      var id = params.get('id');
+      if (!id) {
+        renderNotFound();
+        return;
+      }
+
+      window.SciEngCatalog.load().then(function () {
+        var product = window.SciEngCatalog.getById(id);
+        if (!product) renderNotFound();
+        else renderProduct(product);
+      });
+    })();
+  </script>
+</body>
+</html>

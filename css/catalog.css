@@ -1,0 +1,371 @@
+/* Shared catalog + search styles (SciEngTech Option A palette) */
+:root {
+  --bg: #0E1118;
+  --bg-elevated: #161B26;
+  --bg-light: #1C2230;
+  --text: #FFFFFF;
+  --text-muted: #64748B;
+  --accent: #E11D48;
+  --accent-hover: #BE123C;
+  --border: #2A3142;
+}
+
+.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.75rem; }
+
+/* Header search trigger */
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.search-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 220px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-light);
+  color: var(--text-muted);
+  font: 500 0.8125rem/1 'Inter', sans-serif;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.search-trigger:hover { border-color: rgba(225,29,72,0.45); color: #fff; }
+.search-trigger kbd {
+  margin-left: auto;
+  font: 500 0.65rem/1 'JetBrains Mono', monospace;
+  padding: 3px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+}
+
+/* Search overlay */
+.search-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 96px 20px 40px;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.search-panel.is-open {
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+}
+.search-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  backdrop-filter: blur(4px);
+}
+.search-dialog {
+  position: relative;
+  width: min(720px, 100%);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 32px 64px rgba(0,0,0,0.55);
+  overflow: hidden;
+}
+.search-dialog-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.search-dialog-head input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font: 500 1rem/1.4 'Inter', sans-serif;
+  outline: none;
+}
+.search-dialog-head input::placeholder { color: var(--text-muted); }
+.search-close {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.search-close:hover { color: #fff; background: rgba(255,255,255,0.06); }
+.search-results-wrap {
+  max-height: min(60vh, 480px);
+  overflow-y: auto;
+  padding: 12px 0;
+}
+#searchStatus {
+  padding: 0 16px 8px;
+  font: 500 0.6875rem/1 'JetBrains Mono', monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.search-hint, .search-empty {
+  padding: 20px 16px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.search-empty a { color: var(--accent); }
+.search-result-list { list-style: none; margin: 0; padding: 0; }
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+.search-result-item:hover,
+.search-result-item.is-active { background: rgba(255,255,255,0.05); }
+.search-result-thumb {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  flex-shrink: 0;
+}
+.search-result-thumb--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+.search-result-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.search-result-body strong {
+  font: 600 0.9rem/1.3 'Space Grotesk', sans-serif;
+  color: #fff;
+}
+.search-result-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.search-result-sku { color: var(--accent); margin-top: 2px; }
+.search-view-all {
+  display: block;
+  padding: 12px 16px 16px;
+  text-align: center;
+  color: var(--accent);
+  font: 600 0.8125rem/1 'Space Grotesk', sans-serif;
+  text-decoration: none;
+  border-top: 1px solid var(--border);
+}
+body.search-open { overflow: hidden; }
+
+/* Catalog page */
+.catalog-page { padding: 40px 0 80px; }
+.catalog-hero h1 {
+  font: 700 clamp(1.75rem, 4vw, 2.25rem)/1.15 'Space Grotesk', sans-serif;
+  margin-bottom: 8px;
+}
+.catalog-hero p { color: var(--text-muted); max-width: 56ch; margin-bottom: 28px; }
+.catalog-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.catalog-search-input {
+  flex: 1;
+  min-width: 240px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-light);
+  color: #fff;
+  font: 500 0.9375rem/1 'Inter', sans-serif;
+}
+.catalog-search-input:focus { outline: 2px solid rgba(225,29,72,0.35); border-color: var(--accent); }
+.catalog-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-chip {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font: 500 0.8125rem/1 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-chip:hover, .filter-chip.is-active {
+  border-color: var(--accent);
+  color: #fff;
+  background: rgba(225,29,72,0.12);
+}
+.catalog-meta {
+  font: 500 0.75rem/1 'JetBrains Mono', monospace;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.product-card:hover {
+  border-color: rgba(225,29,72,0.5);
+  transform: translateY(-2px);
+}
+.product-card-media {
+  aspect-ratio: 4/3;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+.product-card-media img { width: 100%; height: 100%; object-fit: cover; }
+.product-card-media .placeholder {
+  font-size: 2rem;
+  color: var(--border);
+}
+.product-card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.product-card-cat {
+  font: 600 0.625rem/1 'Space Grotesk', sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.product-card-body h2 {
+  font: 600 1rem/1.3 'Space Grotesk', sans-serif;
+}
+.product-card-spec { font-size: 0.75rem; color: var(--text-muted); }
+.product-card-sku { font-size: 0.7rem; color: var(--accent); margin-top: auto; padding-top: 8px; }
+
+/* Product detail */
+.product-detail { padding: 40px 0 80px; }
+.product-breadcrumb {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+.product-breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.product-breadcrumb a:hover { color: var(--accent); }
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.product-detail-media {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-elevated);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-detail-media img { width: 100%; height: 100%; object-fit: cover; }
+.product-detail-media .placeholder { font-size: 4rem; color: var(--border); }
+.product-overline {
+  font: 600 0.6875rem/1 'Space Grotesk', sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.product-detail h1 {
+  font: 700 clamp(1.5rem, 3vw, 2rem)/1.2 'Space Grotesk', sans-serif;
+  margin-bottom: 8px;
+}
+.product-sku-line {
+  font: 500 0.8125rem/1 'JetBrains Mono', monospace;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.product-highlight {
+  font: 500 0.8125rem/1.5 'JetBrains Mono', monospace;
+  color: #fff;
+  padding: 12px 14px;
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.product-summary { color: var(--text-muted); margin-bottom: 24px; }
+.spec-table-detail {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+.spec-table-detail header {
+  padding: 10px 14px;
+  background: var(--bg-light);
+  font: 600 0.6875rem/1 'JetBrains Mono', monospace;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid var(--border);
+}
+.spec-table-detail .spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+}
+.spec-table-detail .spec-row:last-child { border-bottom: none; }
+.spec-table-detail .spec-row span:first-child { color: var(--text-muted); }
+.product-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font: 600 0.875rem/1 'Space Grotesk', sans-serif;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.btn-ruby { background: var(--accent); color: #fff; }
+.btn-ruby:hover { background: var(--accent-hover); }
+.btn-outline { border-color: var(--border); color: #fff; background: transparent; }
+.btn-outline:hover { border-color: #fff; }
+.product-not-found { padding: 80px 0; text-align: center; }
+.product-not-found h1 { margin-bottom: 12px; }
+
+@media (max-width: 900px) {
+  .search-trigger { min-width: 44px; padding: 8px 12px; }
+  .search-trigger span:not(.search-icon) { display: none; }
+  .search-trigger kbd { display: none; }
+  .product-detail-grid { grid-template-columns: 1fr; }
+}
