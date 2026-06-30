@@ -405,7 +405,7 @@ function main() {
     <h1>Contact &amp; Credentials</h1>
     <div class="contact-grid">
       <div><h3>Pune Headquarters</h3><p>14, Om Shanti, 156/2 Mangalwar Peth<br>Pune – 411 011, India</p><p><a href="mailto:info@sciengtech.in">info@sciengtech.in</a></p></div>
-      <div><h3>Credentials</h3><p>GST: [Client to provide]</p><p>GeM Vendor ID: [Client to provide]</p></div>
+      <div><h3>Credentials</h3><p><strong>GSTIN:</strong> 27AEOFS5239R1ZY</p><p><strong>GeM Portal ID:</strong> UDYAM-MH-26-0215820</p></div>
       <div><h3>Engineering</h3><p><a href="../engineering/rfq.html">Request Technical Quote</a></p><p><a href="../engineering/upload.html">Upload Schematics</a></p></div>
     </div>
   </div></section>`);
