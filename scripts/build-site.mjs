@@ -62,13 +62,15 @@ function write(rel, html) {
   console.log('  wrote', rel);
 }
 
-function productCard(p, base) {
+function productCard(p, linkBase, assetBase, solutionPrefix) {
+  if (assetBase === undefined) assetBase = linkBase;
+  if (solutionPrefix === undefined) solutionPrefix = 'solutions/';
   const url =
     p.type === 'solution'
-      ? `${base}solutions/${p.id}.html`
-      : `${base}product.html?id=${encodeURIComponent(p.id)}`;
+      ? `${linkBase}${solutionPrefix}${p.id}.html`
+      : `${linkBase}product.html?id=${encodeURIComponent(p.id)}`;
   const media = p.image
-    ? `<img src="${base}${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" />`
+    ? `<img src="${assetBase}${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" />`
     : '<span class="placeholder" aria-hidden="true">◇</span>';
   return `<a class="product-card" href="${url}">
     <div class="product-card-media">${media}</div>
@@ -138,7 +140,7 @@ function solutionDetailPage(s, base) {
 }
 
 function categoryPage(cat, items, base) {
-  const grid = items.map((p) => productCard(p, base)).join('\n');
+  const grid = items.map((p) => productCard(p, base, base, '')).join('\n');
   const main = `<section class="catalog-page">
     <div class="wrap catalog-hero">
       <nav class="product-breadcrumb">
@@ -305,25 +307,25 @@ function buildSolutionsHub(base, rel) {
       <h1>Quantum &amp; Photonics Solutions</h1>
       <p>Turnkey quantum demonstration systems and educational kits — specified, validated, and supported by SciEngTech engineering.</p>
       <h2 class="hub-section-title">Quantum Set-Ups</h2>
-      <div class="product-grid">${q.map((p) => productCard(p, base)).join('')}</div>
+      <div class="product-grid">${q.map((p) => productCard(p, '', '', 'solutions/')).join('')}</div>
       <h2 class="hub-section-title" style="margin-top:48px">Training &amp; Education Kits</h2>
-      <div class="product-grid">${t.map((p) => productCard(p, base)).join('')}</div>
+      <div class="product-grid">${t.map((p) => productCard(p, '', '', 'solutions/')).join('')}</div>
     </div>
   </section>`;
   write(rel, shell({ base, title: 'Solutions', desc: 'Quantum set-ups and training kits.', main, pageId: 'solutions' }));
 }
 
-function buildSubHub(base, rel, title, desc, group) {
+function buildSubHub(rel, title, desc, group) {
   const items = catalog.solutions.filter((s) => s.solutionGroup === group);
   const main = `<section class="catalog-page">
     <div class="wrap catalog-hero">
-      <nav class="product-breadcrumb"><a href="${base}index.html">Home</a> / <a href="${base}solutions.html">Solutions</a> / <span>${esc(title)}</span></nav>
+      <nav class="product-breadcrumb"><a href="../index.html">Home</a> / <a href="../solutions.html">Solutions</a> / <span>${esc(title)}</span></nav>
       <h1>${esc(title)}</h1>
       <p>${esc(desc)}</p>
-      <div class="product-grid">${items.map((p) => productCard(p, base)).join('')}</div>
+      <div class="product-grid">${items.map((p) => productCard(p, '', '../', '')).join('')}</div>
     </div>
   </section>`;
-  write(rel, shell({ base, title, desc, main }));
+  write(rel, shell({ base: '../', title, desc, main }));
 }
 
 function buildComponentsHub(base, rel) {
@@ -355,8 +357,8 @@ function main() {
   buildHomepage();
 
   buildSolutionsHub('', 'solutions.html');
-  buildSubHub('', 'solutions/quantum-setups.html', 'Quantum Set-Ups', 'Integrated quantum demonstration and research systems.', 'quantum-setups');
-  buildSubHub('', 'solutions/training-kits.html', 'Training & Education Kits', 'Hands-on photonics and quantum education kits.', 'training-kits');
+  buildSubHub('solutions/quantum-setups.html', 'Quantum Set-Ups', 'Integrated quantum demonstration and research systems.', 'quantum-setups');
+  buildSubHub('solutions/training-kits.html', 'Training & Education Kits', 'Hands-on photonics and quantum education kits.', 'training-kits');
 
   for (const s of catalog.solutions) {
     write(`solutions/${s.id}.html`, solutionDetailPage(s, '../'));
