@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" data-base="../" data-page="catalog-search">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Component Search | SciEngTech</title>
+  <meta name="description" content="Search catalog" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/site.css" />
+  <link rel="stylesheet" href="../css/catalog.css" />
+</head>
+<body>
+  <div id="site-header"></div>
+  <main><section class="catalog-page">
+    <div class="wrap catalog-hero">
+      <h1>Search Components</h1>
+      <p>Filter and search 47 bench components.</p>
+      <div class="catalog-toolbar">
+        <input type="search" class="catalog-search-input" id="catalogSearchInput" placeholder="Search components, specifications…" autocomplete="off" />
+        <div class="catalog-filters" id="catalogFilters"></div>
+      </div>
+      <p class="catalog-meta" id="catalogCount">Loading…</p>
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </section></main>
+  <div id="site-footer"></div>
+  <div id="site-search"></div>
+  <script>window.__SITE_BASE__ = "../";</script>
+  <script src="../js/catalog-search.js"></script>
+  <script src="../js/header-search.js"></script>
+  <script src="../js/site-chrome.js"></script>
+  <script src="../js/products-page.js"></script>
+</body>
+</html>

@@ -1,8 +1,333 @@
 {
   "version": 2,
   "updated": "2026-06-30",
-  "count": 47,
-  "products": [
+  "solutions": [
+    {
+      "id": "regenerative-delay-line",
+      "sku": "SET-REGEN-DL",
+      "name": "Custom Made, Turn Key, Regenerative cavity-like Laser Delay Line",
+      "type": "solution",
+      "summary": "Custom Made, Turn Key, Regenerative cavity-like Laser Delay Line",
+      "specHighlight": "FEATURE: Custom Made, Turn Key, Regenerative cavity-like Laser Delay Line | FEATURE: Efficient Pulse Utilization: Laser pulse is split, with ~10% of the beam (~700 μJ) used as the probe | FEATURE: Reg",
+      "specs": [
+        {
+          "label": "Feature",
+          "value": "Custom Made, Turn Key, Regenerative cavity-like Laser Delay Line"
+        },
+        {
+          "label": "Feature",
+          "value": "Efficient Pulse Utilization: Laser pulse is split, with ~10% of the beam (~700 μJ) used as the probe"
+        },
+        {
+          "label": "Feature",
+          "value": "Regenerative Cavity Approach: Pulse is stored inside a regenerative amplifier-like cavity using two Pockels cells"
+        },
+        {
+          "label": "Feature",
+          "value": "Controlled Pulse Extraction: Delayed pulse is released after the desired delay for downstream applications"
+        },
+        {
+          "label": "Feature",
+          "value": "Ideal for Ultrafast Applications: Suitable for pump–probe spectroscopy and ultrafast optical experiments."
+        }
+      ],
+      "body": "Custom Made, Turn Key, Regenerative cavity-like Laser Delay Line\n\nCustom Design & Turnkey Solutions: Tailored development of regenerative cavity-like laser delay lines for advanced pump–probe experiments \n\nLong Delay Capability: Enables probe pulse delay of up to 1 μs, overcoming limitations of conventional free-space delay lines \n\nEfficient Pulse Utilization: Laser pulse is split, with ~10% of the beam (~700 μJ) used as the probe \n\nSupercontinuum Generation: Probe pulse is used to generate supercontinuum in photonic crystal fibers, requiring ~100 μJ per pulse \n\nCompact Alternative to Long Optical Paths: Avoids impractical ~300 m optical path length required for mirror-based delay systems \n\nRegenerative Cavity Approach: Pulse is stored inside a regenerative amplifier-like cavity using two Pockels cells \n\nSimplified Architecture: Does not require amplifier crystal or pump lasers, unlike traditional CPA regenerative amplifiers \n\nControlled Pulse Extraction: Delayed pulse is released after the desired delay for downstream applications \n\nIdeal for Ultrafast Applications: Suitable for pump–probe spectroscopy and ultrafast optical experiments.\n\nProduct Code: SET-REGEN-DL",
+      "image": null,
+      "tags": [
+        "regenerative delay line",
+        "training kit"
+      ],
+      "writeupPath": "Training Kit/CustomMadeRegenerativeDelayLine/Custom Made,Turn Key,Regenerative cavity-like laser delay line.docx",
+      "_search": "regenerative-delay-line set-regen-dl custom made, turn key, regenerative cavity-like laser delay line solution   custom made, turn key, regenerative cavity-like laser delay line feature: custom made, turn key, regenerative cavity-like laser delay line | feature: efficient pulse utilization: laser pulse is split, with ~10% of the beam (~700 μj) used as the probe | feature: reg regenerative delay line training kit feature custom made, turn key, regenerative cavity-like laser delay line feature efficient pulse utilization: laser pulse is split, with ~10% of the beam (~700 μj) used as the probe feature regenerative cavity approach: pulse is stored inside a regenerative amplifier-like cavity using two pockels cells feature controlled pulse extraction: delayed pulse is released after the desired delay for downstream applications feature ideal for ultrafast applications: suitable for pump–probe spectroscopy and ultrafast optical experiments. custom made, turn key, regenerative cavity-like laser delay line\n\ncustom design & turnkey solutions: tailored development of regenerative cavity-like laser delay lines for advanced pump–probe experiments \n\nlong delay capability: enables probe pulse delay of up to 1 μs, overcoming limitations of conventional free-space delay lines \n\nefficient pulse utilization: laser pulse is split, with ~10% of the beam (~700 μj) used as the probe \n\nsupercontinuum generation: probe pulse is used to generate supercontinuum in photonic crystal fibers, requiring ~100 μj per pulse \n\ncompact alternative to long optical paths: avoids impractical ~300 m optical path length required for mirror-based delay systems \n\nregenerative cavity approach: pulse is stored inside a regenerative amplifier-like cavity using two pockels cells \n\nsimplified architecture: does not require amplifier crystal or pump lasers, unlike traditional cpa regenerative amplifiers \n\ncontrolled pulse extraction: delayed pulse is released after the desired delay for downstream applications \n\nideal for ultrafast applications: suitable for pump–probe spectroscopy and ultrafast optical experiments.\n\nproduct code: set-regen-dl",
+      "solutionGroup": "training-kits",
+      "solutionUrl": "solutions/regenerative-delay-line.html"
+    },
+    {
+      "id": "entangled-photon-source",
+      "sku": "SET-EPS-IL405-810",
+      "name": "Entangled Photon Source with Integrated Laser",
+      "type": "solution",
+      "summary": "‘Entangled Photon Source with Integrated Laser’",
+      "specHighlight": "FEATURE: ‘Entangled Photon Source with Integrated Laser’ | FEATURE: Entangled Photon-Pair Sources use spontaneous parametric down-conversion (SPDC) to generate a pair of photons. | FEATURE: Entangled ",
+      "specs": [
+        {
+          "label": "Feature",
+          "value": "‘Entangled Photon Source with Integrated Laser’"
+        },
+        {
+          "label": "Feature",
+          "value": "Entangled Photon-Pair Sources use spontaneous parametric down-conversion (SPDC) to generate a pair of photons."
+        },
+        {
+          "label": "Feature",
+          "value": "Entangled photon sources are critical to the demonstration and application of many quantum phenomena."
+        },
+        {
+          "label": "Feature",
+          "value": "Integrated, continuous-wave 15 mW single frequency pump laser at 405 nm"
+        },
+        {
+          "label": "Feature",
+          "value": "Internal 15 mm PPKTP and 7.5 mm KTP compensating crystal for Type II down-conversion around 810 nm"
+        },
+        {
+          "label": "Feature",
+          "value": "Precision control of internal crystal temperature (user adjustable)"
+        }
+      ],
+      "body": "‘Entangled Photon Source with Integrated Laser’\n\nEntangled Photon-Pair Sources use spontaneous parametric down-conversion (SPDC) to generate a pair of photons. \n\nEntangled photon sources are critical to the demonstration and application of many quantum phenomena. \n\nEntangled photons allow users to spend more time using their entangled photons, and less time constructing and maintaining their source. \n\nIntegrated, continuous-wave 15 mW single frequency pump laser at 405 nm \n\nInternal 15 mm PPKTP and 7.5 mm KTP compensating crystal for Type II down-conversion around 810 nm \n\nPrecision control of internal crystal temperature (user adjustable) \n\nPolarization-maintaining fiber on source output for easy integration with fiber optic solutions \n\n>10,000 photon pairs/mW/s source brightness \n\nUSB communication allows tuning of output wavelength and brightness \n\nKit contains metric components \n\nCompact Design \n\nMade in INDIA \n\nProduct Code: SET-EPS-IL405-810",
+      "image": null,
+      "tags": [
+        "entangled photon source",
+        "quantum set-up"
+      ],
+      "writeupPath": "Quantum Set-Up/Single Photon Source/Entangled Photon Source with Integrated Laser.docx",
+      "_search": "entangled-photon-source set-eps-il405-810 entangled photon source with integrated laser solution   ‘entangled photon source with integrated laser’ feature: ‘entangled photon source with integrated laser’ | feature: entangled photon-pair sources use spontaneous parametric down-conversion (spdc) to generate a pair of photons. | feature: entangled  entangled photon source quantum set-up feature ‘entangled photon source with integrated laser’ feature entangled photon-pair sources use spontaneous parametric down-conversion (spdc) to generate a pair of photons. feature entangled photon sources are critical to the demonstration and application of many quantum phenomena. feature integrated, continuous-wave 15 mw single frequency pump laser at 405 nm feature internal 15 mm ppktp and 7.5 mm ktp compensating crystal for type ii down-conversion around 810 nm feature precision control of internal crystal temperature (user adjustable) ‘entangled photon source with integrated laser’\n\nentangled photon-pair sources use spontaneous parametric down-conversion (spdc) to generate a pair of photons. \n\nentangled photon sources are critical to the demonstration and application of many quantum phenomena. \n\nentangled photons allow users to spend more time using their entangled photons, and less time constructing and maintaining their source. \n\nintegrated, continuous-wave 15 mw single frequency pump laser at 405 nm \n\ninternal 15 mm ppktp and 7.5 mm ktp compensating crystal for type ii down-conversion around 810 nm \n\nprecision control of internal crystal temperature (user adjustable) \n\npolarization-maintaining fiber on source output for easy integration with fiber optic solutions \n\n>10,000 photon pairs/mw/s source brightness \n\nusb communication allows tuning of output wavelength and brightness \n\nkit contains metric components \n\ncompact design \n\nmade in india \n\nproduct code: set-eps-il405-810",
+      "solutionGroup": "quantum-setups",
+      "solutionUrl": "solutions/entangled-photon-source.html"
+    },
+    {
+      "id": "bomb-tester",
+      "sku": "SET-BombTester-EDU",
+      "name": "SciEngTech ‘Bomb Tester’ Educational Kit",
+      "type": "solution",
+      "summary": "Designed for Educational, Demonstration, and Classroom Use",
+      "specHighlight": "FEATURE: Complete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials | FEATURE: Easy to Assemble and Use | FEATURE: Choose from Educational Kits Containi",
+      "specs": [
+        {
+          "label": "Feature",
+          "value": "Complete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials"
+        },
+        {
+          "label": "Feature",
+          "value": "Easy to Assemble and Use"
+        },
+        {
+          "label": "Feature",
+          "value": "Choose from Educational Kits Containing Imperial or Metric Components"
+        },
+        {
+          "label": "Feature",
+          "value": "Photons Create an Interference Pattern in a Michelson Interferometer"
+        },
+        {
+          "label": "Feature",
+          "value": "Examines the Principle of Interaction-Free Quantum Measurement"
+        },
+        {
+          "label": "Feature",
+          "value": "\"Marking\" a Photon with Path Information Destroys the Interference Pattern"
+        }
+      ],
+      "body": "SciEngTech ‘Bomb Tester’ Educational Kit\n\nDesigned for Educational, Demonstration, and Classroom Use \n\nComplete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials \n\nEasy to Assemble and Use \n\nChoose from Educational Kits Containing Imperial or Metric Components \n\nPhotons Create an Interference Pattern in a Michelson Interferometer \n\nExamines the Principle of Interaction-Free Quantum Measurement \n\n\"Marking\" a Photon with Path Information Destroys the Interference Pattern \n\nSciEngTech Solutions 532nm laser diode (Green) with its PSU. \n\nSilicon Photodiode with cathode grounded \n\nKit contains metric components \n\nCompact Design \n\nMade in INDIA \n\nProduct Code: SET-BombTester-EDU",
+      "image": null,
+      "tags": [
+        "bomb tester",
+        "quantum set-up"
+      ],
+      "writeupPath": "Quantum Set-Up/Bomb Tester/Bomb Tester.docx",
+      "_search": "bomb-tester set-bombtester-edu sciengtech ‘bomb tester’ educational kit solution   designed for educational, demonstration, and classroom use feature: complete photonics kit includes all hardware except voltmeter plus extensive manual and teaching materials | feature: easy to assemble and use | feature: choose from educational kits containi bomb tester quantum set-up feature complete photonics kit includes all hardware except voltmeter plus extensive manual and teaching materials feature easy to assemble and use feature choose from educational kits containing imperial or metric components feature photons create an interference pattern in a michelson interferometer feature examines the principle of interaction-free quantum measurement feature \"marking\" a photon with path information destroys the interference pattern sciengtech ‘bomb tester’ educational kit\n\ndesigned for educational, demonstration, and classroom use \n\ncomplete photonics kit includes all hardware except voltmeter plus extensive manual and teaching materials \n\neasy to assemble and use \n\nchoose from educational kits containing imperial or metric components \n\nphotons create an interference pattern in a michelson interferometer \n\nexamines the principle of interaction-free quantum measurement \n\n\"marking\" a photon with path information destroys the interference pattern \n\nsciengtech solutions 532nm laser diode (green) with its psu. \n\nsilicon photodiode with cathode grounded \n\nkit contains metric components \n\ncompact design \n\nmade in india \n\nproduct code: set-bombtester-edu",
+      "solutionGroup": "quantum-setups",
+      "solutionUrl": "solutions/bomb-tester.html"
+    },
+    {
+      "id": "michelson-interferometer",
+      "sku": "SET-MI-EDU",
+      "name": "SciEngTech ‘Michelson Interferometer’ Educational Kit",
+      "type": "solution",
+      "summary": "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts.",
+      "specHighlight": "FEATURE: Integrated Optical Source: Includes SciEngTech Solutions Green laser diode with dedicated power supply. | FEATURE: Proudly Designed and Manufactured in India",
+      "specs": [
+        {
+          "label": "Feature",
+          "value": "Integrated Optical Source: Includes SciEngTech Solutions Green laser diode with dedicated power supply."
+        },
+        {
+          "label": "Feature",
+          "value": "Proudly Designed and Manufactured in India"
+        }
+      ],
+      "body": "SciEngTech ‘Michelson Interferometer’ Educational Kit\n\nPurpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts. \n\nComplete, Ready-to-Use System: Supplied with all required optical and mechanical components along with a comprehensive instructional manual and structured teaching resources. \n\nConcept-Driven Experimental Platform: Enables hands-on exploration of interference phenomena using the Michelson interferometer configuration. \n\nDemonstrates Fundamental Interference Principles: Clearly illustrates optical path difference, constructive and destructive interference, and fringe formation. \n\nPrecision Measurement Capability: Allows measurement of laser wavelength through fringe counting and controlled mirror displacement. \n\nStudy of Optical Coherence: Enables investigation of coherence properties of different light sources such as lasers and LEDs. \n\nMaterial Characterization Experiments: Supports determination of refractive index of transparent materials using interferometric techniques. \n\nThermal Expansion Measurement: Provides experimental capability for measuring the thermal expansion coefficient of metallic samples. \n\nUser-Friendly Assembly: Designed for straightforward setup, stable optical alignment, and reliable experimental results in academic laboratories. \n\nIntegrated Optical Source: Includes SciEngTech Solutions Green laser diode with dedicated power supply. \n\nModular Mechanical Architecture: Built using precision opto-mechanical components allowing flexible experimental configurations. \n\nCompact and Laboratory-Efficient Design: Optimized for tabletop laboratory use while maintaining high experimental stability. \n\nProudly Designed and Manufactured in India \n\nProduct Code: SET-MI-EDU",
+      "image": null,
+      "tags": [
+        "michelson interferometer",
+        "quantum set-up"
+      ],
+      "writeupPath": "Quantum Set-Up/Michelson Inerferometer/Michelson Interferometer.docx",
+      "_search": "michelson-interferometer set-mi-edu sciengtech ‘michelson interferometer’ educational kit solution   purpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts. feature: integrated optical source: includes sciengtech solutions green laser diode with dedicated power supply. | feature: proudly designed and manufactured in india michelson interferometer quantum set-up feature integrated optical source: includes sciengtech solutions green laser diode with dedicated power supply. feature proudly designed and manufactured in india sciengtech ‘michelson interferometer’ educational kit\n\npurpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts. \n\ncomplete, ready-to-use system: supplied with all required optical and mechanical components along with a comprehensive instructional manual and structured teaching resources. \n\nconcept-driven experimental platform: enables hands-on exploration of interference phenomena using the michelson interferometer configuration. \n\ndemonstrates fundamental interference principles: clearly illustrates optical path difference, constructive and destructive interference, and fringe formation. \n\nprecision measurement capability: allows measurement of laser wavelength through fringe counting and controlled mirror displacement. \n\nstudy of optical coherence: enables investigation of coherence properties of different light sources such as lasers and leds. \n\nmaterial characterization experiments: supports determination of refractive index of transparent materials using interferometric techniques. \n\nthermal expansion measurement: provides experimental capability for measuring the thermal expansion coefficient of metallic samples. \n\nuser-friendly assembly: designed for straightforward setup, stable optical alignment, and reliable experimental results in academic laboratories. \n\nintegrated optical source: includes sciengtech solutions green laser diode with dedicated power supply. \n\nmodular mechanical architecture: built using precision opto-mechanical components allowing flexible experimental configurations. \n\ncompact and laboratory-efficient design: optimized for tabletop laboratory use while maintaining high experimental stability. \n\nproudly designed and manufactured in india \n\nproduct code: set-mi-edu",
+      "solutionGroup": "quantum-setups",
+      "solutionUrl": "solutions/michelson-interferometer.html"
+    },
+    {
+      "id": "polarized-3d-cinema",
+      "sku": "SET-Polarized3DCinema-EDU",
+      "name": "SciEngTech ‘Polarization and ‘Polarized 3D Cinema’ Educational Kit",
+      "type": "solution",
+      "summary": "Complete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials",
+      "specHighlight": "FEATURE: Complete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials | FEATURE: Choose from Educational Kits Containing Imperial or Metric Components | F",
+      "specs": [
+        {
+          "label": "Feature",
+          "value": "Complete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials"
+        },
+        {
+          "label": "Feature",
+          "value": "Choose from Educational Kits Containing Imperial or Metric Components"
+        },
+        {
+          "label": "Feature",
+          "value": "Learn how to Generate and Measure Linear and Circular Polarizations of Light"
+        },
+        {
+          "label": "Feature",
+          "value": "Learn how to Generate and Measure Linear and Circular Polarizations of Light"
+        },
+        {
+          "label": "Feature",
+          "value": "Create a 3D Projection using Circularly Polarized Light Based on RealD™ Cinema Technology"
+        },
+        {
+          "label": "Feature",
+          "value": "Additional Experiments with Red-Cyan Anaglyph 3D Images and 3D Projection Using Linear Polarization"
+        }
+      ],
+      "body": "SciEngTech ‘Polarization and ‘Polarized 3D Cinema’ Educational Kit\n\nComplete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials \n\nChoose from Educational Kits Containing Imperial or Metric Components \n\nLearn how to Generate and Measure Linear and Circular Polarizations of Light \n\nLearn how to Generate and Measure Linear and Circular Polarizations of Light \n\nCreate a 3D Projection using Circularly Polarized Light Based on RealD™ Cinema Technology \n\nAdditional Experiments with Red-Cyan Anaglyph 3D Images and 3D Projection Using Linear Polarization \n\nMeasure the Rotation of the Polarization Angle of Light Passing through Optically Active Media \n\nIncludes Extensive Manual for Easy Assembly and Use \n\nKits Containing Metric Components \n\nCompact Design \n\nMade in INDIA \n\nProduct Code: SET-Polarized3DCinema-EDU",
+      "image": null,
+      "tags": [
+        "polarized 3d cinema",
+        "training kit"
+      ],
+      "writeupPath": "Training Kit/3D Cinema/3D Cinema.docx",
+      "_search": "polarized-3d-cinema set-polarized3dcinema-edu sciengtech ‘polarization and ‘polarized 3d cinema’ educational kit solution   complete photonics kit includes all hardware except voltmeter plus extensive manual and teaching materials feature: complete photonics kit includes all hardware except voltmeter plus extensive manual and teaching materials | feature: choose from educational kits containing imperial or metric components | f polarized 3d cinema training kit feature complete photonics kit includes all hardware except voltmeter plus extensive manual and teaching materials feature choose from educational kits containing imperial or metric components feature learn how to generate and measure linear and circular polarizations of light feature learn how to generate and measure linear and circular polarizations of light feature create a 3d projection using circularly polarized light based on reald™ cinema technology feature additional experiments with red-cyan anaglyph 3d images and 3d projection using linear polarization sciengtech ‘polarization and ‘polarized 3d cinema’ educational kit\n\ncomplete photonics kit includes all hardware except voltmeter plus extensive manual and teaching materials \n\nchoose from educational kits containing imperial or metric components \n\nlearn how to generate and measure linear and circular polarizations of light \n\nlearn how to generate and measure linear and circular polarizations of light \n\ncreate a 3d projection using circularly polarized light based on reald™ cinema technology \n\nadditional experiments with red-cyan anaglyph 3d images and 3d projection using linear polarization \n\nmeasure the rotation of the polarization angle of light passing through optically active media \n\nincludes extensive manual for easy assembly and use \n\nkits containing metric components \n\ncompact design \n\nmade in india \n\nproduct code: set-polarized3dcinema-edu",
+      "solutionGroup": "training-kits",
+      "solutionUrl": "solutions/polarized-3d-cinema.html"
+    },
+    {
+      "id": "quantum-eraser",
+      "sku": "SET-QuantumEraser-EDU",
+      "name": "SciEngTech ‘Quantum Eraser’ Educational Kit",
+      "type": "solution",
+      "summary": "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts.",
+      "specHighlight": "FEATURE: Concept-Driven Experimental Platform: Enables analogy of single-photon interference in a Mach–Zehnder interferometer. | FEATURE: User-Friendly Assembly: Designed for quick setup, stable align",
+      "specs": [
+        {
+          "label": "Feature",
+          "value": "Concept-Driven Experimental Platform: Enables analogy of single-photon interference in a Mach–Zehnder interferometer."
+        },
+        {
+          "label": "Feature",
+          "value": "User-Friendly Assembly: Designed for quick setup, stable alignment, and repeatable results in academic environments."
+        },
+        {
+          "label": "Feature",
+          "value": "Integrated Optical Source: Includes SciEngTech Solutions 520 nm (Green) laser diode with dedicated power supply."
+        },
+        {
+          "label": "Feature",
+          "value": "Modular Mechanical Architecture"
+        },
+        {
+          "label": "Feature",
+          "value": "Compact and Laboratory-Efficient Design"
+        },
+        {
+          "label": "Feature",
+          "value": "Proudly Designed and Manufactured in India."
+        }
+      ],
+      "body": "SciEngTech ‘Quantum Eraser’ Educational Kit\n\nPurpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts. \n\nComplete, Ready-to-Use System: Supplied with all optical and mechanical components, along with a comprehensive instructional manual and structured teaching resources. \n\nConcept-Driven Experimental Platform: Enables analogy of single-photon interference in a Mach–Zehnder interferometer. \n\nDemonstrates Quantum Complementarity: Clearly illustrates the wave–particle duality of light through controlled experimental conditions. \n\nPolarization-Based Which-Path Control: Demonstrates how polarization can “mark” photon paths and how path information can be “erased” to restore interference. \n\nUser-Friendly Assembly: Designed for quick setup, stable alignment, and repeatable results in academic environments. \n\nIntegrated Optical Source: Includes SciEngTech Solutions 520 nm (Green) laser diode with dedicated power supply. \n\nModular Mechanical Architecture \n\nCompact and Laboratory-Efficient Design \n\nProudly Designed and Manufactured in India. \n\nProduct Code: SET-QuantumEraser-EDU",
+      "image": null,
+      "tags": [
+        "quantum eraser",
+        "quantum set-up"
+      ],
+      "writeupPath": "Quantum Set-Up/Quantum Eraser/Quantum Eraser.docx",
+      "_search": "quantum-eraser set-quantumeraser-edu sciengtech ‘quantum eraser’ educational kit solution   purpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts. feature: concept-driven experimental platform: enables analogy of single-photon interference in a mach–zehnder interferometer. | feature: user-friendly assembly: designed for quick setup, stable align quantum eraser quantum set-up feature concept-driven experimental platform: enables analogy of single-photon interference in a mach–zehnder interferometer. feature user-friendly assembly: designed for quick setup, stable alignment, and repeatable results in academic environments. feature integrated optical source: includes sciengtech solutions 520 nm (green) laser diode with dedicated power supply. feature modular mechanical architecture feature compact and laboratory-efficient design feature proudly designed and manufactured in india. sciengtech ‘quantum eraser’ educational kit\n\npurpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts. \n\ncomplete, ready-to-use system: supplied with all optical and mechanical components, along with a comprehensive instructional manual and structured teaching resources. \n\nconcept-driven experimental platform: enables analogy of single-photon interference in a mach–zehnder interferometer. \n\ndemonstrates quantum complementarity: clearly illustrates the wave–particle duality of light through controlled experimental conditions. \n\npolarization-based which-path control: demonstrates how polarization can “mark” photon paths and how path information can be “erased” to restore interference. \n\nuser-friendly assembly: designed for quick setup, stable alignment, and repeatable results in academic environments. \n\nintegrated optical source: includes sciengtech solutions 520 nm (green) laser diode with dedicated power supply. \n\nmodular mechanical architecture \n\ncompact and laboratory-efficient design \n\nproudly designed and manufactured in india. \n\nproduct code: set-quantumeraser-edu",
+      "solutionGroup": "quantum-setups",
+      "solutionUrl": "solutions/quantum-eraser.html"
+    },
+    {
+      "id": "fourier-optics-kit",
+      "sku": "SET-Fourier-EDU",
+      "name": "SciEngTech Fourier Optics Educational Kit",
+      "type": "solution",
+      "summary": "Designed for Educational, Demonstration, and Classroom Use",
+      "specHighlight": "FEATURE: Demonstrate the principles of Fourier Optics Using a 4f Optical Setup | FEATURE: Manipulate Images of 14 Chrome-on-Glass Microstructured Patterns | FEATURE: Investigate Formation and Manipula",
+      "specs": [
+        {
+          "label": "Feature",
+          "value": "Demonstrate the principles of Fourier Optics Using a 4f Optical Setup"
+        },
+        {
+          "label": "Feature",
+          "value": "Manipulate Images of 14 Chrome-on-Glass Microstructured Patterns"
+        },
+        {
+          "label": "Feature",
+          "value": "Investigate Formation and Manipulation of Images in the Context of a Microscope"
+        },
+        {
+          "label": "Feature",
+          "value": "Demonstrate Various Image Processing Techniques"
+        },
+        {
+          "label": "Feature",
+          "value": "Kit Includes all Hardware and Tools (Computer Not Included)"
+        },
+        {
+          "label": "Feature",
+          "value": "Includes Extensive Manual for Easy Assembly and Use"
+        }
+      ],
+      "body": "SciEngTech Fourier Optics Educational Kit\n\nDesigned for Educational, Demonstration, and Classroom Use \n\nDemonstrate the principles of Fourier Optics Using a 4f Optical Setup \n\nManipulate Images of 14 Chrome-on-Glass Microstructured Patterns \n\nInvestigate Formation and Manipulation of Images in the Context of a Microscope \n\nDemonstrate Various Image Processing Techniques \n\nKit Includes all Hardware and Tools (Computer Not Included) \n\nIncludes Extensive Manual for Easy Assembly and Use \n\nKits Containing Metric Components \n\nCompact Design \n\nMade in INDIA \n\nProduct Code: SET-Fourier-EDU",
+      "image": null,
+      "tags": [
+        "fourier optics kit",
+        "training kit"
+      ],
+      "writeupPath": "Training Kit/Fourier Optics/Fourier Optics Educational Kit.docx",
+      "_search": "fourier-optics-kit set-fourier-edu sciengtech fourier optics educational kit solution   designed for educational, demonstration, and classroom use feature: demonstrate the principles of fourier optics using a 4f optical setup | feature: manipulate images of 14 chrome-on-glass microstructured patterns | feature: investigate formation and manipula fourier optics kit training kit feature demonstrate the principles of fourier optics using a 4f optical setup feature manipulate images of 14 chrome-on-glass microstructured patterns feature investigate formation and manipulation of images in the context of a microscope feature demonstrate various image processing techniques feature kit includes all hardware and tools (computer not included) feature includes extensive manual for easy assembly and use sciengtech fourier optics educational kit\n\ndesigned for educational, demonstration, and classroom use \n\ndemonstrate the principles of fourier optics using a 4f optical setup \n\nmanipulate images of 14 chrome-on-glass microstructured patterns \n\ninvestigate formation and manipulation of images in the context of a microscope \n\ndemonstrate various image processing techniques \n\nkit includes all hardware and tools (computer not included) \n\nincludes extensive manual for easy assembly and use \n\nkits containing metric components \n\ncompact design \n\nmade in india \n\nproduct code: set-fourier-edu",
+      "solutionGroup": "training-kits",
+      "solutionUrl": "solutions/fourier-optics-kit.html"
+    },
+    {
+      "id": "quantum-key-distribution",
+      "sku": "SET-QKD-A-EDU",
+      "name": "SciEngTech Quantum Key Distribution Analogy Educational Kit",
+      "type": "solution",
+      "summary": "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum communication principles.",
+      "specHighlight": "FEATURE: User-Friendly Assembly: Designed for stable alignment, repeatable measurements, and reliable classroom operation. | FEATURE: Modular Mechanical Architecture | FEATURE: Compact and Laboratory-",
+      "specs": [
+        {
+          "label": "Feature",
+          "value": "User-Friendly Assembly: Designed for stable alignment, repeatable measurements, and reliable classroom operation."
+        },
+        {
+          "label": "Feature",
+          "value": "Modular Mechanical Architecture"
+        },
+        {
+          "label": "Feature",
+          "value": "Compact and Laboratory-Efficient Design"
+        },
+        {
+          "label": "Feature",
+          "value": "Proudly Designed and Manufactured in India."
+        }
+      ],
+      "body": "SciEngTech Quantum Key Distribution Analogy Educational Kit\n\nPurpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum communication principles. \n\nComplete, Ready-to-Use System: Supplied with all optical, electronic, and mechanical components, along with a comprehensive instructional manual and structured experimental protocols. \n\nConcept-Driven Experimental Platform: Provides a hands-on implementation of the BB84 quantum key distribution protocol using polarization-based encoding. \n\nDemonstrates Secure Key Generation: Clearly illustrates how secret keys are generated through random basis selection and public basis comparison. \n\nEavesdropping Detection Mechanism: Experimentally demonstrates how an intercept–resend attack introduces measurable errors, enabling detection of an eavesdropper. \n\nPolarization-Based Bit Encoding: Uses orthogonal and diagonal polarization bases (+ and ×) to encode and measure binary information. \n\nUser-Friendly Assembly: Designed for stable alignment, repeatable measurements, and reliable classroom operation. \n\nIntegrated Optical and Electronic Modules: Includes pulsed laser source(s), polarization optics, sensor modules, and dedicated control electronics. \n\nModular Mechanical Architecture \n\nCompact and Laboratory-Efficient Design \n\nProudly Designed and Manufactured in India. \n\n \n\nProduct Code: SET-QKD-A-EDU",
+      "image": null,
+      "tags": [
+        "quantum key distribution",
+        "quantum set-up"
+      ],
+      "writeupPath": "Quantum Set-Up/QKD/QAKD.docx",
+      "_search": "quantum-key-distribution set-qkd-a-edu sciengtech quantum key distribution analogy educational kit solution   purpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum communication principles. feature: user-friendly assembly: designed for stable alignment, repeatable measurements, and reliable classroom operation. | feature: modular mechanical architecture | feature: compact and laboratory- quantum key distribution quantum set-up feature user-friendly assembly: designed for stable alignment, repeatable measurements, and reliable classroom operation. feature modular mechanical architecture feature compact and laboratory-efficient design feature proudly designed and manufactured in india. sciengtech quantum key distribution analogy educational kit\n\npurpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum communication principles. \n\ncomplete, ready-to-use system: supplied with all optical, electronic, and mechanical components, along with a comprehensive instructional manual and structured experimental protocols. \n\nconcept-driven experimental platform: provides a hands-on implementation of the bb84 quantum key distribution protocol using polarization-based encoding. \n\ndemonstrates secure key generation: clearly illustrates how secret keys are generated through random basis selection and public basis comparison. \n\neavesdropping detection mechanism: experimentally demonstrates how an intercept–resend attack introduces measurable errors, enabling detection of an eavesdropper. \n\npolarization-based bit encoding: uses orthogonal and diagonal polarization bases (+ and ×) to encode and measure binary information. \n\nuser-friendly assembly: designed for stable alignment, repeatable measurements, and reliable classroom operation. \n\nintegrated optical and electronic modules: includes pulsed laser source(s), polarization optics, sensor modules, and dedicated control electronics. \n\nmodular mechanical architecture \n\ncompact and laboratory-efficient design \n\nproudly designed and manufactured in india. \n\n \n\nproduct code: set-qkd-a-edu",
+      "solutionGroup": "quantum-setups",
+      "solutionUrl": "solutions/quantum-key-distribution.html"
+    }
+  ],
+  "components": [
     {
       "id": "30-mm-cage-plate",
       "sku": "SET-30MMCAGEPLAT",
@@ -2002,5 +2327,9 @@
       "categoryLabel": "Hardware",
       "categoryPath": "/components/hardware.html"
     }
-  ]
+  ],
+  "counts": {
+    "solutions": 8,
+    "components": 47
+  }
 }

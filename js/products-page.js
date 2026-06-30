@@ -47,10 +47,7 @@
     if (!grid || !window.SciEngCatalog) return;
 
     var q = input ? input.value.trim() : '';
-    var list = window.SciEngCatalog.search(q, {
-      limit: 500,
-      category: activeCategory || null
-    });
+    var list = window.SciEngCatalog.search(q, { limit: 500, category: activeCategory || null, type: 'component' });
 
     if (meta) {
       meta.textContent =
@@ -66,7 +63,7 @@
     var html = '';
     for (var i = 0; i < list.length; i++) {
       var p = list[i];
-      var url = window.SciEngCatalog.productUrl(p.id);
+      var url = (window.__SITE_BASE__ || '') + 'product.html?id=' + encodeURIComponent(p.id);
       var media = p.image
         ? '<img src="' + escapeHtml(p.image) + '" alt="' + escapeHtml(p.name) + '" loading="lazy" />'
         : '<span class="placeholder" aria-hidden="true">◇</span>';

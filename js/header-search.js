@@ -18,8 +18,9 @@
   }
 
   function thumb(product) {
+    var base = window.__SITE_BASE__ || '';
     if (product.image) {
-      return '<img class="search-result-thumb" src="' + escapeHtml(product.image) + '" alt="" loading="lazy" />';
+      return '<img class="search-result-thumb" src="' + escapeHtml(base + product.image) + '" alt="" loading="lazy" />';
     }
     return '<span class="search-result-thumb search-result-thumb--empty" aria-hidden="true">◇</span>';
   }
@@ -40,7 +41,7 @@
 
     if (!list.length) {
       resultsEl.innerHTML =
-        '<p class="search-empty">No matching specifications. <a href="products.html?q=' +
+        '<p class="search-empty">No matching specifications. <a href="' + (window.__SITE_BASE__ || '') + 'components/search.html?q=' +
         encodeURIComponent(query) +
         '">Browse full catalog</a> or contact a system engineer for custom requirements.</p>';
       if (statusEl) statusEl.textContent = '0 results';
@@ -50,7 +51,7 @@
     var html = '<ul class="search-result-list" role="listbox" id="searchResultList">';
     for (var i = 0; i < list.length; i++) {
       var p = list[i];
-      var url = window.SciEngCatalog.productUrl(p.id);
+      var url = (window.__SITE_BASE__ || '') + (p.url || window.SciEngCatalog.productUrl(p.id));
       html +=
         '<li role="option" aria-selected="false">' +
         '<a class="search-result-item" href="' +
@@ -76,7 +77,7 @@
     html += '</ul>';
     if (list.length >= 12) {
       html +=
-        '<a class="search-view-all" href="products.html?q=' +
+        '<a class="search-view-all" href="' + (window.__SITE_BASE__ || '') + 'components/search.html?q=' +
         encodeURIComponent(query) +
         '">View all matches in catalog →</a>';
     }

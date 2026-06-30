@@ -1,836 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-base="" data-page="home">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Option A — Dark Charcoal & Ruby | SciEngTech</title>
+  <title>Quantum Optics Systems &amp; Photonics Hardware | SciEngTech</title>
+  <meta name="description" content="Integrated quantum set-ups, training kits, and bench components for research and education. Request a technical quote." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
   <link rel="stylesheet" href="css/catalog.css" />
-  <style>
-    :root {
-      --bg: #0E1118;
-      --bg-elevated: #161B26;
-      --bg-light: #1C2230;
-      --text: #FFFFFF;
-      --text-muted: #64748B;
-      --accent: #E11D48;
-      --accent-hover: #BE123C;
-      --border: #2A3142;
-      --surface-light: #F3F4F6;
-      --text-on-light: #0E1118;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .style-label {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
-      background: var(--accent); color: #fff;
-      text-align: center; padding: 6px 12px;
-      font: 600 11px/1 'Space Grotesk', sans-serif;
-      letter-spacing: 0.12em; text-transform: uppercase;
-    }
-    .wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-
-    /* Nav + Mega Menu */
-    .site-header {
-      position: sticky; top: 28px; z-index: 1000;
-      background: rgba(14, 17, 24, 0.96);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-bar {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 72px; gap: 24px;
-    }
-    .logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700; font-size: 1.1rem; letter-spacing: -0.02em;
-      white-space: nowrap; text-decoration: none; color: #fff;
-    }
-    .logo span { color: var(--text-muted); font-weight: 500; font-size: 0.85rem; margin-left: 6px; }
-    .main-nav {
-      display: flex; align-items: center; gap: 4px; flex: 1; justify-content: center;
-    }
-    .nav-item { position: static; }
-    .nav-trigger {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 10px 16px; border: none; background: transparent;
-      color: rgba(255,255,255,0.78); font: 500 0.9rem/1 'Inter', sans-serif;
-      cursor: pointer; border-radius: 6px; transition: color 0.2s, background 0.2s;
-    }
-    .nav-trigger .chev { font-size: 0.65rem; opacity: 0.7; transition: transform 0.2s; }
-    .nav-item:hover .nav-trigger,
-    .nav-item.is-open .nav-trigger {
-      color: #fff; background: rgba(255,255,255,0.06);
-    }
-    .nav-item:hover .chev { transform: rotate(180deg); }
-    .mega-panel {
-      position: absolute; left: 0; right: 0; top: calc(100% - 1px);
-      background: var(--bg-elevated);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 24px 48px rgba(0,0,0,0.45);
-      opacity: 0; visibility: hidden; pointer-events: none;
-      transform: translateY(8px);
-      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
-    }
-    .nav-item:hover .mega-panel,
-    .nav-item:focus-within .mega-panel {
-      opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0);
-    }
-    .mega-inner { padding: 36px 0 32px; }
-    .mega-grid-4 {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
-    }
-    .mega-grid-3 {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-    }
-    .mega-grid-2 {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
-    }
-    .mega-col-title {
-      font: 600 0.6875rem/1 'Space Grotesk', sans-serif;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 16px; padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-    }
-    .mega-col-title.muted { color: var(--text-muted); }
-    .mega-link {
-      display: block; padding: 8px 0; text-decoration: none;
-      color: rgba(255,255,255,0.88); font-size: 0.875rem; line-height: 1.35;
-      transition: color 0.15s, padding-left 0.15s;
-    }
-    .mega-link:hover { color: #fff; padding-left: 6px; }
-    .mega-link small {
-      display: block; font-size: 0.75rem; color: var(--text-muted);
-      margin-top: 2px; font-weight: 400;
-    }
-    .mega-footer {
-      margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-    }
-    .mega-footer a {
-      font: 600 0.875rem/1 'Space Grotesk', sans-serif;
-      color: var(--accent); text-decoration: none;
-    }
-    .mega-footer a:hover { text-decoration: underline; }
-    .mega-footer span { font-size: 0.8125rem; color: var(--text-muted); }
-    .mega-card {
-      background: var(--bg-light); border: 1px solid var(--border);
-      border-radius: 8px; padding: 20px; text-decoration: none;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .mega-card:hover {
-      border-color: rgba(225, 29, 72, 0.45); transform: translateY(-2px);
-    }
-    .mega-card h4 {
-      font: 600 0.9375rem/1.3 'Space Grotesk', sans-serif; color: #fff; margin-bottom: 8px;
-    }
-    .mega-card p { font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 12px; }
-    .mega-card span { font-size: 0.8125rem; color: var(--accent); font-weight: 600; }
-    .mega-side {
-      background: var(--bg-light); border: 1px solid var(--border);
-      border-radius: 8px; padding: 24px;
-    }
-    .mega-side h4 {
-      font: 600 0.8125rem/1 'Space Grotesk', sans-serif;
-      letter-spacing: 0.06em; text-transform: uppercase;
-      color: var(--text-muted); margin-bottom: 12px;
-    }
-    .mega-side p { font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 16px; }
-    .mega-side .btn { width: 100%; font-size: 0.8125rem; padding: 10px 16px; }
-    .mega-compact { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 12px 24px; border-radius: 6px; font-family: 'Space Grotesk', sans-serif;
-      font-weight: 600; font-size: 0.875rem; text-decoration: none;
-      border: none; cursor: pointer; transition: all 0.2s; white-space: nowrap;
-    }
-    .btn-ruby { background: var(--accent); color: #fff; }
-    .btn-ruby:hover { background: var(--accent-hover); }
-    .btn-outline {
-      background: transparent; color: #fff;
-      border: 1px solid var(--text-muted);
-    }
-    .btn-outline:hover { border-color: #fff; }
-
-    /* Hero */
-    .hero {
-      padding: 100px 0 80px;
-      background:
-        radial-gradient(ellipse 80% 60% at 70% 20%, rgba(225, 29, 72, 0.08) 0%, transparent 60%),
-        var(--bg);
-    }
-    .hero-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
-    }
-    .overline {
-      font: 600 0.6875rem/1 'Space Grotesk', sans-serif;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 20px;
-    }
-    h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2rem, 4.5vw, 3.25rem);
-      font-weight: 700; line-height: 1.08; letter-spacing: -0.03em;
-      margin-bottom: 24px;
-    }
-    .hero p {
-      font-size: 1.125rem; color: var(--text-muted); max-width: 520px; margin-bottom: 36px;
-    }
-    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
-
-    /* Product showcase carousel */
-    .hero-carousel {
-      border: 1px solid var(--border); border-radius: 10px;
-      overflow: hidden; background: #000;
-      box-shadow: 0 24px 48px rgba(0,0,0,0.5);
-    }
-    .carousel-viewport { position: relative; aspect-ratio: 4/3; background: #05070a; }
-    .carousel-slide {
-      position: absolute; inset: 0; opacity: 0;
-      transition: opacity 0.55s ease;
-      pointer-events: none;
-    }
-    .carousel-slide.is-active { opacity: 1; pointer-events: auto; }
-    .carousel-slide img {
-      width: 100%; height: 100%; object-fit: cover; object-position: center;
-      display: block;
-    }
-    .carousel-btn {
-      position: absolute; top: 50%; transform: translateY(-50%);
-      z-index: 3; width: 40px; height: 40px; border-radius: 50%;
-      border: 1px solid var(--border); background: rgba(14,17,24,0.85);
-      color: #fff; font-size: 1.25rem; cursor: pointer;
-      display: grid; place-items: center; transition: border-color 0.2s, background 0.2s;
-    }
-    .carousel-btn:hover { border-color: var(--accent); background: rgba(225,29,72,0.2); }
-    .carousel-btn.prev { left: 12px; }
-    .carousel-btn.next { right: 12px; }
-    .carousel-counter {
-      position: absolute; top: 12px; right: 12px; z-index: 3;
-      font-family: 'JetBrains Mono', monospace; font-size: 0.6875rem;
-      color: var(--text-muted); background: rgba(14,17,24,0.8);
-      padding: 4px 10px; border-radius: 4px; border: 1px solid var(--border);
-    }
-    .carousel-meta {
-      padding: 14px 16px; background: var(--bg-elevated);
-      border-top: 1px solid var(--border);
-    }
-    .carousel-meta .slide-title {
-      display: block; font-family: 'Space Grotesk', sans-serif;
-      font-weight: 600; font-size: 0.9375rem; color: #fff; margin-bottom: 4px;
-    }
-    .carousel-meta .slide-spec {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.6875rem;
-      color: var(--accent); letter-spacing: 0.04em;
-    }
-    .carousel-thumbs {
-      display: flex; gap: 8px; padding: 10px 12px 12px;
-      background: var(--bg-light); border-top: 1px solid var(--border);
-      overflow-x: auto; scrollbar-width: none;
-    }
-    .carousel-thumbs::-webkit-scrollbar { display: none; }
-    .carousel-thumb {
-      flex: 0 0 72px; height: 48px; border-radius: 4px;
-      border: 2px solid transparent; overflow: hidden; cursor: pointer;
-      opacity: 0.45; transition: opacity 0.2s, border-color 0.2s;
-      padding: 0; background: none;
-    }
-    .carousel-thumb img { width: 100%; height: 100%; object-fit: cover; }
-    .carousel-thumb.is-active, .carousel-thumb:hover {
-      opacity: 1; border-color: var(--accent);
-    }
-
-    /* Full-width hardware strip (below hero) */
-    .hardware-strip {
-      padding: 0 0 48px;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-    }
-    .hardware-strip .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
-    .hardware-strip h2 {
-      font-family: 'Space Grotesk', sans-serif; font-size: 0.8125rem;
-      font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--text-muted);
-    }
-    .hardware-strip .strip-link {
-      font-size: 0.8125rem; color: var(--accent); text-decoration: none; font-weight: 600;
-    }
-    .hardware-strip-wrap {
-      position: relative; max-width: 1280px; margin: 0 auto; padding: 0 48px;
-    }
-    .hardware-strip-wrap::before,
-    .hardware-strip-wrap::after {
-      content: ''; position: absolute; top: 0; bottom: 0; width: 48px; z-index: 2;
-      pointer-events: none;
-    }
-    .hardware-strip-wrap::before {
-      left: 0; background: linear-gradient(90deg, var(--bg) 20%, transparent);
-    }
-    .hardware-strip-wrap::after {
-      right: 0; background: linear-gradient(270deg, var(--bg) 20%, transparent);
-    }
-    .strip-scroll-btn {
-      position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
-      width: 36px; height: 36px; border-radius: 50%;
-      border: 1px solid var(--border); background: rgba(22,27,38,0.95);
-      color: var(--text-muted); font-size: 1.1rem; cursor: pointer;
-      display: grid; place-items: center; transition: color 0.2s, border-color 0.2s;
-    }
-    .strip-scroll-btn:hover { color: #fff; border-color: var(--accent); }
-    .strip-scroll-btn.prev { left: 4px; }
-    .strip-scroll-btn.next { right: 4px; }
-    .hardware-scroll {
-      display: flex; gap: 16px; overflow-x: auto; padding: 4px 0 12px;
-      scroll-snap-type: x mandatory; scroll-behavior: smooth;
-      scrollbar-width: none; -ms-overflow-style: none;
-    }
-    .hardware-scroll::-webkit-scrollbar { display: none; }
-    .hardware-card {
-      flex: 0 0 280px; scroll-snap-align: start;
-      border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
-      background: var(--bg-elevated); text-decoration: none;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .hardware-card:hover { border-color: rgba(225,29,72,0.5); transform: translateY(-2px); }
-    .hardware-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; }
-    .hardware-card figcaption {
-      padding: 12px 14px; font-size: 0.8125rem;
-    }
-    .hardware-card strong {
-      display: block; font-family: 'Space Grotesk', sans-serif;
-      color: #fff; font-size: 0.875rem; margin-bottom: 4px;
-    }
-    .hardware-card span {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.625rem;
-      color: var(--accent);
-    }
-
-    /* Proof */
-    .proof {
-      padding: 56px 0; background: var(--bg-elevated);
-      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-    }
-    .proof-label {
-      text-align: center; font-size: 0.875rem; color: var(--text-muted);
-      font-style: italic; margin-bottom: 32px; max-width: 560px; margin-inline: auto;
-    }
-    .logos {
-      display: flex; justify-content: center; align-items: center;
-      gap: 48px; flex-wrap: wrap; opacity: 0.45;
-    }
-    .logos div {
-      font-family: 'Space Grotesk', sans-serif; font-weight: 600;
-      font-size: 0.8rem; letter-spacing: 0.05em; color: #94A3B8;
-      padding: 12px 20px; border: 1px dashed #334155; border-radius: 4px;
-    }
-
-    /* Pillars */
-    .pillars { padding: 96px 0; }
-    .section-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
-    .section-head h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 600; line-height: 1.2; letter-spacing: -0.02em;
-    }
-    .pillar-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-    }
-    .pillar {
-      background: var(--bg-elevated); border: 1px solid var(--border);
-      border-radius: 8px; padding: 32px;
-      transition: border-color 0.2s;
-    }
-    .pillar:hover { border-color: rgba(225, 29, 72, 0.4); }
-    .pillar-num {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;
-      color: var(--text-muted); margin-bottom: 16px;
-    }
-    .pillar h3 {
-      font-family: 'Space Grotesk', sans-serif; font-size: 1rem;
-      font-weight: 600; margin-bottom: 12px; letter-spacing: 0.02em;
-    }
-    .pillar p { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 24px; }
-    .pillar a {
-      color: #fff; font-size: 0.875rem; font-weight: 500; text-decoration: none;
-      border-bottom: 1px solid var(--text-muted);
-    }
-    .pillar a:hover { border-color: var(--accent); color: var(--accent); }
-
-    /* Data proof */
-    .data-proof {
-      padding: 80px 0; background: var(--surface-light); color: var(--text-on-light);
-    }
-    .data-inner {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
-    }
-    .data-proof h2 {
-      font-family: 'Space Grotesk', sans-serif; font-size: 1.75rem;
-      font-weight: 600; margin-bottom: 16px; letter-spacing: -0.02em;
-    }
-    .metric {
-      font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem;
-      font-weight: 700; color: var(--accent); margin: 24px 0 16px;
-    }
-    .data-proof p { color: #475569; font-size: 1rem; }
-    .spec-table {
-      background: #fff; border-radius: 8px; border: 1px solid #E2E8F0;
-      overflow: hidden; font-family: 'JetBrains Mono', monospace; font-size: 0.8125rem;
-    }
-    .spec-table header {
-      position: static; background: #F8FAFC; padding: 12px 16px;
-      font-family: 'Space Grotesk', sans-serif; font-weight: 600;
-      font-size: 0.75rem; letter-spacing: 0.06em; border-bottom: 1px solid #E2E8F0;
-      color: var(--text-on-light);
-    }
-    .spec-row {
-      display: grid; grid-template-columns: 1fr 1fr; padding: 10px 16px;
-      border-bottom: 1px solid #F1F5F9;
-    }
-    .spec-row:last-child { border-bottom: none; }
-    .spec-row span:first-child { color: #64748B; }
-    .spec-row span:last-child { text-align: right; font-weight: 500; }
-
-    /* CTA band */
-    .cta-band {
-      padding: 96px 0;
-      background:
-        radial-gradient(ellipse 60% 80% at 50% 100%, rgba(225, 29, 72, 0.12) 0%, transparent 70%),
-        var(--bg);
-      text-align: center;
-    }
-    .cta-band h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.5rem, 3vw, 2.25rem);
-      font-weight: 600; margin-bottom: 16px;
-    }
-    .cta-band p { color: var(--text-muted); max-width: 520px; margin: 0 auto 12px; }
-    .cta-band .file-types {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.8125rem;
-      color: var(--text-muted); margin-bottom: 32px;
-    }
-    .cta-band .hero-ctas { justify-content: center; }
-
-    footer {
-      border-top: 1px solid var(--border); padding: 48px 0 32px;
-      font-size: 0.8125rem; color: var(--text-muted);
-    }
-    .footer-grid {
-      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px;
-    }
-    .footer-grid h4 {
-      font-family: 'Space Grotesk', sans-serif; font-size: 0.6875rem;
-      letter-spacing: 0.08em; text-transform: uppercase; color: #fff;
-      margin-bottom: 12px;
-    }
-    .footer-grid a { display: block; color: var(--text-muted); text-decoration: none; margin-bottom: 8px; }
-    .footer-grid a:hover { color: var(--accent); }
-
-    @media (max-width: 1024px) {
-      .main-nav { display: none; }
-      .search-trigger span:not(.search-icon) { display: none; }
-      .search-trigger kbd { display: none; }
-      .search-trigger { min-width: 44px; }
-    }
-    @media (max-width: 900px) {
-      .hero-grid, .data-inner, .pillar-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
 </head>
 <body>
-  <div class="style-label">Option A — Dark Charcoal & Ruby · Canonical Gemini palette</div>
-
-  <header class="site-header">
-    <div class="wrap nav-bar">
-      <a class="logo" href="index.html">SciEngTech <span>Solutions</span></a>
-
-      <nav class="main-nav" aria-label="Main navigation">
-        <!-- SOLUTIONS -->
-        <div class="nav-item has-mega">
-          <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">
-            Solutions <span class="chev">▾</span>
-          </button>
-          <div class="mega-panel" role="region" aria-label="Solutions menu">
-            <div class="wrap mega-inner">
-              <div class="mega-grid-3">
-                <a class="mega-card" href="#">
-                  <h4>Quantum & Optical Research Systems</h4>
-                  <p>Integrated frameworks for quantum optics, entangled photon experiments, and advanced research benches.</p>
-                  <span>Explore system specs →</span>
-                </a>
-                <a class="mega-card" href="#">
-                  <h4>Laser Metrology & Diagnostic Suites</h4>
-                  <p>Pulse characterization, power sensing, and contrast measurement for ultrafast laser programs.</p>
-                  <span>Explore system specs →</span>
-                </a>
-                <a class="mega-card" href="#">
-                  <h4>Vacuum Tech & High-Voltage Assemblies</h4>
-                  <p>Low-leakage vacuum architectures with HV power and control for extreme lab conditions.</p>
-                  <span>Explore system specs →</span>
-                </a>
-              </div>
-              <div class="mega-footer">
-                <a href="#">View all deep-tech integration solutions →</a>
-                <span>System-level procurement · RFQ required</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- COMPONENTS (full mega-menu) -->
-        <div class="nav-item has-mega">
-          <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">
-            Components <span class="chev">▾</span>
-          </button>
-          <div class="mega-panel" role="region" aria-label="Components menu">
-            <div class="wrap mega-inner">
-              <div class="mega-grid-4">
-                <div>
-                  <div class="mega-col-title">01 · Lasers & Photonics</div>
-                  <a class="mega-link" href="#">Active Laser Sources & Diodes<small>Diode modules, pump lasers, control systems</small></a>
-                  <a class="mega-link" href="#">Laser Diagnostics<small>Energy/power meters, spectrometers, beam profilers</small></a>
-                  <a class="mega-link" href="#">Fiber Optics & Patchcords<small>Collimators, bundles, patch cables, positioners</small></a>
-                  <a class="mega-link" href="#">Photodetector Modules<small>10 MHz – 2 GHz bandwidth tiers</small></a>
-                </div>
-                <div>
-                  <div class="mega-col-title">02 · Precision Optics</div>
-                  <a class="mega-link" href="#">Optical Lenses<small>Spherical, cylindrical, aspheric · plano-convex/concave</small></a>
-                  <a class="mega-link" href="#">Laser Mirrors<small>Dielectric (fs), protected silver, metallic</small></a>
-                  <a class="mega-link" href="#">Beamsplitters & Polarizers<small>Plate & cube · UV through NIR coatings</small></a>
-                  <a class="mega-link" href="#">Filters & Waveplates<small>Bandpass, ND, quartz zero-order waveplates</small></a>
-                </div>
-                <div>
-                  <div class="mega-col-title">03 · Optomechanics</div>
-                  <a class="mega-link" href="#">High-Stability Mounts<small>Kinematic, prism, lens, rotation, flip mounts</small></a>
-                  <a class="mega-link" href="#">Breadboards & Honeycomb Tables<small>Optical breadboards, lab tables</small></a>
-                  <a class="mega-link" href="#">Motion Control<small>Manual & motorized translation stages</small></a>
-                  <a class="mega-link" href="#">Posts, Rails & Hardware<small>8 / 12 / 16 mm posts, holders, clamps, rails</small></a>
-                </div>
-                <div>
-                  <div class="mega-col-title">04 · Vacuum & HV Systems</div>
-                  <a class="mega-link" href="#">Chambers, Flanges & Fittings<small>Experimental chambers, gate valves, feedthroughs</small></a>
-                  <a class="mega-link" href="#">Vacuum Pumps & Gauges<small>Beamlines, components, pulse compressor chambers</small></a>
-                  <a class="mega-link" href="#">HV & LV Power Supplies<small>High-voltage units, low-voltage bench supplies</small></a>
-                  <a class="mega-link" href="#">Pockels Cells & Drivers<small>Optical shutters, trigger boxes, cell drivers</small></a>
-                </div>
-              </div>
-              <div class="mega-footer">
-                <a href="products.html">→ View Complete Technical Catalog</a>
-                <span>Every component · full spec sheet · Request Technical Quote</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- UTILITIES -->
-        <div class="nav-item has-mega">
-          <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">
-            Utilities <span class="chev">▾</span>
-          </button>
-          <div class="mega-panel" role="region" aria-label="Utilities menu">
-            <div class="wrap mega-inner">
-              <div class="mega-grid-2">
-                <div>
-                  <div class="mega-col-title muted">Lab Utilities & Support</div>
-                  <div class="mega-compact">
-                    <a class="mega-link" href="#">Detectors & Sensors<small>Photodiodes, cameras, oscilloscopes, X-ray</small></a>
-                    <a class="mega-link" href="#">Thermal Management<small>Water chillers · compressor & Peltier</small></a>
-                    <a class="mega-link" href="#">Cleanroom & Cleaning<small>Swabs, tissues, apparel, anti-static gear</small></a>
-                    <a class="mega-link" href="#">Testing Lab Solutions<small>Spectroscopy, microscopy, calibration</small></a>
-                  </div>
-                </div>
-                <div class="mega-side">
-                  <h4>Operational procurement</h4>
-                  <p>Secondary nodes supporting primary experimental infrastructure — specify alongside core component RFQs.</p>
-                  <a class="btn btn-ruby" href="#">Request Technical Quote</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ABOUT / COMPANY -->
-        <div class="nav-item has-mega">
-          <button class="nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">
-            About <span class="chev">▾</span>
-          </button>
-          <div class="mega-panel" role="region" aria-label="About menu">
-            <div class="wrap mega-inner">
-              <div class="mega-grid-3">
-                <div>
-                  <div class="mega-col-title muted">Company</div>
-                  <a class="mega-link" href="#">About Us<small>Engineering team · manufacturing · quality process</small></a>
-                  <a class="mega-link" href="#">Contact & Credentials<small>GST · GeM Vendor ID · Pune lab coordinates</small></a>
-                  <a class="mega-link" href="#">Institutional Validation<small>Defense, space, academic references</small></a>
-                </div>
-                <div>
-                  <div class="mega-col-title muted">Engineering Hub</div>
-                  <a class="mega-link" href="#">RFQ Portal<small>Submit BOM, quantities, and application notes</small></a>
-                  <a class="mega-link" href="#">Upload Schematics<small>.dxf · .step · .pdf verification</small></a>
-                  <a class="mega-link" href="#">Knowledge Center<small>Laser specs, whitepapers, application notes</small></a>
-                </div>
-                <div class="mega-side">
-                  <h4>Pune headquarters</h4>
-                  <p>14, Om Shanti, 156/2 Mangalwar Peth, Pune – 411 011, India</p>
-                  <p style="margin-bottom:16px;font-size:0.8125rem;color:var(--text-muted)">info@sciengtech.in</p>
-                  <a class="btn btn-outline" href="#" style="width:100%;text-align:center">Contact System Engineer</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <div class="nav-search">
-        <button type="button" class="search-trigger" id="searchTrigger" aria-label="Open search">
-          <span class="search-icon">⌕</span>
-          <span>Search components, specs…</span>
-          <kbd>Ctrl K</kbd>
-        </button>
-      </div>
-    </div>
-  </header>
-
+  <div id="site-header"></div>
+  <main>
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="overline">Deep-Tech Hardware Infrastructure</div>
-        <h1>Precision Hardware for Advanced Science and Engineering.</h1>
-        <p>Sourcing certified optics, optomechanics, laser diagnostic instruments, and vacuum systems designed to withstand absolute tolerances.</p>
+        <div class="overline">Quantum Optics Infrastructure</div>
+        <h1>Integrated Quantum Systems for Research, Education, and Advanced Photonics.</h1>
+        <p>SciEngTech engineers entangled photon sources, quantum demonstration set-ups, and training kits — supported by a full bench-component catalog for optical assembly.</p>
         <div class="hero-ctas">
-          <a class="btn btn-ruby" href="#">Request Technical Quote</a>
-          <a class="btn btn-outline" href="products.html">Browse Components</a>
+          <a class="btn btn-ruby" href="engineering/rfq.html">Request Technical Quote</a>
+          <a class="btn btn-outline" href="solutions.html">Explore Quantum Solutions</a>
         </div>
       </div>
-      <div class="hero-carousel" id="heroCarousel" aria-label="Product showcase">
+      <div class="hero-carousel" id="heroCarousel" aria-label="Quantum solutions showcase">
         <div class="carousel-viewport">
-          <span class="carousel-counter" id="carouselCounter">01 / 06</span>
+          <span class="carousel-counter" id="carouselCounter">01 / 05</span>
           <button type="button" class="carousel-btn prev" id="carouselPrev" aria-label="Previous slide">‹</button>
           <button type="button" class="carousel-btn next" id="carouselNext" aria-label="Next slide">›</button>
-          <div class="carousel-slide is-active" data-title="25mm Translation Stage" data-spec="TRAVEL: 25mm · RESOLUTION: 10µm · LOAD: 5kgf">
-            <img src="assets/slides/01-translation-stage.png" alt="25mm translation stage with micrometer — SciEngTech" />
-          </div>
-          <div class="carousel-slide" data-title="Kinematic Mirror Mount" data-spec="APERTURE: 25mm · ADJUST: ±4° · MAT: ANODIZED AL">
-            <img src="assets/slides/02-kinematic-mirror-mount.png" alt="Precision kinematic mirror mount" />
-          </div>
-          <div class="carousel-slide" data-title="Dielectric Laser Mirror" data-spec="COATING: HR @ 800nm · SURFACE: λ/10 · DIA: 25mm">
-            <img src="assets/slides/03-dielectric-mirror.png" alt="800 nm dielectric laser mirror" />
-          </div>
-          <div class="carousel-slide" data-title="CF Vacuum Flange" data-spec="FLANGE: CF63 · LEAK: &lt;1e-9 Torr · MAT: 304L SS">
-            <img src="assets/slides/04-vacuum-flange.png" alt="Vacuum CF flange assembly" />
-          </div>
-          <div class="carousel-slide" data-title="Ultrafast Photodetector" data-spec="BW: 1 GHz · RESP: 0.8 A/W · CONNECTOR: SMA">
-            <img src="assets/slides/05-photodetector-module.png" alt="1 GHz photodetector module" />
-          </div>
-          <div class="carousel-slide" data-title="Optical Breadboard" data-spec="GRID: M6 · FLATNESS: ±0.1mm · MAT: ALUMINUM">
-            <img src="assets/slides/06-optical-breadboard.png" alt="Optical breadboard section" />
-          </div>
+          <div class="carousel-slide is-active" data-title="Entangled Photon Source with Integrated Laser" data-spec="FEATURE: ‘Entangled Photon Source with Integrated Laser’ | FEATURE: Entangled Photon-Pair Sources use spontaneous parametric down-conversion (SPDC) to generate a pair of photons. | FEATURE: Entangled ">
+        <img src="assets/slides/01-translation-stage.png" alt="Entangled Photon Source with Integrated Laser" />
+      </div>
+<div class="carousel-slide" data-title="SciEngTech ‘Bomb Tester’ Educational Kit" data-spec="FEATURE: Complete Photonics Kit Includes All Hardware Except Voltmeter Plus Extensive Manual and Teaching Materials | FEATURE: Easy to Assemble and Use | FEATURE: Choose from Educational Kits Containi">
+        <img src="assets/slides/01-translation-stage.png" alt="SciEngTech ‘Bomb Tester’ Educational Kit" />
+      </div>
+<div class="carousel-slide" data-title="SciEngTech ‘Michelson Interferometer’ Educational Kit" data-spec="FEATURE: Integrated Optical Source: Includes SciEngTech Solutions Green laser diode with dedicated power supply. | FEATURE: Proudly Designed and Manufactured in India">
+        <img src="assets/slides/01-translation-stage.png" alt="SciEngTech ‘Michelson Interferometer’ Educational Kit" />
+      </div>
+<div class="carousel-slide" data-title="SciEngTech ‘Quantum Eraser’ Educational Kit" data-spec="FEATURE: Concept-Driven Experimental Platform: Enables analogy of single-photon interference in a Mach–Zehnder interferometer. | FEATURE: User-Friendly Assembly: Designed for quick setup, stable align">
+        <img src="assets/slides/01-translation-stage.png" alt="SciEngTech ‘Quantum Eraser’ Educational Kit" />
+      </div>
+<div class="carousel-slide" data-title="SciEngTech Quantum Key Distribution Analogy Educational Kit" data-spec="FEATURE: User-Friendly Assembly: Designed for stable alignment, repeatable measurements, and reliable classroom operation. | FEATURE: Modular Mechanical Architecture | FEATURE: Compact and Laboratory-">
+        <img src="assets/slides/01-translation-stage.png" alt="SciEngTech Quantum Key Distribution Analogy Educational Kit" />
+      </div>
         </div>
         <div class="carousel-meta">
-          <span class="slide-title" id="carouselTitle">25mm Translation Stage</span>
-          <span class="slide-spec" id="carouselSpec">TRAVEL: 25mm · RESOLUTION: 10µm · LOAD: 5kgf</span>
+          <span class="slide-title" id="carouselTitle">Entangled Photon Source with Integrated Laser</span>
+          <span class="slide-spec" id="carouselSpec">FEATURE: ‘Entangled Photon Source with Integrated Laser’ | FEATURE: Entangled Photon-Pair Sources use spontaneous parametric down-conversion (SPDC) to generate a pair of photons. | FEATURE: Entangled </span>
         </div>
-        <div class="carousel-thumbs" id="carouselThumbs">
-          <button type="button" class="carousel-thumb is-active" data-index="0"><img src="assets/slides/01-translation-stage.png" alt="" /></button>
-          <button type="button" class="carousel-thumb" data-index="1"><img src="assets/slides/02-kinematic-mirror-mount.png" alt="" /></button>
-          <button type="button" class="carousel-thumb" data-index="2"><img src="assets/slides/03-dielectric-mirror.png" alt="" /></button>
-          <button type="button" class="carousel-thumb" data-index="3"><img src="assets/slides/04-vacuum-flange.png" alt="" /></button>
-          <button type="button" class="carousel-thumb" data-index="4"><img src="assets/slides/05-photodetector-module.png" alt="" /></button>
-          <button type="button" class="carousel-thumb" data-index="5"><img src="assets/slides/06-optical-breadboard.png" alt="" /></button>
-        </div>
+        <div class="carousel-thumbs" id="carouselThumbs"><button type="button" class="carousel-thumb is-active" data-index="0"><img src="assets/slides/01-translation-stage.png" alt="" /></button>
+<button type="button" class="carousel-thumb" data-index="1"><img src="assets/slides/01-translation-stage.png" alt="" /></button>
+<button type="button" class="carousel-thumb" data-index="2"><img src="assets/slides/01-translation-stage.png" alt="" /></button>
+<button type="button" class="carousel-thumb" data-index="3"><img src="assets/slides/01-translation-stage.png" alt="" /></button>
+<button type="button" class="carousel-thumb" data-index="4"><img src="assets/slides/01-translation-stage.png" alt="" /></button></div>
       </div>
     </div>
   </section>
-
-  <section class="hardware-strip" aria-label="Featured hardware">
+  <section class="hardware-strip" aria-label="Quantum solutions">
     <div class="wrap">
-      <h2>Field-tested hardware · spec-verified</h2>
-      <a class="strip-link" href="products.html">View complete catalog →</a>
+      <h2>Quantum set-ups &amp; training kits</h2>
+      <a class="strip-link" href="solutions.html">View all solutions →</a>
     </div>
     <div class="hardware-strip-wrap">
-      <button type="button" class="strip-scroll-btn prev" id="stripPrev" aria-label="Scroll hardware left">‹</button>
-      <button type="button" class="strip-scroll-btn next" id="stripNext" aria-label="Scroll hardware right">›</button>
-      <div class="hardware-scroll" id="hardwareScroll">
-      <a class="hardware-card" href="product.html?id=translation-stage"><img src="assets/slides/01-translation-stage.png" alt="" /><figcaption><strong>Translation Stage</strong><span>TRAVEL: 25mm</span></figcaption></a>
-      <a class="hardware-card" href="product.html?id=precision-kinematic-mirror-mount"><img src="assets/slides/02-kinematic-mirror-mount.png" alt="" /><figcaption><strong>Kinematic Mount</strong><span>APERTURE: 25mm</span></figcaption></a>
-      <a class="hardware-card" href="product.html?id=dielectric-laser-mirror-800nm"><img src="assets/slides/03-dielectric-mirror.png" alt="" /><figcaption><strong>Dielectric Mirror</strong><span>HR @ 800nm</span></figcaption></a>
-      <a class="hardware-card" href="product.html?id=cf-vacuum-flange-cf63"><img src="assets/slides/04-vacuum-flange.png" alt="" /><figcaption><strong>Vacuum Flange</strong><span>CF63</span></figcaption></a>
-      <a class="hardware-card" href="product.html?id=photodetector-ultrafast-1ghz"><img src="assets/slides/05-photodetector-module.png" alt="" /><figcaption><strong>Photodetector</strong><span>1 GHz</span></figcaption></a>
-      <a class="hardware-card" href="product.html?id=breadboards"><img src="assets/slides/06-optical-breadboard.png" alt="" /><figcaption><strong>Breadboard</strong><span>M6 GRID</span></figcaption></a>
-      </div>
+      <button type="button" class="strip-scroll-btn prev" id="stripPrev" aria-label="Scroll left">‹</button>
+      <button type="button" class="strip-scroll-btn next" id="stripNext" aria-label="Scroll right">›</button>
+      <div class="hardware-scroll" id="hardwareScroll"><a class="hardware-card" href="solutions/regenerative-delay-line.html"><img src="assets/slides/01-translation-stage.png" alt="" /><figcaption><strong>Custom Made, Turn Key, Regen</strong><span>SET-REGEN-DL</span></figcaption></a>
+<a class="hardware-card" href="solutions/entangled-photon-source.html"><img src="assets/slides/01-translation-stage.png" alt="" /><figcaption><strong>Entangled Photon Source with</strong><span>SET-EPS-IL405-810</span></figcaption></a>
+<a class="hardware-card" href="solutions/bomb-tester.html"><img src="assets/slides/01-translation-stage.png" alt="" /><figcaption><strong>SciEngTech ‘Bomb Tester’ Edu</strong><span>SET-BombTester-EDU</span></figcaption></a>
+<a class="hardware-card" href="solutions/michelson-interferometer.html"><img src="assets/slides/01-translation-stage.png" alt="" /><figcaption><strong>SciEngTech ‘Michelson Interf</strong><span>SET-MI-EDU</span></figcaption></a>
+<a class="hardware-card" href="solutions/polarized-3d-cinema.html"><img src="assets/slides/01-translation-stage.png" alt="" /><figcaption><strong>SciEngTech ‘Polarization and</strong><span>SET-Polarized3DCinema-EDU</span></figcaption></a>
+<a class="hardware-card" href="solutions/quantum-eraser.html"><img src="assets/slides/01-translation-stage.png" alt="" /><figcaption><strong>SciEngTech ‘Quantum Eraser’ </strong><span>SET-QuantumEraser-EDU</span></figcaption></a>
+<a class="hardware-card" href="solutions/fourier-optics-kit.html"><img src="assets/slides/01-translation-stage.png" alt="" /><figcaption><strong>SciEngTech Fourier Optics Ed</strong><span>SET-Fourier-EDU</span></figcaption></a>
+<a class="hardware-card" href="solutions/quantum-key-distribution.html"><img src="assets/slides/01-translation-stage.png" alt="" /><figcaption><strong>SciEngTech Quantum Key Distr</strong><span>SET-QKD-A-EDU</span></figcaption></a></div>
     </div>
   </section>
-
   <section class="proof">
     <div class="wrap">
-      <p class="proof-label">Powering research across India's leading defense, space, and academic labs.</p>
-      <div class="logos">
-        <div>DEFENSE LAB</div>
-        <div>SPACE RESEARCH</div>
-        <div>IIT / IISc</div>
-        <div>DRDO PROGRAM</div>
-        <div>INDUSTRY R&D</div>
-      </div>
+      <p class="proof-label">Powering quantum optics education and research across India's leading academic and R&amp;D laboratories.</p>
+      <div class="logos"><div>IIT / IISc</div><div>QUANTUM LAB</div><div>PHOTONICS R&amp;D</div><div>DRDO PROGRAM</div></div>
     </div>
   </section>
-
   <section class="pillars">
     <div class="wrap">
-      <div class="section-head">
-        <h2>Engineered for flawless replication. Tested for structural integrity.</h2>
-      </div>
+      <div class="section-head"><h2>Engineered for quantum demonstration. Specified for the lab bench.</h2></div>
       <div class="pillar-grid">
         <article class="pillar">
           <div class="pillar-num">01.</div>
-          <h3>OPTICS & LASER DIAGNOSTICS</h3>
-          <p>From custom laser mirrors to power meters, engineered for ultra-precise pulse and contrast measurements.</p>
-          <a href="#">View System Specs →</a>
+          <h3>QUANTUM SET-UPS</h3>
+          <p>Entangled photon sources, QKD, quantum eraser, bomb tester, and interferometry systems — turnkey for classroom and research.</p>
+          <a href="solutions/quantum-setups.html">View quantum systems →</a>
         </article>
         <article class="pillar">
           <div class="pillar-num">02.</div>
-          <h3>OPTOMECHANICS & HARDWARE</h3>
-          <p>High-stability mounting systems, custom rails, and lab tools machined to exact micron tolerances.</p>
-          <a href="#">View System Specs →</a>
+          <h3>TRAINING &amp; EDUCATION KITS</h3>
+          <p>Fourier optics, polarized 3D cinema, and custom delay-line kits for hands-on photonics education.</p>
+          <a href="solutions/training-kits.html">View training kits →</a>
         </article>
         <article class="pillar">
           <div class="pillar-num">03.</div>
-          <h3>VACUUM & HV POWER SUPPLIES</h3>
-          <p>Low-leakage vacuum technology alongside high-voltage power components for extreme lab conditions.</p>
-          <a href="#">View System Specs →</a>
+          <h3>BENCH COMPONENTS</h3>
+          <p>Opto-mechanics, motion stages, optics, lasers, and hardware — the supporting catalog for quantum bench assembly.</p>
+          <a href="components.html">Browse components →</a>
         </article>
       </div>
     </div>
   </section>
-
   <section class="data-proof">
     <div class="wrap data-inner">
       <div>
         <h2>Rigorous compliance. Guaranteed field performance.</h2>
         <div class="metric">100% Quality Inspected</div>
-        <p>Every lens, mirror, and structural mount undergoes mechanical validation before dispatch. We remove the operational uncertainty from your procurement pipeline.</p>
+        <p>Every system and component undergoes validation before dispatch. Made in India — specified for institutional procurement.</p>
       </div>
       <div class="spec-table">
         <header>INSPECTION RECORD — SAMPLE</header>
-        <div class="spec-row"><span>Surface quality</span><span>λ/10</span></div>
-        <div class="spec-row"><span>Coating</span><span>HR @ 800 nm</span></div>
-        <div class="spec-row"><span>Aperture</span><span>25.0 mm</span></div>
+        <div class="spec-row"><span>Product line</span><span>Quantum Set-Ups</span></div>
+        <div class="spec-row"><span>Origin</span><span>Made in India</span></div>
+        <div class="spec-row"><span>Procurement</span><span>RFQ / Quote</span></div>
         <div class="spec-row"><span>Status</span><span>PASS</span></div>
       </div>
     </div>
   </section>
-
   <section class="cta-band">
     <div class="wrap">
-      <h2>Ready to configure your system requirements?</h2>
-      <p>Upload your engineering schematics or request custom component specifications directly from our specialists.</p>
+      <h2>Ready to configure your quantum lab requirements?</h2>
+      <p>Upload engineering schematics or request a technical quote for quantum systems and bench components.</p>
       <p class="file-types">.dxf · .step · .pdf</p>
       <div class="hero-ctas">
-        <a class="btn btn-ruby" href="#">Upload Tech Specs & Connect</a>
-        <a class="btn btn-outline" href="#">Contact System Engineer</a>
+        <a class="btn btn-ruby" href="engineering/upload.html">Upload Tech Specs &amp; Connect</a>
+        <a class="btn btn-outline" href="company/contact.html">Contact System Engineer</a>
       </div>
     </div>
   </section>
-
-  <footer>
-    <div class="wrap">
-      <div class="footer-grid">
-        <div>
-          <h4>SciEngTech</h4>
-          <p>Precision hardware for mission-critical labs. Pune, India.</p>
-        </div>
-        <div>
-          <h4>Engineering</h4>
-          <a href="#">RFQ Portal</a>
-          <a href="#">Upload Schematics</a>
-          <a href="#">Knowledge Center</a>
-        </div>
-        <div>
-          <h4>Catalog</h4>
-          <a href="products.html">Components</a>
-          <a href="#">Solutions</a>
-          <a href="#">Utilities</a>
-        </div>
-        <div>
-          <h4>Credentials</h4>
-          <a href="#">GST · GeM Vendor ID</a>
-          <a href="#">Lab Coordinates</a>
-        </div>
-      </div>
-      <p>© 2026 Sci.Eng.Tech Solutions</p>
-    </div>
-  </footer>
-
-  <div class="search-panel" id="searchPanel" aria-hidden="true" role="dialog" aria-label="Search catalog">
-    <div class="search-backdrop" id="searchBackdrop"></div>
-    <div class="search-dialog">
-      <div class="search-dialog-head">
-        <span aria-hidden="true">⌕</span>
-        <input type="search" id="globalSearchInput" placeholder="Search components, specifications, wavelengths…" autocomplete="off" />
-        <button type="button" class="search-close" id="searchClose" aria-label="Close search">×</button>
-      </div>
-      <div id="searchStatus"></div>
-      <div class="search-results-wrap" id="searchResults"></div>
-    </div>
-  </div>
-
+  <script src="js/home-carousel.js"></script></main>
+  <div id="site-footer"></div>
+  <div id="site-search"></div>
+  <script>window.__SITE_BASE__ = "";</script>
   <script src="js/catalog-search.js"></script>
   <script src="js/header-search.js"></script>
-  <script>
-    (function () {
-      const slides = [...document.querySelectorAll('.carousel-slide')];
-      const thumbs = [...document.querySelectorAll('.carousel-thumb')];
-      const titleEl = document.getElementById('carouselTitle');
-      const specEl = document.getElementById('carouselSpec');
-      const counterEl = document.getElementById('carouselCounter');
-      let index = 0;
-      let timer;
-
-      function pad(n) { return String(n).padStart(2, '0'); }
-
-      function goTo(i) {
-        index = (i + slides.length) % slides.length;
-        slides.forEach((s, j) => s.classList.toggle('is-active', j === index));
-        thumbs.forEach((t, j) => t.classList.toggle('is-active', j === index));
-        const active = slides[index];
-        titleEl.textContent = active.dataset.title;
-        specEl.textContent = active.dataset.spec;
-        counterEl.textContent = pad(index + 1) + ' / ' + pad(slides.length);
-      }
-
-      function next() { goTo(index + 1); }
-      function prev() { goTo(index - 1); }
-      function resetTimer() {
-        clearInterval(timer);
-        timer = setInterval(next, 5000);
-      }
-
-      document.getElementById('carouselNext').addEventListener('click', () => { next(); resetTimer(); });
-      document.getElementById('carouselPrev').addEventListener('click', () => { prev(); resetTimer(); });
-      thumbs.forEach((t) => t.addEventListener('click', () => {
-        goTo(Number(t.dataset.index));
-        resetTimer();
-      }));
-
-      resetTimer();
-    })();
-
-    (function () {
-      const strip = document.getElementById('hardwareScroll');
-      const step = 296;
-      document.getElementById('stripPrev').addEventListener('click', () => {
-        strip.scrollBy({ left: -step, behavior: 'smooth' });
-      });
-      document.getElementById('stripNext').addEventListener('click', () => {
-        strip.scrollBy({ left: step, behavior: 'smooth' });
-      });
-    })();
-  </script>
+  <script src="js/site-chrome.js"></script>
 </body>
 </html>

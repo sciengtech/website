@@ -6,6 +6,7 @@
   'use strict';
 
   var products = null;
+  var components = null;
   var byId = null;
   var tokenIndex = null;
   var loadPromise = null;
@@ -46,21 +47,22 @@
     if (products) return Promise.resolve(products);
     if (loadPromise) return loadPromise;
 
-    var root = typeof basePath === 'string' ? basePath : resolveBasePath();
-    loadPromise = fetch(root + 'data/products.json', { cache: 'force-cache' })
-      .then(function (res) {
-        if (!res.ok) throw new Error('Failed to load product catalog');
-        return res.json();
-      })
-      .then(function (data) {
-        products = data.products || [];
-        byId = Object.create(null);
-        for (var i = 0; i < products.length; i++) {
-          byId[products[i].id] = products[i];
-        }
-        tokenIndex = buildTokenIndex(products);
-        return products;
-      });
+    var root = typeof basePath === 'string' ? basePath : (window.__SITE_BASE__ || resolveBasePath());
+    loadPromise = Promise.all([
+      fetch(root + 'data/search-index.json', { cache: 'force-cache' }).then(function (r) { return r.json(); }),
+      fetch(root + 'data/products.json', { cache: 'force-cache' }).then(function (r) { return r.json(); })
+    ]).then(function (pair) {
+      var searchData = pair[0];
+      var productData = pair[1];
+      products = searchData.items || [];
+      components = productData.products || [];
+      byId = Object.create(null);
+      for (var i = 0; i < components.length; i++) {
+        byId[components[i].id] = components[i];
+      }
+      tokenIndex = buildTokenIndex(products);
+      return products;
+    });
 
     return loadPromise;
   }
@@ -103,6 +105,7 @@
     options = options || {};
     var limit = options.limit == null ? 12 : options.limit;
     var category = options.category || null;
+    var typeFilter = options.type || null;
 
     if (!products) return [];
 
@@ -110,6 +113,7 @@
     if (!terms.length) {
       var all = products.slice();
       if (category) all = all.filter(function (p) { return p.category === category; });
+      if (typeFilter) all = all.filter(function (p) { return p.type === typeFilter; });
       return all
         .sort(function (a, b) { return (b.featured ? 1 : 0) - (a.featured ? 1 : 0) || a.name.localeCompare(b.name); })
         .slice(0, limit);
@@ -136,6 +140,7 @@
     for (var i = 0; i < indices.length; i++) {
       var product = products[indices[i]];
       if (category && product.category !== category) continue;
+      if (typeFilter && product.type !== typeFilter) continue;
       var score = scoreProduct(product, terms);
       if (score >= 0) results.push({ product: product, score: score });
     }
@@ -152,10 +157,10 @@
   }
 
   function getCategories() {
-    if (!products) return [];
+    if (!components) return [];
     var map = Object.create(null);
-    for (var i = 0; i < products.length; i++) {
-      var p = products[i];
+    for (var i = 0; i < components.length; i++) {
+      var p = components[i];
       if (!map[p.category]) {
         map[p.category] = { id: p.category, label: p.categoryLabel, count: 0 };
       }
@@ -167,7 +172,12 @@
   }
 
   function productUrl(id, basePath) {
-    var root = basePath || '';
+    var root = basePath || window.__SITE_BASE__ || '';
+    for (var i = 0; i < (products || []).length; i++) {
+      if (products[i].id === id && products[i].url) {
+        return root + products[i].url;
+      }
+    }
     return root + 'product.html?id=' + encodeURIComponent(id);
   }
 
@@ -177,6 +187,6 @@
     getById: getById,
     getCategories: getCategories,
     productUrl: productUrl,
-    getAll: function () { return products ? products.slice() : []; }
+    getAll: function () { return components ? components.slice() : []; }
   };
 })(typeof window !== 'undefined' ? window : global);
