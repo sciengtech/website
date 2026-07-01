@@ -17,11 +17,41 @@ function cleanName(name) {
   return String(name || '').replace(/^[\u2018\u2019'']+|[\u2018\u2019'']+$/g, '').trim();
 }
 
+function productImages(p) {
+  if (p.images?.length) return p.images;
+  if (p.image) return [p.image];
+  return [];
+}
+
 function renderMedia(p, base) {
-  if (p.image) {
-    return `<img src="${base}${esc(p.image)}" alt="${esc(cleanName(p.name))}" />`;
+  const images = productImages(p);
+  const name = esc(cleanName(p.name));
+  if (!images.length) {
+    return '<span class="placeholder" aria-hidden="true">◇</span>';
   }
-  return '<span class="placeholder" aria-hidden="true">◇</span>';
+
+  const mainSrc = p.image || images[0];
+  const stage = `<div class="product-media-stage">
+    <img src="${base}${esc(mainSrc)}" alt="${name}" data-gallery-main />
+  </div>`;
+
+  if (images.length === 1) {
+    return `<div class="product-media-gallery" data-product-gallery>${stage}</div>`;
+  }
+
+  const thumbs = images
+    .map((src, i) => {
+      const active = src === mainSrc ? ' is-active' : '';
+      return `<button type="button" class="product-media-thumb${active}" data-gallery-src="${base}${esc(src)}" aria-label="View image ${i + 1}">
+        <img src="${base}${esc(src)}" alt="" loading="lazy" />
+      </button>`;
+    })
+    .join('');
+
+  return `<div class="product-media-gallery" data-product-gallery>
+    ${stage}
+    <div class="product-media-thumbs" role="list">${thumbs}</div>
+  </div>`;
 }
 
 function renderAddToCartBtn(p, opts = {}) {
@@ -311,6 +341,19 @@ export function renderProductDetail(p, { base = '' } = {}) {
 
 export function initProductDetailInteractions(root) {
   if (!root) return;
+  root.querySelectorAll('[data-product-gallery]').forEach((gallery) => {
+    const main = gallery.querySelector('[data-gallery-main]');
+    if (!main) return;
+    gallery.querySelectorAll('.product-media-thumb').forEach((thumb) => {
+      thumb.addEventListener('click', () => {
+        const src = thumb.getAttribute('data-gallery-src');
+        if (!src) return;
+        main.src = src;
+        gallery.querySelectorAll('.product-media-thumb').forEach((t) => t.classList.remove('is-active'));
+        thumb.classList.add('is-active');
+      });
+    });
+  });
   root.querySelectorAll('[data-rfq-tabs]').forEach((wrap) => {
     wrap.querySelectorAll('.rfq-tab').forEach((tab) => {
       tab.addEventListener('click', () => {

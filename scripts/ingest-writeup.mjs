@@ -13,47 +13,24 @@ import {
 } from './parse-writeup.mjs';
 import { patchSolutionsCatalog } from './patch-solutions-catalog.mjs';
 import { solutionGroupLabel } from './solution-groups.mjs';
+import {
+  CATEGORY_MAP,
+  SOLUTION_SLUGS,
+  cleanName,
+  slugify,
+  getTopCategory,
+  isSolutionTopCategory,
+  solutionGroupForTopCategory,
+  resolveProductId,
+  findImages,
+  walkDocx,
+} from './writeup-catalog-map.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const WRITEUP = path.join(ROOT, '_writeup', 'Webpage_Writeup');
 const ASSETS_OUT = path.join(ROOT, 'assets', 'products');
 const DATA_OUT = path.join(ROOT, 'data');
-
-const SOLUTION_SLUGS = {
-  'Entangled Photon Source with Integrated Laser.docx': 'entangled-photon-source',
-  'Quantum Eraser.docx': 'quantum-eraser',
-  'QAKD.docx': 'quantum-key-distribution',
-  'Bomb Tester.docx': 'bomb-tester',
-  'Michelson Interferometer.docx': 'michelson-interferometer',
-  'Fourier Optics Educational Kit.docx': 'fourier-optics-kit',
-  '3D Cinema.docx': 'polarized-3d-cinema',
-  'Custom Made,Turn Key,Regenerative cavity-like laser delay line.docx': 'regenerative-delay-line',
-};
-
-const CATEGORY_MAP = {
-  'Opto-Mechanics': { slug: 'opto-mechanics', label: 'Opto-Mechanics' },
-  'Motion and Positioning': { slug: 'motion-and-positioning', label: 'Motion and Positioning' },
-  Hardware: { slug: 'hardware', label: 'Hardware' },
-  'Fibre Optics': { slug: 'fibre-optics', label: 'Fibre Optics' },
-  Lasers: { slug: 'lasers', label: 'Lasers' },
-  Optics: { slug: 'optics', label: 'Optics' },
-};
-
-function cleanName(s) {
-  return String(s)
-    .replace(/^[\u2018\u2019'']+|[\u2018\u2019'']+$/g, '')
-    .trim();
-}
-
-function slugify(name) {
-  return name
-    .toLowerCase()
-    .replace(/\.docx$/i, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-    .slice(0, 80);
-}
 
 function structuredFields(text, { isSolution, categorySlug }) {
   const parsed = parseWriteupBody(text, { isSolution, categorySlug });
@@ -64,14 +41,6 @@ function structuredFields(text, { isSolution, categorySlug }) {
       .replace(/-/g, '')
       .slice(0, 12)}`;
   return { ...parsed, sku };
-}
-
-function findImages(dir) {
-  if (!fs.existsSync(dir)) return [];
-  return fs
-    .readdirSync(dir)
-    .filter((f) => /\.(png|jpe?g|webp)$/i.test(f))
-    .map((f) => path.join(dir, f));
 }
 
 function copyAsset(src, id) {
@@ -111,30 +80,6 @@ async function parseDocx(filePath) {
   return result.value.replace(/\n{3,}/g, '\n\n').trim();
 }
 
-function getTopCategory(relPath) {
-  const parts = relPath.split(path.sep);
-  for (const key of Object.keys(CATEGORY_MAP)) {
-    if (parts.includes(key)) return key;
-  }
-  if (parts.includes('Quantum Set-Up')) return 'Quantum Set-Up';
-  if (parts.includes('Training Kit')) return 'Training Kit';
-  return parts[0] || 'Other';
-}
-
-async function walkDocx(dir, base = '') {
-  const items = [];
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name);
-    const rel = base ? path.join(base, entry.name) : entry.name;
-    if (entry.isDirectory()) {
-      items.push(...(await walkDocx(full, rel)));
-    } else if (/\.docx$/i.test(entry.name)) {
-      items.push({ full, rel, name: entry.name, dir: dir });
-    }
-  }
-  return items;
-}
-
 async function main() {
   if (!fs.existsSync(WRITEUP)) {
     console.error('Writeup folder not found:', WRITEUP);
@@ -145,8 +90,8 @@ async function main() {
   fs.mkdirSync(DATA_OUT, { recursive: true });
 
   const docxFiles = await walkDocx(WRITEUP);
-  const solutions = [];
-  const components = [];
+  const solutionsById = new Map();
+  const componentsById = new Map();
 
   const prevCatalogPath = path.join(DATA_OUT, 'catalog.json');
   const prevImages = Object.create(null);
@@ -171,10 +116,7 @@ async function main() {
   for (const file of docxFiles) {
     const text = await parseDocx(file.full);
     const topCat = getTopCategory(file.rel);
-    const isSolution =
-      topCat === 'Quantum Set-Up' ||
-      topCat === 'Training Kit' ||
-      SOLUTION_SLUGS[file.name];
+    const isSolution = isSolutionTopCategory(topCat) || Boolean(SOLUTION_SLUGS[file.name]);
 
     const catMeta = !isSolution
       ? CATEGORY_MAP[topCat] || { slug: slugify(topCat), label: topCat }
@@ -193,9 +135,11 @@ async function main() {
         .find((l) => l.length > 40 && !/^SciEngTech/i.test(l)) ||
       name;
 
-    const id = isSolution
-      ? SOLUTION_SLUGS[file.name] || slugify(name)
-      : slugify(name);
+    const id = resolveProductId({
+      fileName: file.name,
+      topCat,
+      parsedName: name,
+    });
 
     const images = findImages(path.dirname(file.full));
     const image = resolveProductImage(id, images.length ? copyAsset(images[0], id) : null);
@@ -229,18 +173,20 @@ async function main() {
     item._search = makeSearch(item);
 
     if (isSolution) {
-      item.solutionGroup =
-        topCat === 'Training Kit' ? 'training-kits' : 'quantum-setups';
+      item.solutionGroup = solutionGroupForTopCategory(topCat);
       item.categoryLabel = solutionGroupLabel(item.solutionGroup);
       item.solutionUrl = `solutions/${id}.html`;
-      solutions.push(item);
+      solutionsById.set(id, item);
     } else {
       item.category = catMeta.slug;
       item.categoryLabel = catMeta.label;
       item.categoryPath = `/components/${catMeta.slug}.html`;
-      components.push(item);
+      componentsById.set(id, item);
     }
   }
+
+  const solutions = [...solutionsById.values()];
+  const components = [...componentsById.values()];
 
   const catalog = {
     version: 2,

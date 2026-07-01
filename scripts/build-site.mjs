@@ -23,6 +23,7 @@ const CATEGORIES = [
   { slug: 'fibre-optics', label: 'Fibre Optics' },
   { slug: 'lasers', label: 'Lasers' },
   { slug: 'optics', label: 'Optics' },
+  { slug: 'lab-accessories', label: 'Lab Accessories' },
 ];
 
 const CATEGORY_COVER_PREF = {

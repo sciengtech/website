@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writeup image review | SciEngTech</title>
+  <style>
+    :root { --bg: #0E1118; --elevated: #161B26; --border: #2A3142; --accent: #E11D48; --muted: #64748B; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: #fff; margin: 0; padding-bottom: 120px; }
+    .toolbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(14,17,24,0.97); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border); padding: 14px 24px;
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+    }
+    .toolbar h1 { font-size: 1rem; color: var(--accent); margin: 0; }
+    .toolbar-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .btn {
+      padding: 8px 14px; border-radius: 6px; border: 1px solid var(--border);
+      background: var(--elevated); color: #fff; font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn-primary { background: var(--accent); border-color: var(--accent); }
+    .progress { font-size: 13px; color: var(--muted); }
+    .wrap { max-width: 1400px; margin: 0 auto; padding: 24px; }
+    .lead { color: #94a3b8; margin-bottom: 24px; line-height: 1.5; }
+    .filter-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+    .filter-row input, .filter-row select {
+      padding: 8px 12px; border-radius: 6px; border: 1px solid var(--border);
+      background: var(--elevated); color: #fff; font-size: 13px;
+    }
+    .product-block {
+      background: var(--elevated); border: 1px solid var(--border); border-radius: 10px;
+      padding: 20px; margin-bottom: 24px;
+    }
+    .product-block.is-done { border-color: rgba(34,197,94,0.4); }
+    .product-block.no-images { opacity: 0.75; }
+    .product-head { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; }
+    .product-title { font-size: 1rem; margin: 0 0 4px; }
+    .tag { display: inline-block; background: rgba(225,29,72,0.15); color: var(--accent); padding: 2px 8px; border-radius: 4px; font-size: 10px; text-transform: uppercase; margin-right: 6px; }
+    .pid { font-size: 12px; color: var(--muted); font-family: ui-monospace, monospace; }
+    .decision-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .decision-row label {
+      display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px;
+      border: 1px solid var(--border); border-radius: 999px; font-size: 12px; cursor: pointer;
+    }
+    .decision-row input { accent-color: var(--accent); }
+    .decision-row label:has(input:checked) { border-color: var(--accent); background: rgba(225,29,72,0.12); }
+    .notes { width: 100%; max-width: 480px; margin-top: 10px; padding: 8px 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); color: #fff; font-size: 13px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+    .img-card {
+      background: #000; border: 2px solid var(--border); border-radius: 8px; overflow: hidden; cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    .img-card:hover { border-color: #94a3b8; }
+    .img-card.is-selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+    .img-card img { width: 100%; aspect-ratio: 4/3; object-fit: contain; display: block; }
+    .img-card figcaption { padding: 8px 10px; font-size: 11px; color: #94a3b8; background: var(--elevated); }
+    .source { font-size: 11px; color: var(--muted); margin-top: 12px; word-break: break-all; }
+    .empty { color: var(--muted); font-size: 13px; font-style: italic; }
+    .export-panel {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 101;
+      background: var(--elevated); border-top: 1px solid var(--border); padding: 16px 24px;
+      display: none;
+    }
+    .export-panel.is-open { display: block; }
+    .export-panel textarea {
+      width: 100%; min-height: 140px; margin-top: 10px; padding: 12px;
+      border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: #fff;
+      font-family: ui-monospace, monospace; font-size: 12px;
+    }
+    .export-panel-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <div>
+      <h1>Client writeup — image selection</h1>
+      <p class="progress" id="progressText">0 / 0 reviewed</p>
+    </div>
+    <div class="toolbar-actions">
+      <button type="button" class="btn" id="btnSave">Save locally</button>
+      <button type="button" class="btn btn-primary" id="btnExport">Copy for Cursor</button>
+      <button type="button" class="btn" id="btnDownload">Download JSON</button>
+      <button type="button" class="btn" id="btnClear">Clear all</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p class="lead">
+      Images from the client <strong>Webpage_Writeup</strong> folder. For each product choose
+      <strong>Use</strong>, <strong>Revamp</strong>, or <strong>Skip</strong>. Click an image to set it as primary.
+      Then <strong>Copy for Cursor</strong> and paste into chat to apply selections to the live catalog.
+    </p>
+    <div class="filter-row">
+      <input type="search" id="searchInput" placeholder="Search by name or id…" />
+      <select id="filterType">
+        <option value="">All types</option>
+        <option value="component">Components</option>
+        <option value="solution">Solutions</option>
+      </select>
+      <select id="filterStatus">
+        <option value="">All status</option>
+        <option value="pending">Not reviewed</option>
+        <option value="done">Reviewed</option>
+        <option value="no-images">No images</option>
+      </select>
+    </div>
+    <div id="products"></div>
+  </div>
+
+  <div class="export-panel" id="exportPanel">
+    <div class="export-panel-head">
+      <strong>Copy this and paste into Cursor chat:</strong>
+      <button type="button" class="btn" id="btnCloseExport">Close</button>
+    </div>
+    <textarea id="exportText" readonly></textarea>
+    <button type="button" class="btn btn-primary" id="btnCopyAgain" style="margin-top:8px">Copy again</button>
+  </div>
+
+  <script>
+    const CATALOG = [{"id":"30-mm-cage-system-alignment-plate","name":"30 mm Cage System Alignment Plate","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/30-mm-cage-system-alignment-plate","images":["Image.png"],"writeupPath":"Opto-Mechanics/Alignment Plate/Cage Plate/Cage Plate Alignment Plate.docx"},{"id":"adapter","name":"Adapter","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/adapter","images":["Adapter.png"],"writeupPath":"Opto-Mechanics/Adapter/Adapter.docx"},{"id":"allen-bolt","name":"Allen Bolt","type":"component","category":"Hardware","folder":"assets/imported/writeup/allen-bolt","images":["Allen Bolt.png","Allen Bolt.webp"],"writeupPath":"Hardware/Allen Bolt/Allen Bolt.docx"},{"id":"aluminium-laser-safety-screen-beam-block-screen-optical-safety-barrier-optical-s","name":"Aluminium/Laser Safety Screen (Beam Block Screen, Optical Safety Barrier, Optical safety screen)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/aluminium-laser-safety-screen-beam-block-screen-optical-safety-barrier-optical-s","images":["aluminium protective screen_4.png","aluminium protective screen_5.png","Image_1.png","Image_2.png"],"writeupPath":"Opto-Mechanics/Laser Safety Screen/Laser Safety Screen.docx"},{"id":"angle-clamp-rigid-assembly-clamps","name":"Angle Clamp (Rigid Assembly Clamps)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/angle-clamp-rigid-assembly-clamps","images":["Overall Post clamp image.png","Post clamp 180 degree.png","Post Clamp 360 degree.png","Post Clamp 45 degree.png","Post Clamp 90 degree.png"],"writeupPath":"Opto-Mechanics/Post Clamp/Post Clamp.docx"},{"id":"base-mounting-plate-for-linear-stage","name":"Base Mounting Plate for Linear Stage","type":"component","category":"Motion and Positioning","folder":"assets/imported/writeup/base-mounting-plate-for-linear-stage","images":[],"writeupPath":"Motion and Positioning/Linear Stage/Base Mounting Plate for Linear Stages.docx"},{"id":"baseplate","name":"BasePlate","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/baseplate","images":["Base Plate_H,SQ,U.png","base plate_H.png","Base Plate_SQ.png","Base Plate_U.png"],"writeupPath":"Opto-Mechanics/BasePlate/BasePlate.docx"},{"id":"breadboard-optomechanical-platform-optical-mounting-board-precision-mounting-boa","name":"BreadBoard(Optomechanical Platform, Optical Mounting Board, Precision Mounting Board)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/breadboard-optomechanical-platform-optical-mounting-board-precision-mounting-boa","images":["breadboard_3.png","rubber damping feet.jpeg"],"writeupPath":"Opto-Mechanics/BreadBoard&Rubber DampingFeet/BreadBoard.docx"},{"id":"cage-assembly-rod-optical-cage-rod-optomechanical-cage-rods-cage-connecting-rods","name":"Cage Assembly Rod (Optical Cage Rod, Optomechanical cage rods,Cage connecting rods)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/cage-assembly-rod-optical-cage-rod-optomechanical-cage-rods-cage-connecting-rods","images":["Image.png"],"writeupPath":"Opto-Mechanics/Cage Assembly Rod/Cage Assembly Rod.docx"},{"id":"cage-plate","name":"Cage Plate","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/cage-plate","images":[],"writeupPath":"Opto-Mechanics/Cage Plate/Cage Plate.docx"},{"id":"clamping-arm-mounting-clamp-arm-support-arm-clamp-mechanical-clamping-arm-opticl","name":"Clamping Arm(Mounting Clamp Arm, Support Arm Clamp, Mechanical Clamping Arm, OptiClamp Arm)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/clamping-arm-mounting-clamp-arm-support-arm-clamp-mechanical-clamping-arm-opticl","images":["Image.png"],"writeupPath":"Opto-Mechanics/ClampingArm/Clamping Arm.docx"},{"id":"clamping-fork-y-clamp-dual-prong-clamp-optic-capture-fork-component-holding-fork","name":"Clamping Fork (Y-Clamp, Dual-Prong Clamp, Optic Capture Fork, Component Holding Fork)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/clamping-fork-y-clamp-dual-prong-clamp-optic-capture-fork-component-holding-fork","images":["clamping fork.png"],"writeupPath":"Opto-Mechanics/ClampingFork/Clamping Fork.docx"},{"id":"cleanroom-and-optics-cleaning-solutions","name":"Cleanroom and Optics Cleaning Solutions","type":"component","category":"Lab Accessories","folder":"assets/imported/writeup/cleanroom-and-optics-cleaning-solutions","images":["CottonTipApplicators.png","CottonTipApplicators1.png","Optics Cleaning Cloth.jpeg","Optics cleaning tissue.jpg"],"writeupPath":"Lab Accessories/SET Cleaning Material.docx"},{"id":"collars","name":"Collars","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/collars","images":["Collar_3.png","Collar_4.png","Slipon Collar.png"],"writeupPath":"Opto-Mechanics/PostCollar/Collars.docx"},{"id":"compact-variable-height-clamp","name":"Compact Variable Height Clamp","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/compact-variable-height-clamp","images":[],"writeupPath":"Opto-Mechanics/Compact Variable Height Clamp/Compact Variable Height Clamp.docx"},{"id":"cube-beamsplitter-mount-optical-cube-mount-beamsplitter-cube-holder-cube-optics-","name":"Cube Beamsplitter Mount (Optical Cube Mount, Beamsplitter Cube Holder ,Cube Optics Mount)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/cube-beamsplitter-mount-optical-cube-mount-beamsplitter-cube-holder-cube-optics-","images":["Image.png","Image_1.jpg"],"writeupPath":"Opto-Mechanics/Cube Beamsplitter Mount/Cube Beamsplitter Mount.docx"},{"id":"regenerative-delay-line","name":"Custom Made, Turn Key, Regenerative cavity-like Laser Delay Line","type":"solution","category":"State of art Setup","folder":"assets/imported/writeup/regenerative-delay-line","images":[],"writeupPath":"State of art Setup/CustomMadeRegenerativeDelayLine/Custom Made,Turn Key,Regenerative cavity-like laser delay line.docx"},{"id":"diode-laser","name":"Diode Laser","type":"component","category":"Lasers","folder":"assets/imported/writeup/diode-laser","images":["Laser Diode.png"],"writeupPath":"Lasers/Laser Diode/Diode laser.docx"},{"id":"entangled-photon-source","name":"Entangled Photon Source with Integrated Laser","type":"solution","category":"Quantum Set-Up","folder":"assets/imported/writeup/entangled-photon-source","images":["IMG_20250330_232742697_HDR.jpg","IMG_20250330_233210017_HDR.jpg","IMG_20250330_233403561_HDR.jpg","IMG_20250330_233410607.jpg"],"writeupPath":"Quantum Set-Up/Single Photon Source/Entangled Photon Source with Integrated Laser.docx"},{"id":"fiber-optics-collimator","name":"Fiber Optics Collimator","type":"component","category":"Fibre Optics","folder":"assets/imported/writeup/fiber-optics-collimator","images":["fiber collimator (1).png","fiber collimator.png","fiber collimator_5.png"],"writeupPath":"Fibre Optics/Fiber Optics Collimator.docx"},{"id":"flip-mount-adapter-beam-diversion-mount-beam-redirect-mount-flipalign-mount","name":"Flip Mount Adapter (Beam Diversion Mount, Beam Redirect Mount, FlipAlign Mount)","type":"component","category":"Motion and Positioning","folder":"assets/imported/writeup/flip-mount-adapter-beam-diversion-mount-beam-redirect-mount-flipalign-mount","images":["Flip Mount.png"],"writeupPath":"Motion and Positioning/Flip Mount Adapter and Platform/FlipMountAdapter.docx"},{"id":"hex-keys","name":"Hex Keys","type":"component","category":"Hardware","folder":"assets/imported/writeup/hex-keys","images":["hex key.jpeg","Hex Keys.png"],"writeupPath":"Hardware/Hex Keys/Hex Keys.docx"},{"id":"hex-locking-thumbscrew","name":"Hex Locking Thumbscrew","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/hex-locking-thumbscrew","images":["Image.png","knobs (1).png","knobs.png"],"writeupPath":"Opto-Mechanics/Hex Locking Thumscrew/Hex Locking Thumbscrew.docx"},{"id":"hex-nut","name":"Hex Nut","type":"component","category":"Hardware","folder":"assets/imported/writeup/hex-nut","images":["nuts_1.png","nuts_2.png","nuts_3.png"],"writeupPath":"Hardware/Hex Nut/Hex Nut.docx"},{"id":"kinematic-mirror-mount-kinematic-optic-mount-precision-mirror-mount-kinematic-ro","name":"Kinematic Mirror Mount (Kinematic Optic Mount, Precision Mirror Mount, Kinematic Rotation Mount)","type":"component","category":"Motion and Positioning","folder":"assets/imported/writeup/kinematic-mirror-mount-kinematic-optic-mount-precision-mirror-mount-kinematic-ro","images":["Image.png","kinematic mirror mount_2.png"],"writeupPath":"Motion and Positioning/KinematicMirrorMount/Kinematic Mirror Mount.docx"},{"id":"kinematic-platform-mount-precision-optic-positioning-platform-kinematic-alignmen","name":"Kinematic Platform Mount (Precision Optic Positioning Platform, Kinematic Alignment Base, Precision Optomechanical Platform)","type":"component","category":"Motion and Positioning","folder":"assets/imported/writeup/kinematic-platform-mount-precision-optic-positioning-platform-kinematic-alignmen","images":["Kinematic Platform mount.png"],"writeupPath":"Motion and Positioning/KinematicPlatformMount/Kinematic Platform Mount.docx"},{"id":"labjack","name":"Labjack","type":"component","category":"Motion and Positioning","folder":"assets/imported/writeup/labjack","images":["Labjack.png"],"writeupPath":"Motion and Positioning/Labjack/Labjack.docx"},{"id":"laser-beam-alignment-tool","name":"Laser Beam Alignment Tool","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/laser-beam-alignment-tool","images":["Image.png"],"writeupPath":"Opto-Mechanics/Laser Beam Alignment Tool/Laser Beam Alignment Tool.docx"},{"id":"lens-mount-alignment-plate-optical-axis-alignment-plate-for-lens-mounts","name":"Lens Mount Alignment Plate (Optical Axis Alignment Plate for Lens Mounts)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/lens-mount-alignment-plate-optical-axis-alignment-plate-for-lens-mounts","images":[],"writeupPath":"Opto-Mechanics/Alignment Plate/Lens Mount/Alignment Plate.docx"},{"id":"lens-mount-lens-holder-optical-lens-mount-fixed-lens-holder-lens-housing-opticel","name":"Lens Mount(Lens Holder, Optical Lens Mount, Fixed Lens Holder, Lens Housing, OptiCell Lens Mount)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/lens-mount-lens-holder-optical-lens-mount-fixed-lens-holder-lens-housing-opticel","images":["Lens mount.png","Lens Mount_1.png"],"writeupPath":"Opto-Mechanics/Lens Mount/Lens Mount.docx"},{"id":"lens-tube-with-retaining-ring","name":"Lens Tube with retaining ring","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/lens-tube-with-retaining-ring","images":["Image 1.png","Image 2.png"],"writeupPath":"Opto-Mechanics/Lens Tube with Retaining Ring/Lens Tube with retainig ring.docx"},{"id":"linear-stage","name":"Linear Stage","type":"component","category":"Motion and Positioning","folder":"assets/imported/writeup/linear-stage","images":[],"writeupPath":"Motion and Positioning/Linear Stage/Linear Stage.docx"},{"id":"magnetic-and-non-magnetic-studded-base-adapter-magnetic-post-adapter-magnetic-in","name":"Magnetic and Non-Magnetic Studded Base Adapter (Magnetic Post Adapter, Magnetic Interface Adapter,Magnetic Support Base, MagBas Adapter)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/magnetic-and-non-magnetic-studded-base-adapter-magnetic-post-adapter-magnetic-in","images":["Pedestal Base Adapter.png","Pedestal Base Adapter_Magnetic.png"],"writeupPath":"Opto-Mechanics/Magnetic and Non Magnetic BaseAdapter/Magnetic and Non-magnetic Studded Base Adapter.docx"},{"id":"magnetic-beam-height-ruler","name":"Magnetic Beam Height Ruler","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/magnetic-beam-height-ruler","images":["Magnetic Beam Height Ruler.png","Magnetic Beam Height Ruler_1.png","Magnetic Beam Height Ruler_2.png","Magnetic Beam Height Ruler_3.png"],"writeupPath":"Opto-Mechanics/Magnetic Beam Ht Ruler/Magnetic Beam Ht Ruler.docx"},{"id":"mountable-tool-kit","name":"Mountable Tool Kit","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/mountable-tool-kit","images":[],"writeupPath":"Opto-Mechanics/12 piece Mountable Tool Caddy Kit/Mountable Tool Kit.docx"},{"id":"optical-post-optomechanical-support-post-mounting-post-optical-mounting-rod-thre","name":"Optical Post(Optomechanical Support Post, Mounting Post, Optical Mounting Rod,Threaded Mounting Post)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/optical-post-optomechanical-support-post-mounting-post-optical-mounting-rod-thre","images":["Optical post_1.png","optical post_2.png"],"writeupPath":"Opto-Mechanics/Post/Optical Post.docx"},{"id":"pedestal-post-holder-pedestal-post-mount-fixed-height-post-mount-rigid-post-pede","name":"Pedestal Post Holder(Pedestal Post Mount,Fixed Height Post Mount, Rigid Post Pedestal)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/pedestal-post-holder-pedestal-post-mount-fixed-height-post-mount-rigid-post-pede","images":["Image.png","post holder with pedestal adaptor.png"],"writeupPath":"Opto-Mechanics/Pedestal Post Holder/Pedestal Post Holder.docx"},{"id":"post-holder-adjustable-post-mount-vertical-post-mount","name":"Post Holder(Adjustable Post Mount,Vertical Post Mount)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/post-holder-adjustable-post-mount-vertical-post-mount","images":["post holder with magnetic base.png","Post Holder with pedestal adaptor.png","post holder.jpg","Post Holder.png","Universal Post Holder.png"],"writeupPath":"Opto-Mechanics/Post Holder and Universal Post Holder/Post Holder.docx"},{"id":"right-angle-bracket-for-linear-stage","name":"Right Angle bracket for Linear Stage","type":"component","category":"Motion and Positioning","folder":"assets/imported/writeup/right-angle-bracket-for-linear-stage","images":[],"writeupPath":"Motion and Positioning/Linear Stage/Right angle bracket for Linear stage.docx"},{"id":"rotation-mount-360-precision-rotation-mount-continuous-rotation-mount-rotational","name":"Rotation Mount (360° Precision Rotation Mount, Continuous Rotation Mount, Rotational Stage)","type":"component","category":"Motion and Positioning","folder":"assets/imported/writeup/rotation-mount-360-precision-rotation-mount-continuous-rotation-mount-rotational","images":["rotation mount.png"],"writeupPath":"Motion and Positioning/RotationMount/Rotation Mount.docx"},{"id":"rubber-damping-feet","name":"Rubber Damping Feet","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/rubber-damping-feet","images":["breadboard_3.png","rubber damping feet.jpeg"],"writeupPath":"Opto-Mechanics/BreadBoard&Rubber DampingFeet/Rubber Damping Feet.docx"},{"id":"bomb-tester","name":"SciEngTech ‘Bomb Tester’ Educational Kit","type":"solution","category":"Quantum Set-Up","folder":"assets/imported/writeup/bomb-tester","images":[],"writeupPath":"Quantum Set-Up/Bomb Tester/Bomb Tester.docx"},{"id":"michelson-interferometer","name":"SciEngTech ‘Michelson Interferometer’ Educational Kit","type":"solution","category":"Quantum Set-Up","folder":"assets/imported/writeup/michelson-interferometer","images":["IMG_20260329_101920838_HDR.jpg"],"writeupPath":"Quantum Set-Up/Michelson Inerferometer/Michelson Interferometer.docx"},{"id":"polarized-3d-cinema","name":"SciEngTech ‘Polarization and ‘Polarized 3D Cinema’ Educational Kit","type":"solution","category":"Training Kit","folder":"assets/imported/writeup/polarized-3d-cinema","images":["1703592307149.jpg","1703654832662.jpg"],"writeupPath":"Training Kit/3D Cinema/3D Cinema.docx"},{"id":"quantum-eraser","name":"SciEngTech ‘Quantum Eraser’ Educational Kit","type":"solution","category":"Quantum Set-Up","folder":"assets/imported/writeup/quantum-eraser","images":[],"writeupPath":"Quantum Set-Up/Quantum Eraser/Quantum Eraser.docx"},{"id":"fourier-optics-kit","name":"SciEngTech Fourier Optics Educational Kit","type":"solution","category":"Training Kit","folder":"assets/imported/writeup/fourier-optics-kit","images":["1702361661622.jpg"],"writeupPath":"Training Kit/Fourier Optics/Fourier Optics Educational Kit.docx"},{"id":"sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t","name":"SciEngTech offers a comprehensive range of optical components designed to meet the needs of research, laboratory, and industrial applications. Our team can assist you in selecting the most suitable mirrors or lenses based on your specific experimental setup and performance requirements.","type":"component","category":"Optics","folder":"assets/imported/writeup/sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t","images":[],"writeupPath":"Optics/Mirrors.docx"},{"id":"quantum-key-distribution","name":"SciEngTech Quantum Key Distribution Analogy Educational Kit","type":"solution","category":"Quantum Set-Up","folder":"assets/imported/writeup/quantum-key-distribution","images":["IMG_20260327_085431078_HDR.jpg"],"writeupPath":"Quantum Set-Up/QKD/QAKD.docx"},{"id":"spanner-wrench-optic-lock-ring-tool-optic-adjustment-tool","name":"Spanner Wrench(Optic Lock Ring Tool, Optic Adjustment Tool)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/spanner-wrench-optic-lock-ring-tool-optic-adjustment-tool","images":["spanner wrench_1.png","spanner wrench_2.png"],"writeupPath":"Opto-Mechanics/SpannerWrench/Spanner Wrench.docx"},{"id":"swivel-base-adapter-swivel-mounting-base","name":"Swivel Base Adapter(Swivel Mounting Base)","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/swivel-base-adapter-swivel-mounting-base","images":["Image.png"],"writeupPath":"Opto-Mechanics/SwivelBaseAdapter/Swivel Base Adapter.docx"},{"id":"table-clamp-l-shape","name":"Table Clamp “L” Shape","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/table-clamp-l-shape","images":[],"writeupPath":"Opto-Mechanics/Clamp/Table Clamp L shape.docx"},{"id":"universal-base-plate","name":"Universal Base Plate","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/universal-base-plate","images":[],"writeupPath":"Opto-Mechanics/Universal Base Plate/Universal Base Plate.docx"},{"id":"universal-post-holder","name":"Universal Post Holder","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/universal-post-holder","images":["post holder with magnetic base.png","Post Holder with pedestal adaptor.png","post holder.jpg","Post Holder.png","Universal Post Holder.png"],"writeupPath":"Opto-Mechanics/Post Holder and Universal Post Holder/Universal Post Holder or Swivel Base Adapter.docx"},{"id":"viewing-screen","name":"Viewing Screen","type":"component","category":"Opto-Mechanics","folder":"assets/imported/writeup/viewing-screen","images":["Image.png"],"writeupPath":"Opto-Mechanics/Viewing Screen/Viewing Screen.docx"},{"id":"washer","name":"Washer","type":"component","category":"Hardware","folder":"assets/imported/writeup/washer","images":["Image_1.png","Image_2.png","Image_3.png","IMG_20220708_063519371.jpg","IMG_20220708_063916640.jpg","washer (1).png","washer (2).png"],"writeupPath":"Hardware/Washer/Washer.docx"}];
+    const STORAGE_KEY = 'sciengtech-writeup-image-selections-v2';
+    const state = loadState();
+    let filters = { q: '', type: '', status: '' };
+
+    function loadState() {
+      try {
+        const s = localStorage.getItem(STORAGE_KEY);
+        if (s) return JSON.parse(s);
+      } catch (e) {}
+      return {};
+    }
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      updateProgress();
+    }
+
+    function defaultItem() { return { decision: '', image: '', notes: '' }; }
+    function getItem(id) {
+      if (!state[id]) state[id] = defaultItem();
+      return state[id];
+    }
+
+    function filteredCatalog() {
+      return CATALOG.filter(function (p) {
+        if (filters.type && p.type !== filters.type) return false;
+        const item = getItem(p.id);
+        const hasImages = p.images.length > 0;
+        if (filters.status === 'pending' && item.decision) return false;
+        if (filters.status === 'done' && !item.decision) return false;
+        if (filters.status === 'no-images' && hasImages) return false;
+        if (filters.q) {
+          const q = filters.q.toLowerCase();
+          if (!p.name.toLowerCase().includes(q) && !p.id.includes(q) && !(p.category || '').toLowerCase().includes(q)) return false;
+        }
+        return true;
+      });
+    }
+
+    function render() {
+      const list = filteredCatalog();
+      document.getElementById('products').innerHTML = list.map(renderProduct).join('');
+      bindEvents();
+      updateProgress();
+    }
+
+    function renderProduct(p) {
+      const item = getItem(p.id);
+      const done = item.decision ? ' is-done' : '';
+      const noImg = !p.images.length ? ' no-images' : '';
+      const imgs = p.images.map(function (file) {
+        const sel = item.image === file ? ' is-selected' : '';
+        return '<figure class="img-card' + sel + '" data-id="' + p.id + '" data-file="' + file + '">' +
+          '<img src="/' + p.folder + '/' + file + '" alt="" loading="lazy" />' +
+          '<figcaption>' + file + '</figcaption></figure>';
+      }).join('');
+      return '<article class="product-block' + done + noImg + '" data-product="' + p.id + '">' +
+        '<div class="product-head">' +
+          '<div><span class="tag">' + p.type + '</span><span class="tag">' + escapeHtml(p.category) + '</span>' +
+          '<h2 class="product-title">' + escapeHtml(p.name) + '</h2>' +
+          '<div class="pid">' + p.id + '</div></div>' +
+          '<div class="decision-row">' +
+            decisionLabel(p.id, 'use', 'Use as-is', item.decision) +
+            decisionLabel(p.id, 'revamp', 'Revamp', item.decision) +
+            decisionLabel(p.id, 'skip', 'Skip', item.decision) +
+          '</div>' +
+        '</div>' +
+        (p.images.length ? '<div class="grid">' + imgs + '</div>' : '<p class="empty">No images in writeup folder — mark Revamp or Skip.</p>') +
+        '<input type="text" class="notes" placeholder="Notes (optional)" data-notes="' + p.id + '" value="' + escapeAttr(item.notes) + '" />' +
+        '<p class="source">Writeup: ' + escapeHtml(p.writeupPath) + '</p>' +
+      '</article>';
+    }
+
+    function decisionLabel(id, value, label, current) {
+      const checked = current === value ? ' checked' : '';
+      return '<label><input type="radio" name="decision-' + id + '" value="' + value + '"' + checked + ' /> ' + label + '</label>';
+    }
+
+    function escapeHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function escapeAttr(s) { return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+
+    function bindEvents() {
+      document.querySelectorAll('.img-card[data-id]').forEach(function (card) {
+        card.addEventListener('click', function () {
+          const id = card.dataset.id;
+          const file = card.dataset.file;
+          const item = getItem(id);
+          item.image = item.image === file ? '' : file;
+          if (item.image && !item.decision) item.decision = 'use';
+          saveState();
+          render();
+        });
+      });
+      document.querySelectorAll('.decision-row input[type=radio]').forEach(function (radio) {
+        radio.addEventListener('change', function () {
+          getItem(radio.name.replace('decision-', '')).decision = radio.value;
+          saveState();
+          render();
+        });
+      });
+      document.querySelectorAll('.notes').forEach(function (input) {
+        input.addEventListener('input', function () {
+          getItem(input.dataset.notes).notes = input.value;
+          saveState();
+        });
+      });
+    }
+
+    function updateProgress() {
+      const reviewed = CATALOG.filter(function (p) { return getItem(p.id).decision; }).length;
+      document.getElementById('progressText').textContent = reviewed + ' / ' + CATALOG.length + ' reviewed';
+    }
+
+    function buildExport() {
+      const lines = ['## Writeup image selections for SciEngTech', '', 'Save JSON to data/image-selections.json then run npm run apply-images', ''];
+      const json = { exportedAt: new Date().toISOString(), source: 'writeup', selections: [] };
+      CATALOG.forEach(function (p) {
+        const item = getItem(p.id);
+        if (!item.decision) return;
+        const entry = {
+          id: p.id,
+          name: p.name,
+          type: p.type,
+          decision: item.decision,
+          image: item.image || null,
+          path: item.image ? p.folder + '/' + item.image : null,
+          notes: item.notes || ''
+        };
+        json.selections.push(entry);
+        lines.push('- **' + p.id + '**: **' + item.decision.toUpperCase() + '**' +
+          (item.image ? ' → `' + item.image + '`' : '') +
+          (item.notes ? ' — _' + item.notes + '_' : ''));
+      });
+      const pending = CATALOG.filter(function (p) { return !getItem(p.id).decision; });
+      if (pending.length) {
+        lines.push('', '### Not yet reviewed (' + pending.length + ')', pending.map(function (p) { return '- ' + p.id; }).join('\n'));
+      }
+      lines.push('', '### JSON', '```json', JSON.stringify(json, null, 2), '```');
+      return { text: lines.join('\n'), json: json };
+    }
+
+    document.getElementById('searchInput').addEventListener('input', function (e) {
+      filters.q = e.target.value;
+      render();
+    });
+    document.getElementById('filterType').addEventListener('change', function (e) {
+      filters.type = e.target.value;
+      render();
+    });
+    document.getElementById('filterStatus').addEventListener('change', function (e) {
+      filters.status = e.target.value;
+      render();
+    });
+    document.getElementById('btnSave').addEventListener('click', function () {
+      saveState();
+      alert('Selections saved in this browser.');
+    });
+    document.getElementById('btnExport').addEventListener('click', function () {
+      const out = buildExport();
+      document.getElementById('exportText').value = out.text;
+      document.getElementById('exportPanel').classList.add('is-open');
+      navigator.clipboard.writeText(out.text).catch(function () {});
+    });
+    document.getElementById('btnCopyAgain').addEventListener('click', function () {
+      const ta = document.getElementById('exportText');
+      ta.select();
+      navigator.clipboard.writeText(ta.value);
+    });
+    document.getElementById('btnCloseExport').addEventListener('click', function () {
+      document.getElementById('exportPanel').classList.remove('is-open');
+    });
+    document.getElementById('btnDownload').addEventListener('click', function () {
+      const out = buildExport();
+      const blob = new Blob([JSON.stringify(out.json, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'image-selections-' + new Date().toISOString().slice(0, 10) + '.json';
+      a.click();
+    });
+    document.getElementById('btnClear').addEventListener('click', function () {
+      if (confirm('Clear all selections?')) {
+        Object.keys(state).forEach(function (k) { delete state[k]; });
+        saveState();
+        render();
+      }
+    });
+
+    render();
+  </script>
+</body>
+</html>
