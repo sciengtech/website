@@ -17,6 +17,34 @@ function cleanName(name) {
   return String(name || '').replace(/^[\u2018\u2019'']+|[\u2018\u2019'']+$/g, '').trim();
 }
 
+function normText(s) {
+  return String(s || '')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .replace(/[.·]+$/g, '');
+}
+
+function isDuplicateText(a, b) {
+  const na = normText(a);
+  const nb = normText(b);
+  if (!na || !nb) return false;
+  return na === nb || na.includes(nb) || nb.includes(na);
+}
+
+function uniqueTexts(items, ...skip) {
+  const skipNorm = skip.map(normText).filter(Boolean);
+  const kept = [];
+  return (items || []).filter((item) => {
+    const n = normText(item);
+    if (!n) return false;
+    if (skipNorm.some((s) => isDuplicateText(s, item))) return false;
+    if (kept.some((k) => isDuplicateText(k, item))) return false;
+    kept.push(item);
+    return true;
+  });
+}
+
 function productImages(p) {
   if (p.images?.length) return p.images;
   if (p.image) return [p.image];
@@ -204,7 +232,8 @@ function renderHeroMeta(p, overline) {
       '<p class="product-sku-line mono">Quote-driven · configure below</p>'
     : `<p class="product-sku-line mono">SKU: ${esc(p.sku)}</p>`;
   const highlight =
-    p.pageTemplate === 'solution' ?
+    p.pageTemplate === 'solution' ||
+    (p.pageTemplate === 'configurable' && p.solutionContent?.tagline) ?
       ''
     : p.specHighlight ?
       `<p class="product-highlight mono">${esc(p.specHighlight)}</p>`
@@ -234,9 +263,13 @@ function renderComponentBody(p, base) {
 
 function renderSolutionBody(p, base) {
   const sc = p.solutionContent || {};
-  const demonstrates = sc.demonstrates?.length ? sc.demonstrates : p.features;
+  const tagline = sc.tagline || '';
+  const demonstrates = uniqueTexts(
+    sc.demonstrates?.length ? sc.demonstrates : p.features,
+    tagline
+  );
   const kitIncludes = sc.kitIncludes || [];
-  const capabilities = sc.capabilities?.length ? sc.capabilities : [];
+  const capabilities = uniqueTexts(sc.capabilities?.length ? sc.capabilities : [], tagline, ...demonstrates);
   const showOverview = p.overview?.length && !demonstrates?.length;
 
   return `${showOverview ? renderOverview(p) : ''}
@@ -248,13 +281,19 @@ function renderSolutionBody(p, base) {
 
 function renderCustomSolutionBody(p, base) {
   const sc = p.solutionContent || {};
-  const demonstrates = sc.demonstrates || [];
+  const tagline = sc.tagline || '';
+  const overviewParas = uniqueTexts(p.overview, tagline);
+  const demonstrates = uniqueTexts(sc.demonstrates, tagline, ...overviewParas, p.customNote);
   const kitIncludes = sc.kitIncludes || [];
-  const note = p.customNote ?
+  const showCustomNote =
+    p.customNote &&
+    !isDuplicateText(p.customNote, tagline) &&
+    !overviewParas.some((para) => isDuplicateText(para, p.customNote));
+  const note = showCustomNote ?
     `<p class="product-custom-note">${esc(p.customNote)}</p>`
   : '';
 
-  return `${renderOverview(p)}
+  return `${overviewParas.length ? renderOverview({ ...p, overview: overviewParas }) : ''}
     ${note}
     ${demonstrates.length ? `<div class="product-solution-section"><h2 class="product-section-title">Overview</h2>${renderBulletList(demonstrates)}</div>` : ''}
     ${renderRfqParameters(p)}

@@ -63,8 +63,7 @@
       "pageTemplate": "configurable",
       "aliases": [],
       "overview": [
-        "Continuous-wave and pulsed laser systems specified for research, ultrafast, and industrial photonics applications.",
-        "Customized as per user requirements."
+        "Continuous-wave and pulsed laser systems specified for research, ultrafast, and industrial photonics applications."
       ],
       "features": [],
       "applications": [],
@@ -87,18 +86,14 @@
       ],
       "solutionContent": {
         "tagline": "Customized as per user requirements",
-        "demonstrates": [
-          "Continuous-wave and pulsed laser systems specified for research, ultrafast, and industrial photonics applications."
-        ],
+        "demonstrates": [],
         "kitIncludes": [
           "Engineering consultation and specification review",
           "Turnkey or modular delivery scoped to your quote"
         ],
-        "capabilities": [
-          "Customized as per user requirements."
-        ]
+        "capabilities": []
       },
-      "customNote": "Customized as per user requirements.",
+      "customNote": null,
       "summary": "Continuous-wave and pulsed laser systems specified for research, ultrafast, and industrial photonics applications.",
       "specHighlight": "Customized as per user requirements · Request Technical Quote",
       "specs": [
@@ -189,8 +184,7 @@
       "pageTemplate": "configurable",
       "aliases": [],
       "overview": [
-        "Hanbury Brown–Twiss (HBT) and Hong–Ou–Mandel (HOM) experimental setups for photon statistics and indistinguishability measurements.",
-        "Customized as per user requirements."
+        "Hanbury Brown–Twiss (HBT) and Hong–Ou–Mandel (HOM) experimental setups for photon statistics and indistinguishability measurements."
       ],
       "features": [],
       "applications": [],
@@ -213,18 +207,14 @@
       ],
       "solutionContent": {
         "tagline": "Customized as per user requirements",
-        "demonstrates": [
-          "Hanbury Brown–Twiss (HBT) and Hong–Ou–Mandel (HOM) experimental setups for photon statistics and indistinguishability measurements."
-        ],
+        "demonstrates": [],
         "kitIncludes": [
           "Engineering consultation and specification review",
           "Turnkey or modular delivery scoped to your quote"
         ],
-        "capabilities": [
-          "Customized as per user requirements."
-        ]
+        "capabilities": []
       },
-      "customNote": "Customized as per user requirements.",
+      "customNote": null,
       "summary": "Hanbury Brown–Twiss (HBT) and Hong–Ou–Mandel (HOM) experimental setups for photon statistics and indistinguishability measurements.",
       "specHighlight": "Customized as per user requirements · Request Technical Quote",
       "specs": [
@@ -253,8 +243,7 @@
       "pageTemplate": "configurable",
       "aliases": [],
       "overview": [
-        "Pockels cell assemblies and drivers for pulse picking, cavity control, and ultrafast beam modulation.",
-        "Customized as per user requirements."
+        "Pockels cell assemblies and drivers for pulse picking, cavity control, and ultrafast beam modulation."
       ],
       "features": [],
       "applications": [],
@@ -277,18 +266,14 @@
       ],
       "solutionContent": {
         "tagline": "Customized as per user requirements",
-        "demonstrates": [
-          "Pockels cell assemblies and drivers for pulse picking, cavity control, and ultrafast beam modulation."
-        ],
+        "demonstrates": [],
         "kitIncludes": [
           "Engineering consultation and specification review",
           "Turnkey or modular delivery scoped to your quote"
         ],
-        "capabilities": [
-          "Customized as per user requirements."
-        ]
+        "capabilities": []
       },
-      "customNote": "Customized as per user requirements.",
+      "customNote": null,
       "summary": "Pockels cell assemblies and drivers for pulse picking, cavity control, and ultrafast beam modulation.",
       "specHighlight": "Customized as per user requirements · Request Technical Quote",
       "specs": [
@@ -378,7 +363,6 @@
       "pageTemplate": "configurable",
       "aliases": [],
       "overview": [
-        "Quantum state tomography platforms for reconstructing and characterizing quantum states in research and education.",
         "Configured in consultation with SciEngTech engineering."
       ],
       "features": [],
@@ -402,9 +386,7 @@
       ],
       "solutionContent": {
         "tagline": "Quantum state tomography platforms for reconstructing and characterizing quantum states in research and education.",
-        "demonstrates": [
-          "Quantum state tomography platforms for reconstructing and characterizing quantum states in research and education."
-        ],
+        "demonstrates": [],
         "kitIncludes": [
           "Engineering consultation and specification review",
           "Turnkey or modular delivery scoped to your quote"
@@ -450,7 +432,6 @@
       "solutionContent": {
         "tagline": "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts.",
         "demonstrates": [
-          "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts.",
           "Concept-Driven Experimental Platform: Enables hands-on exploration of interference phenomena using the Michelson interferometer configuration.",
           "Demonstrates Fundamental Interference Principles: Clearly illustrates optical path difference, constructive and destructive interference, and fringe formation.",
           "Precision Measurement Capability: Allows measurement of laser wavelength through fringe counting and controlled mirror displacement.",
@@ -471,7 +452,7 @@
       },
       "customNote": null,
       "summary": "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts.",
-      "specHighlight": "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts.",
+      "specHighlight": "Educational quantum optics kit · Request Technical Quote",
       "specs": [
         {
           "label": "Procurement",
@@ -485,7 +466,7 @@
         "quantum set-up"
       ],
       "writeupPath": "Quantum Set-Up/Michelson Inerferometer/Michelson Interferometer.docx",
-      "_search": "michelson-interferometer set-mi-edu sciengtech ‘michelson interferometer’ educational kit solution quantum-setups quantum set-ups purpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts. purpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts.  michelson interferometer quantum set-up sciengtech ‘michelson interferometer’ educational kit\n\npurpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts. \n\ncomplete, ready-to-use system: supplied with all required optical and mechanical components along with a comprehensive instructional manual and structured teaching resources. \n\nconcept-driven experimental platform: enables hands-on exploration of interference phenomena using the michelson interferometer configuration. \n\ndemonstrates fundamental interference principles: clearly illustrates optical path difference, constructive and destructive interference, and fringe formation. \n\nprecision measurement capability: allows measurement of laser wavelength through fringe counting and controlled mirror displacement. \n\nstudy of optical coherence: enables investigation of coherence properties of different light sources such as lasers and leds. \n\nmaterial characterization experiments: supports determination of refractive index of transparent materials using interferometric techniques. \n\nthermal expansion measurement: provides experimental capability for measuring the thermal expansion coefficient of metallic samples. \n\nuser-friendly assembly: designed for straightforward setup, stable optical alignment, and reliable experimental results in academic laboratories. \n\nintegrated optical source: includes sciengtech solutions green laser diode with dedicated power supply. \n\nmodular mechanical architecture: built using precision opto-mechanical components allowing flexible experimental configurations. \n\ncompact and laboratory-efficient design: optimized for tabletop laboratory use while maintaining high experimental stability. \n\nproudly designed and manufactured in india \n\nproduct code: set-mi-edu",
+      "_search": "michelson-interferometer set-mi-edu sciengtech ‘michelson interferometer’ educational kit solution quantum-setups quantum set-ups purpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts. educational quantum optics kit · request technical quote  michelson interferometer quantum set-up sciengtech ‘michelson interferometer’ educational kit\n\npurpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts. \n\ncomplete, ready-to-use system: supplied with all required optical and mechanical components along with a comprehensive instructional manual and structured teaching resources. \n\nconcept-driven experimental platform: enables hands-on exploration of interference phenomena using the michelson interferometer configuration. \n\ndemonstrates fundamental interference principles: clearly illustrates optical path difference, constructive and destructive interference, and fringe formation. \n\nprecision measurement capability: allows measurement of laser wavelength through fringe counting and controlled mirror displacement. \n\nstudy of optical coherence: enables investigation of coherence properties of different light sources such as lasers and leds. \n\nmaterial characterization experiments: supports determination of refractive index of transparent materials using interferometric techniques. \n\nthermal expansion measurement: provides experimental capability for measuring the thermal expansion coefficient of metallic samples. \n\nuser-friendly assembly: designed for straightforward setup, stable optical alignment, and reliable experimental results in academic laboratories. \n\nintegrated optical source: includes sciengtech solutions green laser diode with dedicated power supply. \n\nmodular mechanical architecture: built using precision opto-mechanical components allowing flexible experimental configurations. \n\ncompact and laboratory-efficient design: optimized for tabletop laboratory use while maintaining high experimental stability. \n\nproudly designed and manufactured in india \n\nproduct code: set-mi-edu",
       "solutionGroup": "quantum-setups",
       "categoryLabel": "Quantum Set-Ups",
       "solutionUrl": "solutions/michelson-interferometer.html",
@@ -570,7 +551,6 @@
       "solutionContent": {
         "tagline": "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts.",
         "demonstrates": [
-          "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts.",
           "Concept-Driven Experimental Platform: Enables analogy of single-photon interference in a Mach–Zehnder interferometer.",
           "Demonstrates Quantum Complementarity: Clearly illustrates the wave–particle duality of light through controlled experimental conditions.",
           "Polarization-Based Which-Path Control: Demonstrates how polarization can “mark” photon paths and how path information can be “erased” to restore interference.",
@@ -588,7 +568,7 @@
       },
       "customNote": null,
       "summary": "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts.",
-      "specHighlight": "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts.",
+      "specHighlight": "Educational quantum optics kit · Request Technical Quote",
       "specs": [
         {
           "label": "Procurement",
@@ -602,7 +582,7 @@
         "quantum set-up"
       ],
       "writeupPath": "Quantum Set-Up/Quantum Eraser/Quantum Eraser.docx",
-      "_search": "quantum-eraser set-quantumeraser-edu sciengtech ‘quantum eraser’ educational kit solution quantum-setups quantum set-ups purpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts. purpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts.  quantum eraser quantum set-up sciengtech ‘quantum eraser’ educational kit\n\npurpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts. \n\ncomplete, ready-to-use system: supplied with all optical and mechanical components, along with a comprehensive instructional manual and structured teaching resources. \n\nconcept-driven experimental platform: enables analogy of single-photon interference in a mach–zehnder interferometer. \n\ndemonstrates quantum complementarity: clearly illustrates the wave–particle duality of light through controlled experimental conditions. \n\npolarization-based which-path control: demonstrates how polarization can “mark” photon paths and how path information can be “erased” to restore interference. \n\nuser-friendly assembly: designed for quick setup, stable alignment, and repeatable results in academic environments. \n\nintegrated optical source: includes sciengtech solutions 520 nm (green) laser diode with dedicated power supply. \n\nmodular mechanical architecture \n\ncompact and laboratory-efficient design \n\nproudly designed and manufactured in india. \n\nproduct code: set-quantumeraser-edu",
+      "_search": "quantum-eraser set-quantumeraser-edu sciengtech ‘quantum eraser’ educational kit solution quantum-setups quantum set-ups purpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts. educational quantum optics kit · request technical quote  quantum eraser quantum set-up sciengtech ‘quantum eraser’ educational kit\n\npurpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts. \n\ncomplete, ready-to-use system: supplied with all optical and mechanical components, along with a comprehensive instructional manual and structured teaching resources. \n\nconcept-driven experimental platform: enables analogy of single-photon interference in a mach–zehnder interferometer. \n\ndemonstrates quantum complementarity: clearly illustrates the wave–particle duality of light through controlled experimental conditions. \n\npolarization-based which-path control: demonstrates how polarization can “mark” photon paths and how path information can be “erased” to restore interference. \n\nuser-friendly assembly: designed for quick setup, stable alignment, and repeatable results in academic environments. \n\nintegrated optical source: includes sciengtech solutions 520 nm (green) laser diode with dedicated power supply. \n\nmodular mechanical architecture \n\ncompact and laboratory-efficient design \n\nproudly designed and manufactured in india. \n\nproduct code: set-quantumeraser-edu",
       "solutionGroup": "quantum-setups",
       "categoryLabel": "Quantum Set-Ups",
       "solutionUrl": "solutions/quantum-eraser.html"
@@ -728,8 +708,7 @@
       "pageTemplate": "configurable",
       "aliases": [],
       "overview": [
-        "Integrated ultrafast photodiode assemblies for timing, detection, and characterization in advanced optical setups.",
-        "Customized as per user requirements."
+        "Integrated ultrafast photodiode assemblies for timing, detection, and characterization in advanced optical setups."
       ],
       "features": [],
       "applications": [],
@@ -752,18 +731,14 @@
       ],
       "solutionContent": {
         "tagline": "Customized as per user requirements",
-        "demonstrates": [
-          "Integrated ultrafast photodiode assemblies for timing, detection, and characterization in advanced optical setups."
-        ],
+        "demonstrates": [],
         "kitIncludes": [
           "Engineering consultation and specification review",
           "Turnkey or modular delivery scoped to your quote"
         ],
-        "capabilities": [
-          "Customized as per user requirements."
-        ]
+        "capabilities": []
       },
-      "customNote": "Customized as per user requirements.",
+      "customNote": null,
       "summary": "Integrated ultrafast photodiode assemblies for timing, detection, and characterization in advanced optical setups.",
       "specHighlight": "Customized as per user requirements · Request Technical Quote",
       "specs": [
@@ -792,8 +767,7 @@
       "pageTemplate": "configurable",
       "aliases": [],
       "overview": [
-        "Turnkey or custom supercontinuum generation systems for ultrafast spectroscopy, imaging, and pump–probe experiments.",
-        "Customized as per user requirements."
+        "Turnkey or custom supercontinuum generation systems for ultrafast spectroscopy, imaging, and pump–probe experiments."
       ],
       "features": [],
       "applications": [],
@@ -816,18 +790,14 @@
       ],
       "solutionContent": {
         "tagline": "Customized as per user requirements",
-        "demonstrates": [
-          "Turnkey or custom supercontinuum generation systems for ultrafast spectroscopy, imaging, and pump–probe experiments."
-        ],
+        "demonstrates": [],
         "kitIncludes": [
           "Engineering consultation and specification review",
           "Turnkey or modular delivery scoped to your quote"
         ],
-        "capabilities": [
-          "Customized as per user requirements."
-        ]
+        "capabilities": []
       },
-      "customNote": "Customized as per user requirements.",
+      "customNote": null,
       "summary": "Turnkey or custom supercontinuum generation systems for ultrafast spectroscopy, imaging, and pump–probe experiments.",
       "specHighlight": "Customized as per user requirements · Request Technical Quote",
       "specs": [

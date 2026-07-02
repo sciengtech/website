@@ -49,7 +49,7 @@ function makeCustomSolution({
     type: 'solution',
     pageTemplate,
     aliases: [],
-    overview: [summary, customLine],
+    overview: customized ? [summary] : [customLine],
     features: [],
     applications: [],
     techSpecs: [],
@@ -65,14 +65,14 @@ function makeCustomSolution({
     ],
     solutionContent: {
       tagline: customized ? 'Customized as per user requirements' : summary,
-      demonstrates: [summary],
+      demonstrates: [],
       kitIncludes: [
         'Engineering consultation and specification review',
         'Turnkey or modular delivery scoped to your quote',
       ],
-      capabilities: customized ? [customLine] : [],
+      capabilities: [],
     },
-    customNote: customized ? customLine : null,
+    customNote: null,
     summary,
     specHighlight: customized
       ? 'Customized as per user requirements · Request Technical Quote'
@@ -88,6 +88,22 @@ function makeCustomSolution({
   };
   item._search = makeSearch(item);
   return item;
+}
+
+function normText(s) {
+  return String(s || '')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .replace(/[.·]+$/g, '');
+}
+
+function dedupeDemonstratesFromTagline(s) {
+  const tagline = s.solutionContent?.tagline;
+  if (!tagline || !s.solutionContent?.demonstrates?.length) return;
+  s.solutionContent.demonstrates = s.solutionContent.demonstrates.filter(
+    (line) => normText(line) !== normText(tagline)
+  );
 }
 
 function applySolutionLabels(solutions) {
@@ -122,6 +138,15 @@ export function patchSolutionsCatalog(catalog) {
       'BB84 quantum key distribution educational platform for classroom and laboratory instruction.';
     s.specHighlight =
       'Quantum Key Distribution · BB84 protocol · Educational platform';
+  }
+
+  for (const id of ['michelson-interferometer', 'quantum-eraser']) {
+    const s = byId[id];
+    if (!s) continue;
+    dedupeDemonstratesFromTagline(s);
+    if (s.specHighlight && s.solutionContent?.tagline && normText(s.specHighlight) === normText(s.solutionContent.tagline)) {
+      s.specHighlight = 'Educational quantum optics kit · Request Technical Quote';
+    }
   }
 
   // —— Move to State of the Art Setups ——
@@ -187,7 +212,14 @@ export function patchSolutionsCatalog(catalog) {
   ];
 
   for (const item of manual) {
-    if (!byId[item.id]) solutions.push(item);
+    const idx = solutions.findIndex((s) => s.id === item.id);
+    if (idx >= 0) {
+      solutions[idx] = item;
+      byId[item.id] = item;
+    } else {
+      solutions.push(item);
+      byId[item.id] = item;
+    }
   }
 
   applySolutionLabels(solutions);
