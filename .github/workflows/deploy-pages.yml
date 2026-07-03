@@ -21,14 +21,16 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+      actions: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,7 +38,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Build site from catalog
         run: npm run build:site
@@ -44,10 +46,45 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # Re-runs and upload retries can leave multiple "github-pages" artifacts on one run_id.
+      - name: Delete stale github-pages artifact
+        uses: geekyeggo/delete-artifact@v5
+        with:
+          name: github-pages
+          failOnError: false
+
       - name: Upload site
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+      actions: write
+    steps:
+      - name: Prune duplicate github-pages artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          artifacts=$(gh api "/repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" \
+            --jq '[.artifacts[] | select(.name == "github-pages")] | sort_by(.created_at) | reverse')
+          count=$(echo "$artifacts" | jq 'length')
+          echo "Found $count github-pages artifact(s) in this run."
+          if [ "$count" -le 1 ]; then
+            exit 0
+          fi
+          echo "$artifacts" | jq -r '.[1:] | .[].id' | while read -r id; do
+            echo "Deleting duplicate artifact $id"
+            gh api -X DELETE "/repos/${{ github.repository }}/actions/artifacts/$id"
+          done
 
       - name: Deploy to GitHub Pages
         id: deployment
