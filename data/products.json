@@ -3325,84 +3325,203 @@
     },
     {
       "id": "sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t",
-      "sku": "SET-SCIENGTECHOF",
-      "name": "SciEngTech offers a comprehensive range of optical components designed to meet the needs of research, laboratory, and industrial applications. Our team can assist you in selecting the most suitable mirrors or lenses based on your specific experimental setup and performance requirements.",
+      "sku": "SET-OPTICS",
+      "name": "Optics",
       "type": "component",
-      "pageTemplate": "configurable",
-      "aliases": [],
-      "overview": [
-        "Mirrors To help us recommend the optimal mirror solution, kindly share the following parameters: Diameter, Thickness, Material, Wavelength range or designed wavelength, Back surface, AOI, Type of coating, and reflectance/transmittance (R/T) ratio.",
-        "Lens Type of Lens, Coated or Uncoated, Diameter, Thickness, Design Wavelength, Focal Length, Back focal length, Surface Quality Ratio Beamsplitter Type of Beamsplitter, Size of beamsplitter, Transmitted and Reflected beam deviation, Extinction Ratio, Transmission and Reflection efficiency, AOI."
+      "pageTemplate": "component",
+      "aliases": [
+        "Lenses",
+        "Mirrors",
+        "Beam Splitters",
+        "Polarizers"
       ],
-      "features": [],
-      "applications": [],
+      "overview": [
+        "Precision Optical Components for Advanced Research and Education",
+        "SciEngTech Solutions LLP provides high-quality optics for advanced research laboratories, teaching laboratories, laser experiments, photonics systems, and quantum optics platforms. Our optics are selected and supplied with a focus on experimental reliability, clean beam handling, precise alignment, and compatibility with modern optical setups."
+      ],
+      "features": [
+        "Wavelength: UV, Visible, and NIR",
+        "Material: BK7, Fused Silica, Optical Glass, and Specialty Optical Materials",
+        "Coating: Aluminium, Silver, Chromium, Dielectric, Anti-Reflection, Broadband and Laser-Line, Coated, Uncoated",
+        "Size: Standard Diameters, Standard Shapes, and Custom Sizes",
+        "Mounting Options: Mounted and Unmounted Optics"
+      ],
+      "applications": [
+        "Laser beam alignment",
+        "Imaging and spectroscopy",
+        "Interferometry",
+        "Photonics experiments",
+        "Optical instrumentation",
+        "Quantum optics teaching and research setups",
+        "Scientific and educational laboratories"
+      ],
       "techSpecs": [],
-      "keyValueSpecs": [],
-      "variants": [],
-      "configurationOptions": null,
-      "rfqSections": [
+      "keyValueSpecs": [
         {
-          "id": "mirrors",
-          "title": "Mirrors",
-          "parameters": [
-            "Diameter",
-            "Thickness",
-            "Material",
-            "Wavelength range or designed wavelength",
-            "Back surface",
-            "AOI",
-            "Type of coating",
-            "reflectance/transmittance (R/T) ratio."
-          ]
+          "label": "Lenses — Lens",
+          "value": "Plano-Convex, Bi-Convex, Plano-Concave, Bi-Concave, Achromatic, Cylindrical, Aspheric, and Ball Lenses"
         },
         {
-          "id": "lens",
-          "title": "Lens",
-          "parameters": [
-            "Type of Lens",
-            "Coated or Uncoated",
-            "Diameter",
-            "Thickness",
-            "Design Wavelength",
-            "Focal Length",
-            "Back focal length",
-            "Surface Quality Ratio"
-          ]
+          "label": "Lenses — Material",
+          "value": "BK7, Fused Silica, Optical Glass, and Specialty Glass"
         },
         {
-          "id": "beamsplitter",
-          "title": "Beamsplitter",
-          "parameters": [
-            "Type of Beamsplitter",
-            "Size of beamsplitter",
-            "Transmitted and Reflected beam deviation",
-            "Extinction Ratio",
-            "Transmission and Reflection efficiency",
-            "AOI."
-          ]
+          "label": "Lenses — Diameter",
+          "value": "6 mm, 12.7 mm, 25.4 mm, 50.8 mm"
+        },
+        {
+          "label": "Lenses — Focal length",
+          "value": "Short, Medium, and Long Focal Length Lenses"
+        },
+        {
+          "label": "Lenses — Coating",
+          "value": "Uncoated, MgF₂, Broadband Anti-Reflection, and Laser-Line AR Coating"
+        },
+        {
+          "label": "Lenses — Wavelength",
+          "value": "UV, Visible, NIR, and Selected Laser Wavelengths"
+        },
+        {
+          "label": "Lenses — Mounting",
+          "value": "Mounted and Unmounted Lenses"
+        },
+        {
+          "label": "Lenses — Compatibility",
+          "value": "Standard Opto-Mechanics"
+        },
+        {
+          "label": "Mirrors — Mirror",
+          "value": "Protected Silver, Protected Aluminum, Enhanced Aluminum, Dielectric, and Broadband Mirrors"
+        },
+        {
+          "label": "Mirrors — Substrate",
+          "value": "BK7, Fused Silica, Optical Glass, and Specialty Optical Materials"
+        },
+        {
+          "label": "Mirrors — Diameter",
+          "value": "12.7 mm, 25.4 mm, 50.8 mm"
+        },
+        {
+          "label": "Mirrors — Shape",
+          "value": "Round, Square, Rectangular"
+        },
+        {
+          "label": "Mirrors — Coating",
+          "value": "Visible, NIR, Broadband, and Laser-Line Coatings"
+        },
+        {
+          "label": "Mirrors — Reflectivity",
+          "value": "High-Reflectivity Coatings for Selected Wavelengths"
+        },
+        {
+          "label": "Mirrors — Mounting",
+          "value": "Mounted and Unmounted Mirrors"
+        },
+        {
+          "label": "Mirrors — Compatibility",
+          "value": "Standard Opto-Mechanics"
+        },
+        {
+          "label": "Beam Splitters — Type",
+          "value": "Plate Beam Splitters, Cube Beam Splitters, Non-Polarizing Beam Splitters, and Polarizing Beam Splitters"
+        },
+        {
+          "label": "Beam Splitters — Splitting Ratio (R/T)",
+          "value": "50:50, 70:30, 80:20, 90:10"
+        },
+        {
+          "label": "Beam Splitters — Wavelength Range",
+          "value": "Visible, NIR, Broadband and Laser-Line Wavelength Ranges"
+        },
+        {
+          "label": "Beam Splitters — Coating",
+          "value": "Broadband Coatings, Laser-Line Coatings, and Anti-Reflection Coated Back Surfaces"
+        },
+        {
+          "label": "Beam Splitters — Material",
+          "value": "BK7, Fused Silica, Optical Glass, and Specialty Optical Materials"
+        },
+        {
+          "label": "Beam Splitters — Size",
+          "value": "12.7 mm, 25.4 mm, 50.8 mm, Cube Sizes, and Custom Dimensions"
+        },
+        {
+          "label": "Beam Splitters — Mounting",
+          "value": "Mounted and Unmounted Beam Splitters"
+        },
+        {
+          "label": "Beam Splitters — Polarization",
+          "value": "Polarization-Sensitive and Polarization-Insensitive Configurations"
+        },
+        {
+          "label": "Beam Splitters — Compatibility",
+          "value": "Standard Opto-Mechanics"
+        },
+        {
+          "label": "Polarizers — Type",
+          "value": "Linear Polarizers, Glan-Type Polarizers, Cube Polarizers, Wire-Grid Polarizers and Film Polarizers"
+        },
+        {
+          "label": "Polarizers — Wavelength",
+          "value": "Visible, NIR, and Selected Laser Wavelengths"
+        },
+        {
+          "label": "Polarizers — Diameter",
+          "value": "12.7 mm, 25.4 mm, 50.8 mm"
+        },
+        {
+          "label": "Polarizers — Mounting",
+          "value": "Mounted and Unmounted Polarizers"
+        },
+        {
+          "label": "Polarizers — Extinction Ratio",
+          "value": "High-Extinction-Ratio Polarizers Where Required"
+        },
+        {
+          "label": "Polarizers — Coating",
+          "value": "Broadband and Laser-Line Options"
+        },
+        {
+          "label": "Polarizers — Rotation Compatibility",
+          "value": "Compatible with Standard Rotation Mounts"
+        },
+        {
+          "label": "Polarizers — Polarizing Optics",
+          "value": "Polarizing Beam Splitter Cube Options"
+        },
+        {
+          "label": "Polarizers — Compatibility",
+          "value": "Standard Opto-Mechanics"
         }
       ],
+      "variants": [],
+      "configurationOptions": null,
+      "rfqSections": null,
       "solutionContent": null,
-      "customNote": null,
-      "summary": "Mirrors To help us recommend the optimal mirror solution, kindly share the following parameters: Diameter, Thickness, Material, Wavelength range or designed wavelength, Back surface, AOI, Type of coating, and reflectance/transmittance (R/T) ratio.",
-      "specHighlight": "Configure options · Request Technical Quote",
+      "customNote": "Sci.Eng.Tech can help you selecting the right optical component for your experimental set-up. Contact Sci.Eng.Tech Solutions for technical guidance and customized optical solutions.",
+      "summary": "Precision optical components for advanced research and education — lenses, mirrors, beam splitters, and polarizers for photonics and quantum optics laboratories.",
+      "specHighlight": "Lenses, Mirrors, Beam Splitters & Polarizers · Request Technical Quote",
       "specs": [
         {
           "label": "Procurement",
           "value": "Request Technical Quote"
         }
       ],
-      "body": "SciEngTech offers a comprehensive range of optical components designed to meet the needs of research, laboratory, and industrial applications. Our team can assist you in selecting the most suitable mirrors or lenses based on your specific experimental setup and performance requirements.\n\nMirrors\n\nTo help us recommend the optimal mirror solution, kindly share the following parameters:\n\n Diameter, Thickness, Material, Wavelength range or designed wavelength, Back surface, AOI, Type of coating, and reflectance/transmittance (R/T) ratio.\n\nLens\n\nType of Lens, Coated or Uncoated, Diameter, Thickness, Design Wavelength, Focal Length, Back focal length, Surface Quality Ratio\n\nBeamsplitter\n\nType of Beamsplitter, Size of beamsplitter, Transmitted and Reflected beam deviation, Extinction Ratio, Transmission and Reflection efficiency, AOI.\n\nWave Plate",
-      "image": null,
+      "body": "Optics\n\nPrecision Optical Components for Advanced Research and Education\n\nSciEngTech Solutions LLP provides high-quality optics for advanced research laboratories, teaching laboratories, laser experiments, photonics systems, and quantum optics platforms.\n\nLenses, Mirrors, Beam Splitters, and Polarizers are available in standard and custom configurations for photonics and quantum optics laboratories.\n\nProduct Code: SET-OPTICS",
+      "image": "assets/slides/03-dielectric-mirror.svg",
       "tags": [
-        "sciengtech offers a comprehensive range of optical components designed to meet t",
-        "optics"
+        "optics",
+        "lenses",
+        "mirrors",
+        "beam splitters",
+        "polarizers",
+        "photonics"
       ],
       "writeupPath": "Optics/Mirrors.docx",
-      "_search": "sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t set-sciengtechof sciengtech offers a comprehensive range of optical components designed to meet the needs of research, laboratory, and industrial applications. our team can assist you in selecting the most suitable mirrors or lenses based on your specific experimental setup and performance requirements. component   configurable mirrors to help us recommend the optimal mirror solution, kindly share the following parameters: diameter, thickness, material, wavelength range or designed wavelength, back surface, aoi, type of coating, and reflectance/transmittance (r/t) ratio. configure options · request technical quote    sciengtech offers a comprehensive range of optical components designed to meet t optics procurement request technical quote  sciengtech offers a comprehensive range of optical components designed to meet the needs of research, laboratory, and industrial applications. our team can assist you in selecting the most suitable mirrors or lenses based on your specific experimental setup and performance requirements.\n\nmirrors\n\nto help us recommend the optimal mirror solution, kindly share the following parameters:\n\n diameter, thickness, material, wavelength range or designed wavelength, back surface, aoi, type of coating, and reflectance/transmittance (r/t) ratio.\n\nlens\n\ntype of lens, coated or uncoated, diameter, thickness, design wavelength, focal length, back focal length, surface quality ratio\n\nbeamsplitter\n\ntype of beamsplitter, size of beamsplitter, transmitted and reflected beam deviation, extinction ratio, transmission and reflection efficiency, aoi.\n\nwave plate",
       "category": "optics",
       "categoryLabel": "Optics",
-      "categoryPath": "/components/optics.html"
+      "categoryPath": "/product.html#sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t",
+      "_search": "sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t set-optics optics component optics optics precision optical components for advanced research and education — lenses, mirrors, beam splitters, and polarizers for photonics and quantum optics laboratories. lenses, mirrors, beam splitters & polarizers · request technical quote lenses mirrors beam splitters polarizers optics lenses mirrors beam splitters polarizers photonics optics\n\nprecision optical components for advanced research and education\n\nsciengtech solutions llp provides high-quality optics for advanced research laboratories, teaching laboratories, laser experiments, photonics systems, and quantum optics platforms.\n\nlenses, mirrors, beam splitters, and polarizers are available in standard and custom configurations for photonics and quantum optics laboratories.\n\nproduct code: set-optics"
     },
     {
       "id": "spanner-wrench",

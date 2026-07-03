@@ -668,14 +668,14 @@
     {
       "id": "sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t",
       "type": "component",
-      "name": "SciEngTech offers a comprehensive range of optical components designed to meet the needs of research, laboratory, and industrial applications. Our team can assist you in selecting the most suitable mirrors or lenses based on your specific experimental setup and performance requirements.",
-      "sku": "SET-SCIENGTECHOF",
+      "name": "Optics",
+      "sku": "SET-OPTICS",
       "category": "optics",
       "categoryLabel": "Optics",
-      "specHighlight": "Configure options · Request Technical Quote",
-      "image": null,
+      "specHighlight": "Lenses, Mirrors, Beam Splitters & Polarizers · Request Technical Quote",
+      "image": "assets/slides/03-dielectric-mirror.svg",
       "url": "product.html#sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t",
-      "_search": "sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t set-sciengtechof sciengtech offers a comprehensive range of optical components designed to meet the needs of research, laboratory, and industrial applications. our team can assist you in selecting the most suitable mirrors or lenses based on your specific experimental setup and performance requirements. component   configurable mirrors to help us recommend the optimal mirror solution, kindly share the following parameters: diameter, thickness, material, wavelength range or designed wavelength, back surface, aoi, type of coating, and reflectance/transmittance (r/t) ratio. configure options · request technical quote    sciengtech offers a comprehensive range of optical components designed to meet t optics procurement request technical quote  sciengtech offers a comprehensive range of optical components designed to meet the needs of research, laboratory, and industrial applications. our team can assist you in selecting the most suitable mirrors or lenses based on your specific experimental setup and performance requirements.\n\nmirrors\n\nto help us recommend the optimal mirror solution, kindly share the following parameters:\n\n diameter, thickness, material, wavelength range or designed wavelength, back surface, aoi, type of coating, and reflectance/transmittance (r/t) ratio.\n\nlens\n\ntype of lens, coated or uncoated, diameter, thickness, design wavelength, focal length, back focal length, surface quality ratio\n\nbeamsplitter\n\ntype of beamsplitter, size of beamsplitter, transmitted and reflected beam deviation, extinction ratio, transmission and reflection efficiency, aoi.\n\nwave plate",
+      "_search": "sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t set-optics optics component optics optics precision optical components for advanced research and education — lenses, mirrors, beam splitters, and polarizers for photonics and quantum optics laboratories. lenses, mirrors, beam splitters & polarizers · request technical quote lenses mirrors beam splitters polarizers optics lenses mirrors beam splitters polarizers photonics optics\n\nprecision optical components for advanced research and education\n\nsciengtech solutions llp provides high-quality optics for advanced research laboratories, teaching laboratories, laser experiments, photonics systems, and quantum optics platforms.\n\nlenses, mirrors, beam splitters, and polarizers are available in standard and custom configurations for photonics and quantum optics laboratories.\n\nproduct code: set-optics",
       "featured": false
     },
     {

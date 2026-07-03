@@ -16,6 +16,11 @@ const catalog = patchSolutionsCatalog(
   JSON.parse(fs.readFileSync(path.join(ROOT, 'data/catalog.json'), 'utf8'))
 );
 
+/** Single-product categories link straight to product.html#id (no category hub). */
+const DIRECT_PRODUCT_CATEGORIES = {
+  optics: 'sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t',
+};
+
 const CATEGORIES = [
   { slug: 'opto-mechanics', label: 'Opto-Mechanics' },
   { slug: 'motion-and-positioning', label: 'Motion and Positioning' },
@@ -28,7 +33,11 @@ const CATEGORIES = [
 
 /** Homepage category strip — 10 tiles in two rows */
 const HOME_CATEGORIES = [
-  { slug: 'optics', label: 'Optics', href: 'components/optics.html' },
+  {
+    slug: 'optics',
+    label: 'Optics',
+    href: `product.html#${DIRECT_PRODUCT_CATEGORIES.optics}`,
+  },
   { slug: 'opto-mechanics', label: 'Opto-Mechanics', href: 'components/opto-mechanics.html' },
   { slug: 'motion-and-positioning', label: 'Motion and Positioning', href: 'components/motion-and-positioning.html' },
   { slug: 'lasers', label: 'Lasers and Detectors', href: 'components/lasers.html' },
@@ -70,9 +79,7 @@ const CATEGORY_COVER_PREF = {
   hardware: ['hex-nut', 'allen-bolt', 'washer'],
   'fibre-optics': ['fiber-optics-collimator'],
   lasers: ['diode-laser'],
-  optics: [
-    'sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t',
-  ],
+  optics: [DIRECT_PRODUCT_CATEGORIES.optics],
 };
 
 const CATEGORY_COVER_SLIDE = {
@@ -273,6 +280,11 @@ function solutionDetailPage(s, base) {
     pageId: 'solution',
     detailPage: true,
   });
+}
+
+function categoryRedirectPage(productId, base) {
+  const url = componentProductUrl(productId, base);
+  return `<!DOCTYPE html><html><head><meta charset="UTF-8" /><meta http-equiv="refresh" content="0;url=${url}" /><title>Redirect</title></head><body><p><a href="${url}">View ${esc('Optics')}</a></p></body></html>`;
 }
 
 function categoryPage(cat, items, base) {
@@ -554,13 +566,18 @@ function buildComponentsHub(base, rel) {
     const media = cover
       ? `<div class="pillar-media"><img src="${base}${esc(cover)}" alt="${esc(cat.label)}" loading="lazy" /></div>`
       : `<div class="pillar-media pillar-media--empty" aria-hidden="true"><span>◇</span></div>`;
-    return `<a class="pillar pillar--category" href="${base}components/${cat.slug}.html">
+    const directId = DIRECT_PRODUCT_CATEGORIES[cat.slug];
+    const href = directId
+      ? componentProductUrl(directId, base)
+      : `${base}components/${cat.slug}.html`;
+    const linkLabel = directId ? 'View product →' : 'View category →';
+    return `<a class="pillar pillar--category" href="${href}">
       ${media}
       <div class="pillar-body">
         <div class="pillar-num">${String(count).padStart(2, '0')}</div>
         <h3>${esc(cat.label.toUpperCase())}</h3>
         <p>${count} spec-verified component${count === 1 ? '' : 's'}.</p>
-        <span class="pillar-link">View category →</span>
+        <span class="pillar-link">${linkLabel}</span>
       </div>
     </a>`;
   }).join('');
@@ -653,6 +670,11 @@ function main() {
 
   buildComponentsHub('', 'components.html');
   for (const cat of CATEGORIES) {
+    const directId = DIRECT_PRODUCT_CATEGORIES[cat.slug];
+    if (directId) {
+      write(`components/${cat.slug}.html`, categoryRedirectPage(directId, '../'));
+      continue;
+    }
     const items = catalog.components.filter((c) => c.category === cat.slug);
     write(`components/${cat.slug}.html`, categoryPage(cat, items, '../'));
   }

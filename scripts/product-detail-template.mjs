@@ -415,10 +415,13 @@ export function renderProductDetailMain(p, { base, breadcrumbHtml }) {
 
 export function renderComponentBreadcrumb(p, base) {
   const name = cleanName(p.name);
+  const categoryHref = p.categoryPath
+    ? `${base}${String(p.categoryPath).replace(/^\//, '')}`
+    : `${base}components/${esc(p.category)}.html`;
   return `<nav class="product-breadcrumb" aria-label="Breadcrumb">
     <a href="${base}index.html">Home</a> /
     <a href="${base}components.html">Components</a> /
-    <a href="${base}components/${esc(p.category)}.html">${esc(p.categoryLabel)}</a> /
+    <a href="${categoryHref}">${esc(p.categoryLabel)}</a> /
     <span>${esc(name)}</span>
   </nav>`;
 }

@@ -260,6 +260,35 @@ body.search-open { overflow: hidden; }
   margin-bottom: 8px;
 }
 .catalog-hero p { color: var(--text-muted); max-width: 56ch; margin-bottom: 28px; }
+.category-intro { margin-bottom: 36px; }
+.category-intro .lead {
+  color: var(--text);
+  font: 500 1.125rem/1.5 'Inter', sans-serif;
+  max-width: 62ch;
+  margin-bottom: 16px;
+}
+.category-intro__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px 40px;
+  margin: 28px 0;
+}
+.category-intro__heading {
+  font: 600 0.75rem/1 'JetBrains Mono', monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+.category-intro__closing {
+  max-width: 62ch;
+  margin-bottom: 0;
+}
+.category-intro__closing a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.category-intro__closing a:hover { text-decoration: underline; }
 .catalog-toolbar {
   display: flex;
   flex-direction: column;
