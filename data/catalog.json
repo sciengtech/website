@@ -4752,90 +4752,10 @@
         "assets/products/washer/image-02.png",
         "assets/products/washer/image-03.png"
       ]
-    },
-    {
-      "id": "vacuum-post",
-      "sku": "SET-VP",
-      "name": "Vacuum Post",
-      "type": "component",
-      "pageTemplate": "component",
-      "aliases": [
-        "Vacuum-compatible Post",
-        "Breadboard Mountable Post"
-      ],
-      "overview": [
-        "Vacuum Post is designed for optomechanical assemblies that require direct breadboard mounting and compatibility with standard post-holding hardware.",
-        "The post has M4 tapping on one side and M6 tapping on the other side, supporting flexible mounting of optical components and breadboard hardware. It is mountable on standard breadboards and compatible with the Universal Post Holder."
-      ],
-      "features": [
-        "M4 tapping on one side",
-        "M6 tapping on the other side",
-        "Mountable on standard breadboards",
-        "Compatible with Universal Post Holder",
-        "Suitable for vacuum and optomechanical setups"
-      ],
-      "applications": [
-        "Optical and photonics laboratories",
-        "Vacuum-compatible optomechanical assemblies",
-        "Breadboard-mounted optical setups",
-        "Research and educational experiments"
-      ],
-      "techSpecs": [
-        {
-          "label": "Threading",
-          "value": "M4 tapping on one side; M6 tapping on the other side"
-        },
-        {
-          "label": "Mounting",
-          "value": "Mountable on standard breadboards"
-        },
-        {
-          "label": "Compatibility",
-          "value": "Universal Post Holder"
-        }
-      ],
-      "keyValueSpecs": [],
-      "variants": [],
-      "configurationOptions": null,
-      "rfqSections": null,
-      "solutionContent": null,
-      "customNote": null,
-      "summary": "Vacuum Post for optomechanical assemblies with M4 tapping on one side and M6 tapping on the other side. Mountable on standard breadboards and compatible with the Universal Post Holder.",
-      "specHighlight": "M4 tapping · M6 tapping · Breadboard mountable",
-      "specs": [
-        {
-          "label": "Threading",
-          "value": "M4 and M6 tapped ends"
-        },
-        {
-          "label": "Mounting",
-          "value": "Standard breadboard compatible"
-        },
-        {
-          "label": "Compatibility",
-          "value": "Universal Post Holder"
-        }
-      ],
-      "body": "Vacuum Post\n\nVacuum Post is designed for optomechanical assemblies that require direct breadboard mounting and compatibility with standard post-holding hardware.\n\nThe post has M4 tapping on one side and M6 tapping on the other side, supporting flexible mounting of optical components and breadboard hardware. It is mountable on standard breadboards and compatible with the Universal Post Holder.\n\nFeatures\n\nM4 tapping on one side\n\nM6 tapping on the other side\n\nMountable on standard breadboards\n\nCompatible with Universal Post Holder\n\nSuitable for vacuum and optomechanical setups\n\nApplications\n\nOptical and photonics laboratories\n\nVacuum-compatible optomechanical assemblies\n\nBreadboard-mounted optical setups\n\nResearch and educational experiments",
-      "image": null,
-      "images": [],
-      "tags": [
-        "vacuum post",
-        "opto-mechanics",
-        "breadboard mount",
-        "universal post holder",
-        "m4 tapping",
-        "m6 tapping"
-      ],
-      "writeupPath": null,
-      "category": "opto-mechanics",
-      "categoryLabel": "Opto-Mechanics",
-      "categoryPath": "/components/opto-mechanics.html",
-      "_search": "vacuum-post set-vp vacuum post component opto-mechanics opto-mechanics vacuum post for optomechanical assemblies with m4 tapping on one side and m6 tapping on the other side. mountable on standard breadboards and compatible with the universal post holder. m4 tapping · m6 tapping · breadboard mountable vacuum-compatible post breadboard mountable post vacuum post opto-mechanics breadboard mount universal post holder m4 tapping m6 tapping vacuum post\n\nvacuum post is designed for optomechanical assemblies that require direct breadboard mounting and compatibility with standard post-holding hardware.\n\nthe post has m4 tapping on one side and m6 tapping on the other side, supporting flexible mounting of optical components and breadboard hardware. it is mountable on standard breadboards and compatible with the universal post holder.\n\nfeatures\n\nm4 tapping on one side\n\nm6 tapping on the other side\n\nmountable on standard breadboards\n\ncompatible with universal post holder\n\nsuitable for vacuum and optomechanical setups\n\napplications\n\noptical and photonics laboratories\n\nvacuum-compatible optomechanical assemblies\n\nbreadboard-mounted optical setups\n\nresearch and educational experiments"
     }
   ],
   "counts": {
     "solutions": 14,
-    "components": 46
+    "components": 45
   }
 }
