@@ -316,13 +316,42 @@ function renderHeroMeta(p, overline) {
     ${highlight}`;
 }
 
+function renderSpecSections(p) {
+  if (!p.specSections?.length) return '';
+  const tabs = p.specSections
+    .map(
+      (s, i) =>
+        `<button type="button" class="rfq-tab${i === 0 ? ' is-active' : ''}" data-rfq-tab="${esc(s.id)}" role="tab">${esc(s.title)}</button>`
+    )
+    .join('');
+  const panels = p.specSections
+    .map((s, i) => {
+      const table = renderSpecTable('Key Features', s.specs || []);
+      return `<div class="rfq-panel${i === 0 ? ' is-active' : ''}" data-rfq-panel="${esc(s.id)}">${table}</div>`;
+    })
+    .join('');
+  return `<div class="product-rfq-section product-spec-tabs" data-rfq-tabs>
+    <div class="rfq-tabs" role="tablist">${tabs}</div>
+    ${panels}
+  </div>`;
+}
+
 function renderComponentBody(p, base) {
-  const specs = p.techSpecs?.length ? p.techSpecs : p.keyValueSpecs?.length ? p.keyValueSpecs : null;
+  const specs =
+    p.techSpecs?.length ? p.techSpecs
+    : !p.specSections?.length && p.keyValueSpecs?.length ? p.keyValueSpecs
+    : null;
   const specHeader = p.keyValueSpecs?.length && !p.techSpecs?.length ? 'SPECIFICATION SHEET' : 'SPECIFICATION SHEET';
+  const note =
+    p.customNote ?
+      `<p class="product-custom-note">${esc(p.customNote)}</p>`
+    : '';
 
   return `${renderOverview(p)}
     ${renderTwoColBlocks('Features', p.features, 'Applications', p.applications)}
     ${specs ? renderSpecTable(specHeader, specs) : ''}
+    ${renderSpecSections(p)}
+    ${note}
     ${renderCtas(p, base)}`;
 }
 

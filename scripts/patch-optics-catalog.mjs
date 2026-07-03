@@ -1,5 +1,5 @@
 /**
- * Consolidate optics into a single catalog product (no category hub).
+ * Consolidate optics into a single catalog product with tabbed spec sections.
  * Run: node scripts/patch-optics-catalog.mjs
  */
 import fs from 'fs';
@@ -12,8 +12,6 @@ const catalogPath = path.join(ROOT, 'data/catalog.json');
 
 export const OPTICS_PRODUCT_ID =
   'sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t';
-
-const SPLIT_IDS = ['lenses', 'mirrors', 'beam-splitters', 'polarizers'];
 
 function buildSearch(item) {
   return [
@@ -33,41 +31,65 @@ function buildSearch(item) {
     .toLowerCase();
 }
 
-const keyValueSpecs = [
-  { label: 'Lenses — Lens', value: 'Plano-Convex, Bi-Convex, Plano-Concave, Bi-Concave, Achromatic, Cylindrical, Aspheric, and Ball Lenses' },
-  { label: 'Lenses — Material', value: 'BK7, Fused Silica, Optical Glass, and Specialty Glass' },
-  { label: 'Lenses — Diameter', value: '6 mm, 12.7 mm, 25.4 mm, 50.8 mm' },
-  { label: 'Lenses — Focal length', value: 'Short, Medium, and Long Focal Length Lenses' },
-  { label: 'Lenses — Coating', value: 'Uncoated, MgF₂, Broadband Anti-Reflection, and Laser-Line AR Coating' },
-  { label: 'Lenses — Wavelength', value: 'UV, Visible, NIR, and Selected Laser Wavelengths' },
-  { label: 'Lenses — Mounting', value: 'Mounted and Unmounted Lenses' },
-  { label: 'Lenses — Compatibility', value: 'Standard Opto-Mechanics' },
-  { label: 'Mirrors — Mirror', value: 'Protected Silver, Protected Aluminum, Enhanced Aluminum, Dielectric, and Broadband Mirrors' },
-  { label: 'Mirrors — Substrate', value: 'BK7, Fused Silica, Optical Glass, and Specialty Optical Materials' },
-  { label: 'Mirrors — Diameter', value: '12.7 mm, 25.4 mm, 50.8 mm' },
-  { label: 'Mirrors — Shape', value: 'Round, Square, Rectangular' },
-  { label: 'Mirrors — Coating', value: 'Visible, NIR, Broadband, and Laser-Line Coatings' },
-  { label: 'Mirrors — Reflectivity', value: 'High-Reflectivity Coatings for Selected Wavelengths' },
-  { label: 'Mirrors — Mounting', value: 'Mounted and Unmounted Mirrors' },
-  { label: 'Mirrors — Compatibility', value: 'Standard Opto-Mechanics' },
-  { label: 'Beam Splitters — Type', value: 'Plate Beam Splitters, Cube Beam Splitters, Non-Polarizing Beam Splitters, and Polarizing Beam Splitters' },
-  { label: 'Beam Splitters — Splitting Ratio (R/T)', value: '50:50, 70:30, 80:20, 90:10' },
-  { label: 'Beam Splitters — Wavelength Range', value: 'Visible, NIR, Broadband and Laser-Line Wavelength Ranges' },
-  { label: 'Beam Splitters — Coating', value: 'Broadband Coatings, Laser-Line Coatings, and Anti-Reflection Coated Back Surfaces' },
-  { label: 'Beam Splitters — Material', value: 'BK7, Fused Silica, Optical Glass, and Specialty Optical Materials' },
-  { label: 'Beam Splitters — Size', value: '12.7 mm, 25.4 mm, 50.8 mm, Cube Sizes, and Custom Dimensions' },
-  { label: 'Beam Splitters — Mounting', value: 'Mounted and Unmounted Beam Splitters' },
-  { label: 'Beam Splitters — Polarization', value: 'Polarization-Sensitive and Polarization-Insensitive Configurations' },
-  { label: 'Beam Splitters — Compatibility', value: 'Standard Opto-Mechanics' },
-  { label: 'Polarizers — Type', value: 'Linear Polarizers, Glan-Type Polarizers, Cube Polarizers, Wire-Grid Polarizers and Film Polarizers' },
-  { label: 'Polarizers — Wavelength', value: 'Visible, NIR, and Selected Laser Wavelengths' },
-  { label: 'Polarizers — Diameter', value: '12.7 mm, 25.4 mm, 50.8 mm' },
-  { label: 'Polarizers — Mounting', value: 'Mounted and Unmounted Polarizers' },
-  { label: 'Polarizers — Extinction Ratio', value: 'High-Extinction-Ratio Polarizers Where Required' },
-  { label: 'Polarizers — Coating', value: 'Broadband and Laser-Line Options' },
-  { label: 'Polarizers — Rotation Compatibility', value: 'Compatible with Standard Rotation Mounts' },
-  { label: 'Polarizers — Polarizing Optics', value: 'Polarizing Beam Splitter Cube Options' },
-  { label: 'Polarizers — Compatibility', value: 'Standard Opto-Mechanics' },
+const specSections = [
+  {
+    id: 'lenses',
+    title: 'Lenses',
+    specs: [
+      { label: 'Lens', value: 'Plano-Convex, Bi-Convex, Plano-Concave, Bi-Concave, Achromatic, Cylindrical, Aspheric, and Ball Lenses' },
+      { label: 'Material', value: 'BK7, Fused Silica, Optical Glass, and Specialty Glass' },
+      { label: 'Diameter', value: '6 mm, 12.7 mm, 25.4 mm, 50.8 mm' },
+      { label: 'Focal length', value: 'Short, Medium, and Long Focal Length Lenses' },
+      { label: 'Coating', value: 'Uncoated, MgF₂, Broadband Anti-Reflection, and Laser-Line AR Coating' },
+      { label: 'Wavelength', value: 'UV, Visible, NIR, and Selected Laser Wavelengths' },
+      { label: 'Mounting', value: 'Mounted and Unmounted Lenses' },
+      { label: 'Compatibility', value: 'Standard Opto-Mechanics' },
+    ],
+  },
+  {
+    id: 'mirrors',
+    title: 'Mirrors',
+    specs: [
+      { label: 'Mirror', value: 'Protected Silver, Protected Aluminum, Enhanced Aluminum, Dielectric, and Broadband Mirrors' },
+      { label: 'Substrate', value: 'BK7, Fused Silica, Optical Glass, and Specialty Optical Materials' },
+      { label: 'Diameter', value: '12.7 mm, 25.4 mm, 50.8 mm' },
+      { label: 'Shape', value: 'Round, Square, Rectangular' },
+      { label: 'Coating', value: 'Visible, NIR, Broadband, and Laser-Line Coatings' },
+      { label: 'Reflectivity', value: 'High-Reflectivity Coatings for Selected Wavelengths' },
+      { label: 'Mounting', value: 'Mounted and Unmounted Mirrors' },
+      { label: 'Compatibility', value: 'Standard Opto-Mechanics' },
+    ],
+  },
+  {
+    id: 'beam-splitters',
+    title: 'Beam Splitters',
+    specs: [
+      { label: 'Beam Splitter', value: 'Plate Beam Splitters, Cube Beam Splitters, Non-Polarizing Beam Splitters, and Polarizing Beam Splitters' },
+      { label: 'Splitting Ratio (R/T)', value: '50:50, 70:30, 80:20, 90:10' },
+      { label: 'Wavelength Range', value: 'Visible, NIR, Broadband and Laser-Line Wavelength Ranges' },
+      { label: 'Coating', value: 'Broadband Coatings, Laser-Line Coatings, and Anti-Reflection Coated Back Surfaces' },
+      { label: 'Material', value: 'BK7, Fused Silica, Optical Glass, and Specialty Optical Materials' },
+      { label: 'Size', value: '12.7 mm, 25.4 mm, 50.8 mm, Cube Sizes, and Custom Dimensions' },
+      { label: 'Mounting', value: 'Mounted and Unmounted Beam Splitters' },
+      { label: 'Polarization', value: 'Polarization-Sensitive and Polarization-Insensitive Configurations' },
+      { label: 'Compatibility', value: 'Standard Opto-Mechanics' },
+    ],
+  },
+  {
+    id: 'polarizers',
+    title: 'Polarizers',
+    specs: [
+      { label: 'Polarizer', value: 'Linear Polarizers, Glan-Type Polarizers, Cube Polarizers, Wire-Grid Polarizers and Film Polarizers' },
+      { label: 'Wavelength', value: 'Visible, NIR, and Selected Laser Wavelengths' },
+      { label: 'Diameter', value: '12.7 mm, 25.4 mm, 50.8 mm' },
+      { label: 'Mounting', value: 'Mounted and Unmounted Polarizers' },
+      { label: 'Extinction Ratio', value: 'High-Extinction-Ratio Polarizers Where Required' },
+      { label: 'Coating', value: 'Broadband and Laser-Line Options' },
+      { label: 'Rotation Compatibility', value: 'Compatible with Standard Rotation Mounts' },
+      { label: 'Polarizing Optics', value: 'Polarizing Beam Splitter Cube Options' },
+      { label: 'Compatibility', value: 'Standard Opto-Mechanics' },
+    ],
+  },
 ];
 
 const opticsProduct = {
@@ -98,7 +120,8 @@ const opticsProduct = {
     'Scientific and educational laboratories',
   ],
   techSpecs: [],
-  keyValueSpecs,
+  keyValueSpecs: [],
+  specSections,
   variants: [],
   configurationOptions: null,
   rfqSections: null,
@@ -113,9 +136,7 @@ const opticsProduct = {
 
 Precision Optical Components for Advanced Research and Education
 
-SciEngTech Solutions LLP provides high-quality optics for advanced research laboratories, teaching laboratories, laser experiments, photonics systems, and quantum optics platforms.
-
-Lenses, Mirrors, Beam Splitters, and Polarizers are available in standard and custom configurations for photonics and quantum optics laboratories.
+Lenses, Mirrors, Beam Splitters, and Polarizers for photonics and quantum optics laboratories.
 
 Product Code: SET-OPTICS`,
   image: 'assets/slides/03-dielectric-mirror.svg',
@@ -129,24 +150,14 @@ Product Code: SET-OPTICS`,
 opticsProduct._search = buildSearch(opticsProduct);
 
 const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
-const splitIdx = catalog.components.findIndex((c) => SPLIT_IDS.includes(c.id));
-if (splitIdx === -1 && !catalog.components.some((c) => c.id === OPTICS_PRODUCT_ID)) {
-  console.error('No split optics products found to replace.');
+const idx = catalog.components.findIndex((c) => c.id === OPTICS_PRODUCT_ID);
+if (idx === -1) {
+  console.error('Optics product not found in catalog.');
   process.exit(1);
 }
 
-catalog.components = catalog.components.filter((c) => !SPLIT_IDS.includes(c.id));
-const existingIdx = catalog.components.findIndex((c) => c.id === OPTICS_PRODUCT_ID);
-if (existingIdx >= 0) {
-  catalog.components[existingIdx] = opticsProduct;
-} else {
-  const insertAt = catalog.components.findIndex((c) => c.id === 'spanner-wrench');
-  if (insertAt >= 0) catalog.components.splice(insertAt, 0, opticsProduct);
-  else catalog.components.push(opticsProduct);
-}
-
+catalog.components[idx] = opticsProduct;
 catalog.updated = '2026-07-03';
-catalog.counts.components = catalog.components.length;
 
 fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 2));
-console.log(`Optics consolidated to single product (${OPTICS_PRODUCT_ID}), ${catalog.counts.components} components total.`);
+console.log(`Updated optics product with ${specSections.length} tabbed spec sections.`);

@@ -480,15 +480,56 @@
     );
   }
 
+  function renderSpecSections(p) {
+    if (!p.specSections || !p.specSections.length) return '';
+    var tabs = p.specSections
+      .map(function (s, i) {
+        return (
+          '<button type="button" class="rfq-tab' +
+          (i === 0 ? ' is-active' : '') +
+          '" data-rfq-tab="' +
+          esc(s.id) +
+          '" role="tab">' +
+          esc(s.title) +
+          '</button>'
+        );
+      })
+      .join('');
+    var panels = p.specSections
+      .map(function (s, i) {
+        return (
+          '<div class="rfq-panel' +
+          (i === 0 ? ' is-active' : '') +
+          '" data-rfq-panel="' +
+          esc(s.id) +
+          '">' +
+          renderSpecTable('Key Features', s.specs || []) +
+          '</div>'
+        );
+      })
+      .join('');
+    return (
+      '<div class="product-rfq-section product-spec-tabs" data-rfq-tabs>' +
+      '<div class="rfq-tabs" role="tablist">' +
+      tabs +
+      '</div>' +
+      panels +
+      '</div>'
+    );
+  }
+
   function renderComponentBody(p, base) {
     var specs =
       p.techSpecs && p.techSpecs.length ? p.techSpecs
-      : p.keyValueSpecs && p.keyValueSpecs.length ? p.keyValueSpecs
+      : !p.specSections?.length && p.keyValueSpecs && p.keyValueSpecs.length ? p.keyValueSpecs
       : null;
+    var note = p.customNote ? '<p class="product-custom-note">' + esc(p.customNote) + '</p>' : '';
     return (
       renderOverview(p) +
       renderTwoColBlocks('Features', p.features, 'Applications', p.applications) +
       (specs ? renderSpecTable('SPECIFICATION SHEET', specs) : '') +
+      renderSpecSections(p) +
+      note +
       renderCtas(p, base)
     );
   }

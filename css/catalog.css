@@ -683,7 +683,8 @@ body.search-open { overflow: hidden; }
   color: #fff;
   background: var(--bg-light);
 }
-.product-rfq-section { margin: 8px 0 24px; }
+.product-spec-tabs { margin-top: 8px; }
+.product-spec-tabs .rfq-tabs { margin-bottom: 20px; }
 .rfq-tabs {
   display: flex;
   flex-wrap: wrap;
