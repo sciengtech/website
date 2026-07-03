@@ -737,7 +737,7 @@ function main() {
   buildCompanyPage('../', 'company/contact.html', 'Contact', `<section class="page-content"><div class="wrap">
     <h1>Contact &amp; Credentials</h1>
     <div class="contact-grid">
-      <div><h3>Pune Headquarters</h3><p>14, Om Shanti, 156/2 Mangalwar Peth<br>Pune – 411 011, India</p><p><a href="mailto:info@sciengtech.in">info@sciengtech.in</a></p></div>
+      <div><h3>Pune Headquarters</h3><p>14, Om Shanti, 156/2 Mangalwar Peth<br>Pune – 411 011, India</p><p><a href="mailto:info@sciengtech.in">info@sciengtech.in</a><br><a href="mailto:sciengtechsol@gmail.com">sciengtechsol@gmail.com</a></p></div>
       <div><h3>Credentials</h3>
         <p><strong>GSTIN:</strong> 27AEOFS5239R1ZY</p>
         <p><strong>UDYAM:</strong> UDYAM-MH-26-0215820</p>
