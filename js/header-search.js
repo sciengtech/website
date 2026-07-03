@@ -130,6 +130,10 @@
     activeIndex = -1;
   }
 
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('.search-result-item')) closePanel();
+  });
+
   function setActive(idx) {
     var items = document.querySelectorAll('.search-result-item');
     for (var i = 0; i < items.length; i++) {
@@ -196,6 +200,7 @@
         setActive(Math.max(activeIndex - 1, 0));
       } else if (e.key === 'Enter' && activeIndex >= 0 && currentResults[activeIndex]) {
         e.preventDefault();
+        closePanel();
         window.location.href = window.SciEngCatalog.productUrl(currentResults[activeIndex].id);
       }
     });
@@ -219,7 +224,7 @@
     init();
   }
 
-  window.SciEngHeaderSearch = { init: tryInit };
+  window.SciEngHeaderSearch = { init: tryInit, close: closePanel };
 
   document.addEventListener('site-chrome-ready', tryInit);
 

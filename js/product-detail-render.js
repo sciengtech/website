@@ -44,6 +44,24 @@
     });
   }
 
+  function variantLabelForRow(row) {
+    var cols = variantColumns([row]);
+    return cols
+      .map(function (c) {
+        return row[c.key] || '';
+      })
+      .filter(Boolean)
+      .join(' · ');
+  }
+
+  function variantForImagePath(p, src) {
+    var variants = variantsWithImages(p);
+    for (var i = 0; i < variants.length; i++) {
+      if (variants[i].image === src) return variants[i];
+    }
+    return null;
+  }
+
   function renderVariantPicker(p, base) {
     var variants = variantsWithImages(p);
     if (!variants.length) return '';
@@ -104,20 +122,36 @@
       '</div>';
 
     var picker = renderVariantPicker(p, base);
+    var galleryAttrs =
+      ' data-product-gallery data-default-sku="' + esc(p.sku || '') + '"';
     if (images.length === 1) {
-      return '<div class="product-media-gallery" data-product-gallery>' + stage + picker + '</div>';
+      return '<div class="product-media-gallery"' + galleryAttrs + '>' + stage + picker + '</div>';
     }
 
     var thumbs = images
       .map(function (src, i) {
         var active = src === mainSrc ? ' is-active' : '';
+        var variant = variantForImagePath(p, src);
+        var variantSku = variant
+          ? String(variant.sku || variant.product_code || variant.set_code || '').replace(/\s+/g, '')
+          : '';
+        var variantLabel = variant ? variantLabelForRow(variant) : '';
+        var variantAttrs = variant
+          ? ' data-variant-sku="' +
+            esc(variantSku) +
+            '" data-variant-label="' +
+            esc(variantLabel) +
+            '"'
+          : '';
         return (
           '<button type="button" class="product-media-thumb' +
           active +
           '" data-gallery-src="' +
           base +
           esc(src) +
-          '" aria-label="View image ' +
+          '"' +
+          variantAttrs +
+          ' aria-label="View image ' +
           (i + 1) +
           '">' +
           '<img src="' +
@@ -130,7 +164,9 @@
       .join('');
 
     return (
-      '<div class="product-media-gallery" data-product-gallery>' +
+      '<div class="product-media-gallery"' +
+      galleryAttrs +
+      '>' +
       stage +
       '<div class="product-media-thumbs" role="list">' +
       thumbs +
@@ -630,20 +666,22 @@
           });
         }
       }
+      var defaultSku = gallery ? gallery.getAttribute('data-default-sku') || '' : '';
+      var activeSku = sku || defaultSku;
       var skuLine = root.querySelector('[data-product-sku-line]');
-      if (skuLine && sku) skuLine.textContent = 'SKU: ' + sku;
+      if (skuLine && activeSku) skuLine.textContent = 'SKU: ' + activeSku;
       root.querySelectorAll('[data-product-cart-btn]').forEach(function (btn) {
-        if (sku) btn.setAttribute('data-sku', sku);
-        if (label) btn.setAttribute('data-variant-label', label);
+        if (activeSku) btn.setAttribute('data-sku', activeSku);
+        if (sku && label) btn.setAttribute('data-variant-label', label);
         else btn.removeAttribute('data-variant-label');
       });
       root.querySelectorAll('.variant-picker-chip').forEach(function (chip) {
-        var active = chip.getAttribute('data-variant-sku') === sku;
+        var active = Boolean(sku) && chip.getAttribute('data-variant-sku') === sku;
         chip.classList.toggle('is-active', active);
         chip.setAttribute('aria-pressed', active ? 'true' : 'false');
       });
       root.querySelectorAll('[data-variant-row]').forEach(function (row) {
-        row.classList.toggle('is-selected', row.getAttribute('data-variant-sku') === sku);
+        row.classList.toggle('is-selected', Boolean(sku) && row.getAttribute('data-variant-sku') === sku);
       });
     }
 
@@ -654,11 +692,11 @@
         thumb.addEventListener('click', function () {
           var src = thumb.getAttribute('data-gallery-src');
           if (!src) return;
-          main.src = src;
-          gallery.querySelectorAll('.product-media-thumb').forEach(function (t) {
-            t.classList.remove('is-active');
-          });
-          thumb.classList.add('is-active');
+          applyVariantSelection(
+            thumb.getAttribute('data-variant-sku') || '',
+            src,
+            thumb.getAttribute('data-variant-label') || ''
+          );
         });
       });
     });

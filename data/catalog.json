@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-02",
+  "updated": "2026-07-03",
   "solutions": [
     {
       "id": "regenerative-delay-line",
@@ -960,8 +960,7 @@
       "categoryLabel": "Hardware",
       "categoryPath": "/components/hardware.html",
       "images": [
-        "assets/products/allen-bolt/primary.png",
-        "assets/products/allen-bolt/image-02.webp"
+        "assets/products/allen-bolt/primary.png"
       ]
     },
     {
@@ -1198,7 +1197,7 @@
       "sku": "SET-PB-H",
       "name": "BasePlate",
       "type": "component",
-      "pageTemplate": "component",
+      "pageTemplate": "variant-catalog",
       "aliases": [],
       "overview": [
         "SciEngTech Solutions offers high-quality optical post bases manufactured from durable aluminium alloy for secure mounting of Ø12.7 mm (1/2\") posts and post holders on optical breadboards. Precision-machined and black anodized for enhanced durability and reduced light reflections, these post bases provide a stable foundation for optical and optomechanical assemblies.",
@@ -1217,41 +1216,43 @@
         "Research and educational experiments",
         "Precision optomechanical assemblies",
         "Alignment and positioning of optical components",
-        "H-Shaped (Dual-Bridge Base Plate, Cross-Link Base Plate)",
-        "Dimension (H× L× W): 25 mm x 75 mm x 10 mm",
-        "Tapping: M6 slot",
-        "U-shaped (U-Channel Plate, U-Frame Base Plate)",
-        "Dimension (H× L× W): 25 mm x 58 mm x 10 mm",
-        "Tapping: M6 slot",
-        "Square- Shaped (Square Mounting Plate,Square Support Plate, Four-Sided Base Plate, Quadrilateral Mounting Plate)",
-        "Dimension (H× L× W): 50 mm x 75 mm x 10 mm",
-        "Tapping: M6 slot",
-        "Tapped Mounting Base",
-        "Manufactured from high-quality black anodized aluminum, these base plates combine excellent mechanical strength, corrosion resistance, and low reflectivity, making them ideal for laboratory, research, and industrial applications.",
-        "Multiple tapped holes for flexible mounting configurations",
-        "Compatible with standard optical breadboards and mounting hardware",
-        "Designed and manufactured in India",
-        "Specifications:",
-        "Dimensions (H× L× W) 10mm × 100mm × 50mm",
-        "Nine M6 tapped holes",
-        "Six M4 tapped",
-        "Two straight hole as in H-base plate",
-        "Material: Black anodized aluminum",
-        "Optical and photonics laboratories",
-        "Laser and fiber-optic experiments",
         "Precision alignment setups",
-        "Research and educational demonstrations",
         "Custom optomechanical assemblies and fixtures"
       ],
       "techSpecs": [],
       "keyValueSpecs": [],
-      "variants": [],
+      "variants": [
+        {
+          "sr": 1,
+          "shape": "H-Shaped",
+          "dimension": "25 mm × 75 mm × 10 mm",
+          "product_code": "SET-PB-H",
+          "sku": "SET-PB-H",
+          "image": "assets/products/baseplate/image-02.png"
+        },
+        {
+          "sr": 2,
+          "shape": "Square",
+          "dimension": "50 mm × 75 mm × 10 mm",
+          "product_code": "SET-PB-SQ",
+          "sku": "SET-PB-SQ",
+          "image": "assets/products/baseplate/image-03.png"
+        },
+        {
+          "sr": 3,
+          "shape": "U-Shaped",
+          "dimension": "25 mm × 58 mm × 10 mm",
+          "product_code": "SET-PB-U",
+          "sku": "SET-PB-U",
+          "image": "assets/products/baseplate/image-04.png"
+        }
+      ],
       "configurationOptions": null,
       "rfqSections": null,
       "solutionContent": null,
       "customNote": null,
       "summary": "SciEngTech Solutions offers high-quality optical post bases manufactured from durable aluminium alloy for secure mounting of Ø12.7 mm (1/2\") posts and post holders on optical breadboards. Precision-machined and black anodized for enhanced durability and reduced light reflections, these post bases provide a stable foundation for optical and optomechanical assemblies.",
-      "specHighlight": "Precision-machined aluminium alloy construction · Black anodized finish for durability and low reflectivity",
+      "specHighlight": "3 configurations available · SKU from SET-PB-H",
       "specs": [
         {
           "label": "Feature",
@@ -1866,7 +1867,7 @@
       "sku": "SET-PC",
       "name": "Collars",
       "type": "component",
-      "pageTemplate": "component",
+      "pageTemplate": "variant-catalog",
       "aliases": [],
       "overview": [
         "SciEngTech Post Collars provide a simple, reliable, and cost-effective solution for maintaining accurate post positioning and improving the stability of optical experiments.",
@@ -1891,18 +1892,32 @@
         "Precision optomechanical assemblies",
         "Research and educational setups",
         "Post positioning and height referencing",
-        "General optical breadboard applications",
-        "SET-PC-TH (Thin Slipon Collar)"
+        "General optical breadboard applications"
       ],
       "techSpecs": [],
       "keyValueSpecs": [],
-      "variants": [],
+      "variants": [
+        {
+          "sr": 1,
+          "type": "Standard Post Collar",
+          "product_code": "SET-PC",
+          "sku": "SET-PC",
+          "image": "assets/products/collars/primary.png"
+        },
+        {
+          "sr": 2,
+          "type": "Slip-On Post Collar",
+          "product_code": "SET-PC-SPC",
+          "sku": "SET-PC-SPC",
+          "image": "assets/products/collars/image-03.png"
+        }
+      ],
       "configurationOptions": null,
       "rfqSections": null,
       "solutionContent": null,
       "customNote": null,
       "summary": "SciEngTech Post Collars provide a simple, reliable, and cost-effective solution for maintaining accurate post positioning and improving the stability of optical experiments.",
-      "specHighlight": "Designed for Ø12.7 mm (1/2\") optical posts · Slip-on collar design for quick installation and adjustment",
+      "specHighlight": "2 configurations available · SKU from SET-PC",
       "specs": [
         {
           "label": "Feature",
@@ -2506,7 +2521,7 @@
         }
       ],
       "body": "Hex Keys\n\nSciEngTech Solutions offers high-quality Stainless Steel SS303 Hex Keys of different sizes, suitable for a broad range of mechanical and optomechanical assemblies. \n\nHex Size (mm): 1.5, 2, 3,",
-      "image": "assets/products/hex-keys/primary.jpeg",
+      "image": "assets/products/hex-keys/image-02.png",
       "tags": [
         "hex keys",
         "hardware"
@@ -2517,7 +2532,6 @@
       "categoryLabel": "Hardware",
       "categoryPath": "/components/hardware.html",
       "images": [
-        "assets/products/hex-keys/primary.jpeg",
         "assets/products/hex-keys/image-02.png"
       ]
     },
@@ -3070,83 +3084,6 @@
         "assets/products/lens-mount/primary.png",
         "assets/products/lens-mount/image-02.png"
       ]
-    },
-    {
-      "id": "lens-mount-alignment-plate",
-      "sku": "SET-LMAP",
-      "name": "Lens Mount Alignment Plate",
-      "type": "component",
-      "pageTemplate": "component",
-      "aliases": [
-        "Optical Axis Alignment Plate for Lens Mounts"
-      ],
-      "overview": [
-        "The alignment plate serves as a temporary reference tool during optical alignment procedures. It helps in defining the optical axis and ensures that the laser beam is properly centered through the lens system before final locking and operation.",
-        "It provides a reference surface to ensure accurate beam positioning and simplifies alignment procedures in complex optical systems.",
-        "Once alignment is completed, the plate can be removed without disturbing the setup."
-      ],
-      "features": [
-        "Removable alignment plate for convenient use during setup and alignment",
-        "Designed to assist laser beam alignment with pre-mounted lens holders",
-        "Ensures accurate beam positioning along the optical axis",
-        "Compatible with standard opto-mechanical lens mounts",
-        "Compact and easy-to-handle design for laboratory use",
-        "Precision-machined aluminium construction with black anodized finish"
-      ],
-      "applications": [
-        "Laser beam alignment in optical benches",
-        "Lens system centering and calibration",
-        "Interferometer setup alignment",
-        "Educational optics experiments",
-        "Research laboratory optical assembly",
-        "Photonics and laser system alignment"
-      ],
-      "techSpecs": [],
-      "keyValueSpecs": [],
-      "variants": [],
-      "configurationOptions": null,
-      "rfqSections": null,
-      "solutionContent": null,
-      "customNote": null,
-      "summary": "The alignment plate serves as a temporary reference tool during optical alignment procedures. It helps in defining the optical axis and ensures that the laser beam is properly centered through the lens system before final locking and operation.",
-      "specHighlight": "Removable alignment plate for convenient use during setup and alignment · Designed to assist laser beam alignment with pre-mounted lens holders",
-      "specs": [
-        {
-          "label": "Feature",
-          "value": "Removable alignment plate for convenient use during setup and alignment"
-        },
-        {
-          "label": "Feature",
-          "value": "Designed to assist laser beam alignment with pre-mounted lens holders"
-        },
-        {
-          "label": "Feature",
-          "value": "Ensures accurate beam positioning along the optical axis"
-        },
-        {
-          "label": "Feature",
-          "value": "Compatible with standard opto-mechanical lens mounts"
-        },
-        {
-          "label": "Feature",
-          "value": "Compact and easy-to-handle design for laboratory use"
-        },
-        {
-          "label": "Feature",
-          "value": "Precision-machined aluminium construction with black anodized finish"
-        }
-      ],
-      "body": "Lens Mount Alignment Plate (Optical Axis Alignment Plate for Lens Mounts)\n\nThe alignment plate serves as a temporary reference tool during optical alignment procedures. It helps in defining the optical axis and ensures that the laser beam is properly centered through the lens system before final locking and operation. \n\n It provides a reference surface to ensure accurate beam positioning and simplifies alignment procedures in complex optical systems.\n\nOnce alignment is completed, the plate can be removed without disturbing the setup.\n\nFeatures\n\nRemovable alignment plate for convenient use during setup and alignment\n\nDesigned to assist laser beam alignment with pre-mounted lens holders\n\nEnsures accurate beam positioning along the optical axis\n\nCompatible with standard opto-mechanical lens mounts\n\nCompact and easy-to-handle design for laboratory use\n\nPrecision-machined aluminium construction with black anodized finish\n\nApplications\n\nLaser beam alignment in optical benches\n\nLens system centering and calibration\n\nInterferometer setup alignment\n\nEducational optics experiments\n\nResearch laboratory optical assembly\n\nPhotonics and laser system alignment\n\nProduct Code: SET-LMAP",
-      "image": null,
-      "tags": [
-        "lens mount alignment plate",
-        "opto-mechanics"
-      ],
-      "writeupPath": "Opto-Mechanics/Alignment Plate/Lens Mount/Alignment Plate.docx",
-      "_search": "lens-mount-alignment-plate set-lmap lens mount alignment plate component   component the alignment plate serves as a temporary reference tool during optical alignment procedures. it helps in defining the optical axis and ensures that the laser beam is properly centered through the lens system before final locking and operation. removable alignment plate for convenient use during setup and alignment · designed to assist laser beam alignment with pre-mounted lens holders optical axis alignment plate for lens mounts removable alignment plate for convenient use during setup and alignment designed to assist laser beam alignment with pre-mounted lens holders ensures accurate beam positioning along the optical axis compatible with standard opto-mechanical lens mounts compact and easy-to-handle design for laboratory use precision-machined aluminium construction with black anodized finish laser beam alignment in optical benches lens system centering and calibration interferometer setup alignment educational optics experiments research laboratory optical assembly photonics and laser system alignment lens mount alignment plate opto-mechanics feature removable alignment plate for convenient use during setup and alignment feature designed to assist laser beam alignment with pre-mounted lens holders feature ensures accurate beam positioning along the optical axis feature compatible with standard opto-mechanical lens mounts feature compact and easy-to-handle design for laboratory use feature precision-machined aluminium construction with black anodized finish  lens mount alignment plate (optical axis alignment plate for lens mounts)\n\nthe alignment plate serves as a temporary reference tool during optical alignment procedures. it helps in defining the optical axis and ensures that the laser beam is properly centered through the lens system before final locking and operation. \n\n it provides a reference surface to ensure accurate beam positioning and simplifies alignment procedures in complex optical systems.\n\nonce alignment is completed, the plate can be removed without disturbing the setup.\n\nfeatures\n\nremovable alignment plate for convenient use during setup and alignment\n\ndesigned to assist laser beam alignment with pre-mounted lens holders\n\nensures accurate beam positioning along the optical axis\n\ncompatible with standard opto-mechanical lens mounts\n\ncompact and easy-to-handle design for laboratory use\n\nprecision-machined aluminium construction with black anodized finish\n\napplications\n\nlaser beam alignment in optical benches\n\nlens system centering and calibration\n\ninterferometer setup alignment\n\neducational optics experiments\n\nresearch laboratory optical assembly\n\nphotonics and laser system alignment\n\nproduct code: set-lmap",
-      "category": "opto-mechanics",
-      "categoryLabel": "Opto-Mechanics",
-      "categoryPath": "/components/opto-mechanics.html"
     },
     {
       "id": "lens-tube-with-retaining-ring",
@@ -4011,8 +3948,7 @@
         "assets/products/post-holder/primary.jpg",
         "assets/products/post-holder/image-02.png",
         "assets/products/post-holder/image-03.png",
-        "assets/products/post-holder/image-04.png",
-        "assets/products/post-holder/image-05.png"
+        "assets/products/post-holder/image-04.png"
       ]
     },
     {
@@ -4814,16 +4750,12 @@
       "images": [
         "assets/products/washer/primary.png",
         "assets/products/washer/image-02.png",
-        "assets/products/washer/image-03.png",
-        "assets/products/washer/image-04.jpg",
-        "assets/products/washer/image-05.jpg",
-        "assets/products/washer/image-06.png",
-        "assets/products/washer/image-07.png"
+        "assets/products/washer/image-03.png"
       ]
     }
   ],
   "counts": {
     "solutions": 14,
-    "components": 46
+    "components": 45
   }
 }

@@ -56,6 +56,22 @@ function variantsWithImages(p) {
   return p.variants.filter((v) => v.image);
 }
 
+function variantLabelForRow(row) {
+  const cols = variantColumns([row]);
+  return cols
+    .map((c) => row[c.key] || '')
+    .filter(Boolean)
+    .join(' · ');
+}
+
+function variantForImagePath(p, src) {
+  const variants = variantsWithImages(p);
+  for (let i = 0; i < variants.length; i++) {
+    if (variants[i].image === src) return variants[i];
+  }
+  return null;
+}
+
 function renderVariantPicker(p, base) {
   const variants = variantsWithImages(p);
   if (!variants.length) return '';
@@ -93,20 +109,30 @@ function renderMedia(p, base) {
   </div>`;
 
   const picker = renderVariantPicker(p, base);
+  const galleryAttrs =
+    ` data-product-gallery data-default-sku="${esc(p.sku || '')}"`;
   if (images.length === 1) {
-    return `<div class="product-media-gallery" data-product-gallery>${stage}${picker}</div>`;
+    return `<div class="product-media-gallery"${galleryAttrs}>${stage}${picker}</div>`;
   }
 
   const thumbs = images
     .map((src, i) => {
       const active = src === mainSrc ? ' is-active' : '';
-      return `<button type="button" class="product-media-thumb${active}" data-gallery-src="${base}${esc(src)}" aria-label="View image ${i + 1}">
+      const variant = variantForImagePath(p, src);
+      const variantSku = variant
+        ? String(variant.sku || variant.product_code || variant.set_code || '').replace(/\s+/g, '')
+        : '';
+      const variantLabel = variant ? variantLabelForRow(variant) : '';
+      const variantAttrs = variant
+        ? ` data-variant-sku="${esc(variantSku)}" data-variant-label="${esc(variantLabel)}"`
+        : '';
+      return `<button type="button" class="product-media-thumb${active}" data-gallery-src="${base}${esc(src)}"${variantAttrs} aria-label="View image ${i + 1}">
         <img src="${base}${esc(src)}" alt="" loading="lazy" />
       </button>`;
     })
     .join('');
 
-  return `<div class="product-media-gallery" data-product-gallery>
+  return `<div class="product-media-gallery"${galleryAttrs}>
     ${stage}
     <div class="product-media-thumbs" role="list">${thumbs}</div>
     ${picker}
@@ -430,20 +456,22 @@ export function initProductDetailInteractions(root) {
         thumb.classList.toggle('is-active', thumbSrc === imageSrc);
       });
     }
+    const defaultSku = gallery?.getAttribute('data-default-sku') || '';
+    const activeSku = sku || defaultSku;
     const skuLine = root.querySelector('[data-product-sku-line]');
-    if (skuLine && sku) skuLine.textContent = `SKU: ${sku}`;
+    if (skuLine && activeSku) skuLine.textContent = `SKU: ${activeSku}`;
     root.querySelectorAll('[data-product-cart-btn]').forEach((btn) => {
-      if (sku) btn.setAttribute('data-sku', sku);
-      if (label) btn.setAttribute('data-variant-label', label);
+      if (activeSku) btn.setAttribute('data-sku', activeSku);
+      if (sku && label) btn.setAttribute('data-variant-label', label);
       else btn.removeAttribute('data-variant-label');
     });
     root.querySelectorAll('.variant-picker-chip').forEach((chip) => {
-      const active = chip.getAttribute('data-variant-sku') === sku;
+      const active = Boolean(sku) && chip.getAttribute('data-variant-sku') === sku;
       chip.classList.toggle('is-active', active);
       chip.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
     root.querySelectorAll('[data-variant-row]').forEach((row) => {
-      row.classList.toggle('is-selected', row.getAttribute('data-variant-sku') === sku);
+      row.classList.toggle('is-selected', Boolean(sku) && row.getAttribute('data-variant-sku') === sku);
     });
   }
 
@@ -454,9 +482,11 @@ export function initProductDetailInteractions(root) {
       thumb.addEventListener('click', () => {
         const src = thumb.getAttribute('data-gallery-src');
         if (!src) return;
-        main.src = src;
-        gallery.querySelectorAll('.product-media-thumb').forEach((t) => t.classList.remove('is-active'));
-        thumb.classList.add('is-active');
+        applyVariantSelection(
+          thumb.getAttribute('data-variant-sku') || '',
+          src,
+          thumb.getAttribute('data-variant-label') || ''
+        );
       });
     });
   });
