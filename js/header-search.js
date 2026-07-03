@@ -93,17 +93,32 @@
     renderResults(list, query);
   }
 
+  function focusInput(el) {
+    if (!el) return;
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        try {
+          el.focus({ preventScroll: true });
+        } catch (err) {
+          el.focus();
+        }
+      });
+    });
+  }
+
   function openPanel() {
     var panel = document.getElementById('searchPanel');
     var input = document.getElementById('globalSearchInput');
-    if (!panel) return;
+    var trigger = document.getElementById('searchTrigger');
+    if (!panel || !input) return;
     panel.classList.add('is-open');
     panel.setAttribute('aria-hidden', 'false');
     document.body.classList.add('search-open');
-    if (input) {
-      input.focus();
-      runSearch(input.value.trim());
+    if (trigger && document.activeElement === trigger) {
+      trigger.blur();
     }
+    focusInput(input);
+    runSearch(input.value.trim());
   }
 
   function closePanel() {
@@ -126,11 +141,33 @@
   }
 
   var initialized = false;
+  var triggerBound = false;
+
+  function bindSearchTrigger() {
+    if (triggerBound) return;
+    document.addEventListener('click', function (e) {
+      var trigger = e.target.closest('#searchTrigger');
+      if (!trigger) return;
+      e.preventDefault();
+      init();
+      openPanel();
+    });
+    triggerBound = true;
+  }
+
+  bindSearchTrigger();
+
+  document.addEventListener('keydown', function (e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      init();
+      openPanel();
+    }
+  });
 
   function init() {
     if (initialized) return;
 
-    var trigger = document.getElementById('searchTrigger');
     var input = document.getElementById('globalSearchInput');
     var panel = document.getElementById('searchPanel');
     var backdrop = document.getElementById('searchBackdrop');
@@ -144,22 +181,11 @@
       if (resultsEl) resultsEl.innerHTML = '<p class="search-empty">Catalog unavailable offline.</p>';
     });
 
-    if (trigger) {
-      trigger.addEventListener('click', function (e) {
-        e.preventDefault();
-        openPanel();
-      });
-    }
-
     if (closeBtn) closeBtn.addEventListener('click', closePanel);
     if (backdrop) backdrop.addEventListener('click', closePanel);
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closePanel();
-      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-        e.preventDefault();
-        openPanel();
-      }
       if (!panel.classList.contains('is-open')) return;
 
       if (e.key === 'ArrowDown') {

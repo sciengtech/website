@@ -189,6 +189,20 @@
     grid.innerHTML = html;
   }
 
+  function focusCatalogInput() {
+    var input = document.getElementById('catalogSearchInput');
+    if (!input) return;
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        try {
+          input.focus({ preventScroll: true });
+        } catch (err) {
+          input.focus();
+        }
+      });
+    });
+  }
+
   function init() {
     mode = document.documentElement.getAttribute('data-catalog-mode') || 'full';
     var params = new URLSearchParams(window.location.search);
@@ -216,6 +230,7 @@
         clearTimeout(debounceTimer);
         debounceTimer = setTimeout(renderGrid, 120);
       });
+      focusCatalogInput();
     }
   }
 

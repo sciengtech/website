@@ -26,14 +26,34 @@ const CATEGORIES = [
   { slug: 'lab-accessories', label: 'Lab Accessories' },
 ];
 
-/** Homepage category strip — optics & opto-mechanics → lasers → others */
-const HOME_CATEGORY_ORDER = [
-  'optics',
-  'opto-mechanics',
-  'motion-and-positioning',
-  'lasers',
-  'fibre-optics',
-  'hardware',
+/** Homepage category strip — 10 tiles in two rows */
+const HOME_CATEGORIES = [
+  { slug: 'optics', label: 'Optics', href: 'components/optics.html' },
+  { slug: 'opto-mechanics', label: 'Opto-Mechanics', href: 'components/opto-mechanics.html' },
+  { slug: 'motion-and-positioning', label: 'Motion and Positioning', href: 'components/motion-and-positioning.html' },
+  { slug: 'lasers', label: 'Lasers and Detectors', href: 'components/lasers.html' },
+  { slug: 'fibre-optics', label: 'Fibre Optics', href: 'components/fibre-optics.html' },
+  {
+    slug: 'quantum-technology',
+    label: 'Quantum Technology',
+    href: 'solutions/quantum-setups.html',
+  },
+  {
+    slug: 'quantum-education',
+    label: 'Quantum Education',
+    href: 'solutions/quantum-setups.html',
+  },
+  {
+    slug: 'photonics-training',
+    label: 'Photonics Training',
+    href: 'solutions/training-kits.html',
+  },
+  {
+    slug: 'customised-solutions',
+    label: 'Customised Solutions',
+    href: 'solutions/state-of-the-art-setups.html',
+  },
+  { slug: 'hardware', label: 'Hardware', href: 'components/hardware.html' },
 ];
 
 const CATEGORY_COVER_PREF = {
@@ -117,7 +137,7 @@ function shell({ base, title, desc, main, pageId = '', catalogMode = '', detailP
   <meta name="description" content="${esc(desc)}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="${base}css/site.css" />
   <link rel="stylesheet" href="${base}css/catalog.css" />
 </head>
@@ -303,17 +323,40 @@ const HOME_CATEGORY_IMAGES = {
   lasers: 'assets/homepage/categories/04-lasers.webp',
   'fibre-optics': 'assets/homepage/categories/05-fibre-optics.webp',
   hardware: 'assets/homepage/categories/06-hardware.webp',
+  'quantum-technology': 'assets/homepage/categories/07-quantum-technology.webp',
+  'quantum-education': 'assets/homepage/categories/08-quantum-education.webp',
+  'photonics-training': 'assets/homepage/categories/09-photonics-training.webp',
+  'customised-solutions': 'assets/homepage/categories/10-customised-solutions.webp',
+};
+
+const HOME_CATEGORY_IMAGE_FALLBACKS = {
+  'quantum-technology': 'assets/homepage/quantum/01-entangled-photon-source.webp',
+  'quantum-education': 'assets/homepage/quantum/03-quantum-key-distribution.webp',
+  'photonics-training': 'assets/homepage/quantum/05-michelson-interferometer.webp',
+  'customised-solutions': 'assets/homepage/quantum/02-hbt-and-hom.webp',
 };
 
 function placeholderSlide(index) {
   return SLIDE_PLACEHOLDERS[index % SLIDE_PLACEHOLDERS.length];
 }
 
+function homeCategoryCover(cat, index) {
+  const candidates = [
+    HOME_CATEGORY_IMAGES[cat.slug],
+    HOME_CATEGORY_IMAGE_FALLBACKS[cat.slug],
+    categoryCoverImage(cat.slug),
+    placeholderSlide(index),
+  ];
+  for (const cover of candidates) {
+    if (cover && assetExists(cover)) return cover;
+  }
+  return placeholderSlide(index);
+}
+
 function componentCategoryQuicklinks() {
-  const ordered = HOME_CATEGORY_ORDER.map((slug) => CATEGORIES.find((c) => c.slug === slug)).filter(Boolean);
-  const tiles = ordered.map((cat, i) => {
-    const cover = HOME_CATEGORY_IMAGES[cat.slug] || categoryCoverImage(cat.slug) || placeholderSlide(i);
-    return `<a class="category-tile" href="components/${cat.slug}.html" aria-label="${esc(cat.label)}">
+  const tiles = HOME_CATEGORIES.map((cat, i) => {
+    const cover = homeCategoryCover(cat, i);
+    return `<a class="category-tile" href="${esc(cat.href)}" aria-label="${esc(cat.label)}">
       <span class="category-tile__media">
         <img src="${esc(cover)}" alt="" loading="lazy" />
         <span class="category-tile__label">${esc(cat.label)}</span>
@@ -331,80 +374,35 @@ function componentCategoryQuicklinks() {
   </div>`;
 }
 
-function homePillarsSection() {
-  return `<section class="pillars">
-    <div class="wrap">
-      <div class="section-head"><h2>Engineered for quantum demonstration. Specified for the lab bench.</h2></div>
-      <div class="home-catalog">
-        <p class="home-catalog__eyebrow">Turnkey solutions</p>
-        <div class="home-catalog__solutions">
-          <a class="home-catalog-card" href="solutions/quantum-setups.html">
-            <span class="home-catalog-card__num">01</span>
-            <h3>Quantum Set-Ups</h3>
-            <p>Entangled photon sources, QKD-BB84, quantum eraser, and interferometry systems for classroom and research.</p>
-            <span class="home-catalog-card__cta">View quantum systems →</span>
-          </a>
-          <a class="home-catalog-card" href="solutions/state-of-the-art-setups.html">
-            <span class="home-catalog-card__num">02</span>
-            <h3>State of the Art Setups</h3>
-            <p>Regenerative delay lines, supercontinuum sources, laser systems, and custom ultrafast assemblies.</p>
-            <span class="home-catalog-card__cta">View state-of-the-art systems →</span>
-          </a>
-          <a class="home-catalog-card" href="solutions/training-kits.html">
-            <span class="home-catalog-card__num">03</span>
-            <h3>Training &amp; Education Kits</h3>
-            <p>Fourier optics, polarized 3D cinema, and hands-on photonics education kits.</p>
-            <span class="home-catalog-card__cta">View training kits →</span>
-          </a>
-        </div>
-        <a class="home-catalog-banner" href="components.html">
-          <div class="home-catalog-banner__copy">
-            <span class="home-catalog-banner__eyebrow">Bench hardware catalog</span>
-            <h3>Components for optical assembly</h3>
-            <p>Opto-mechanics, motion stages, optics, lasers, and hardware — the supporting catalog for every quantum bench build.</p>
-          </div>
-          <span class="home-catalog-banner__cta btn btn-outline">Browse components →</span>
-        </a>
-      </div>
-    </div>
-  </section>`;
-}
-
 function homeClosingSections() {
   return `<section class="data-proof" aria-label="Quality and compliance">
     <div class="wrap quality-proof">
       <div class="quality-proof__intro">
-        <p class="quality-proof__overline">Institutional procurement ready</p>
         <h2>Rigorous compliance. Guaranteed field performance.</h2>
-        <p>Every quantum system and bench component is validated before dispatch — manufactured in India and specified for academic, defence, and government procurement channels.</p>
       </div>
       <div class="credential-bar" role="list">
         <article class="credential-badge" role="listitem">
           <img class="credential-badge__logo" src="assets/credentials/make-in-india.svg" alt="" width="120" height="48" />
           <h3>Made in India</h3>
-          <p>Engineered &amp; manufactured in Pune</p>
         </article>
         <article class="credential-badge" role="listitem">
           <img class="credential-badge__logo" src="assets/credentials/iso-certified.svg" alt="" width="120" height="48" />
-          <h3>ISO Certified</h3>
-          <p>Quality management processes</p>
+          <h3>ISO 9001:2015</h3>
         </article>
         <article class="credential-badge" role="listitem">
           <img class="credential-badge__logo" src="assets/credentials/gem-vendor.svg" alt="" width="120" height="48" />
           <h3>GeM Vendor</h3>
-          <p>Approved Government e-Marketplace supplier</p>
         </article>
         <article class="credential-badge" role="listitem">
           <img class="credential-badge__logo" src="assets/credentials/quality-inspected.svg" alt="" width="120" height="48" />
-          <h3>100% Inspected</h3>
-          <p>Every unit checked before dispatch</p>
+          <h3>Every unit checked before dispatch</h3>
         </article>
       </div>
       <div class="quality-proof__body">
         <div class="quality-commitments">
           <article class="quality-commitment">
             <h3>Specification review</h3>
-            <p>Configurations and BOM lines are confirmed against your application before engineering and production begin.</p>
+            <p>All configurations and Bill of Materials line items will be reviewed and confirmed against your application requirements prior to the commencement of engineering and production.</p>
           </article>
           <article class="quality-commitment">
             <h3>Pre-dispatch inspection</h3>
@@ -418,7 +416,7 @@ function homeClosingSections() {
         <div class="spec-table quality-record">
           <header>PROCUREMENT &amp; COMPLIANCE RECORD</header>
           <div class="spec-row"><span>Legal entity</span><span>SciEngTech Solutions LLP</span></div>
-          <div class="spec-row"><span>Origin</span><span>Made in India · Pune</span></div>
+          <div class="spec-row"><span>Origin</span><span>India · Pune · Mumbai</span></div>
           <div class="spec-row"><span>GSTIN</span><span class="mono">27AEOFS5239R1ZY</span></div>
           <div class="spec-row"><span>UDYAM</span><span class="mono">UDYAM-MH-26-0215820</span></div>
           <div class="spec-row"><span>GeM status</span><span>Approved vendor</span></div>
@@ -429,7 +427,7 @@ function homeClosingSections() {
   </section>
   <section class="cta-band">
     <div class="wrap">
-      <h2>Ready to configure your quantum lab requirements?</h2>
+      <h2>Ready to configure your lab requirements?</h2>
       <p>Request a technical quote for quantum systems and bench components.</p>
       <div class="hero-ctas">
         <a class="btn btn-ruby" href="engineering/rfq.html">Request Technical Quote</a>
@@ -464,8 +462,8 @@ function buildHomepageMain() {
     <div class="wrap hero-grid">
       <div>
         <div class="overline">Quantum Optics Infrastructure</div>
-        <h1>Integrated Quantum Systems for Research, Education, and Advanced Photonics.</h1>
-        <p>SciEngTech engineers entangled photon sources, quantum demonstration set-ups, and training kits — supported by a full bench-component catalog for optical assembly.</p>
+        <h1>Laser, Photonics, Integrated Quantum System for research and Education</h1>
+        <p>SciEngTech engineers laser, entangled photon source, quantum demonstration set-ups, and training kits — supported by a full bench-component catalog for optical assembly.</p>
         <div class="hero-ctas">
           <a class="btn btn-ruby" href="engineering/rfq.html">Request Technical Quote</a>
           <a class="btn btn-outline" href="solutions.html">Explore Quantum Solutions</a>
@@ -477,6 +475,7 @@ function buildHomepageMain() {
           <button type="button" class="carousel-btn prev" id="carouselPrev" aria-label="Previous slide">‹</button>
           <button type="button" class="carousel-btn next" id="carouselNext" aria-label="Next slide">›</button>
           ${slideHtml}
+          <p class="carousel-disclaimer">Images shown are representative.</p>
         </div>
         <a class="carousel-meta" id="carouselMeta" href="${esc(slides[0]?.solutionUrl || `solutions/${slides[0]?.id}.html` || 'solutions.html')}">
           <span class="slide-title" id="carouselTitle">${esc(slides[0]?.name.replace(/^['']|['']$/g, '') || '')}</span>
@@ -490,7 +489,6 @@ function buildHomepageMain() {
   <section class="proof" aria-label="Institutional clients">
     <div class="wrap proof-inner">
       <p class="proof-overline">Institutional reach</p>
-      <p class="proof-label">Powering quantum optics education and research across India's leading academic and R&amp;D laboratories.</p>
       <div class="client-sectors">
         <span class="client-sector">IITs</span>
         <span class="client-sector">IISERs</span>
@@ -501,7 +499,6 @@ function buildHomepageMain() {
       </div>
     </div>
   </section>
-  ${homePillarsSection()}
   ${homeClosingSections()}`;
 }
 
@@ -717,7 +714,7 @@ function main() {
     <p class="lead">SciEngTech Solutions LLP engineers quantum optics systems, educational photonics kits, and precision bench hardware from Pune, India.</p>
     <div class="about-prose">
       <p>SciEngTech Solutions LLP builds the instruments and bench hardware that India's research labs, universities, and training centres use to teach and demonstrate quantum optics. From entangled photon sources and QKD demonstration platforms to Fourier optics kits and opto-mechanical assemblies, our work spans turnkey quantum set-ups and the components that hold an optical table together.</p>
-      <p>We engineer and manufacture in Pune. Every system is specified for real laboratory use — not catalog placeholders — and validated before dispatch. Our processes are ISO-certified, every unit is quality inspected, and we are an approved vendor on the Government e-Marketplace (GeM) for institutional procurement.</p>
+      <p>We engineer and manufacture in Pune. Every system is specified for real laboratory use — not catalog placeholders — and validated before dispatch. Our processes are ISO 9001:2015 certified, every unit is quality inspected, and we are an approved vendor on the Government e-Marketplace (GeM) for institutional procurement.</p>
       <p>Institutions across India — IITs, IISERs, universities, defence laboratories, and industry R&amp;D groups — rely on SciEngTech for equipment that must perform reliably in teaching and research environments. When you request a quote, you work directly with our engineering team on configurations, lead times, and documentation suited to your procurement workflow.</p>
     </div>
     <h2 class="about-section-title">Our team</h2>
@@ -745,7 +742,7 @@ function main() {
         <p><strong>GSTIN:</strong> 27AEOFS5239R1ZY</p>
         <p><strong>UDYAM:</strong> UDYAM-MH-26-0215820</p>
         <p><strong>GeM:</strong> Approved vendor</p>
-        <p><strong>Quality:</strong> ISO certified · 100% Quality Inspected · Made in India</p>
+        <p><strong>Quality:</strong> ISO 9001:2015 · 100% Quality Inspected · Made in India</p>
       </div>
       <div><h3>Engineering</h3><p><a href="../engineering/rfq.html">Request Technical Quote</a></p></div>
     </div>

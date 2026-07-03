@@ -3,15 +3,6 @@
   "source": "writeup",
   "selections": [
     {
-      "id": "30-mm-cage-system-alignment-plate",
-      "name": "30 mm Cage System Alignment Plate",
-      "type": "component",
-      "decision": "use",
-      "image": "Image.png",
-      "path": "assets/imported/writeup/30-mm-cage-system-alignment-plate/Image.png",
-      "notes": ""
-    },
-    {
       "id": "adapter",
       "name": "Adapter",
       "type": "component",

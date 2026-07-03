@@ -37,6 +37,52 @@
     return [];
   }
 
+  function variantsWithImages(p) {
+    if (!p.variants || !p.variants.length) return [];
+    return p.variants.filter(function (v) {
+      return v.image;
+    });
+  }
+
+  function renderVariantPicker(p, base) {
+    var variants = variantsWithImages(p);
+    if (!variants.length) return '';
+    var chips = variants
+      .map(function (row, i) {
+        var sku = String(row.sku || row.product_code || row.set_code || '').replace(/\s+/g, '');
+        var cols = variantColumns([row]);
+        var label = cols
+          .map(function (c) {
+            return row[c.key] || '';
+          })
+          .filter(Boolean)
+          .join(' · ');
+        var chipLabel = label ? sku + ' · ' + label : sku;
+        return (
+          '<button type="button" class="variant-picker-chip' +
+          (i === 0 ? ' is-active' : '') +
+          '"' +
+          ' data-variant-sku="' +
+          esc(sku) +
+          '"' +
+          ' data-variant-image="' +
+          base +
+          esc(row.image) +
+          '"' +
+          ' data-variant-label="' +
+          esc(label) +
+          '"' +
+          ' aria-pressed="' +
+          (i === 0 ? 'true' : 'false') +
+          '">' +
+          esc(chipLabel) +
+          '</button>'
+        );
+      })
+      .join('');
+    return '<div class="product-variant-picker" data-variant-picker role="list">' + chips + '</div>';
+  }
+
   function renderMedia(p, base) {
     var images = productImages(p);
     var name = esc(cleanName(p.name));
@@ -44,22 +90,40 @@
       return '<span class="placeholder" aria-hidden="true">◇</span>';
     }
 
-    var mainSrc = p.image || images[0];
+    var imageVariants = variantsWithImages(p);
+    var mainSrc =
+      imageVariants.length ? imageVariants[0].image : p.image || images[0];
     var stage =
       '<div class="product-media-stage">' +
-      '<img src="' + base + esc(mainSrc) + '" alt="' + name + '" data-gallery-main />' +
+      '<img src="' +
+      base +
+      esc(mainSrc) +
+      '" alt="' +
+      name +
+      '" data-gallery-main />' +
       '</div>';
 
+    var picker = renderVariantPicker(p, base);
     if (images.length === 1) {
-      return '<div class="product-media-gallery" data-product-gallery>' + stage + '</div>';
+      return '<div class="product-media-gallery" data-product-gallery>' + stage + picker + '</div>';
     }
 
     var thumbs = images
       .map(function (src, i) {
         var active = src === mainSrc ? ' is-active' : '';
         return (
-          '<button type="button" class="product-media-thumb' + active + '" data-gallery-src="' + base + esc(src) + '" aria-label="View image ' + (i + 1) + '">' +
-          '<img src="' + base + esc(src) + '" alt="" loading="lazy" />' +
+          '<button type="button" class="product-media-thumb' +
+          active +
+          '" data-gallery-src="' +
+          base +
+          esc(src) +
+          '" aria-label="View image ' +
+          (i + 1) +
+          '">' +
+          '<img src="' +
+          base +
+          esc(src) +
+          '" alt="" loading="lazy" />' +
           '</button>'
         );
       })
@@ -70,7 +134,9 @@
       stage +
       '<div class="product-media-thumbs" role="list">' +
       thumbs +
-      '</div></div>'
+      '</div>' +
+      picker +
+      '</div>'
     );
   }
 
@@ -80,7 +146,7 @@
     var name = cleanName(p.name);
     var variantLabel = opts.variantLabel || '';
     return (
-      '<button type="button" class="btn btn-ruby" data-add-to-cart' +
+      '<button type="button" class="btn btn-ruby" data-add-to-cart data-product-cart-btn' +
       ' data-product-id="' +
       esc(p.id) +
       '" data-sku="' +
@@ -177,7 +243,7 @@
 
   function variantColumns(variants) {
     if (!variants.length) return [];
-    var skip = { sr: 1, sku: 1 };
+    var skip = { sr: 1, sku: 1, image: 1 };
     var keys = Object.keys(variants[0]).filter(function (k) {
       return !skip[k];
     });
@@ -212,8 +278,20 @@
           })
           .filter(Boolean)
           .join(' · ');
+        var rowAttrs = row.image
+          ? ' class="variant-row-selectable" data-variant-row data-variant-sku="' +
+            esc(skuClean) +
+            '" data-variant-image="' +
+            base +
+            esc(row.image) +
+            '" data-variant-label="' +
+            esc(variantLabel) +
+            '"'
+          : '';
         return (
-          '<tr><td>' +
+          '<tr' +
+          rowAttrs +
+          '><td>' +
           esc(row.sr) +
           '</td>' +
           cols
@@ -336,10 +414,15 @@
       p.aliases && p.aliases.length ?
         '<p class="product-aliases">' + esc(p.aliases.join(' · ')) + '</p>'
       : '';
+    var imageVariants = variantsWithImages(p);
+    var defaultSku =
+      imageVariants.length ?
+        String(imageVariants[0].sku || imageVariants[0].product_code || '').replace(/\s+/g, '')
+      : p.sku;
     var skuLine =
       p.pageTemplate === 'configurable' && (!p.variants || !p.variants.length) ?
         '<p class="product-sku-line mono">Quote-driven · configure below</p>'
-      : '<p class="product-sku-line mono">SKU: ' + esc(p.sku) + '</p>';
+      : '<p class="product-sku-line mono" data-product-sku-line>SKU: ' + esc(defaultSku) + '</p>';
     var highlight =
       p.pageTemplate === 'solution' ? ''
       : p.specHighlight ? '<p class="product-highlight mono">' + esc(p.specHighlight) + '</p>'
@@ -534,6 +617,36 @@
 
   function initProductDetailInteractions(root) {
     if (!root) return;
+
+    function applyVariantSelection(sku, imageSrc, label) {
+      var gallery = root.querySelector('[data-product-gallery]');
+      var main = gallery ? gallery.querySelector('[data-gallery-main]') : null;
+      if (main && imageSrc) {
+        main.src = imageSrc;
+        if (gallery) {
+          gallery.querySelectorAll('.product-media-thumb').forEach(function (thumb) {
+            var thumbSrc = thumb.getAttribute('data-gallery-src') || '';
+            thumb.classList.toggle('is-active', thumbSrc === imageSrc);
+          });
+        }
+      }
+      var skuLine = root.querySelector('[data-product-sku-line]');
+      if (skuLine && sku) skuLine.textContent = 'SKU: ' + sku;
+      root.querySelectorAll('[data-product-cart-btn]').forEach(function (btn) {
+        if (sku) btn.setAttribute('data-sku', sku);
+        if (label) btn.setAttribute('data-variant-label', label);
+        else btn.removeAttribute('data-variant-label');
+      });
+      root.querySelectorAll('.variant-picker-chip').forEach(function (chip) {
+        var active = chip.getAttribute('data-variant-sku') === sku;
+        chip.classList.toggle('is-active', active);
+        chip.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+      root.querySelectorAll('[data-variant-row]').forEach(function (row) {
+        row.classList.toggle('is-selected', row.getAttribute('data-variant-sku') === sku);
+      });
+    }
+
     root.querySelectorAll('[data-product-gallery]').forEach(function (gallery) {
       var main = gallery.querySelector('[data-gallery-main]');
       if (!main) return;
@@ -549,6 +662,35 @@
         });
       });
     });
+    root.querySelectorAll('[data-variant-picker]').forEach(function (picker) {
+      picker.querySelectorAll('.variant-picker-chip').forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          applyVariantSelection(
+            chip.getAttribute('data-variant-sku') || '',
+            chip.getAttribute('data-variant-image') || '',
+            chip.getAttribute('data-variant-label') || ''
+          );
+        });
+      });
+    });
+    root.querySelectorAll('[data-variant-row]').forEach(function (row) {
+      row.addEventListener('click', function (event) {
+        if (event.target.closest('[data-add-to-cart]')) return;
+        applyVariantSelection(
+          row.getAttribute('data-variant-sku') || '',
+          row.getAttribute('data-variant-image') || '',
+          row.getAttribute('data-variant-label') || ''
+        );
+      });
+    });
+    var firstChip = root.querySelector('.variant-picker-chip.is-active');
+    if (firstChip) {
+      applyVariantSelection(
+        firstChip.getAttribute('data-variant-sku') || '',
+        firstChip.getAttribute('data-variant-image') || '',
+        firstChip.getAttribute('data-variant-label') || ''
+      );
+    }
     root.querySelectorAll('[data-rfq-tabs]').forEach(function (wrap) {
       wrap.querySelectorAll('.rfq-tab').forEach(function (tab) {
         tab.addEventListener('click', function () {

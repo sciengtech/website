@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-01",
+  "updated": "2026-07-02",
   "items": [
     {
       "id": "regenerative-delay-line",
@@ -185,19 +185,6 @@
       "featured": true
     },
     {
-      "id": "30-mm-cage-system-alignment-plate",
-      "type": "component",
-      "name": "30 mm Cage System Alignment Plate",
-      "sku": "SET-CSAP",
-      "category": "opto-mechanics",
-      "categoryLabel": "Opto-Mechanics",
-      "specHighlight": "Designed for compatibility with 30 mm cage systems · Used for alignment of visible laser beams in cage-based setups",
-      "image": "assets/products/30-mm-cage-system-alignment-plate/primary.png",
-      "url": "product.html#30-mm-cage-system-alignment-plate",
-      "_search": "30-mm-cage-system-alignment-plate set-csap 30 mm cage system alignment plate component opto-mechanics opto-mechanics the alignment plate acts as a reference tool during the setup of cage systems. it helps in aligning and centering the laser beam through the optical axis, ensuring proper system configuration before final assembly. it is particularly useful during initial alignment and system calibration stages. designed for compatibility with 30 mm cage systems · used for alignment of visible laser beams in cage-based setups 30 mm cage system alignment plate opto-mechanics feature designed for compatibility with 30 mm cage systems feature used for alignment of visible laser beams in cage-based setups feature ensures accurate beam centering and optical axis alignment feature precision-machined construction for stable positioning feature compact and easy-to-integrate design feature suitable for laboratory optical assemblies 30 mm cage system alignment plate\n\nthe alignment plate acts as a reference tool during the setup of cage systems. it helps in aligning and centering the laser beam through the optical axis, ensuring proper system configuration before final assembly. it is particularly useful during initial alignment and system calibration stages.\n\nthe cage plate alignment plate is designed for use with 30 mm cage system assemblies. it serves as a precision alignment accessory for accurately setting and verifying the path of visible laser beams within cage-based optical systems.\n\nfeatures\n\ndesigned for compatibility with 30 mm cage systems\n\nused for alignment of visible laser beams in cage-based setups\n\nensures accurate beam centering and optical axis alignment\n\nprecision-machined construction for stable positioning\n\ncompact and easy-to-integrate design\n\nsuitable for laboratory optical assemblies\n\napplications\n\n30 mm cage system alignment and setup\n\nlaser beam alignment in optical assemblies\n\neducational optics experiments\n\nphotonics and laser laboratory setups\n\ninterferometry and optical instrumentation alignment\n\nproduct code: set-csap",
-      "featured": false
-    },
-    {
       "id": "adapter",
       "type": "component",
       "name": "Adapter",
@@ -243,7 +230,7 @@
       "sku": "SET-ANGLECLAMP",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
-      "specHighlight": "Compatible with Ø12.7 mm optical posts · Ideal for building rigid and modular optomechanical structures",
+      "specHighlight": "4 configurations available · SKU from SET-RAC-45",
       "image": "assets/products/angle-clamp/primary.png",
       "url": "product.html#angle-clamp",
       "_search": "angle-clamp set-angleclamp angle clamp component opto-mechanics opto-mechanics sciengtech rigid assembly clamps provide a simple and reliable solution for creating stable, repeatable, and highly rigid optomechanical assemblies using standard ø12.7 mm optical posts. compatible with ø12.7 mm optical posts · ideal for building rigid and modular optomechanical structures angle clamp opto-mechanics feature compatible with ø12.7 mm optical posts feature ideal for building rigid and modular optomechanical structures feature double-bored through holes for improved stability and alignment feature high mechanical rigidity and repeatability feature precision-machined construction for reliable performance feature aluminum thumbscrews with 5 mm hex drive for secure locking feature easy integration into optical breadboard and cage-based assemblies feature lightweight yet robust design angle clamp (rigid assembly clamps)\n\nsciengtech rigid assembly clamps provide a simple and reliable solution for creating stable, repeatable, and highly rigid optomechanical assemblies using standard ø12.7 mm optical posts.\n\nfeaturing double-bored through holes, the clamps provide enhanced mechanical stability through two-line contact with the posts, ensuring improved alignment accuracy, rigidity, and repeatability in demanding optical and photonics applications.\n\nfeatures\n\ncompatible with ø12.7 mm optical posts \n\nideal for building rigid and modular optomechanical structures \n\ndouble-bored through holes for improved stability and alignment \n\nhigh mechanical rigidity and repeatability\n\nprecision-machined construction for reliable performance \n\naluminum thumbscrews with 5 mm hex drive for secure locking \n\neasy integration into optical breadboard and cage-based assemblies \n\nlightweight yet robust design \n\nsuitable for laboratory, research, and industrial applications \n\ndesigned and manufactured in india \n\napplications\n\noptical and photonics laboratories \n\nlaser alignment and beam delivery systems \n\ncustom optomechanical frameworks \n\nquantum optics and spectroscopy experiments \n\nresearch and educational setups \n\nprecision mounting and support structures \n\nset-rac-45\n\nset-rac-90\n\nset-rac-180\n\nset-rac-360\n\napplications\n\noptical cage and post assemblies \n\nprecision alignment structures \n\nlaser and photonics setups \n\ninterferometry and quantum optics experiments \n\neducational and research laboratories\n\nnotes\n\nensure proper tightening of thumbscrews to achieve optimal rigidity \n\ncompatible with standard optomechanical post systems\n\n \n\nsr no\n\nproduct code\n\n1\n\nset-rac-45\n\n2\n\nset-rac-90\n\n3\n\nset-rac-180\n\n4\n\nset-rac-360",
@@ -764,7 +751,7 @@
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "specHighlight": "7 configurations available · SKU from SET-UPH-20",
-      "image": "assets/products/universal-post-holder/primary.jpg",
+      "image": "assets/products/universal-post-holder/image-05.png",
       "url": "product.html#universal-post-holder",
       "_search": "universal-post-holder set-universalpos universal post holder component opto-mechanics opto-mechanics the 360° swivel base adapter is designed to mount existing ø1/2\" post holders using an m6 cap screw, providing flexible rotational alignment and rapid system setup. 7 configurations available · sku from set-uph-20 universal post holder opto-mechanics feature mounts to ø1/2\" post holders via m6 cap screw feature 360° rotational adjustment for flexible alignment feature magnetic base for temporary positioning on breadboards feature enables quick and efficient optical system assembly feature made from anodized aluminum for durability universal post holder\n\nthe 360° swivel base adapter is designed to mount existing ø1/2\" post holders using an m6 cap screw, providing flexible rotational alignment and rapid system setup.\n\nthe adapter features an integrated magnetic base, which securely holds components in position on an optical breadboard during initial alignment. this significantly reduces setup time and allows easy repositioning before final fixing.\n\nconstructed from high-quality anodized aluminum, the adapter ensures durability, corrosion resistance, and reliable performance in laboratory environments.\n\nkey features\n\nmounts to ø1/2\" post holders via m6 cap screw \n\n360° rotational adjustment for flexible alignment \n\nmagnetic base for temporary positioning on breadboards \n\nenables quick and efficient optical system assembly \n\nmade from anodized aluminum for durability \n\navailable sizes\n\nsr no\n\nlength (mm)\n\nproduct code\n\n1\n\n20\n\nset-uph-20\n\n2\n\n30\n\nset-uph-30\n\n3\n\n40\n\nset-uph-40\n\n4\n\n50\n\nset-uph-50\n\n5\n\n75\n\nset-uph-75\n\n6\n\n100\n\nset-uph-100\n\n7\n\n150\n\nset-uph-150\n\nfigure",
       "featured": false

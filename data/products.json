@@ -1,84 +1,8 @@
 {
   "version": 2,
-  "updated": "2026-07-01",
-  "count": 47,
+  "updated": "2026-07-02",
+  "count": 46,
   "products": [
-    {
-      "id": "30-mm-cage-system-alignment-plate",
-      "sku": "SET-CSAP",
-      "name": "30 mm Cage System Alignment Plate",
-      "type": "component",
-      "pageTemplate": "component",
-      "aliases": [],
-      "overview": [
-        "The alignment plate acts as a reference tool during the setup of cage systems. It helps in aligning and centering the laser beam through the optical axis, ensuring proper system configuration before final assembly. It is particularly useful during initial alignment and system calibration stages.",
-        "The Cage Plate Alignment Plate is designed for use with 30 mm cage system assemblies. It serves as a precision alignment accessory for accurately setting and verifying the path of visible laser beams within cage-based optical systems."
-      ],
-      "features": [
-        "Designed for compatibility with 30 mm cage systems",
-        "Used for alignment of visible laser beams in cage-based setups",
-        "Ensures accurate beam centering and optical axis alignment",
-        "Precision-machined construction for stable positioning",
-        "Compact and easy-to-integrate design",
-        "Suitable for laboratory optical assemblies"
-      ],
-      "applications": [
-        "30 mm cage system alignment and setup",
-        "Laser beam alignment in optical assemblies",
-        "Educational optics experiments",
-        "Photonics and laser laboratory setups",
-        "Interferometry and optical instrumentation alignment"
-      ],
-      "techSpecs": [],
-      "keyValueSpecs": [],
-      "variants": [],
-      "configurationOptions": null,
-      "rfqSections": null,
-      "solutionContent": null,
-      "customNote": null,
-      "summary": "The alignment plate acts as a reference tool during the setup of cage systems. It helps in aligning and centering the laser beam through the optical axis, ensuring proper system configuration before final assembly. It is particularly useful during initial alignment and system calibration stages.",
-      "specHighlight": "Designed for compatibility with 30 mm cage systems · Used for alignment of visible laser beams in cage-based setups",
-      "specs": [
-        {
-          "label": "Feature",
-          "value": "Designed for compatibility with 30 mm cage systems"
-        },
-        {
-          "label": "Feature",
-          "value": "Used for alignment of visible laser beams in cage-based setups"
-        },
-        {
-          "label": "Feature",
-          "value": "Ensures accurate beam centering and optical axis alignment"
-        },
-        {
-          "label": "Feature",
-          "value": "Precision-machined construction for stable positioning"
-        },
-        {
-          "label": "Feature",
-          "value": "Compact and easy-to-integrate design"
-        },
-        {
-          "label": "Feature",
-          "value": "Suitable for laboratory optical assemblies"
-        }
-      ],
-      "body": "30 mm Cage System Alignment Plate\n\nThe alignment plate acts as a reference tool during the setup of cage systems. It helps in aligning and centering the laser beam through the optical axis, ensuring proper system configuration before final assembly. It is particularly useful during initial alignment and system calibration stages.\n\nThe Cage Plate Alignment Plate is designed for use with 30 mm cage system assemblies. It serves as a precision alignment accessory for accurately setting and verifying the path of visible laser beams within cage-based optical systems.\n\nFeatures\n\nDesigned for compatibility with 30 mm cage systems\n\nUsed for alignment of visible laser beams in cage-based setups\n\nEnsures accurate beam centering and optical axis alignment\n\nPrecision-machined construction for stable positioning\n\nCompact and easy-to-integrate design\n\nSuitable for laboratory optical assemblies\n\nApplications\n\n30 mm cage system alignment and setup\n\nLaser beam alignment in optical assemblies\n\nEducational optics experiments\n\nPhotonics and laser laboratory setups\n\nInterferometry and optical instrumentation alignment\n\nProduct Code: SET-CSAP",
-      "image": "assets/products/30-mm-cage-system-alignment-plate/primary.png",
-      "tags": [
-        "30 mm cage system alignment plate",
-        "opto-mechanics"
-      ],
-      "writeupPath": "Opto-Mechanics/Alignment Plate/Cage Plate/Cage Plate Alignment Plate.docx",
-      "_search": "30-mm-cage-system-alignment-plate set-csap 30 mm cage system alignment plate component opto-mechanics opto-mechanics the alignment plate acts as a reference tool during the setup of cage systems. it helps in aligning and centering the laser beam through the optical axis, ensuring proper system configuration before final assembly. it is particularly useful during initial alignment and system calibration stages. designed for compatibility with 30 mm cage systems · used for alignment of visible laser beams in cage-based setups 30 mm cage system alignment plate opto-mechanics feature designed for compatibility with 30 mm cage systems feature used for alignment of visible laser beams in cage-based setups feature ensures accurate beam centering and optical axis alignment feature precision-machined construction for stable positioning feature compact and easy-to-integrate design feature suitable for laboratory optical assemblies 30 mm cage system alignment plate\n\nthe alignment plate acts as a reference tool during the setup of cage systems. it helps in aligning and centering the laser beam through the optical axis, ensuring proper system configuration before final assembly. it is particularly useful during initial alignment and system calibration stages.\n\nthe cage plate alignment plate is designed for use with 30 mm cage system assemblies. it serves as a precision alignment accessory for accurately setting and verifying the path of visible laser beams within cage-based optical systems.\n\nfeatures\n\ndesigned for compatibility with 30 mm cage systems\n\nused for alignment of visible laser beams in cage-based setups\n\nensures accurate beam centering and optical axis alignment\n\nprecision-machined construction for stable positioning\n\ncompact and easy-to-integrate design\n\nsuitable for laboratory optical assemblies\n\napplications\n\n30 mm cage system alignment and setup\n\nlaser beam alignment in optical assemblies\n\neducational optics experiments\n\nphotonics and laser laboratory setups\n\ninterferometry and optical instrumentation alignment\n\nproduct code: set-csap",
-      "category": "opto-mechanics",
-      "categoryLabel": "Opto-Mechanics",
-      "categoryPath": "/components/opto-mechanics.html",
-      "images": [
-        "assets/products/30-mm-cage-system-alignment-plate/primary.png"
-      ]
-    },
     {
       "id": "adapter",
       "sku": "SET-ADAPTER",
@@ -290,7 +214,7 @@
       "sku": "SET-ANGLECLAMP",
       "name": "Angle Clamp",
       "type": "component",
-      "pageTemplate": "component",
+      "pageTemplate": "variant-catalog",
       "aliases": [
         "Rigid Assembly Clamps"
       ],
@@ -317,34 +241,50 @@
         "Quantum optics and spectroscopy experiments",
         "Research and educational setups",
         "Precision mounting and support structures",
-        "SET-RAC-45",
-        "SET-RAC-90",
-        "SET-RAC-180",
-        "SET-RAC-360",
         "Optical cage and post assemblies",
         "Precision alignment structures",
         "Laser and photonics setups",
         "Interferometry and quantum optics experiments",
-        "Educational and research laboratories",
-        "Notes",
-        "Ensure proper tightening of thumbscrews to achieve optimal rigidity",
-        "Compatible with standard optomechanical post systems",
-        "Sr No",
-        "Product Code",
-        "SET-RAC-45",
-        "SET-RAC-90",
-        "SET-RAC-180",
-        "SET-RAC-360"
+        "Educational and research laboratories"
       ],
       "techSpecs": [],
       "keyValueSpecs": [],
-      "variants": [],
+      "variants": [
+        {
+          "sr": 1,
+          "angle": "45°",
+          "product_code": "SET-RAC-45",
+          "sku": "SET-RAC-45",
+          "image": "assets/products/angle-clamp/image-02.png"
+        },
+        {
+          "sr": 2,
+          "angle": "90°",
+          "product_code": "SET-RAC-90",
+          "sku": "SET-RAC-90",
+          "image": "assets/products/angle-clamp/image-03.png"
+        },
+        {
+          "sr": 3,
+          "angle": "180°",
+          "product_code": "SET-RAC-180",
+          "sku": "SET-RAC-180",
+          "image": "assets/products/angle-clamp/image-04.png"
+        },
+        {
+          "sr": 4,
+          "angle": "360°",
+          "product_code": "SET-RAC-360",
+          "sku": "SET-RAC-360",
+          "image": "assets/products/angle-clamp/image-05.png"
+        }
+      ],
       "configurationOptions": null,
       "rfqSections": null,
       "solutionContent": null,
       "customNote": null,
       "summary": "SciEngTech Rigid Assembly Clamps provide a simple and reliable solution for creating stable, repeatable, and highly rigid optomechanical assemblies using standard Ø12.7 mm optical posts.",
-      "specHighlight": "Compatible with Ø12.7 mm optical posts · Ideal for building rigid and modular optomechanical structures",
+      "specHighlight": "4 configurations available · SKU from SET-RAC-45",
       "specs": [
         {
           "label": "Feature",
@@ -3898,7 +3838,7 @@
         }
       ],
       "body": "Universal Post Holder\n\nThe 360° swivel base adapter is designed to mount existing Ø1/2\" post holders using an M6 cap screw, providing flexible rotational alignment and rapid system setup.\n\nThe adapter features an integrated magnetic base, which securely holds components in position on an optical breadboard during initial alignment. This significantly reduces setup time and allows easy repositioning before final fixing.\n\nConstructed from high-quality anodized aluminum, the adapter ensures durability, corrosion resistance, and reliable performance in laboratory environments.\n\nKey Features\n\nMounts to Ø1/2\" post holders via M6 cap screw \n\n360° rotational adjustment for flexible alignment \n\nMagnetic base for temporary positioning on breadboards \n\nEnables quick and efficient optical system assembly \n\nMade from anodized aluminum for durability \n\nAvailable sizes\n\nSr No\n\nLength (mm)\n\nProduct Code\n\n1\n\n20\n\nSET-UPH-20\n\n2\n\n30\n\nSET-UPH-30\n\n3\n\n40\n\nSET-UPH-40\n\n4\n\n50\n\nSET-UPH-50\n\n5\n\n75\n\nSET-UPH-75\n\n6\n\n100\n\nSET-UPH-100\n\n7\n\n150\n\nSET-UPH-150\n\nFigure",
-      "image": "assets/products/universal-post-holder/primary.jpg",
+      "image": "assets/products/universal-post-holder/image-05.png",
       "tags": [
         "universal post holder",
         "opto-mechanics"
@@ -3909,10 +3849,6 @@
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
       "images": [
-        "assets/products/universal-post-holder/primary.jpg",
-        "assets/products/universal-post-holder/image-02.png",
-        "assets/products/universal-post-holder/image-03.png",
-        "assets/products/universal-post-holder/image-04.png",
         "assets/products/universal-post-holder/image-05.png"
       ]
     },

@@ -597,6 +597,38 @@ body.search-open { overflow: hidden; }
   color: var(--text-muted);
   font-style: italic;
 }
+.product-variant-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.variant-picker-chip {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font: 500 0.75rem/1 'JetBrains Mono', monospace;
+  color: var(--text-muted);
+  background: var(--bg-light);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.variant-picker-chip:hover {
+  border-color: var(--accent);
+  color: #fff;
+}
+.variant-picker-chip.is-active {
+  border-color: var(--accent);
+  color: #fff;
+  background: rgba(196, 30, 58, 0.15);
+}
+.product-variant-table tbody tr.variant-row-selectable {
+  cursor: pointer;
+}
+.product-variant-table tbody tr.variant-row-selectable.is-selected {
+  background: rgba(196, 30, 58, 0.08);
+}
 .product-config-section { margin: 8px 0 24px; }
 .product-config-hint {
   font-size: 0.8125rem;
