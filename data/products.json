@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-03",
+  "updated": "2026-07-08",
   "count": 45,
   "products": [
     {
@@ -626,7 +626,7 @@
       "sku": "SET-CAGEASSEMBLY",
       "name": "Cage Assembly Rod",
       "type": "component",
-      "pageTemplate": "variant-catalog",
+      "pageTemplate": "component",
       "aliases": [
         "Optical Cage Rod",
         "Optomechanical cage rods",
@@ -646,64 +646,17 @@
         "Optical cage systems",
         "Laser alignment setups",
         "Modular opto-mechanical assemblies",
-        "Research and laboratory instrumentation",
-        "Sr No",
-        "Length of Rod",
-        "Product Code",
-        "SET-CR-25",
-        "SET-CR-50",
-        "SET-CR-100",
-        "SET-CR-150",
-        "SET-CR-200",
-        "10”",
-        "SET-CR-250"
+        "Research and laboratory instrumentation"
       ],
       "techSpecs": [],
       "keyValueSpecs": [],
-      "variants": [
-        {
-          "sr": 1,
-          "length_of_rod": "1”",
-          "product_code": "SET-CR-25",
-          "sku": "SET-CR-25"
-        },
-        {
-          "sr": 2,
-          "length_of_rod": "2”",
-          "product_code": "SET-CR-50",
-          "sku": "SET-CR-50"
-        },
-        {
-          "sr": 3,
-          "length_of_rod": "4”",
-          "product_code": "SET-CR-100",
-          "sku": "SET-CR-100"
-        },
-        {
-          "sr": 4,
-          "length_of_rod": "6”",
-          "product_code": "SET-CR-150",
-          "sku": "SET-CR-150"
-        },
-        {
-          "sr": 5,
-          "length_of_rod": "8”",
-          "product_code": "SET-CR-200",
-          "sku": "SET-CR-200"
-        },
-        {
-          "sr": 6,
-          "length_of_rod": "10”",
-          "product_code": "SET-CR-250",
-          "sku": "SET-CR-250"
-        }
-      ],
+      "variants": [],
       "configurationOptions": null,
       "rfqSections": null,
       "solutionContent": null,
       "customNote": null,
       "summary": "Precision-ground stainless steel cage rods designed for seamless integration with standard cage systems. These rods provide reliability, alignment for optical and mechanical assemblies.",
-      "specHighlight": "6 configurations available · SKU from SET-CR-25",
+      "specHighlight": "Ø6 mm rod diameter · M4 threaded studded ends",
       "specs": [
         {
           "label": "Feature",
@@ -726,14 +679,14 @@
           "value": "M4 Threaded studded ends which enables end-to-end connection of multiple rods"
         }
       ],
-      "body": "Cage Assembly Rod (Optical Cage Rod, Optomechanical cage rods,Cage connecting rods)\n\nOverview\n\nPrecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. These rods provide reliability, alignment for optical and mechanical assemblies.\n\nKey Features\n\nCompatible with standard 30 mm and 60 mm cage systems \n\nRod Diameter: Ø6 mm \n\nHigh rigidity and corrosion resistance \n\nEasy integration into existing setups\n\nM4 Threaded studded ends which enables end-to-end connection of multiple rods \n\nApplications\n\nOptical cage systems \n\nLaser alignment setups \n\nModular opto-mechanical assemblies \n\nResearch and laboratory instrumentation\n\nSr No\n\nLength of Rod\n\nProduct Code\n\n1\n\n1”\n\nSET-CR-25\n\n2\n\n2”\n\nSET-CR-50\n\n3\n\n4”\n\nSET-CR-100\n\n4\n\n6”\n\nSET-CR-150\n\n5\n\n8”\n\nSET-CR-200\n\n6\n\n10”\n\nSET-CR-250",
+      "body": "Cage Assembly Rod (Optical Cage Rod, Optomechanical cage rods,Cage connecting rods)\n\nOverview\n\nPrecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. These rods provide reliability, alignment for optical and mechanical assemblies.\n\nKey Features\n\nCompatible with standard 30 mm and 60 mm cage systems \n\nRod Diameter: Ø6 mm \n\nHigh rigidity and corrosion resistance \n\nEasy integration into existing setups\n\nM4 Threaded studded ends which enables end-to-end connection of multiple rods \n\nApplications\n\nOptical cage systems \n\nLaser alignment setups \n\nModular opto-mechanical assemblies \n\nResearch and laboratory instrumentation",
       "image": "assets/products/cage-assembly-rod/primary.png",
       "tags": [
         "cage assembly rod",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Cage Assembly Rod/Cage Assembly Rod.docx",
-      "_search": "cage-assembly-rod set-cageassembly cage assembly rod component opto-mechanics opto-mechanics precision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies. 6 configurations available · sku from set-cr-25 cage assembly rod opto-mechanics feature compatible with standard 30 mm and 60 mm cage systems feature rod diameter: ø6 mm feature high rigidity and corrosion resistance feature easy integration into existing setups feature m4 threaded studded ends which enables end-to-end connection of multiple rods cage assembly rod (optical cage rod, optomechanical cage rods,cage connecting rods)\n\noverview\n\nprecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies.\n\nkey features\n\ncompatible with standard 30 mm and 60 mm cage systems \n\nrod diameter: ø6 mm \n\nhigh rigidity and corrosion resistance \n\neasy integration into existing setups\n\nm4 threaded studded ends which enables end-to-end connection of multiple rods \n\napplications\n\noptical cage systems \n\nlaser alignment setups \n\nmodular opto-mechanical assemblies \n\nresearch and laboratory instrumentation\n\nsr no\n\nlength of rod\n\nproduct code\n\n1\n\n1”\n\nset-cr-25\n\n2\n\n2”\n\nset-cr-50\n\n3\n\n4”\n\nset-cr-100\n\n4\n\n6”\n\nset-cr-150\n\n5\n\n8”\n\nset-cr-200\n\n6\n\n10”\n\nset-cr-250",
+      "_search": "cage-assembly-rod set-cageassembly cage assembly rod component opto-mechanics opto-mechanics precision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies. ø6 mm rod diameter · m4 threaded studded ends optical cage rod optomechanical cage rods cage connecting rods cage assembly rod opto-mechanics cage assembly rod (optical cage rod, optomechanical cage rods,cage connecting rods)\n\noverview\n\nprecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies.\n\nkey features\n\ncompatible with standard 30 mm and 60 mm cage systems \n\nrod diameter: ø6 mm \n\nhigh rigidity and corrosion resistance \n\neasy integration into existing setups\n\nm4 threaded studded ends which enables end-to-end connection of multiple rods \n\napplications\n\noptical cage systems \n\nlaser alignment setups \n\nmodular opto-mechanical assemblies \n\nresearch and laboratory instrumentation",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
