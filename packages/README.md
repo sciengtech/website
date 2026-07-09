@@ -2,6 +2,18 @@
 
 Give your client **only** `update-website-skill.zip` plus their GitHub PAT.
 
+## Site Editor (Electron)
+
+Desktop CMS for editing `catalog.json`, `knowledge.json`, and product images:
+
+```powershell
+cd packages/site-editor
+npm install
+npm run dev
+```
+
+See [site-editor/README.md](site-editor/README.md) for GitHub OAuth setup.
+
 ## What's in the zip
 
 ```

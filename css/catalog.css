@@ -565,6 +565,12 @@ body.search-open { overflow: hidden; }
 .product-not-found h1 { margin-bottom: 12px; }
 
 .product-detail-main { min-width: 0; }
+.product-html-body { margin-top: 8px; }
+.product-empty-note {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 8px 0 0;
+}
 .product-aliases {
   font-size: 0.875rem;
   color: var(--text-muted);

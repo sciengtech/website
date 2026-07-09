@@ -584,6 +584,14 @@
     return html + renderCtas(p, base);
   }
 
+  function renderHtmlBody(p, base) {
+    var html = String(p.htmlBody || '').trim();
+    var content = html ?
+      '<div class="product-html-body knowledge-prose">' + html + '</div>'
+    : '<p class="product-empty-note">Product details coming soon.</p>';
+    return content + renderCtas(p, base);
+  }
+
   function renderProductDetailMain(p, base, breadcrumbHtml) {
     var template = p.pageTemplate || (p.type === 'solution' ? 'solution' : 'component');
     var overline =
@@ -614,6 +622,9 @@
             renderRfqParameters(p) +
             renderTwoColBlocks('Features', p.features, 'Applications', p.applications) +
             renderCtas(p, base);
+        break;
+      case 'rich-page':
+        body = renderHtmlBody(p, base);
         break;
       default:
         body = renderComponentBody(p, base);

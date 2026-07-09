@@ -1,5 +1,5 @@
 /**
- * HTML rendering for product detail pages (4 templates).
+ * HTML rendering for product detail pages (5 templates).
  * Used by build-site.mjs (Node) and product-page.js (browser via product-detail-render.js).
  */
 import { solutionGroupLabel, solutionGroupHubUrl } from './solution-groups.mjs';
@@ -395,6 +395,14 @@ function renderCustomSolutionBody(p, base) {
     ${renderCtas(p, base)}`;
 }
 
+function renderHtmlBody(p, base) {
+  const html = String(p.htmlBody || '').trim();
+  const content = html ?
+    `<div class="product-html-body knowledge-prose">${html}</div>`
+  : '<p class="product-empty-note">Product details coming soon.</p>';
+  return `${content}${renderCtas(p, base)}`;
+}
+
 export function renderProductDetailMain(p, { base, breadcrumbHtml }) {
   const template = p.pageTemplate || (p.type === 'solution' ? 'solution' : 'component');
   const overline =
@@ -423,6 +431,9 @@ export function renderProductDetailMain(p, { base, breadcrumbHtml }) {
         ${renderRfqParameters(p)}
         ${renderTwoColBlocks('Features', p.features, 'Applications', p.applications)}
         ${renderCtas(p, base)}`;
+      break;
+    case 'rich-page':
+      body = renderHtmlBody(p, base);
       break;
     default:
       body = renderComponentBody(p, base);
