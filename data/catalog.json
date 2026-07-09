@@ -4805,10 +4805,45 @@
         "assets/products/washer/image-02.png",
         "assets/products/washer/image-03.png"
       ]
+    },
+    {
+      "id": "test",
+      "sku": "SET-TEST",
+      "name": "test",
+      "type": "component",
+      "pageTemplate": "rich-page",
+      "aliases": [],
+      "overview": [],
+      "features": [],
+      "applications": [],
+      "techSpecs": [],
+      "keyValueSpecs": [],
+      "variants": [],
+      "configurationOptions": null,
+      "rfqSections": null,
+      "solutionContent": null,
+      "customNote": null,
+      "summary": "test",
+      "specHighlight": "",
+      "specs": [
+        {
+          "label": "Procurement",
+          "value": "Request Technical Quote"
+        }
+      ],
+      "body": "test\n\ntest\n\nProcurement: Request Technical Quote\n\nASe this is nothing. not bold. but this is hyperlinked",
+      "htmlBody": "<p><strong>ASe</strong><br><br>this is nothing. not bold. but this is hyperlinked</p>",
+      "image": null,
+      "tags": [],
+      "writeupPath": null,
+      "_search": "test set-test test component opto-mechanics opto-mechanics rich-page test      procurement request technical quote  test\n\ntest\n\nprocurement: request technical quote\n\nase this is nothing. not bold. but this is hyperlinked",
+      "category": "opto-mechanics",
+      "categoryLabel": "Opto-Mechanics",
+      "categoryPath": "/components/opto-mechanics.html"
     }
   ],
   "counts": {
     "solutions": 14,
-    "components": 45
+    "components": 46
   }
 }
