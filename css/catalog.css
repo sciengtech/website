@@ -368,7 +368,7 @@ body.search-open { overflow: hidden; }
   aspect-ratio: 4 / 3;
   min-height: 0;
   flex-shrink: 0;
-  background: var(--bg);
+  background: #fff;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
 }
