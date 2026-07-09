@@ -4832,7 +4832,7 @@
         }
       ],
       "body": "test\n\ntest\n\nProcurement: Request Technical Quote\n\nASe this is nothing. not bold. but this is hyperlinked",
-      "htmlBody": "<p><strong>ASe</strong><br><br>this is nothing. not bold. but this is hyperlinked</p>",
+      "htmlBody": "<p><strong>ASe</strong><br><br>this is nothing. not bold. but this is<a href=\"https://sciengtech.in\" target=\"_blank\" rel=\"noopener\"> hyperlinked</a></p>",
       "image": null,
       "tags": [],
       "writeupPath": null,
