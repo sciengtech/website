@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-08",
+  "updated": "2026-07-09",
   "solutions": [
     {
       "id": "regenerative-delay-line",
@@ -1635,7 +1635,7 @@
       "sku": "SET-CLAMPINGFORK",
       "name": "Clamping Fork",
       "type": "component",
-      "pageTemplate": "variant-catalog",
+      "pageTemplate": "component",
       "aliases": [
         "Y-Clamp",
         "Dual-Prong Clamp",
@@ -1664,60 +1664,17 @@
         "Laser alignment and beam steering setups",
         "Precision optomechanical assemblies",
         "Research and educational experiments",
-        "Quantum optics and spectroscopy systems",
-        "Sr No",
-        "Counterbolt Slot",
-        "Captive screw present",
-        "Product Code",
-        "31.5 mm",
-        "SET-CF-125",
-        "31.5 mm",
-        "Yes",
-        "SET-CS-CF-125",
-        "44.4 mm",
-        "SET-CF-175",
-        "44.4 mm",
-        "Yes",
-        "SET-CS-CF-175"
+        "Quantum optics and spectroscopy systems"
       ],
       "techSpecs": [],
       "keyValueSpecs": [],
-      "variants": [
-        {
-          "sr": 1,
-          "counterbolt_slot": "31.5 mm",
-          "captive_screw_present": "No",
-          "product_code": "SET-CF-125",
-          "sku": "SET-CF-125"
-        },
-        {
-          "sr": 2,
-          "counterbolt_slot": "31.5 mm",
-          "captive_screw_present": "Yes",
-          "product_code": "SET-CS-CF-125",
-          "sku": "SET-CS-CF-125"
-        },
-        {
-          "sr": 3,
-          "counterbolt_slot": "44.4 mm",
-          "captive_screw_present": "No",
-          "product_code": "SET-CF-175",
-          "sku": "SET-CF-175"
-        },
-        {
-          "sr": 4,
-          "counterbolt_slot": "44.4 mm",
-          "captive_screw_present": "Yes",
-          "product_code": "SET-CS-CF-175",
-          "sku": "SET-CS-CF-175"
-        }
-      ],
+      "variants": [],
       "configurationOptions": null,
       "rfqSections": null,
       "solutionContent": null,
       "customNote": null,
       "summary": "SciEngTech Solutions offers high-quality pedestal forks precision-machined from corrosion-resistant stainless steel for stable and flexible mounting of pedestal-style post holders in optical and optomechanical setups. Designed for use with Ø12.7 mm (1/2\") posts and post holders, these forks provide a rigid yet adjustable support structure for accurate component positioning.",
-      "specHighlight": "4 configurations available · SKU from SET-CF-125",
+      "specHighlight": "M6 counterbored slot · 12 mm thick stainless steel fork",
       "specs": [
         {
           "label": "Feature",
@@ -1752,14 +1709,14 @@
           "value": "Captive screw option available"
         }
       ],
-      "body": "Clamping Fork (Y-Clamp, Dual-Prong Clamp, Optic Capture Fork, Component Holding Fork)\n\nSciEngTech Solutions offers high-quality pedestal forks precision-machined from corrosion-resistant stainless steel for stable and flexible mounting of pedestal-style post holders in optical and optomechanical setups. Designed for use with Ø12.7 mm (1/2\") posts and post holders, these forks provide a rigid yet adjustable support structure for accurate component positioning.\n\nThe swivel design allows 360° rotational adjustment, enabling precise placement and alignment of optical components without disturbing the rest of the experimental setup. With 12 mm thick construction and an M6 counterbored mounting slot, the pedestal fork ensures excellent stability and secure attachment to optical breadboards.\n\nFeatures\n\nPrecision-machined from high-quality stainless steel \n\nCompatible with Ø12.7 mm (1/2\") posts and post holders \n\nFull 360° swivel rotation for flexible positioning \n\nProvides high clamping force for pedestal-style post holders \n\nThree-point contact design for enhanced stability \n\nM6 counterbored slot for secure breadboard mounting \n\n12 mm thick construction for improved rigidity \n\nCaptive screw option available \n\nVacuum compatible \n\nCorrosion-resistant and durable \n\nDesigned and manufactured in India \n\nApplications\n\nOptical and photonics laboratories \n\nLaser alignment and beam steering setups \n\nPrecision optomechanical assemblies \n\nResearch and educational experiments \n\nQuantum optics and spectroscopy systems\n\nSr No\n\nCounterbolt Slot\n\nCaptive screw present\n\nProduct Code\n\n1\n\n31.5 mm\n\nNo\n\nSET-CF-125\n\n2\n\n31.5 mm\n\nYes\n\nSET-CS-CF-125\n\n3\n\n44.4 mm\n\nNo\n\nSET-CF-175\n\n4\n\n44.4 mm\n\nYes\n\nSET-CS-CF-175",
+      "body": "Clamping Fork (Y-Clamp, Dual-Prong Clamp, Optic Capture Fork, Component Holding Fork)\n\nSciEngTech Solutions offers high-quality pedestal forks precision-machined from corrosion-resistant stainless steel for stable and flexible mounting of pedestal-style post holders in optical and optomechanical setups. Designed for use with Ø12.7 mm (1/2\") posts and post holders, these forks provide a rigid yet adjustable support structure for accurate component positioning.\n\nThe swivel design allows 360° rotational adjustment, enabling precise placement and alignment of optical components without disturbing the rest of the experimental setup. With 12 mm thick construction and an M6 counterbored mounting slot, the pedestal fork ensures excellent stability and secure attachment to optical breadboards.\n\nFeatures\n\nPrecision-machined from high-quality stainless steel \n\nCompatible with Ø12.7 mm (1/2\") posts and post holders \n\nFull 360° swivel rotation for flexible positioning \n\nProvides high clamping force for pedestal-style post holders \n\nThree-point contact design for enhanced stability \n\nM6 counterbored slot for secure breadboard mounting \n\n12 mm thick construction for improved rigidity \n\nCaptive screw option available \n\nVacuum compatible \n\nCorrosion-resistant and durable \n\nDesigned and manufactured in India \n\nApplications\n\nOptical and photonics laboratories \n\nLaser alignment and beam steering setups \n\nPrecision optomechanical assemblies \n\nResearch and educational experiments \n\nQuantum optics and spectroscopy systems",
       "image": "assets/products/clamping-fork/primary.png",
       "tags": [
         "clamping fork",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/ClampingFork/Clamping Fork.docx",
-      "_search": "clamping-fork set-clampingfork clamping fork component opto-mechanics opto-mechanics sciengtech solutions offers high-quality pedestal forks precision-machined from corrosion-resistant stainless steel for stable and flexible mounting of pedestal-style post holders in optical and optomechanical setups. designed for use with ø12.7 mm (1/2\") posts and post holders, these forks provide a rigid yet adjustable support structure for accurate component positioning. 4 configurations available · sku from set-cf-125 clamping fork opto-mechanics feature precision-machined from high-quality stainless steel feature compatible with ø12.7 mm (1/2\") posts and post holders feature full 360° swivel rotation for flexible positioning feature provides high clamping force for pedestal-style post holders feature three-point contact design for enhanced stability feature m6 counterbored slot for secure breadboard mounting feature 12 mm thick construction for improved rigidity feature captive screw option available clamping fork (y-clamp, dual-prong clamp, optic capture fork, component holding fork)\n\nsciengtech solutions offers high-quality pedestal forks precision-machined from corrosion-resistant stainless steel for stable and flexible mounting of pedestal-style post holders in optical and optomechanical setups. designed for use with ø12.7 mm (1/2\") posts and post holders, these forks provide a rigid yet adjustable support structure for accurate component positioning.\n\nthe swivel design allows 360° rotational adjustment, enabling precise placement and alignment of optical components without disturbing the rest of the experimental setup. with 12 mm thick construction and an m6 counterbored mounting slot, the pedestal fork ensures excellent stability and secure attachment to optical breadboards.\n\nfeatures\n\nprecision-machined from high-quality stainless steel \n\ncompatible with ø12.7 mm (1/2\") posts and post holders \n\nfull 360° swivel rotation for flexible positioning \n\nprovides high clamping force for pedestal-style post holders \n\nthree-point contact design for enhanced stability \n\nm6 counterbored slot for secure breadboard mounting \n\n12 mm thick construction for improved rigidity \n\ncaptive screw option available \n\nvacuum compatible \n\ncorrosion-resistant and durable \n\ndesigned and manufactured in india \n\napplications\n\noptical and photonics laboratories \n\nlaser alignment and beam steering setups \n\nprecision optomechanical assemblies \n\nresearch and educational experiments \n\nquantum optics and spectroscopy systems\n\nsr no\n\ncounterbolt slot\n\ncaptive screw present\n\nproduct code\n\n1\n\n31.5 mm\n\nno\n\nset-cf-125\n\n2\n\n31.5 mm\n\nyes\n\nset-cs-cf-125\n\n3\n\n44.4 mm\n\nno\n\nset-cf-175\n\n4\n\n44.4 mm\n\nyes\n\nset-cs-cf-175",
+      "_search": "clamping-fork set-clampingfork clamping fork component opto-mechanics opto-mechanics sciengtech solutions offers high-quality pedestal forks precision-machined from corrosion-resistant stainless steel for stable and flexible mounting of pedestal-style post holders in optical and optomechanical setups. designed for use with ø12.7 mm (1/2\") posts and post holders, these forks provide a rigid yet adjustable support structure for accurate component positioning. m6 counterbored slot · 12 mm thick stainless steel fork y-clamp dual-prong clamp optic capture fork component holding fork clamping fork opto-mechanics clamping fork (y-clamp, dual-prong clamp, optic capture fork, component holding fork)\n\nsciengtech solutions offers high-quality pedestal forks precision-machined from corrosion-resistant stainless steel for stable and flexible mounting of pedestal-style post holders in optical and optomechanical setups. designed for use with ø12.7 mm (1/2\") posts and post holders, these forks provide a rigid yet adjustable support structure for accurate component positioning.\n\nthe swivel design allows 360° rotational adjustment, enabling precise placement and alignment of optical components without disturbing the rest of the experimental setup. with 12 mm thick construction and an m6 counterbored mounting slot, the pedestal fork ensures excellent stability and secure attachment to optical breadboards.\n\nfeatures\n\nprecision-machined from high-quality stainless steel \n\ncompatible with ø12.7 mm (1/2\") posts and post holders \n\nfull 360° swivel rotation for flexible positioning \n\nprovides high clamping force for pedestal-style post holders \n\nthree-point contact design for enhanced stability \n\nm6 counterbored slot for secure breadboard mounting \n\n12 mm thick construction for improved rigidity \n\ncaptive screw option available \n\nvacuum compatible \n\ncorrosion-resistant and durable \n\ndesigned and manufactured in india \n\napplications\n\noptical and photonics laboratories \n\nlaser alignment and beam steering setups \n\nprecision optomechanical assemblies \n\nresearch and educational experiments \n\nquantum optics and spectroscopy systems",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
