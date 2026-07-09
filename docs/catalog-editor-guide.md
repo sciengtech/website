@@ -10,7 +10,7 @@ This document explains how to control the live website by editing JSON data file
 |------|----------|-----------|
 | `data/catalog.json` | Solutions, components, homepage carousel, category pages, solution detail pages, search index (via build) | **Build time** (+ derived JSON at runtime) |
 | `data/knowledge.json` | Knowledge Center / blog articles | **Build time** |
-| `data/products.json` | Component detail (`product.html`), RFQ pre-fill | **Browser** (auto-generated — do not edit by hand) |
+| `data/products.json` | Legacy build artifact (no longer used at runtime) | **Build output** — optional |
 | `data/search-index.json` | Catalog search, header search, filters | **Browser** (auto-generated — do not edit by hand) |
 
 **Rule:** After editing `catalog.json` or `knowledge.json`, run a site build and deploy. Pushing JSON alone does not update static HTML until CI runs `npm run build:site`.
@@ -259,7 +259,7 @@ Order on category page = order in `components` array within that category.
 
 ### Component detail (`product.html?id={id}`)
 
-- Runtime load from `products.json` (components only)
+- Runtime load from `catalog.json` (`components` array) for `product.html` and RFQ pre-fill
 - Same templates as above
 
 ### Sitemap
@@ -640,7 +640,7 @@ This **replaces** `knowledge.json` from the WordPress API. Manual edits will be 
 data/
   catalog.json          ← product catalog (source of truth)
   knowledge.json        ← blog / Knowledge Center
-  products.json         ← generated (components for runtime)
+  products.json         ← generated (legacy; runtime uses catalog.json)
   search-index.json     ← generated (search)
 assets/
   products/{id}/        ← product photos

@@ -1,6 +1,6 @@
 /**
  * Client-side product catalog + inverted-index search.
- * Products load once from data/products.json; _search blobs are precomputed in JSON.
+ * Component detail loads from data/catalog.json; search uses data/search-index.json.
  */
 (function (global) {
   'use strict';
@@ -53,15 +53,15 @@
         if (!r.ok) throw new Error('search-index.json HTTP ' + r.status);
         return r.json();
       }),
-      fetch(root + 'data/products.json').then(function (r) {
-        if (!r.ok) throw new Error('products.json HTTP ' + r.status);
+      fetch(root + 'data/catalog.json').then(function (r) {
+        if (!r.ok) throw new Error('catalog.json HTTP ' + r.status);
         return r.json();
       }),
     ]).then(function (pair) {
       var searchData = pair[0];
-      var productData = pair[1];
+      var catalogData = pair[1];
       products = searchData.items || [];
-      components = productData.products || [];
+      components = catalogData.components || [];
       byId = Object.create(null);
       for (var i = 0; i < components.length; i++) {
         byId[components[i].id] = components[i];
