@@ -890,7 +890,7 @@
     }
     .spec-row:last-child { border-bottom: none; }
     .spec-row span:first-child { color: #64748B; }
-    .spec-row span:last-child { text-align: right; font-weight: 500; }
+    .spec-row span:last-child { text-align: left; font-weight: 500; }
 
     /* CTA band */
     .cta-band {
@@ -1200,8 +1200,15 @@
 .knowledge-prose blockquote{margin:1.5rem 0;padding:20px 24px;border-left:3px solid var(--accent);background:rgba(225,29,72,.04);border-radius:0 8px 8px 0}
 .knowledge-prose blockquote p{margin-bottom:.5rem}
 .knowledge-prose blockquote cite{display:block;font-size:.875rem;color:var(--text-muted);font-style:normal}
-.knowledge-prose a{color:var(--accent)}
-.knowledge-prose strong{color:var(--text)}
+.knowledge-prose a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.knowledge-prose a:hover{opacity:.88}
+.knowledge-prose strong{color:var(--text);font-weight:600}
+.knowledge-prose u{text-decoration:underline;text-underline-offset:2px}
+.knowledge-prose h3{font-family:Space Grotesk,sans-serif;font-size:1.1rem;color:var(--text);margin:2rem 0 .75rem;font-weight:600}
+.knowledge-prose h4{font-family:Space Grotesk,sans-serif;font-size:1rem;color:var(--text);margin:1.5rem 0 .5rem;font-weight:600}
+.knowledge-prose ul,.knowledge-prose ol{margin:0 0 1rem 1.25rem;padding:0}
+.knowledge-prose li{margin-bottom:.35rem}
+.knowledge-prose span[style],.knowledge-prose font{color:inherit}
 .knowledge-prose img{max-width:100%;height:auto;border-radius:8px;margin:1.5rem 0}
 .knowledge-prose table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem}
 .knowledge-prose td,.knowledge-prose th{padding:10px 14px;border:1px solid var(--border);text-align:left;vertical-align:top}

@@ -768,6 +768,19 @@
       "url": "product.html#washer",
       "_search": "washer set-washer washer component hardware hardware sciengtech solutions offers high-quality stainless steel ss303 washers hex of different metric types and thickness, suitable for a broad range of mechanical and optomechanical assemblies. configure options · request technical quote washer hardware procurement request technical quote washer\n\nsciengtech solutions offers high-quality stainless steel ss303 washers hex of different metric types and thickness, suitable for a broad range of mechanical and optomechanical assemblies. \n\nmetric type:  m3, m4, m5, m6, m8, m10, m12, m14, m16, m18, m20, m22, m24, m27, m30, m33, m36\n\nthickness (mm): 1.0, 2.0, 3.0",
       "featured": false
+    },
+    {
+      "id": "test",
+      "type": "component",
+      "name": "test",
+      "sku": "SET-TEST",
+      "category": "opto-mechanics",
+      "categoryLabel": "Opto-Mechanics",
+      "specHighlight": "",
+      "image": null,
+      "url": "product.html#test",
+      "_search": "test set-test test component opto-mechanics opto-mechanics rich-page test      procurement request technical quote  test\n\ntest\n\nprocurement: request technical quote\n\nase this is nothing. not bold. but this is hyperlinked",
+      "featured": false
     }
   ]
 }

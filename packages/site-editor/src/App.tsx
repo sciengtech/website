@@ -38,8 +38,8 @@ export function App() {
   >('all');
   const [categoryFilter, setCategoryFilter] = useState<'all' | string>('all');
   const [sortKey, setSortKey] = useState<
-    'name' | 'sku' | 'pageTemplate' | 'category'
-  >('name');
+    'order' | 'name' | 'sku' | 'pageTemplate' | 'category'
+  >('order');
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc');
   const [showColumnPicker, setShowColumnPicker] = useState(false);
   const [visibleColumns, setVisibleColumns] = useState({
@@ -118,6 +118,7 @@ export function App() {
     });
 
     const dir = sortDir === 'asc' ? 1 : -1;
+    if (sortKey === 'order') return filtered;
     const sorted = [...filtered].sort((a, b) => {
       const av =
         sortKey === 'name'
@@ -161,6 +162,7 @@ export function App() {
     });
 
     const dir = sortDir === 'asc' ? 1 : -1;
+    if (sortKey === 'order') return filtered;
     const sorted = [...filtered].sort((a, b) => {
       const av =
         sortKey === 'name'
@@ -287,6 +289,7 @@ export function App() {
                     legacyUrl: null,
                     legacyId: null,
                     body: '<p></p>',
+                    image: null,
                   },
                 })
               }
@@ -326,7 +329,11 @@ export function App() {
               <select
                 className="mt-1 rounded-md border border-[#2a3142] bg-[#0e1118] px-3 py-2 text-sm"
                 value={categoryFilter}
-                onChange={(e) => setCategoryFilter(e.target.value === 'all' ? 'all' : e.target.value)}
+                onChange={(e) => {
+                  const next = e.target.value === 'all' ? 'all' : e.target.value;
+                  setCategoryFilter(next);
+                  if (next !== 'all') setSortKey('order');
+                }}
               >
                 <option value="all">All</option>
                 {availableCategories.map((c) => (
@@ -346,6 +353,7 @@ export function App() {
                   setSortKey(e.target.value as typeof sortKey)
                 }
               >
+                <option value="order">Manual order (drag)</option>
                 <option value="name">Name</option>
                 <option value="sku">SKU</option>
                 <option value="pageTemplate">Page template</option>
@@ -477,6 +485,7 @@ export function App() {
 
         {view.kind === 'edit-product' && (
           <ProductForm
+            key={`${view.isNew ? 'new' : 'edit'}-${view.product.id}`}
             product={view.product}
             isNew={view.isNew}
             onCancel={async () => {
@@ -497,6 +506,7 @@ export function App() {
 
         {view.kind === 'edit-article' && knowledge && (
           <ArticleForm
+            key={`${view.isNew ? 'new' : 'edit'}-${view.article.id || 'draft'}`}
             article={view.article}
             knowledge={knowledge}
             isNew={view.isNew}
@@ -517,11 +527,44 @@ export function App() {
         )}
 
         {view.kind === 'list' && tab === 'components' && (
-          <ProductTable
-            rows={filteredComponents}
-            visibleColumns={visibleColumns}
-            onEdit={(p) => setView({ kind: 'edit-product', product: p })}
-          />
+          <>
+            {sortKey === 'order' && (
+              <p className="mb-2 text-xs text-slate-500">
+                Drag rows to set listing order
+                {categoryFilter !== 'all' ? ` for “${categoryFilter}”` : ''}. Publish to update the live site.
+              </p>
+            )}
+            <ProductTable
+              rows={filteredComponents}
+              visibleColumns={visibleColumns}
+              allowReorder={sortKey === 'order'}
+              onReorder={async (orderedIds) => {
+                if (!catalog) return;
+                let fullIds: string[];
+                if (categoryFilter === 'all') {
+                  fullIds = orderedIds;
+                } else {
+                  const result: string[] = [];
+                  let inserted = false;
+                  for (const item of catalog.components) {
+                    const cat = item.categoryLabel || item.category || item.solutionGroup || '';
+                    if (cat === categoryFilter) {
+                      if (!inserted) {
+                        result.push(...orderedIds);
+                        inserted = true;
+                      }
+                    } else {
+                      result.push(item.id);
+                    }
+                  }
+                  fullIds = result;
+                }
+                const data = await window.siteEditor.catalog.reorder(fullIds);
+                setCatalog(data);
+              }}
+              onEdit={(p) => setView({ kind: 'edit-product', product: p })}
+            />
+          </>
         )}
         {view.kind === 'list' && tab === 'solutions' && (
           <ProductTable
@@ -545,6 +588,8 @@ function ProductTable({
   rows,
   visibleColumns,
   onEdit,
+  allowReorder = false,
+  onReorder,
 }: {
   rows: CatalogProduct[];
   visibleColumns: {
@@ -554,11 +599,27 @@ function ProductTable({
     category: boolean;
   };
   onEdit: (p: CatalogProduct) => void;
+  allowReorder?: boolean;
+  onReorder?: (orderedIds: string[]) => Promise<void>;
 }) {
+  const [dragId, setDragId] = useState<string | null>(null);
+
+  async function moveRow(fromId: string, toId: string) {
+    if (!onReorder || fromId === toId) return;
+    const ids = rows.map((r) => r.id);
+    const from = ids.indexOf(fromId);
+    const to = ids.indexOf(toId);
+    if (from < 0 || to < 0) return;
+    ids.splice(from, 1);
+    ids.splice(to, 0, fromId);
+    await onReorder(ids);
+  }
+
   return (
     <table className="w-full text-left text-sm">
       <thead className="text-xs uppercase text-slate-500">
         <tr>
+          {allowReorder && <th className="w-8 p-2" />}
           {visibleColumns.name && <th className="p-2">Name</th>}
           {visibleColumns.sku && <th className="p-2">SKU</th>}
           {visibleColumns.template && <th className="p-2">Page template</th>}
@@ -568,7 +629,25 @@ function ProductTable({
       </thead>
       <tbody>
         {rows.map((p) => (
-          <tr key={p.id} className="border-t border-[#2a3142] hover:bg-[#161b26]">
+          <tr
+            key={p.id}
+            className="border-t border-[#2a3142] hover:bg-[#161b26]"
+            draggable={allowReorder}
+            onDragStart={() => setDragId(p.id)}
+            onDragOver={(e) => {
+              if (allowReorder) e.preventDefault();
+            }}
+            onDrop={async (e) => {
+              e.preventDefault();
+              if (dragId) await moveRow(dragId, p.id);
+              setDragId(null);
+            }}
+          >
+            {allowReorder && (
+              <td className="cursor-grab p-2 text-slate-500 select-none" title="Drag to reorder">
+                ⋮⋮
+              </td>
+            )}
             {visibleColumns.name && <td className="p-2">{p.name}</td>}
             {visibleColumns.sku && <td className="p-2 font-mono text-xs">{p.sku}</td>}
             {visibleColumns.template && <td className="p-2 text-xs text-slate-200">{p.pageTemplate}</td>}

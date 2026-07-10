@@ -292,7 +292,7 @@ function categoryPage(cat, items, base) {
   const main = `<section class="catalog-page">
     <div class="wrap catalog-hero">
       <nav class="product-breadcrumb">
-        <a href="${base}index.html">Home</a> / <a href="${base}components.html">Components</a> / <span>${esc(cat.label)}</span>
+        <a href="${base}index.html">Home</a> / <a href="${base}components.html">Categories</a> / <span>${esc(cat.label)}</span>
       </nav>
       <h1>${esc(cat.label)}</h1>
       <p>${items.length} spec-verified component${items.length === 1 ? '' : 's'} from the SciEngTech technical catalog. Request a quote for quantities and custom configurations.</p>
@@ -375,11 +375,10 @@ function componentCategoryQuicklinks() {
       </span>
     </a>`;
   }).join('\n');
-  return `<div class="hero-categories category-quicklinks" aria-label="Browse components by category">
+  return `<div class="hero-categories category-quicklinks" aria-label="Browse by category">
     <div class="wrap">
       <div class="category-quicklinks__head">
         <h2>Browse by Category</h2>
-        <a class="category-quicklinks__all" href="components.html">All Components →</a>
       </div>
       <div class="category-quicklinks__grid">${tiles}</div>
     </div>
@@ -583,13 +582,13 @@ function buildComponentsHub(base, rel) {
   }).join('');
   const main = `<section class="catalog-page">
     <div class="wrap catalog-hero">
-      <h1>Technical Component Catalog</h1>
-      <p>Bench hardware supporting quantum and photonics assembly — ${catalog.components.length} components across six engineering categories.</p>
+      <h1>Technical Categories</h1>
+      <p>Bench hardware supporting quantum and photonics assembly — ${catalog.components.length} items across six engineering categories.</p>
       <p style="margin-top:-12px"><a href="${base}catalog.html" style="color:var(--accent);font-weight:600">Search all ${catalog.solutions.length + catalog.components.length} catalog items →</a></p>
       <div class="pillar-grid" style="margin-top:32px">${cards}</div>
     </div>
   </section>`;
-  write(rel, shell({ base, title: 'Components', desc: 'Quantum bench component catalog.', main, pageId: 'components' }));
+  write(rel, shell({ base, title: 'Categories', desc: 'Quantum bench category catalog.', main, pageId: 'components' }));
 }
 
 function buildCompanyPage(base, rel, title, content) {
@@ -610,25 +609,30 @@ function buildCheckoutPage() {
           </div>
           <div id="checkoutCartEmpty" class="checkout-empty" hidden>
             <p>Your cart is empty.</p>
-            <a class="btn btn-ruby" href="../catalog.html">Browse Catalog</a>
+            <p class="checkout-empty-hint">Need something that is not in the catalog? Use <strong>Write to us</strong> on the right.</p>
+            <a class="btn btn-outline" href="../catalog.html">Browse Catalog</a>
           </div>
           <div id="checkoutCartList" class="checkout-cart-list"></div>
         </div>
-        <div class="checkout-panel checkout-panel--form" id="checkoutFormWrap" hidden>
-          <h2>Contact Details</h2>
-          <p class="checkout-form-hint">Fields marked <span class="req">*</span> are required.</p>
+        <div class="checkout-panel checkout-panel--form" id="checkoutFormWrap">
+          <h2 id="checkoutFormTitle">Contact Details</h2>
+          <p class="checkout-form-hint" id="checkoutFormHint">Fields marked <span class="req">*</span> are required.</p>
           <div id="checkoutFormConfigWarn" class="checkout-config-warn" hidden>
             <strong>Form not wired yet.</strong> Create the Google Form, then add the form ID and entry IDs in <code>js/google-form-config.js</code>.
           </div>
           <form id="checkoutForm" class="checkout-form" novalidate>
             <div class="checkout-field"><label for="fullName">Full Name <span class="req">*</span></label><input type="text" id="fullName" name="fullName" required autocomplete="name" /></div>
             <div class="checkout-field"><label for="email">Email <span class="req">*</span></label><input type="email" id="email" name="email" required autocomplete="email" /></div>
-            <div class="checkout-field"><label for="institute">Institute / Organization</label><input type="text" id="institute" name="institute" autocomplete="organization" /></div>
+            <div class="checkout-field"><label for="institute">Institute / Organization <span class="req">*</span></label><input type="text" id="institute" name="institute" required autocomplete="organization" /></div>
             <div class="checkout-field"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" autocomplete="tel" /></div>
             <div class="checkout-field"><label for="designation">Designation / Role</label><input type="text" id="designation" name="designation" autocomplete="organization-title" /></div>
-            <div class="checkout-field"><label for="notes">Additional Notes</label><textarea id="notes" name="notes" rows="4" placeholder="Application requirements, timeline, quantities, delivery location…"></textarea></div>
+            <div class="checkout-field" id="checkoutNotesField"><label for="notes">Additional Notes</label><textarea id="notes" name="notes" rows="4" placeholder="Application requirements, timeline, quantities, delivery location…"></textarea></div>
+            <div class="checkout-field" id="checkoutWriteToUsField" hidden>
+              <label for="writeMessage">Your message <span class="req">*</span></label>
+              <textarea id="writeMessage" name="writeMessage" rows="5" placeholder="Tell us what you need — products not listed, custom configurations, or general enquiries…"></textarea>
+            </div>
             <p id="checkoutFormError" class="checkout-form-error" hidden></p>
-            <button type="submit" class="btn btn-ruby checkout-submit">Submit Quote Request</button>
+            <button type="submit" class="btn btn-ruby checkout-submit" id="checkoutSubmitBtn">Submit Quote Request</button>
             <p class="checkout-form-foot">By submitting, you agree to be contacted regarding this quote request. No payment is collected on this site.</p>
           </form>
         </div>
@@ -701,7 +705,7 @@ function main() {
 
   // Component-only search (shortcut to filtered full catalog)
   const compMain = catalogBrowseMain({
-    title: 'Search Components',
+    title: 'Search Categories',
     subtitle: `Filter and search ${catalog.components.length} bench components.`,
     placeholder: 'Search components, specifications…',
     showTypeFilters: false,
@@ -834,7 +838,7 @@ function main() {
     <p class="lead">Browse the quantum solutions catalog or submit an RFQ for custom requirements.</p>
     <div class="hero-ctas" style="justify-content:center;margin-top:32px">
       <a class="btn btn-ruby" href="solutions.html">Quantum Solutions</a>
-      <a class="btn btn-outline" href="components.html">Components</a>
+      <a class="btn btn-outline" href="components.html">Categories</a>
     </div>
   </div></section>`);
 

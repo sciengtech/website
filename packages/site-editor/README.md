@@ -34,12 +34,15 @@ npm run dev
 
 ## Build & package (Windows)
 
+**Before packaging for clients:** create `.env` with your GitHub OAuth App credentials (see above). The installer embeds those credentials so clients do not need a `.env` file.
+
 ```powershell
-npm run build
 npm run package:win
 ```
 
-Installer output: `packages/site-editor/dist/`
+Installer output: `packages/site-editor/release/`
+
+Clients only click **Sign in with GitHub** in the app — no manual configuration.
 
 ## Workflow
 

@@ -89,6 +89,8 @@ export interface KnowledgeArticle {
   legacyUrl: string | null;
   legacyId: number | null;
   body: string;
+  /** Featured / primary image path under assets/knowledge/ */
+  image?: string | null;
 }
 
 export interface KnowledgeData {
@@ -135,6 +137,7 @@ export interface SiteEditorApi {
     save: (product: CatalogProduct) => Promise<CatalogData>;
     create: (product: CatalogProduct) => Promise<CatalogData>;
     remove: (id: string, type: ProductType) => Promise<CatalogData>;
+    reorder: (orderedIds: string[]) => Promise<CatalogData>;
   };
   knowledge: {
     load: () => Promise<KnowledgeData>;
@@ -146,9 +149,20 @@ export interface SiteEditorApi {
     pickAndSave: (
       productId: string,
       slot: 'primary' | 'gallery',
-    ) => Promise<{ path: string; relativePath: string } | null>;
+      options?: { multi?: boolean; kind?: 'product' | 'knowledge' },
+    ) => Promise<{ path: string; relativePath: string }[] | null>;
+    saveFromPaths: (
+      productId: string,
+      filePaths: string[],
+      slot: 'primary' | 'gallery',
+      kind?: 'product' | 'knowledge',
+    ) => Promise<{ path: string; relativePath: string }[]>;
     getPreviewUrl: (relativePath: string) => Promise<string | null>;
-    listForProduct: (productId: string) => Promise<string[]>;
+    listForProduct: (
+      productId: string,
+      kind?: 'product' | 'knowledge',
+    ) => Promise<string[]>;
+    remove: (relativePath: string) => Promise<void>;
   };
   publish: {
     run: (commitMessage: string) => Promise<PublishResult>;

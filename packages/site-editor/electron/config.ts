@@ -1,10 +1,12 @@
-/** OAuth config — getters read process.env at call time (after env.ts loads .env). */
+/** OAuth config — .env in dev; baked oauth-config.generated.json in packaged builds. */
+import oauthBuilt from './oauth-config.generated.json';
+
 export const GITHUB_OAUTH = {
   get clientId() {
-    return process.env.GITHUB_OAUTH_CLIENT_ID?.trim() || '';
+    return process.env.GITHUB_OAUTH_CLIENT_ID?.trim() || oauthBuilt.clientId || '';
   },
   get clientSecret() {
-    return process.env.GITHUB_OAUTH_CLIENT_SECRET?.trim() || '';
+    return process.env.GITHUB_OAUTH_CLIENT_SECRET?.trim() || oauthBuilt.clientSecret || '';
   },
   redirectUri: 'http://127.0.0.1:3847/callback',
   scope: 'repo',

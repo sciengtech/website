@@ -46,6 +46,7 @@ function extractImage(body) {
 }
 
 function articleImage(article) {
+  if (article.image) return article.image;
   return extractImage(article.body) || FALLBACK_IMAGES[article.id] || 'assets/slides/03-dielectric-mirror.svg';
 }
 
@@ -117,7 +118,7 @@ function bentoCtaCard(assetBase, pageBase) {
   return `<article class="bento-card bento-card--cta bento-card--split bento-tone-ruby">
     <a class="bento-card-link" href="${pageBase}product.html#sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t">
       <div class="bento-card-body">
-        <span class="bento-card-meta">Components</span>
+        <span class="bento-card-meta">Categories</span>
         <h2>Optics Catalog</h2>
         <p>Mirrors, lenses, beam splitters, and polarizers — spec-verified and available for RFQ.</p>
         <span class="bento-card-cta">Browse optics</span>
@@ -263,6 +264,11 @@ export function buildKnowledgePages({ shell, write }) {
           <h1>${esc(article.title)}</h1>
           ${tagHtml ? `<div class="knowledge-tags">${tagHtml}</div>` : ''}
         </header>
+        ${
+          article.image
+            ? `<div class="knowledge-article-hero"><img src="${esc(article.image.startsWith('http') ? article.image : base + article.image)}" alt="" /></div>`
+            : ''
+        }
         <div class="knowledge-prose">${fixBodyLinks(article.body, base)}</div>
         <footer class="knowledge-article-footer">
           <p>Questions about specifications or custom configurations? <a href="${base}engineering/rfq.html">Request a technical quote</a> or <a href="${base}company/contact.html">contact engineering</a>.</p>

@@ -8,6 +8,10 @@ const candidates = [
   join(__dirname, '../../.env'),
 ];
 
+if (process.resourcesPath) {
+  candidates.push(join(process.resourcesPath, '.env'));
+}
+
 for (const envPath of candidates) {
   if (existsSync(envPath)) {
     config({ path: envPath });

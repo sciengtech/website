@@ -17,13 +17,17 @@ import {
   loadKnowledge,
   removeArticle,
   removeProduct,
+  reorderComponents,
   saveArticle,
   saveProduct,
 } from './data-service';
 import {
+  deleteProductImage,
   getPreviewFileUrl,
   listProductImages,
   pickAndSaveImage,
+  saveImagesFromPaths,
+  type ImageAssetKind,
 } from './image-service';
 import { getDirtySourceFiles, publishChanges } from './publish';
 import type { CatalogProduct, KnowledgeArticle, ProductType } from '../shared/types';
@@ -70,19 +74,45 @@ function registerIpc(): void {
   ipcMain.handle('catalog:remove', (_e, id: string, type: ProductType) =>
     removeProduct(id, type),
   );
+  ipcMain.handle('catalog:reorder', (_e, orderedIds: string[]) =>
+    reorderComponents(orderedIds),
+  );
 
   ipcMain.handle('knowledge:load', () => loadKnowledge());
   ipcMain.handle('knowledge:save', (_e, article: KnowledgeArticle) => saveArticle(article));
   ipcMain.handle('knowledge:create', (_e, article: KnowledgeArticle) => createArticle(article));
   ipcMain.handle('knowledge:remove', (_e, id: string) => removeArticle(id));
 
-  ipcMain.handle('images:pick', (_e, productId: string, slot: 'primary' | 'gallery') =>
-    pickAndSaveImage(productId, slot),
+  ipcMain.handle(
+    'images:pick',
+    (
+      _e,
+      productId: string,
+      slot: 'primary' | 'gallery',
+      options?: { multi?: boolean; kind?: ImageAssetKind },
+    ) => pickAndSaveImage(productId, slot, options),
+  );
+  ipcMain.handle(
+    'images:savePaths',
+    (
+      _e,
+      productId: string,
+      filePaths: string[],
+      slot: 'primary' | 'gallery',
+      kind?: ImageAssetKind,
+    ) => saveImagesFromPaths(productId, filePaths, slot, kind ?? 'product'),
   );
   ipcMain.handle('images:preview', (_e, relativePath: string) =>
     getPreviewFileUrl(relativePath),
   );
-  ipcMain.handle('images:list', (_e, productId: string) => listProductImages(productId));
+  ipcMain.handle(
+    'images:list',
+    (_e, productId: string, kind?: ImageAssetKind) =>
+      listProductImages(productId, kind ?? 'product'),
+  );
+  ipcMain.handle('images:delete', (_e, relativePath: string) => {
+    deleteProductImage(relativePath);
+  });
 
   ipcMain.handle('publish:dirty', () => getDirtySourceFiles());
   ipcMain.handle('publish:run', (_e, message: string) => publishChanges(message));

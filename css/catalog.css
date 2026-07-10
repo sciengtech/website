@@ -677,6 +677,75 @@ body.product-lightbox-open { overflow: hidden; }
 }
 .spec-table-detail .spec-row:last-child { border-bottom: none; }
 .spec-table-detail .spec-row span:first-child { color: var(--text-muted); }
+/* Optics / product spec tables: left-align values */
+.product-detail .spec-table-detail .spec-row,
+.product-spec-tabs .spec-table-detail .spec-row {
+  justify-content: flex-start;
+  text-align: left;
+}
+.product-detail .spec-table-detail .spec-row span:last-child,
+.product-spec-tabs .spec-table-detail .spec-row span:last-child {
+  text-align: left;
+  margin-left: auto;
+}
+.product-detail .knowledge-prose table th,
+.product-detail .knowledge-prose table td,
+.product-html-body.knowledge-prose table th,
+.product-html-body.knowledge-prose table td {
+  text-align: left;
+}
+.requirements-panel {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-light);
+}
+.requirements-textarea {
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font: 0.875rem/1.5 Inter, system-ui, sans-serif;
+  resize: vertical;
+}
+.requirements-status {
+  margin-top: 10px;
+  font-size: 0.8125rem;
+  color: var(--accent);
+}
+.knowledge-article-hero {
+  margin: 0 0 28px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #000;
+}
+.knowledge-article-hero img {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+}
+.checkout-empty-hint {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin: 8px 0 16px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 .product-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
 .btn {
   display: inline-flex;

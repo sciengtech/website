@@ -9,6 +9,7 @@ import {
 } from '@/lib/catalog-meta';
 import { StringListEditor } from './StringListEditor';
 import { ImageManager } from './ImageManager';
+import { TagsInput } from './TagsInput';
 import { VariantCatalogEditor } from './VariantCatalogEditor';
 import { RichTextEditor } from './RichTextEditor';
 import { Button } from './ui/Button';
@@ -146,18 +147,7 @@ export function ProductForm({
       )}
       <div>
         <Label>Tags (comma-separated)</Label>
-        <Input
-          value={draft.tags.join(', ')}
-          onChange={(e) =>
-            set(
-              'tags',
-              e.target.value
-                .split(',')
-                .map((t) => t.trim())
-                .filter(Boolean),
-            )
-          }
-        />
+        <TagsInput value={draft.tags} onChange={(tags) => set('tags', tags)} />
       </div>
 
       {!isRichPage && (
@@ -172,7 +162,7 @@ export function ProductForm({
         <div>
           <Label>Page content (HTML)</Label>
           <p className="mb-2 text-xs text-slate-500">
-            Rich text below the product name and SKU on the live page. Links, bold, headings, and lists are supported.
+            WordPress-style editor — fonts, colors, links, lists, tables, and images. Content appears below the product name and SKU on the live page.
           </p>
           <RichTextEditor
             value={draft.htmlBody || ''}
@@ -212,9 +202,20 @@ export function ProductForm({
               productId={draft.id}
               image={draft.image}
               images={draft.images}
-              onChange={({ image, images }) => {
-                set('image', image);
-                if (images) set('images', images);
+              isNew={isNew}
+              onChange={({ image, images, removedPath }) => {
+                setDraft((d) => ({
+                  ...d,
+                  image,
+                  ...(images !== undefined ? { images } : {}),
+                  ...(removedPath && d.variants
+                    ? {
+                        variants: d.variants.map((v) =>
+                          v.image === removedPath ? { ...v, image: undefined } : v,
+                        ),
+                      }
+                    : {}),
+                }));
               }}
             />
           </div>
@@ -270,9 +271,20 @@ export function ProductForm({
             productId={draft.id}
             image={draft.image}
             images={draft.images}
-            onChange={({ image, images }) => {
-              set('image', image);
-              if (images) set('images', images);
+            isNew={isNew}
+            onChange={({ image, images, removedPath }) => {
+              setDraft((d) => ({
+                ...d,
+                image,
+                ...(images !== undefined ? { images } : {}),
+                ...(removedPath && d.variants
+                  ? {
+                      variants: d.variants.map((v) =>
+                        v.image === removedPath ? { ...v, image: undefined } : v,
+                      ),
+                    }
+                  : {}),
+              }));
             }}
           />
         </div>

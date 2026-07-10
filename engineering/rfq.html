@@ -27,25 +27,30 @@
           </div>
           <div id="checkoutCartEmpty" class="checkout-empty" hidden>
             <p>Your cart is empty.</p>
-            <a class="btn btn-ruby" href="../catalog.html">Browse Catalog</a>
+            <p class="checkout-empty-hint">Need something that is not in the catalog? Use <strong>Write to us</strong> on the right.</p>
+            <a class="btn btn-outline" href="../catalog.html">Browse Catalog</a>
           </div>
           <div id="checkoutCartList" class="checkout-cart-list"></div>
         </div>
-        <div class="checkout-panel checkout-panel--form" id="checkoutFormWrap" hidden>
-          <h2>Contact Details</h2>
-          <p class="checkout-form-hint">Fields marked <span class="req">*</span> are required.</p>
+        <div class="checkout-panel checkout-panel--form" id="checkoutFormWrap">
+          <h2 id="checkoutFormTitle">Contact Details</h2>
+          <p class="checkout-form-hint" id="checkoutFormHint">Fields marked <span class="req">*</span> are required.</p>
           <div id="checkoutFormConfigWarn" class="checkout-config-warn" hidden>
             <strong>Form not wired yet.</strong> Create the Google Form, then add the form ID and entry IDs in <code>js/google-form-config.js</code>.
           </div>
           <form id="checkoutForm" class="checkout-form" novalidate>
             <div class="checkout-field"><label for="fullName">Full Name <span class="req">*</span></label><input type="text" id="fullName" name="fullName" required autocomplete="name" /></div>
             <div class="checkout-field"><label for="email">Email <span class="req">*</span></label><input type="email" id="email" name="email" required autocomplete="email" /></div>
-            <div class="checkout-field"><label for="institute">Institute / Organization</label><input type="text" id="institute" name="institute" autocomplete="organization" /></div>
+            <div class="checkout-field"><label for="institute">Institute / Organization <span class="req">*</span></label><input type="text" id="institute" name="institute" required autocomplete="organization" /></div>
             <div class="checkout-field"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" autocomplete="tel" /></div>
             <div class="checkout-field"><label for="designation">Designation / Role</label><input type="text" id="designation" name="designation" autocomplete="organization-title" /></div>
-            <div class="checkout-field"><label for="notes">Additional Notes</label><textarea id="notes" name="notes" rows="4" placeholder="Application requirements, timeline, quantities, delivery location…"></textarea></div>
+            <div class="checkout-field" id="checkoutNotesField"><label for="notes">Additional Notes</label><textarea id="notes" name="notes" rows="4" placeholder="Application requirements, timeline, quantities, delivery location…"></textarea></div>
+            <div class="checkout-field" id="checkoutWriteToUsField" hidden>
+              <label for="writeMessage">Your message <span class="req">*</span></label>
+              <textarea id="writeMessage" name="writeMessage" rows="5" placeholder="Tell us what you need — products not listed, custom configurations, or general enquiries…"></textarea>
+            </div>
             <p id="checkoutFormError" class="checkout-form-error" hidden></p>
-            <button type="submit" class="btn btn-ruby checkout-submit">Submit Quote Request</button>
+            <button type="submit" class="btn btn-ruby checkout-submit" id="checkoutSubmitBtn">Submit Quote Request</button>
             <p class="checkout-form-foot">By submitting, you agree to be contacted regarding this quote request. No payment is collected on this site.</p>
           </form>
         </div>

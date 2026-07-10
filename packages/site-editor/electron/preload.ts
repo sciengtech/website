@@ -21,6 +21,7 @@ const api: SiteEditorApi = {
     save: (product: CatalogProduct) => ipcRenderer.invoke('catalog:save', product),
     create: (product: CatalogProduct) => ipcRenderer.invoke('catalog:create', product),
     remove: (id: string, type: ProductType) => ipcRenderer.invoke('catalog:remove', id, type),
+    reorder: (orderedIds: string[]) => ipcRenderer.invoke('catalog:reorder', orderedIds),
   },
   knowledge: {
     load: () => ipcRenderer.invoke('knowledge:load'),
@@ -29,9 +30,13 @@ const api: SiteEditorApi = {
     remove: (id: string) => ipcRenderer.invoke('knowledge:remove', id),
   },
   images: {
-    pickAndSave: (productId, slot) => ipcRenderer.invoke('images:pick', productId, slot),
+    pickAndSave: (productId, slot, options) =>
+      ipcRenderer.invoke('images:pick', productId, slot, options),
+    saveFromPaths: (productId, filePaths, slot, kind) =>
+      ipcRenderer.invoke('images:savePaths', productId, filePaths, slot, kind),
     getPreviewUrl: (relativePath) => ipcRenderer.invoke('images:preview', relativePath),
-    listForProduct: (productId) => ipcRenderer.invoke('images:list', productId),
+    listForProduct: (productId, kind) => ipcRenderer.invoke('images:list', productId, kind),
+    remove: (relativePath) => ipcRenderer.invoke('images:delete', relativePath),
   },
   publish: {
     run: (commitMessage) => ipcRenderer.invoke('publish:run', commitMessage),

@@ -1,5 +1,6 @@
 /**
  * Checkout page: cart review + contact form → hidden Google Form submit.
+ * Empty cart shows Write to us; cart with items requires Institution.
  */
 (function () {
   'use strict';
@@ -18,6 +19,41 @@
     var cfg = window.SciEngGoogleForm;
     if (!cfg || !cfg.formId) return false;
     return !!(cfg.fields.fullName && cfg.fields.email && cfg.fields.orderItems);
+  }
+
+  function cartHasItems() {
+    return window.SciEngQuoteCart && window.SciEngQuoteCart.read().length > 0;
+  }
+
+  function syncFormMode() {
+    var hasItems = cartHasItems();
+    var title = document.getElementById('checkoutFormTitle');
+    var hint = document.getElementById('checkoutFormHint');
+    var notesField = document.getElementById('checkoutNotesField');
+    var writeField = document.getElementById('checkoutWriteToUsField');
+    var submitBtn = document.getElementById('checkoutSubmitBtn');
+    var formWrap = document.getElementById('checkoutFormWrap');
+
+    if (formWrap) formWrap.hidden = false;
+
+    if (hasItems) {
+      if (title) title.textContent = 'Contact Details';
+      if (hint) {
+        hint.innerHTML = 'Fields marked <span class="req">*</span> are required.';
+      }
+      if (notesField) notesField.hidden = false;
+      if (writeField) writeField.hidden = true;
+      if (submitBtn) submitBtn.textContent = 'Submit Quote Request';
+    } else {
+      if (title) title.textContent = 'Write to us';
+      if (hint) {
+        hint.innerHTML =
+          'Cart is empty — send a message about products or requirements not listed in the catalog. Fields marked <span class="req">*</span> are required.';
+      }
+      if (notesField) notesField.hidden = true;
+      if (writeField) writeField.hidden = false;
+      if (submitBtn) submitBtn.textContent = 'Send message';
+    }
   }
 
   function mergeQueryProduct() {
@@ -72,7 +108,6 @@
   function renderCart() {
     var listEl = document.getElementById('checkoutCartList');
     var emptyEl = document.getElementById('checkoutCartEmpty');
-    var formWrap = document.getElementById('checkoutFormWrap');
     var configWarn = document.getElementById('checkoutFormConfigWarn');
     if (!listEl || !window.SciEngQuoteCart) return;
 
@@ -81,12 +116,13 @@
     if (!items.length) {
       listEl.innerHTML = '';
       if (emptyEl) emptyEl.hidden = false;
-      if (formWrap) formWrap.hidden = true;
+      syncFormMode();
+      if (configWarn) configWarn.hidden = formConfigured();
       return;
     }
 
     if (emptyEl) emptyEl.hidden = true;
-    if (formWrap) formWrap.hidden = false;
+    syncFormMode();
 
     listEl.innerHTML = items
       .map(function (item) {
@@ -178,11 +214,17 @@
     el.hidden = !msg;
   }
 
-  function validateContact(data) {
+  function validateContact(data, mode) {
     if (!data.fullName) return 'Full name is required.';
     if (!data.email) return 'Email is required.';
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return 'Enter a valid email address.';
-    if (!window.SciEngQuoteCart.read().length) return 'Your cart is empty. Add products before checkout.';
+    if (!data.institute) return 'Institute / Organization is required.';
+    if (mode === 'cart' && !window.SciEngQuoteCart.read().length) {
+      return 'Your cart is empty. Add products before checkout.';
+    }
+    if (mode === 'write' && !data.writeMessage) {
+      return 'Please enter your message.';
+    }
     return '';
   }
 
@@ -210,6 +252,9 @@
       e.preventDefault();
       showError('');
 
+      var mode = cartHasItems() ? 'cart' : 'write';
+      var writeMessage =
+        (form.writeMessage && form.writeMessage.value.trim()) || '';
       var data = {
         fullName: (form.fullName && form.fullName.value.trim()) || '',
         email: (form.email && form.email.value.trim()) || '',
@@ -217,10 +262,20 @@
         phone: (form.phone && form.phone.value.trim()) || '',
         designation: (form.designation && form.designation.value.trim()) || '',
         notes: (form.notes && form.notes.value.trim()) || '',
-        orderItems: window.SciEngQuoteCart ? window.SciEngQuoteCart.toBomText() : '',
+        writeMessage: writeMessage,
+        orderItems:
+          mode === 'cart'
+            ? window.SciEngQuoteCart
+              ? window.SciEngQuoteCart.toBomText()
+              : ''
+            : 'Write to us:\n' + writeMessage,
       };
 
-      var err = validateContact(data);
+      if (mode === 'write') {
+        data.notes = writeMessage;
+      }
+
+      var err = validateContact(data, mode);
       if (err) {
         showError(err);
         return;
@@ -239,7 +294,7 @@
 
       submitToGoogleForm(data)
         .then(function () {
-          window.SciEngQuoteCart.clear();
+          if (window.SciEngQuoteCart) window.SciEngQuoteCart.clear();
           var thankYou = (window.SciEngGoogleForm.thankYouPath || 'thank-you.html').replace(/^\//, '');
           window.location.href = base + thankYou;
         })
@@ -247,7 +302,8 @@
           showError('Submission failed. Please try again or email info@sciengtech.in.');
           if (submitBtn) {
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Submit Quote Request';
+            submitBtn.textContent =
+              mode === 'cart' ? 'Submit Quote Request' : 'Send message';
           }
         });
     });

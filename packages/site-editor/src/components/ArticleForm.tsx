@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import type { KnowledgeArticle, KnowledgeData } from '@shared/types';
 import { RichTextEditor } from './RichTextEditor';
+import { TagsInput } from './TagsInput';
+import { ImageManager } from './ImageManager';
 import { Button } from './ui/Button';
 import { Input } from './ui/Input';
 import { Textarea } from './ui/Textarea';
@@ -85,17 +87,19 @@ export function ArticleForm({
         </div>
         <div>
           <Label>Tags (comma-separated)</Label>
-          <Input
-            value={draft.tags.join(', ')}
-            onChange={(e) =>
-              set(
-                'tags',
-                e.target.value
-                  .split(',')
-                  .map((t) => t.trim())
-                  .filter(Boolean),
-              )
-            }
+          <TagsInput value={draft.tags} onChange={(tags) => set('tags', tags)} />
+        </div>
+        <div>
+          <Label>Primary image</Label>
+          <p className="mb-2 text-xs text-slate-500">
+            Shown on Knowledge Center cards and at the top of the article page. Set the article ID first.
+          </p>
+          <ImageManager
+            productId={draft.id}
+            image={draft.image ?? null}
+            isNew={isNew}
+            kind="knowledge"
+            onChange={({ image }) => set('image', image)}
           />
         </div>
         <div>

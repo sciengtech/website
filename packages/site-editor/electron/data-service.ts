@@ -63,6 +63,27 @@ export function createProduct(product: CatalogProduct): CatalogData {
   return saveCatalog(catalog);
 }
 
+export function reorderComponents(orderedIds: string[]): CatalogData {
+  const catalog = loadCatalog();
+  const byId = new Map(catalog.components.map((p) => [p.id, p]));
+  const seen = new Set<string>();
+  const next: CatalogProduct[] = [];
+
+  for (const id of orderedIds) {
+    const item = byId.get(id);
+    if (item && !seen.has(id)) {
+      next.push(item);
+      seen.add(id);
+    }
+  }
+  for (const item of catalog.components) {
+    if (!seen.has(item.id)) next.push(item);
+  }
+
+  catalog.components = next;
+  return saveCatalog(catalog);
+}
+
 export function removeProduct(id: string, type: ProductType): CatalogData {
   const catalog = loadCatalog();
   if (type === 'solution') {

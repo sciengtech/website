@@ -130,7 +130,7 @@ function waitForCallback(state: string): Promise<string> {
 export async function loginWithGitHub(): Promise<AuthStatus> {
   if (!GITHUB_OAUTH.clientId || !GITHUB_OAUTH.clientSecret) {
     throw new Error(
-      'Set GITHUB_OAUTH_CLIENT_ID and GITHUB_OAUTH_CLIENT_SECRET in packages/site-editor/.env',
+      'GitHub OAuth is not configured in this build. Reinstall from a build that includes OAuth credentials, or contact SciEngTech support.',
     );
   }
   const state = Math.random().toString(36).slice(2);

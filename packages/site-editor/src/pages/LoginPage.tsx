@@ -33,7 +33,7 @@ export function LoginPage({ onLoggedIn }: { onLoggedIn: () => void }) {
         </Button>
         {error && <p className="mt-4 text-sm text-red-400">{error}</p>}
         <p className="mt-6 text-left text-xs text-slate-500">
-          Requires <code className="text-slate-300">.env</code> with GitHub OAuth client ID and secret.
+          Sign in with a GitHub account that has push access to the SciEngTech website repository.
         </p>
       </div>
     </div>

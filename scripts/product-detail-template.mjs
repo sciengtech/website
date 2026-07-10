@@ -202,7 +202,7 @@ function variantColumns(variants) {
 function renderVariantTable(p, base) {
   if (!p.variants?.length) return '';
   const cols = variantColumns(p.variants);
-  const head = `<thead><tr><th>#</th>${cols.map((c) => `<th>${esc(c.label)}</th>`).join('')}<th>SKU</th><th></th></tr></thead>`;
+  const head = `<thead><tr><th>#</th>${cols.map((c) => `<th>${esc(c.label)}</th>`).join('')}<th>Product Code</th><th></th></tr></thead>`;
   const body = p.variants
     .map((row) => {
       const sku = row.sku || row.product_code || row.set_code || '';
@@ -259,25 +259,26 @@ function renderConfigurationOptions(p) {
 
 function renderRfqParameters(p) {
   if (!p.rfqSections?.length) return '';
-  const tabs = p.rfqSections
-    .map(
-      (s, i) =>
-        `<button type="button" class="rfq-tab${i === 0 ? ' is-active' : ''}" data-rfq-tab="${esc(s.id)}">${esc(s.title)}</button>`
-    )
-    .join('');
-  const panels = p.rfqSections
-    .map(
-      (s, i) =>
-        `<div class="rfq-panel${i === 0 ? ' is-active' : ''}" data-rfq-panel="${esc(s.id)}">
-          <p class="rfq-panel-intro">Share the following parameters for ${esc(s.title.toLowerCase())} when requesting a quote:</p>
-          <ul class="product-bullet-list rfq-param-list">${s.parameters.map((param) => `<li>${esc(param)}</li>`).join('')}</ul>
-        </div>`
-    )
-    .join('');
-  return `<div class="product-rfq-section" data-rfq-tabs>
-    <h2 class="product-section-title">Specify Your Requirements</h2>
-    <div class="rfq-tabs" role="tablist">${tabs}</div>
-    ${panels}
+  const hints = p.rfqSections
+    .flatMap((s) => s.parameters || [])
+    .filter(Boolean)
+    .slice(0, 8);
+  const hintList = hints.length
+    ? `<ul class="product-bullet-list rfq-param-list" data-requirements-hints>${hints.map((param) => `<li>${esc(param)}</li>`).join('')}</ul>`
+    : '';
+  return `<div class="product-rfq-section" data-requirements-box>
+    <button type="button" class="btn btn-outline" data-requirements-toggle>Specify Your Requirements</button>
+    <div class="requirements-panel" data-requirements-panel hidden>
+      <p class="rfq-panel-intro">Describe the configuration, wavelengths, quantities, or other details you need. This note is added to your quote cart.</p>
+      ${hintList}
+      <label class="sr-only" for="requirements-text-${esc(p.id)}">Requirements</label>
+      <textarea id="requirements-text-${esc(p.id)}" class="requirements-textarea" data-requirements-text rows="5" placeholder="e.g. wavelength, pulse width, mounting constraints…"></textarea>
+      <button type="button" class="btn btn-ruby" data-requirements-add
+        data-product-id="${esc(p.id)}"
+        data-sku="${esc(p.sku || '')}"
+        data-name="${esc(cleanName(p.name))}">Add requirements to quote</button>
+      <p class="requirements-status" data-requirements-status hidden></p>
+    </div>
   </div>`;
 }
 
@@ -293,9 +294,11 @@ function renderHeroMeta(p, overline) {
       String(imageVariants[0].sku || imageVariants[0].product_code || '').replace(/\s+/g, '')
     : p.sku;
   const skuLine =
-    p.pageTemplate === 'configurable' && !p.variants?.length ?
+    p.pageTemplate === 'variant-catalog' ?
+      ''
+    : p.pageTemplate === 'configurable' && !p.variants?.length ?
       '<p class="product-sku-line mono">Quote-driven · configure below</p>'
-    : `<p class="product-sku-line mono" data-product-sku-line>SKU: ${esc(defaultSku)}</p>`;
+    : `<p class="product-sku-line mono" data-product-sku-line>Product Code: ${esc(defaultSku)}</p>`;
   const highlight =
     p.pageTemplate === 'solution' ||
     (p.pageTemplate === 'configurable' && p.solutionContent?.tagline) ?
@@ -378,7 +381,6 @@ function renderCustomSolutionBody(p, base) {
   const tagline = sc.tagline || '';
   const overviewParas = uniqueTexts(p.overview, tagline);
   const demonstrates = uniqueTexts(sc.demonstrates, tagline, ...overviewParas, p.customNote);
-  const kitIncludes = sc.kitIncludes || [];
   const showCustomNote =
     p.customNote &&
     !isDuplicateText(p.customNote, tagline) &&
@@ -391,7 +393,6 @@ function renderCustomSolutionBody(p, base) {
     ${note}
     ${demonstrates.length ? `<div class="product-solution-section"><h2 class="product-section-title">Overview</h2>${renderBulletList(demonstrates)}</div>` : ''}
     ${renderRfqParameters(p)}
-    ${kitIncludes.length ? `<div class="product-solution-section"><h2 class="product-section-title">Engagement</h2>${renderBulletList(kitIncludes)}</div>` : ''}
     ${renderCtas(p, base)}`;
 }
 
@@ -460,7 +461,7 @@ export function renderComponentBreadcrumb(p, base) {
     : `${base}components/${esc(p.category)}.html`;
   return `<nav class="product-breadcrumb" aria-label="Breadcrumb">
     <a href="${base}index.html">Home</a> /
-    <a href="${base}components.html">Components</a> /
+    <a href="${base}components.html">Categories</a> /
     <a href="${categoryHref}">${esc(p.categoryLabel)}</a> /
     <span>${esc(name)}</span>
   </nav>`;
@@ -627,7 +628,7 @@ export function initProductDetailInteractions(root) {
     const defaultSku = gallery?.getAttribute('data-default-sku') || '';
     const activeSku = sku || defaultSku;
     const skuLine = root.querySelector('[data-product-sku-line]');
-    if (skuLine && activeSku) skuLine.textContent = `SKU: ${activeSku}`;
+    if (skuLine && activeSku) skuLine.textContent = `Product Code: ${activeSku}`;
     root.querySelectorAll('[data-product-cart-btn]').forEach((btn) => {
       if (activeSku) btn.setAttribute('data-sku', activeSku);
       if (sku && label) btn.setAttribute('data-variant-label', label);
@@ -697,6 +698,43 @@ export function initProductDetailInteractions(root) {
         tab.classList.add('is-active');
         wrap.querySelector(`[data-rfq-panel="${id}"]`)?.classList.add('is-active');
       });
+    });
+  });
+
+  root.querySelectorAll('[data-requirements-box]').forEach((box) => {
+    const toggle = box.querySelector('[data-requirements-toggle]');
+    const panel = box.querySelector('[data-requirements-panel]');
+    const textarea = box.querySelector('[data-requirements-text]');
+    const addBtn = box.querySelector('[data-requirements-add]');
+    const status = box.querySelector('[data-requirements-status]');
+    toggle?.addEventListener('click', () => {
+      if (!panel) return;
+      panel.hidden = !panel.hidden;
+    });
+    addBtn?.addEventListener('click', () => {
+      const text = (textarea?.value || '').trim();
+      if (!text) {
+        if (status) {
+          status.hidden = false;
+          status.textContent = 'Enter your requirements before adding to the quote.';
+        }
+        return;
+      }
+      if (window.SciEngQuoteCart) {
+        window.SciEngQuoteCart.addItem({
+          productId: addBtn.getAttribute('data-product-id') || '',
+          sku: addBtn.getAttribute('data-sku') || '',
+          name: addBtn.getAttribute('data-name') || 'Solution',
+          variantLabel: 'Requirements: ' + text,
+          qty: 1,
+        });
+        if (window.SciEngCartUI) window.SciEngCartUI.updateBadge();
+      }
+      if (status) {
+        status.hidden = false;
+        status.textContent = 'Added to quote cart. Open Checkout to submit.';
+      }
+      if (textarea) textarea.value = '';
     });
   });
 }
