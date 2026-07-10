@@ -104,9 +104,9 @@ function renderMedia(p, base) {
   const imageVariants = variantsWithImages(p);
   const mainSrc =
     imageVariants.length ? imageVariants[0].image : p.image || images[0];
-  const stage = `<div class="product-media-stage">
+  const stage = `<button type="button" class="product-media-stage" data-gallery-open aria-label="View ${name} fullscreen">
     <img src="${base}${esc(mainSrc)}" alt="${name}" data-gallery-main />
-  </div>`;
+  </button>`;
 
   const picker = renderVariantPicker(p, base);
   const galleryAttrs =
@@ -489,6 +489,131 @@ export function renderProductDetail(p, { base = '' } = {}) {
 export function initProductDetailInteractions(root) {
   if (!root) return;
 
+  function initProductLightbox(rootEl) {
+    let lightbox = document.getElementById('productLightbox');
+    if (!lightbox) {
+      lightbox = document.createElement('div');
+      lightbox.id = 'productLightbox';
+      lightbox.className = 'product-lightbox';
+      lightbox.setAttribute('role', 'dialog');
+      lightbox.setAttribute('aria-modal', 'true');
+      lightbox.setAttribute('aria-label', 'Product image viewer');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightbox.innerHTML = `<button type="button" class="product-lightbox__backdrop" data-lightbox-close aria-label="Close image viewer"></button>
+        <button type="button" class="product-lightbox__close" data-lightbox-close aria-label="Close">&times;</button>
+        <button type="button" class="product-lightbox__nav product-lightbox__nav--prev" data-lightbox-prev aria-label="Previous image">&#8249;</button>
+        <button type="button" class="product-lightbox__nav product-lightbox__nav--next" data-lightbox-next aria-label="Next image">&#8250;</button>
+        <div class="product-lightbox__panel">
+          <div class="product-lightbox__stage"><img src="" alt="" data-lightbox-img /></div>
+          <p class="product-lightbox__counter" data-lightbox-counter hidden></p>
+        </div>`;
+      document.body.appendChild(lightbox);
+    }
+
+    const state = { sources: [], index: 0, alt: '' };
+    const img = lightbox.querySelector('[data-lightbox-img]');
+    const counter = lightbox.querySelector('[data-lightbox-counter]');
+    const prevBtn = lightbox.querySelector('[data-lightbox-prev]');
+    const nextBtn = lightbox.querySelector('[data-lightbox-next]');
+
+    const gallerySources = (gallery) => {
+      const thumbs = gallery.querySelectorAll('.product-media-thumb[data-gallery-src]');
+      if (thumbs.length) {
+        return [...thumbs].map((thumb) => thumb.getAttribute('data-gallery-src') || '').filter(Boolean);
+      }
+      const main = gallery.querySelector('[data-gallery-main]');
+      return main?.src ? [main.src] : [];
+    };
+
+    const currentIndex = (sources, main) => {
+      if (!main || !sources.length) return 0;
+      const src = main.getAttribute('src') || main.src;
+      const idx = sources.indexOf(src);
+      return idx >= 0 ? idx : 0;
+    };
+
+    const updateLightbox = () => {
+      if (!img || !state.sources.length) return;
+      img.src = state.sources[state.index];
+      img.alt = state.alt;
+      if (counter) {
+        if (state.sources.length > 1) {
+          counter.hidden = false;
+          counter.textContent = `${state.index + 1} / ${state.sources.length}`;
+        } else {
+          counter.hidden = true;
+          counter.textContent = '';
+        }
+      }
+      if (prevBtn) prevBtn.disabled = state.index <= 0;
+      if (nextBtn) nextBtn.disabled = state.index >= state.sources.length - 1;
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('product-lightbox-open');
+    };
+
+    const openLightbox = (sources, index, alt) => {
+      if (!sources.length) return;
+      state.sources = sources;
+      state.index = index;
+      state.alt = alt || '';
+      updateLightbox();
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('product-lightbox-open');
+      lightbox.querySelector('.product-lightbox__close')?.focus();
+    };
+
+    if (!lightbox.dataset.bound) {
+      lightbox.dataset.bound = 'true';
+      lightbox.querySelectorAll('[data-lightbox-close]').forEach((btn) => {
+        btn.addEventListener('click', closeLightbox);
+      });
+      prevBtn?.addEventListener('click', () => {
+        if (state.index > 0) {
+          state.index -= 1;
+          updateLightbox();
+        }
+      });
+      nextBtn?.addEventListener('click', () => {
+        if (state.index < state.sources.length - 1) {
+          state.index += 1;
+          updateLightbox();
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('is-open')) return;
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          closeLightbox();
+        } else if (e.key === 'ArrowLeft' && state.index > 0) {
+          e.preventDefault();
+          state.index -= 1;
+          updateLightbox();
+        } else if (e.key === 'ArrowRight' && state.index < state.sources.length - 1) {
+          e.preventDefault();
+          state.index += 1;
+          updateLightbox();
+        }
+      });
+    }
+
+    rootEl.querySelectorAll('[data-product-gallery]').forEach((gallery) => {
+      const stage = gallery.querySelector('[data-gallery-open], .product-media-stage');
+      if (!stage || stage.dataset.lightboxBound) return;
+      stage.dataset.lightboxBound = 'true';
+      stage.addEventListener('click', () => {
+        const main = gallery.querySelector('[data-gallery-main]');
+        const sources = gallerySources(gallery);
+        if (!sources.length) return;
+        openLightbox(sources, currentIndex(sources, main), main?.alt || '');
+      });
+    });
+  }
+
   function applyVariantSelection(sku, imageSrc, label) {
     const gallery = root.querySelector('[data-product-gallery]');
     const main = gallery?.querySelector('[data-gallery-main]');
@@ -554,6 +679,7 @@ export function initProductDetailInteractions(root) {
       );
     });
   });
+  initProductLightbox(root);
   const firstChip = root.querySelector('.variant-picker-chip.is-active');
   if (firstChip) {
     applyVariantSelection(

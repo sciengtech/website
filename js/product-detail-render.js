@@ -112,14 +112,16 @@
     var mainSrc =
       imageVariants.length ? imageVariants[0].image : p.image || images[0];
     var stage =
-      '<div class="product-media-stage">' +
+      '<button type="button" class="product-media-stage" data-gallery-open aria-label="View ' +
+      name +
+      ' fullscreen">' +
       '<img src="' +
       base +
       esc(mainSrc) +
       '" alt="' +
       name +
       '" data-gallery-main />' +
-      '</div>';
+      '</button>';
 
     var picker = renderVariantPicker(p, base);
     var galleryAttrs =
@@ -703,6 +705,139 @@
     );
   }
 
+  function initProductLightbox(root) {
+    var lightbox = document.getElementById('productLightbox');
+    if (!lightbox) {
+      lightbox = document.createElement('div');
+      lightbox.id = 'productLightbox';
+      lightbox.className = 'product-lightbox';
+      lightbox.setAttribute('role', 'dialog');
+      lightbox.setAttribute('aria-modal', 'true');
+      lightbox.setAttribute('aria-label', 'Product image viewer');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightbox.innerHTML =
+        '<button type="button" class="product-lightbox__backdrop" data-lightbox-close aria-label="Close image viewer"></button>' +
+        '<button type="button" class="product-lightbox__close" data-lightbox-close aria-label="Close">&times;</button>' +
+        '<button type="button" class="product-lightbox__nav product-lightbox__nav--prev" data-lightbox-prev aria-label="Previous image">&#8249;</button>' +
+        '<button type="button" class="product-lightbox__nav product-lightbox__nav--next" data-lightbox-next aria-label="Next image">&#8250;</button>' +
+        '<div class="product-lightbox__panel">' +
+        '<div class="product-lightbox__stage"><img src="" alt="" data-lightbox-img /></div>' +
+        '<p class="product-lightbox__counter" data-lightbox-counter hidden></p>' +
+        '</div>';
+      document.body.appendChild(lightbox);
+    }
+
+    var state = { sources: [], index: 0, alt: '' };
+    var img = lightbox.querySelector('[data-lightbox-img]');
+    var counter = lightbox.querySelector('[data-lightbox-counter]');
+    var prevBtn = lightbox.querySelector('[data-lightbox-prev]');
+    var nextBtn = lightbox.querySelector('[data-lightbox-next]');
+
+    function gallerySources(gallery) {
+      var thumbs = gallery.querySelectorAll('.product-media-thumb[data-gallery-src]');
+      if (thumbs.length) {
+        return Array.prototype.map.call(thumbs, function (thumb) {
+          return thumb.getAttribute('data-gallery-src') || '';
+        }).filter(Boolean);
+      }
+      var main = gallery.querySelector('[data-gallery-main]');
+      return main && main.src ? [main.src] : [];
+    }
+
+    function currentIndex(sources, main) {
+      if (!main || !sources.length) return 0;
+      var src = main.getAttribute('src') || main.src;
+      var idx = sources.indexOf(src);
+      return idx >= 0 ? idx : 0;
+    }
+
+    function updateLightbox() {
+      if (!img || !state.sources.length) return;
+      img.src = state.sources[state.index];
+      img.alt = state.alt;
+      if (counter) {
+        if (state.sources.length > 1) {
+          counter.hidden = false;
+          counter.textContent = state.index + 1 + ' / ' + state.sources.length;
+        } else {
+          counter.hidden = true;
+          counter.textContent = '';
+        }
+      }
+      if (prevBtn) prevBtn.disabled = state.index <= 0;
+      if (nextBtn) nextBtn.disabled = state.index >= state.sources.length - 1;
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('product-lightbox-open');
+    }
+
+    function openLightbox(sources, index, alt) {
+      if (!sources.length) return;
+      state.sources = sources;
+      state.index = index;
+      state.alt = alt || '';
+      updateLightbox();
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('product-lightbox-open');
+      var closeBtn = lightbox.querySelector('.product-lightbox__close');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    if (!lightbox.dataset.bound) {
+      lightbox.dataset.bound = 'true';
+      lightbox.querySelectorAll('[data-lightbox-close]').forEach(function (btn) {
+        btn.addEventListener('click', closeLightbox);
+      });
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+          if (state.index > 0) {
+            state.index -= 1;
+            updateLightbox();
+          }
+        });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          if (state.index < state.sources.length - 1) {
+            state.index += 1;
+            updateLightbox();
+          }
+        });
+      }
+      document.addEventListener('keydown', function (e) {
+        if (!lightbox.classList.contains('is-open')) return;
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          closeLightbox();
+        } else if (e.key === 'ArrowLeft' && state.index > 0) {
+          e.preventDefault();
+          state.index -= 1;
+          updateLightbox();
+        } else if (e.key === 'ArrowRight' && state.index < state.sources.length - 1) {
+          e.preventDefault();
+          state.index += 1;
+          updateLightbox();
+        }
+      });
+    }
+
+    root.querySelectorAll('[data-product-gallery]').forEach(function (gallery) {
+      var stage = gallery.querySelector('[data-gallery-open], .product-media-stage');
+      if (!stage || stage.dataset.lightboxBound) return;
+      stage.dataset.lightboxBound = 'true';
+      stage.addEventListener('click', function () {
+        var main = gallery.querySelector('[data-gallery-main]');
+        var sources = gallerySources(gallery);
+        if (!sources.length) return;
+        openLightbox(sources, currentIndex(sources, main), main ? main.alt : '');
+      });
+    });
+  }
+
   function initProductDetailInteractions(root) {
     if (!root) return;
 
@@ -773,6 +908,7 @@
         );
       });
     });
+    initProductLightbox(root);
     var firstChip = root.querySelector('.variant-picker-chip.is-active');
     if (firstChip) {
       applyVariantSelection(
