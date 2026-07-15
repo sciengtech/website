@@ -4,14 +4,6 @@
  */
 import { solutionGroupLabel } from './solution-groups.mjs';
 
-const CUSTOM_RFQ_PARAMS = [
-  'Application and experimental goals',
-  'Wavelength / spectral range',
-  'Power, repetition rate, or bandwidth targets',
-  'Integration and mounting requirements',
-  'Timeline and quantity',
-];
-
 function makeSearch(p) {
   return [
     p.id,
@@ -30,6 +22,8 @@ function makeSearch(p) {
     .toLowerCase();
 }
 
+const MADE_IN_INDIA = 'Proudly Designed and Manufactured in India';
+
 function makeCustomSolution({
   id,
   name,
@@ -37,7 +31,7 @@ function makeCustomSolution({
   group,
   summary,
   customized = true,
-  pageTemplate = 'configurable',
+  pageTemplate = 'solution',
 }) {
   const customLine = customized
     ? 'Customized as per user requirements.'
@@ -49,28 +43,22 @@ function makeCustomSolution({
     type: 'solution',
     pageTemplate,
     aliases: [],
-    overview: customized ? [summary] : [customLine],
+    overview: [summary],
     features: [],
     applications: [],
     techSpecs: [],
     keyValueSpecs: [],
     variants: [],
     configurationOptions: null,
-    rfqSections: [
-      {
-        id: 'requirements',
-        title: 'Specify Your Requirements',
-        parameters: CUSTOM_RFQ_PARAMS,
-      },
-    ],
+    rfqSections: null,
     solutionContent: {
       tagline: customized ? 'Customized as per user requirements' : summary,
-      demonstrates: [],
+      demonstrates: customized ? [] : [customLine],
       kitIncludes: [
         'Engineering consultation and specification review',
         'Turnkey or modular delivery scoped to your quote',
       ],
-      capabilities: [],
+      capabilities: [MADE_IN_INDIA],
     },
     customNote: null,
     summary,
@@ -214,6 +202,21 @@ export function patchSolutionsCatalog(catalog) {
   for (const item of manual) {
     const idx = solutions.findIndex((s) => s.id === item.id);
     if (idx >= 0) {
+      const prev = solutions[idx];
+      if (prev.image && !item.image) item.image = prev.image;
+      if (prev.images?.length && !item.images?.length) item.images = prev.images;
+      if (prev.overview?.length && item.overview?.[0] === item.summary) {
+        // keep richer overview when present
+        if (prev.overview.join(' ') !== item.overview.join(' ') && prev.overview[0] !== item.summary) {
+          item.overview = prev.overview;
+        }
+      }
+      if (prev.solutionContent?.demonstrates?.length && !item.solutionContent.demonstrates?.length) {
+        item.solutionContent.demonstrates = prev.solutionContent.demonstrates;
+      }
+      if (prev.solutionContent?.kitIncludes?.length > item.solutionContent.kitIncludes.length) {
+        item.solutionContent.kitIncludes = prev.solutionContent.kitIncludes;
+      }
       solutions[idx] = item;
       byId[item.id] = item;
     } else {
@@ -224,11 +227,54 @@ export function patchSolutionsCatalog(catalog) {
 
   applySolutionLabels(solutions);
 
+  const QUANTUM_ORDER = [
+    'entangled-photon-source',
+    'quantum-key-distribution',
+    'quantum-eraser',
+    'bomb-tester',
+    'hbt-and-hom',
+    'quantum-tomography',
+    'michelson-interferometer',
+  ];
+  const TRAINING_ORDER = ['polarized-3d-cinema', 'fourier-optics-kit'];
+  const SOTA_ORDER = [
+    'pockels-cell-assemblies',
+    'white-light-supercontinuum-source',
+    'cw-and-pulsed-lasers',
+    'ultrafast-photodiodes-assemblies',
+    'regenerative-delay-line',
+  ];
+
   for (const s of solutions) {
+    s.rfqSections = null;
+    if (!s.solutionContent) {
+      s.solutionContent = { tagline: null, demonstrates: [], kitIncludes: [], capabilities: [] };
+    }
+    const sc = s.solutionContent;
+    if (!Array.isArray(sc.kitIncludes)) sc.kitIncludes = [];
+    if (!Array.isArray(sc.capabilities)) sc.capabilities = [];
+    if (!sc.capabilities.includes(MADE_IN_INDIA)) sc.capabilities.push(MADE_IN_INDIA);
+    if (s.pageTemplate === 'configurable') s.pageTemplate = 'solution';
+
+    const qi = QUANTUM_ORDER.indexOf(s.id);
+    const ti = TRAINING_ORDER.indexOf(s.id);
+    const si = SOTA_ORDER.indexOf(s.id);
+    if (qi >= 0) s.sortIndex = qi + 1;
+    else if (ti >= 0) s.sortIndex = ti + 1;
+    else if (si >= 0) s.sortIndex = si + 1;
+
     s._search = makeSearch(s);
   }
 
-  solutions.sort((a, b) => a.name.localeCompare(b.name));
+  solutions.sort((a, b) => {
+    const ga = a.solutionGroup || '';
+    const gb = b.solutionGroup || '';
+    if (ga !== gb) return ga.localeCompare(gb);
+    const ia = a.sortIndex ?? 999;
+    const ib = b.sortIndex ?? 999;
+    if (ia !== ib) return ia - ib;
+    return a.name.localeCompare(b.name);
+  });
   catalog.counts = {
     solutions: solutions.length,
     components: catalog.components.length,

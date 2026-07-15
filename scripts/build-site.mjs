@@ -17,9 +17,7 @@ const catalog = patchSolutionsCatalog(
 );
 
 /** Single-product categories link straight to product.html#id (no category hub). */
-const DIRECT_PRODUCT_CATEGORIES = {
-  optics: 'sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t',
-};
+const DIRECT_PRODUCT_CATEGORIES = {};
 
 const CATEGORIES = [
   { slug: 'opto-mechanics', label: 'Opto-Mechanics' },
@@ -36,7 +34,7 @@ const HOME_CATEGORIES = [
   {
     slug: 'optics',
     label: 'Optics',
-    href: `product.html#${DIRECT_PRODUCT_CATEGORIES.optics}`,
+    href: 'components/optics.html',
   },
   { slug: 'opto-mechanics', label: 'Opto-Mechanics', href: 'components/opto-mechanics.html' },
   { slug: 'motion-and-positioning', label: 'Motion and Positioning', href: 'components/motion-and-positioning.html' },
@@ -79,7 +77,7 @@ const CATEGORY_COVER_PREF = {
   hardware: ['hex-nut', 'allen-bolt', 'washer'],
   'fibre-optics': ['fiber-optics-collimator'],
   lasers: ['diode-laser'],
-  optics: [DIRECT_PRODUCT_CATEGORIES.optics],
+  optics: ['optical-lenses', 'optical-mirrors', 'beam-splitters', 'polarizers'],
 };
 
 const CATEGORY_COVER_SLIDE = {
@@ -287,7 +285,17 @@ function categoryRedirectPage(productId, base) {
   return `<!DOCTYPE html><html><head><meta charset="UTF-8" /><meta http-equiv="refresh" content="0;url=${url}" /><title>Redirect</title></head><body><p><a href="${url}">View ${esc('Optics')}</a></p></body></html>`;
 }
 
+function sortByIndex(items) {
+  return [...items].sort((a, b) => {
+    const ia = a.sortIndex ?? 999;
+    const ib = b.sortIndex ?? 999;
+    if (ia !== ib) return ia - ib;
+    return String(a.name || '').localeCompare(String(b.name || ''));
+  });
+}
+
 function categoryPage(cat, items, base) {
+  items = sortByIndex(items);
   const grid = items.map((p) => productCard(p, base, base, '')).join('\n');
   const main = `<section class="catalog-page">
     <div class="wrap catalog-hero">
@@ -439,7 +447,7 @@ function homeClosingSections() {
   <section class="cta-band">
     <div class="wrap">
       <h2>Ready to configure your lab requirements?</h2>
-      <p>Request a technical quote.</p>
+      <p>Request a technical quote for your lab.</p>
       <div class="hero-ctas">
         <a class="btn btn-ruby" href="engineering/rfq.html">Request Technical Quote</a>
         <a class="btn btn-outline" href="company/contact.html">Contact System Engineer</a>
@@ -450,8 +458,18 @@ function homeClosingSections() {
 }
 
 function buildHomepageMain() {
-  const quantum = catalog.solutions.filter((s) => s.solutionGroup === 'quantum-setups');
-  const slides = quantum.slice(0, 5);
+  // Homepage carousel stays fixed (not driven by quantum hub sort order).
+  const carouselIds = [
+    'entangled-photon-source',
+    'hbt-and-hom',
+    'quantum-key-distribution',
+    'quantum-tomography',
+    'michelson-interferometer',
+  ];
+  const byId = Object.fromEntries(
+    catalog.solutions.filter((s) => s.solutionGroup === 'quantum-setups').map((s) => [s.id, s])
+  );
+  const slides = carouselIds.map((id) => byId[id]).filter(Boolean);
   const slideHtml = slides
     .map((s, i) => {
       const img = HOME_QUANTUM_IMAGES[s.id] || s.image || placeholderSlide(i);
@@ -527,9 +545,9 @@ function buildHomepage() {
 }
 
 function buildSolutionsHub(base, rel) {
-  const q = catalog.solutions.filter((s) => s.solutionGroup === 'quantum-setups');
-  const t = catalog.solutions.filter((s) => s.solutionGroup === 'training-kits');
-  const sota = catalog.solutions.filter((s) => s.solutionGroup === 'state-of-the-art-setups');
+  const q = sortByIndex(catalog.solutions.filter((s) => s.solutionGroup === 'quantum-setups'));
+  const t = sortByIndex(catalog.solutions.filter((s) => s.solutionGroup === 'training-kits'));
+  const sota = sortByIndex(catalog.solutions.filter((s) => s.solutionGroup === 'state-of-the-art-setups'));
   const main = `<section class="catalog-page">
     <div class="wrap catalog-hero">
       <h1>Quantum &amp; Photonics Solutions</h1>
@@ -546,7 +564,7 @@ function buildSolutionsHub(base, rel) {
 }
 
 function buildSubHub(rel, title, desc, group) {
-  const items = catalog.solutions.filter((s) => s.solutionGroup === group);
+  const items = sortByIndex(catalog.solutions.filter((s) => s.solutionGroup === group));
   const main = `<section class="catalog-page">
     <div class="wrap catalog-hero">
       <nav class="product-breadcrumb"><a href="../index.html">Home</a> / <a href="../solutions.html">Solutions</a> / <span>${esc(title)}</span></nav>
@@ -737,7 +755,7 @@ function main() {
   // Company & engineering
   buildCompanyPage('../', 'company/about.html', 'About Us', `<section class="page-content about-page"><div class="wrap about-wrap">
     <h1>About SciEngTech Solutions</h1>
-    <p class="lead">SciEngTech Solutions LLP engineers quantum optics systems, educational photonics kits, and precision bench hardware from Pune, India.</p>
+    <p class="lead">SciEngTech Solutions LLP engineers quantum optics systems, educational photonics kits, and precision bench hardware from Pune, Mumbai, India.</p>
     <div class="about-prose">
       <p>SciEngTech Solutions LLP builds the instruments and bench hardware that India's research labs, universities, and training centres use to teach and demonstrate quantum optics. From entangled photon sources and QKD demonstration platforms to Fourier optics kits and opto-mechanical assemblies, our work spans turnkey quantum set-ups and the components that hold an optical table together.</p>
       <p>We engineer and manufacture in Pune. Every system is specified for real laboratory use — not catalog placeholders — and validated before dispatch. Our processes are ISO 9001:2015 certified, every unit is quality inspected, and we are an approved vendor on the Government e-Marketplace (GeM) for institutional procurement.</p>
@@ -792,7 +810,7 @@ function main() {
     <h2>7. Governing law</h2>
     <p>These terms are governed by the laws of India. Courts at Pune, Maharashtra shall have exclusive jurisdiction, subject to mandatory institutional procurement rules applicable to the buyer.</p>
     <h2>8. Contact</h2>
-    <p>Questions: <a href="mailto:info@sciengtech.in">info@sciengtech.in</a> · <a href="../contact.html">Contact &amp; Credentials</a></p>
+    <p>Questions: <a href="mailto:info@sciengtech.in">info@sciengtech.in</a> · <a href="mailto:sciengtechsol@gmail.com">sciengtechsol@gmail.com</a> · <a href="../contact.html">Contact &amp; Credentials</a></p>
     <p><em>Last updated: July 2026</em></p>
   </div></section>`);
 
@@ -800,7 +818,7 @@ function main() {
     <h1>Privacy Policy</h1>
     <p class="lead">How SciEngTech Solutions LLP collects and uses information submitted through sciengtech.in.</p>
     <h2>1. Who we are</h2>
-    <p>SciEngTech Solutions LLP (SciEngTech), Pune, India. Contact: <a href="mailto:info@sciengtech.in">info@sciengtech.in</a>.</p>
+    <p>SciEngTech Solutions LLP (SciEngTech), Pune, India. Contact: <a href="mailto:info@sciengtech.in">info@sciengtech.in</a> · <a href="mailto:sciengtechsol@gmail.com">sciengtechsol@gmail.com</a>.</p>
     <h2>2. Information we collect</h2>
     <p>When you request a technical quote or contact us, we may collect: name, work email, organisation, phone, project details, BOM information, and correspondence related to your inquiry.</p>
     <h2>3. How we use information</h2>

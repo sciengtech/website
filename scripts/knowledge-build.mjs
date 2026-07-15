@@ -116,15 +116,15 @@ function bentoSplitCard(article, assetBase, pageBase, tone = 'muted') {
 
 function bentoCtaCard(assetBase, pageBase) {
   return `<article class="bento-card bento-card--cta bento-card--split bento-tone-ruby">
-    <a class="bento-card-link" href="${pageBase}product.html#sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t">
+    <a class="bento-card-link" href="${pageBase}engineering/rfq.html">
       <div class="bento-card-body">
-        <span class="bento-card-meta">Categories</span>
-        <h2>Optics Catalog</h2>
-        <p>Mirrors, lenses, beam splitters, and polarizers — spec-verified and available for RFQ.</p>
-        <span class="bento-card-cta">Browse optics</span>
+        <span class="bento-card-meta">Engineering</span>
+        <h2>Request a technical quote</h2>
+        <p>Specify lab requirements and our engineering team will respond with configurations and lead times.</p>
+        <span class="bento-card-cta">Open RFQ form</span>
       </div>
       <div class="bento-card-media" aria-hidden="true">
-        <img src="${assetBase}assets/slides/03-dielectric-mirror.svg" alt="" loading="lazy" />
+        <img src="${assetBase}assets/slides/01-translation-stage.svg" alt="" loading="lazy" />
       </div>
     </a>
   </article>`;

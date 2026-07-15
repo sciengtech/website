@@ -279,9 +279,13 @@
     );
   }
 
-  function variantColumns(variants) {
+  function variantColumns(variants, opts) {
     if (!variants.length) return [];
     var skip = { sr: 1, sku: 1, image: 1 };
+    if (opts && opts.hideSkuColumn) {
+      skip.product_code = 1;
+      skip.set_code = 1;
+    }
     var keys = Object.keys(variants[0]).filter(function (k) {
       return !skip[k];
     });
@@ -297,15 +301,19 @@
 
   function renderVariantTable(p, base) {
     if (!p.variants || !p.variants.length) return '';
-    var cols = variantColumns(p.variants);
+    var hideSr = !!p.hideSrColumn;
+    var hideSku = !!p.hideSkuColumn;
+    var cols = variantColumns(p.variants, { hideSkuColumn: hideSku });
     var head =
-      '<thead><tr><th>#</th>' +
+      '<thead><tr>' +
+      (hideSr ? '' : '<th>#</th>') +
       cols
         .map(function (c) {
           return '<th>' + esc(c.label) + '</th>';
         })
         .join('') +
-      '<th>Product Code</th><th></th></tr></thead>';
+      (hideSku ? '' : '<th>Product Code</th>') +
+      '<th></th></tr></thead>';
     var body = p.variants
       .map(function (row) {
         var sku = row.sku || row.product_code || row.set_code || '';
@@ -329,17 +337,15 @@
         return (
           '<tr' +
           rowAttrs +
-          '><td>' +
-          esc(row.sr) +
-          '</td>' +
+          '>' +
+          (hideSr ? '' : '<td>' + esc(row.sr) + '</td>') +
           cols
             .map(function (c) {
               return '<td>' + esc(row[c.key] || '') + '</td>';
             })
             .join('') +
-          '<td class="mono">' +
-          esc(skuClean) +
-          '</td><td><button type="button" class="variant-cart-btn" data-add-to-cart data-product-id="' +
+          (hideSku ? '' : '<td class="mono">' + esc(skuClean) + '</td>') +
+          '<td><button type="button" class="variant-cart-btn" data-add-to-cart data-product-id="' +
           esc(p.id) +
           '" data-sku="' +
           esc(skuClean) +

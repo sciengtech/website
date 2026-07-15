@@ -3,6 +3,12 @@
 
   var renderSeq = 0;
 
+  /** Old single Optics page → Optics category hub */
+  var LEGACY_PRODUCT_REDIRECTS = {
+    'sciengtech-offers-a-comprehensive-range-of-optical-components-designed-to-meet-t':
+      'components/optics.html',
+  };
+
   function resolveProductId() {
     if (window.SciEngCatalog && window.SciEngCatalog.resolveProductIdFromLocation) {
       return window.SciEngCatalog.resolveProductIdFromLocation();
@@ -95,6 +101,11 @@
     var seq = ++renderSeq;
     if (!id) {
       renderNotFound();
+      return;
+    }
+    if (LEGACY_PRODUCT_REDIRECTS[id]) {
+      var base = window.__SITE_BASE__ || '';
+      window.location.replace(base + LEGACY_PRODUCT_REDIRECTS[id]);
       return;
     }
     if (!window.SciEngCatalog || typeof window.SciEngCatalog.load !== 'function') {
