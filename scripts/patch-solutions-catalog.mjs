@@ -24,6 +24,24 @@ function makeSearch(p) {
 
 const MADE_IN_INDIA = 'Proudly Designed and Manufactured in India';
 
+const CUSTOM_RFQ_PARAMS = [
+  'Application and experimental goals',
+  'Wavelength / spectral range',
+  'Power, repetition rate, or bandwidth targets',
+  'Integration and mounting requirements',
+  'Timeline and quantity',
+];
+
+function defaultRfqSections() {
+  return [
+    {
+      id: 'requirements',
+      title: 'Specify Your Requirements',
+      parameters: [...CUSTOM_RFQ_PARAMS],
+    },
+  ];
+}
+
 function makeCustomSolution({
   id,
   name,
@@ -50,7 +68,7 @@ function makeCustomSolution({
     keyValueSpecs: [],
     variants: [],
     configurationOptions: null,
-    rfqSections: null,
+    rfqSections: defaultRfqSections(),
     solutionContent: {
       tagline: customized ? 'Customized as per user requirements' : summary,
       demonstrates: customized ? [] : [customLine],
@@ -246,7 +264,7 @@ export function patchSolutionsCatalog(catalog) {
   ];
 
   for (const s of solutions) {
-    s.rfqSections = null;
+    if (!s.rfqSections?.length) s.rfqSections = defaultRfqSections();
     if (!s.solutionContent) {
       s.solutionContent = { tagline: null, demonstrates: [], kitIncludes: [], capabilities: [] };
     }

@@ -34,6 +34,8 @@ export function scaffoldProduct(input: {
     applications: [],
     techSpecs: [],
     keyValueSpecs: [],
+    specTableTitle: null,
+    customTable: null,
     variants: [],
     configurationOptions: null,
     rfqSections: null,
@@ -45,8 +47,10 @@ export function scaffoldProduct(input: {
     body: '',
     htmlBody: input.pageTemplate === 'rich-page' ? '' : undefined,
     image: null,
+    images: [],
     tags: [],
     writeupPath: null,
+    sortIndex: null,
     _search: '',
     ...(isSolution
       ? {

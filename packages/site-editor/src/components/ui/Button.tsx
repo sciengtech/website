@@ -4,12 +4,14 @@ import type { ButtonHTMLAttributes } from 'react';
 export function Button({
   className,
   variant = 'default',
+  type = 'button',
   ...props
 }: ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: 'default' | 'primary' | 'ghost' | 'danger';
 }) {
   return (
     <button
+      type={type}
       className={cn(
         'inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-semibold transition disabled:opacity-50',
         variant === 'default' && 'border border-[#2a3142] bg-[#161b26] hover:border-[#e11d48]',

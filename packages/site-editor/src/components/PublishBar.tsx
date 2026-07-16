@@ -1,12 +1,22 @@
 import { useEffect, useState } from 'react';
 import { Button } from './ui/Button';
-import { Input } from './ui/Input';
+
+function shortPath(file: string) {
+  const parts = file.replace(/\\/g, '/').split('/');
+  if (parts.length <= 2) return file;
+  return `…/${parts.slice(-2).join('/')}`;
+}
 
 export function PublishBar({ onPublished }: { onPublished?: () => void }) {
   const [dirty, setDirty] = useState<string[]>([]);
   const [message, setMessage] = useState('content: update site data');
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState<{
+    kind: 'ok' | 'err';
+    text: string;
+    actionsUrl?: string;
+  } | null>(null);
   const [loading, setLoading] = useState(false);
+  const [showFiles, setShowFiles] = useState(false);
 
   async function refreshDirty() {
     const files = await window.siteEditor.publish.getDirtyFiles();
@@ -20,60 +30,132 @@ export function PublishBar({ onPublished }: { onPublished?: () => void }) {
   }, []);
 
   async function publish() {
-    if (!window.confirm(`Publish ${dirty.length} file(s) to main?`)) return;
+    if (!window.confirm(`Push ${dirty.length} file(s) to main?`)) return;
     setLoading(true);
-    setStatus('');
+    setStatus(null);
     const result = await window.siteEditor.publish.run(message);
     setLoading(false);
     if (result.ok) {
-      setStatus(`Pushed ${result.files.length} file(s). CI: ${result.actionsUrl}`);
+      setStatus({
+        kind: 'ok',
+        text: `Pushed ${result.files.length} file(s)`,
+        actionsUrl: result.actionsUrl,
+      });
       onPublished?.();
       refreshDirty();
+      setShowFiles(false);
     } else {
-      setStatus(result.error || 'Publish failed');
+      setStatus({ kind: 'err', text: result.error || 'Push failed' });
     }
   }
 
-  return (
-    <div className="w-full rounded-lg border border-[#2a3142] bg-[#161b26] p-3">
-      <div className="flex items-start gap-2">
-        <div className="flex-1 min-w-0">
-          <div className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-slate-400">
-            Commit message
-          </div>
-          <Input value={message} onChange={(e) => setMessage(e.target.value)} className="w-full" />
-        </div>
+  const hasChanges = dirty.length > 0;
 
-        <div className="flex flex-col items-end gap-2">
-          <Button
-            type="button"
-            variant="primary"
-            disabled={loading || dirty.length === 0}
-            onClick={publish}
-            className="w-[90px] text-xs"
-          >
-            {loading ? 'Publishing…' : `Publish (${dirty.length})`}
-          </Button>
-          <Button
-            type="button"
-            onClick={refreshDirty}
-            variant="ghost"
-            className="w-[90px] text-xs"
-          >
-            Refresh
-          </Button>
-        </div>
+  return (
+    <div className="space-y-3">
+      <div className="flex items-center justify-between gap-2">
+        <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+          Push changes
+        </span>
+        <button
+          type="button"
+          onClick={refreshDirty}
+          className="text-[11px] text-slate-500 transition hover:text-slate-300"
+          title="Refresh dirty files"
+        >
+          Refresh
+        </button>
       </div>
 
-      {dirty.length > 0 && (
-        <ul className="mt-2 max-h-24 overflow-auto pr-1 list-inside list-disc text-xs text-slate-400">
+      <div
+        className={`rounded-md border px-2.5 py-2 text-xs ${
+          hasChanges
+            ? 'border-[#e11d48]/35 bg-[#e11d48]/10 text-[#fda4af]'
+            : 'border-[#2a3142] bg-[#0e1118] text-slate-500'
+        }`}
+      >
+        {hasChanges ? (
+          <button
+            type="button"
+            className="flex w-full items-center justify-between gap-2 text-left"
+            onClick={() => setShowFiles((v) => !v)}
+          >
+            <span>
+              {dirty.length} file{dirty.length === 1 ? '' : 's'} ready
+            </span>
+            <span className="text-[10px] uppercase tracking-wide opacity-70">
+              {showFiles ? 'Hide' : 'Show'}
+            </span>
+          </button>
+        ) : (
+          <span>Working tree clean</span>
+        )}
+      </div>
+
+      {hasChanges && showFiles && (
+        <ul className="max-h-28 space-y-1 overflow-y-auto rounded-md border border-[#2a3142] bg-[#0e1118] p-2">
           {dirty.map((f) => (
-            <li key={f}>{f}</li>
+            <li
+              key={f}
+              className="truncate font-mono text-[10px] leading-relaxed text-slate-400"
+              title={f}
+            >
+              {shortPath(f)}
+            </li>
           ))}
         </ul>
       )}
 
-      {status && <p className="mt-2 text-xs text-slate-300">{status}</p>}
+      <div className="relative z-10">
+        <label htmlFor="publish-commit-message" className="mb-1 block text-[11px] text-slate-500">
+          Commit message
+        </label>
+        <textarea
+          id="publish-commit-message"
+          name="publish-commit-message"
+          rows={2}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          disabled={loading}
+          autoComplete="off"
+          autoCorrect="off"
+          spellCheck={false}
+          className="w-full resize-none rounded-md border border-[#2a3142] bg-[#0e1118] px-3 py-2 text-xs text-slate-200 outline-none focus:border-[#e11d48] disabled:opacity-50"
+        />
+      </div>
+
+      <Button
+        type="button"
+        variant="primary"
+        disabled={loading || !hasChanges || !message.trim()}
+        onClick={publish}
+        className="w-full text-xs"
+      >
+        {loading ? 'Pushing…' : 'Push to GitHub'}
+      </Button>
+
+      {status && (
+        <p
+          className={`text-[11px] leading-snug ${
+            status.kind === 'ok' ? 'text-emerald-400' : 'text-rose-400'
+          }`}
+        >
+          {status.text}
+          {status.kind === 'ok' && status.actionsUrl ? (
+            <>
+              {' · '}
+              <a
+                href={status.actionsUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="underline decoration-emerald-700 underline-offset-2 hover:text-emerald-300"
+              >
+                CI
+              </a>
+            </>
+          ) : null}
+        </p>
+      )}
     </div>
   );
 }

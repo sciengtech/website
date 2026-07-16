@@ -73,11 +73,11 @@ Legend: `[x]` done · `[~]` partial / needs assets · `[ ]` todo · `[?]` needs 
 - [x] Hex nut box/overview cleanup
 - [~] Washer spring/plain table TBD
 - [~] Lab accessories: lint-free tissue/cloth TBD; smaller images CSS
-- [x] Ultrafast / CW-pulsed / custom solutions: remove Specify Requirements block (via patch)
+- [ ] Ultrafast / CW-pulsed / custom solutions: Specify Requirements text box restored (client asked back)
 - [~] Photos for ultrafast / CW-pulsed / Pockels / WLS TBD
 
 ## Quantum / Training / Custom
-- [x] Remove Specify Your Requirements + engagement RFQ block from custom solutions
+- [x] Specify Your Requirements text box restored on solution pages
 - [x] What’s Included + Key Capabilities (+ Made in India) on solutions
 - [x] Quantum setups display order
 - [~] HBT/Tomography AI images, eraser/QKD/bomb text images TBD

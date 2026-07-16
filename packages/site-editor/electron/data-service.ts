@@ -54,33 +54,108 @@ export function saveProduct(product: CatalogProduct): CatalogData {
 }
 
 export function createProduct(product: CatalogProduct): CatalogData {
+  const id = String(product.id || '').trim();
+  if (!id) throw new Error('Product id is required');
+  product.id = id;
+
   const catalog = loadCatalog();
   const list = product.type === 'solution' ? catalog.solutions : catalog.components;
   if (list.some((p) => p.id === product.id)) {
     throw new Error(`Product id "${product.id}" already exists`);
   }
+  if (product.sortIndex == null) {
+    const peers =
+      product.type === 'solution'
+        ? list.filter((p) => p.solutionGroup === product.solutionGroup)
+        : list.filter((p) => p.category === product.category);
+    const max = peers.reduce((m, p) => Math.max(m, Number(p.sortIndex) || 0), 0);
+    product.sortIndex = max + 1;
+  }
   upsertProduct(catalog, product);
   return saveCatalog(catalog);
 }
 
+/** Assigns sortIndex 1..n from orderedIds (webpage list order). Other products are unchanged. */
 export function reorderComponents(orderedIds: string[]): CatalogData {
   const catalog = loadCatalog();
   const byId = new Map(catalog.components.map((p) => [p.id, p]));
   const seen = new Set<string>();
-  const next: CatalogProduct[] = [];
 
-  for (const id of orderedIds) {
+  orderedIds.forEach((id, index) => {
     const item = byId.get(id);
     if (item && !seen.has(id)) {
-      next.push(item);
+      item.sortIndex = index + 1;
       seen.add(id);
     }
-  }
-  for (const item of catalog.components) {
-    if (!seen.has(item.id)) next.push(item);
+  });
+
+  // Keep array order in sync with visual list for the reordered subset.
+  if (seen.size > 0) {
+    const next: CatalogProduct[] = [];
+    let inserted = false;
+    for (const item of catalog.components) {
+      if (seen.has(item.id)) {
+        if (!inserted) {
+          for (const id of orderedIds) {
+            const row = byId.get(id);
+            if (row && seen.has(id)) next.push(row);
+          }
+          inserted = true;
+        }
+      } else {
+        next.push(item);
+      }
+    }
+    if (!inserted) {
+      for (const id of orderedIds) {
+        const row = byId.get(id);
+        if (row) next.push(row);
+      }
+    }
+    catalog.components = next;
   }
 
-  catalog.components = next;
+  return saveCatalog(catalog);
+}
+
+export function reorderSolutions(orderedIds: string[]): CatalogData {
+  const catalog = loadCatalog();
+  const byId = new Map(catalog.solutions.map((p) => [p.id, p]));
+  const seen = new Set<string>();
+
+  orderedIds.forEach((id, index) => {
+    const item = byId.get(id);
+    if (item && !seen.has(id)) {
+      item.sortIndex = index + 1;
+      seen.add(id);
+    }
+  });
+
+  if (seen.size > 0) {
+    const next: CatalogProduct[] = [];
+    let inserted = false;
+    for (const item of catalog.solutions) {
+      if (seen.has(item.id)) {
+        if (!inserted) {
+          for (const id of orderedIds) {
+            const row = byId.get(id);
+            if (row && seen.has(id)) next.push(row);
+          }
+          inserted = true;
+        }
+      } else {
+        next.push(item);
+      }
+    }
+    if (!inserted) {
+      for (const id of orderedIds) {
+        const row = byId.get(id);
+        if (row) next.push(row);
+      }
+    }
+    catalog.solutions = next;
+  }
+
   return saveCatalog(catalog);
 }
 

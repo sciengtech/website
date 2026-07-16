@@ -265,6 +265,87 @@
     );
   }
 
+  /** Flexible multi-column table (catalog.customTable), with legacy techSpecs fallback. */
+  function renderFlexibleCustomTable(table, fallbackTitle) {
+    var columns = (table && table.columns) || [];
+    var rows = (table && table.rows) || [];
+    if (!rows.length) return '';
+    var colCount = columns.length;
+    rows.forEach(function (row) {
+      if (Array.isArray(row) && row.length > colCount) colCount = row.length;
+    });
+    if (!colCount) return '';
+    var hasContent = rows.some(function (row) {
+      return (row || []).some(function (cell) {
+        return String(cell || '').trim();
+      });
+    });
+    if (!hasContent) return '';
+    var title =
+      (table.title && String(table.title).trim()) ||
+      fallbackTitle ||
+      'SPECIFICATION SHEET';
+    // Column header row is separate from the table title. Hide when no column names are set.
+    var showColHeaders = columns.some(function (col) {
+      return String(col || '').trim();
+    });
+    var head = '';
+    if (showColHeaders) {
+      head =
+        '<thead><tr>' +
+        Array.from({ length: colCount })
+          .map(function (_c, i) {
+            return '<th>' + esc((columns[i] && String(columns[i]).trim()) || '') + '</th>';
+          })
+          .join('') +
+        '</tr></thead>';
+    }
+    var body =
+      '<tbody>' +
+      rows
+        .map(function (row) {
+          return (
+            '<tr>' +
+            Array.from({ length: colCount })
+              .map(function (_c, i) {
+                return '<td>' + esc((row && row[i]) || '') + '</td>';
+              })
+              .join('') +
+            '</tr>'
+          );
+        })
+        .join('') +
+      '</tbody>';
+    return (
+      '<div class="product-custom-table-section">' +
+      '<div class="spec-table-detail product-custom-table-wrap">' +
+      '<header>' +
+      esc(title) +
+      '</header>' +
+      '<div class="product-custom-table-scroll">' +
+      '<table class="product-custom-table">' +
+      head +
+      body +
+      '</table></div></div></div>'
+    );
+  }
+
+  function renderCustomSpecTable(p, fallbackTitle) {
+    if (p.customTable && p.customTable.columns && p.customTable.columns.length) {
+      var flexible = renderFlexibleCustomTable(p.customTable, fallbackTitle);
+      if (flexible) return flexible;
+    }
+    var rows = null;
+    if (p.techSpecs && p.techSpecs.length) rows = p.techSpecs;
+    else if (p.keyValueSpecs && p.keyValueSpecs.length) rows = p.keyValueSpecs;
+    if (!rows) return '';
+    var title =
+      (p.specTableTitle && String(p.specTableTitle).trim()) ||
+      fallbackTitle ||
+      'SPECIFICATION SHEET';
+    return renderSpecTable(title, rows);
+  }
+
   function renderOverview(p) {
     var paras = p.overview && p.overview.length ? p.overview : p.summary ? [p.summary] : [];
     if (!paras.length) return '';
@@ -518,15 +599,11 @@
   }
 
   function renderComponentBody(p, base) {
-    var specs =
-      p.techSpecs && p.techSpecs.length ? p.techSpecs
-      : !p.specSections?.length && p.keyValueSpecs && p.keyValueSpecs.length ? p.keyValueSpecs
-      : null;
     var note = p.customNote ? '<p class="product-custom-note">' + esc(p.customNote) + '</p>' : '';
     return (
       renderOverview(p) +
       renderTwoColBlocks('Features', p.features, 'Applications', p.applications) +
-      (specs ? renderSpecTable('SPECIFICATION SHEET', specs) : '') +
+      renderCustomSpecTable(p, 'SPECIFICATION SHEET') +
       renderSpecSections(p) +
       note +
       renderCtas(p, base)
@@ -558,7 +635,8 @@
         renderBulletList(capabilities) +
         '</div>';
     }
-    return html + renderCtas(p, base);
+    html += renderRfqParameters(p);
+    return html + renderCustomSpecTable(p, 'SPECIFICATION SHEET') + renderCtas(p, base);
   }
 
   function renderCustomSolutionBody(p, base) {
@@ -573,7 +651,7 @@
         '</div>';
     }
     html += renderRfqParameters(p);
-    return html + renderCtas(p, base);
+    return html + renderCustomSpecTable(p, 'SPECIFICATION SHEET') + renderCtas(p, base);
   }
 
   function renderHtmlBody(p, base) {
@@ -581,7 +659,7 @@
     var content = html ?
       '<div class="product-html-body knowledge-prose">' + html + '</div>'
     : '<p class="product-empty-note">Product details coming soon.</p>';
-    return content + renderCtas(p, base);
+    return content + renderCustomSpecTable(p, 'SPECIFICATION SHEET') + renderCtas(p, base);
   }
 
   function renderProductDetailMain(p, base, breadcrumbHtml) {
@@ -600,9 +678,7 @@
           renderOverview(p) +
           renderTwoColBlocks('Features', p.features, 'Applications', p.applications) +
           renderVariantTable(p, base) +
-          (p.techSpecs && p.techSpecs.length ?
-            renderSpecTable('TECHNICAL SPECIFICATIONS', p.techSpecs)
-          : '') +
+          renderCustomSpecTable(p, 'TECHNICAL SPECIFICATIONS') +
           renderCtas(p, base);
         break;
       case 'configurable':
@@ -613,6 +689,7 @@
             renderConfigurationOptions(p) +
             renderRfqParameters(p) +
             renderTwoColBlocks('Features', p.features, 'Applications', p.applications) +
+            renderCustomSpecTable(p, 'SPECIFICATION SHEET') +
             renderCtas(p, base);
         break;
       case 'rich-page':

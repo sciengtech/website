@@ -35,7 +35,19 @@ export function makeBody(p: CatalogProduct): string {
 
   const structuredExtras = [p.configurationOptions, p.rfqSections]
     .filter(Boolean)
-    .map((v) => JSON.stringify(v));
+    .map((v) => {
+      try {
+        return JSON.stringify(v);
+      } catch {
+        return '';
+      }
+    })
+    .filter(Boolean);
+
+  const customTableText = [
+    ...(p.customTable?.columns || []),
+    ...((p.customTable?.rows || []).flatMap((row) => (Array.isArray(row) ? row : []))),
+  ];
 
   return [
     p.name,
@@ -48,6 +60,7 @@ export function makeBody(p: CatalogProduct): string {
     ...specLines(p.specs),
     ...specLines(p.techSpecs),
     ...specLines(p.keyValueSpecs),
+    ...customTableText,
     ...variantText,
     ...solutionParts,
     p.customNote,

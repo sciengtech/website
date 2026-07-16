@@ -493,6 +493,33 @@ body.search-open { overflow: hidden; }
   display: block;
   pointer-events: none;
 }
+.product-custom-table-wrap {
+  overflow: hidden;
+}
+.product-custom-table-scroll {
+  overflow-x: auto;
+}
+.product-custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  text-align: left;
+}
+.product-custom-table th,
+.product-custom-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+.product-custom-table th {
+  color: var(--text-muted);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.02);
+}
+.product-custom-table tbody tr:last-child td {
+  border-bottom: none;
+}
 .product-variant-table th,
 .product-variant-table td {
   text-align: left;

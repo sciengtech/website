@@ -118,7 +118,14 @@ export function App() {
     });
 
     const dir = sortDir === 'asc' ? 1 : -1;
-    if (sortKey === 'order') return filtered;
+    if (sortKey === 'order') {
+      return [...filtered].sort((a, b) => {
+        const ia = a.sortIndex == null ? Number.MAX_SAFE_INTEGER : Number(a.sortIndex);
+        const ib = b.sortIndex == null ? Number.MAX_SAFE_INTEGER : Number(b.sortIndex);
+        if (ia !== ib) return dir * (ia - ib);
+        return String(a.name || '').localeCompare(String(b.name || ''), undefined, { sensitivity: 'base' });
+      });
+    }
     const sorted = [...filtered].sort((a, b) => {
       const av =
         sortKey === 'name'
@@ -162,7 +169,14 @@ export function App() {
     });
 
     const dir = sortDir === 'asc' ? 1 : -1;
-    if (sortKey === 'order') return filtered;
+    if (sortKey === 'order') {
+      return [...filtered].sort((a, b) => {
+        const ia = a.sortIndex == null ? Number.MAX_SAFE_INTEGER : Number(a.sortIndex);
+        const ib = b.sortIndex == null ? Number.MAX_SAFE_INTEGER : Number(b.sortIndex);
+        if (ia !== ib) return dir * (ia - ib);
+        return String(a.name || '').localeCompare(String(b.name || ''), undefined, { sensitivity: 'base' });
+      });
+    }
     const sorted = [...filtered].sort((a, b) => {
       const av =
         sortKey === 'name'
@@ -223,17 +237,22 @@ export function App() {
   }
 
   return (
-    <div className="flex min-h-screen">
-      <aside className="flex w-56 flex-col border-r border-[#2a3142] bg-[#0b0f17] p-4">
-        <h1 className="mb-1 text-sm font-bold text-[#e11d48]">Site Editor</h1>
-        <p className="mb-4 text-xs text-slate-500">@{auth.username}</p>
-        <nav className="space-y-1">
+    <div className="flex h-screen overflow-hidden">
+      <aside className="flex h-full w-60 shrink-0 flex-col border-r border-[#2a3142] bg-[#0b0f17]">
+        <div className="border-b border-[#2a3142] px-4 py-4">
+          <h1 className="text-sm font-bold tracking-tight text-[#e11d48]">Site Editor</h1>
+          <p className="mt-0.5 truncate text-xs text-slate-500">@{auth.username}</p>
+        </div>
+
+        <nav className="min-h-0 flex-1 space-y-0.5 overflow-y-auto px-3 py-3">
           {(['components', 'solutions', 'knowledge'] as Tab[]).map((t) => (
             <button
               key={t}
               type="button"
-              className={`w-full rounded-md px-3 py-2 text-left text-sm capitalize ${
-                tab === t ? 'bg-[#e11d48]/20 text-white' : 'text-slate-400 hover:bg-[#161b26]'
+              className={`w-full rounded-md px-3 py-2 text-left text-sm capitalize transition ${
+                tab === t
+                  ? 'bg-[#e11d48]/20 font-medium text-white'
+                  : 'text-slate-400 hover:bg-[#161b26] hover:text-slate-200'
               }`}
               onClick={() => {
                 setTab(t);
@@ -244,20 +263,26 @@ export function App() {
             </button>
           ))}
         </nav>
-        <div className="mt-auto space-y-2 pt-6">
-          <Button className="w-full" onClick={handleSync} disabled={syncing}>
-            {syncing ? 'Syncing…' : 'Sync from GitHub'}
-          </Button>
-          <Button className="w-full" variant="ghost" onClick={handleLogout}>
-            Sign out
-          </Button>
-          <div className="pt-3">
-            <PublishBar onPublished={loadData} />
+
+        <div className="shrink-0 border-t border-[#2a3142] px-3 py-3">
+          <PublishBar onPublished={loadData} />
+
+          <div className="mt-4 space-y-1 border-t border-[#2a3142] pt-3">
+            <Button
+              className="w-full text-xs"
+              onClick={handleSync}
+              disabled={syncing}
+            >
+              {syncing ? 'Syncing…' : 'Pull from GitHub'}
+            </Button>
+            <Button className="w-full text-xs" variant="ghost" onClick={handleLogout}>
+              Sign out
+            </Button>
           </div>
         </div>
       </aside>
 
-      <main className="flex-1 p-6">
+      <main className="min-w-0 flex-1 overflow-y-auto p-6">
         <div className="mb-4 flex flex-wrap items-center gap-3">
           <Input
             className="max-w-sm"
@@ -353,7 +378,7 @@ export function App() {
                   setSortKey(e.target.value as typeof sortKey)
                 }
               >
-                <option value="order">Manual order (drag)</option>
+                <option value="order">Manual order (# / drag)</option>
                 <option value="name">Name</option>
                 <option value="sku">SKU</option>
                 <option value="pageTemplate">Page template</option>
@@ -493,13 +518,20 @@ export function App() {
               setView({ kind: 'list' });
             }}
             onSave={async (product) => {
-              if (view.isNew) {
-                await window.siteEditor.catalog.create(product);
-              } else {
-                await window.siteEditor.catalog.save(product);
+              try {
+                if (view.isNew) {
+                  await window.siteEditor.catalog.create(product);
+                } else {
+                  await window.siteEditor.catalog.save(product);
+                }
+                await loadData();
+                setView({ kind: 'list' });
+              } catch (err) {
+                const message = err instanceof Error ? err.message : String(err);
+                console.error('[App] product save failed', err);
+                window.alert(`Save failed: ${message}`);
+                throw err;
               }
-              await loadData();
-              setView({ kind: 'list' });
             }}
           />
         )}
@@ -530,8 +562,11 @@ export function App() {
           <>
             {sortKey === 'order' && (
               <p className="mb-2 text-xs text-slate-500">
-                Drag rows to set listing order
-                {categoryFilter !== 'all' ? ` for “${categoryFilter}”` : ''}. Publish to update the live site.
+                Drag rows or use ↑↓ to set <code className="text-slate-400">sortIndex</code>
+                {categoryFilter !== 'all'
+                  ? ` for “${categoryFilter}” (1 = first on that category page)`
+                  : ' — filter by category first so you only renumber that group'}
+                . Publish to update the live site.
               </p>
             )}
             <ProductTable
@@ -539,27 +574,7 @@ export function App() {
               visibleColumns={visibleColumns}
               allowReorder={sortKey === 'order'}
               onReorder={async (orderedIds) => {
-                if (!catalog) return;
-                let fullIds: string[];
-                if (categoryFilter === 'all') {
-                  fullIds = orderedIds;
-                } else {
-                  const result: string[] = [];
-                  let inserted = false;
-                  for (const item of catalog.components) {
-                    const cat = item.categoryLabel || item.category || item.solutionGroup || '';
-                    if (cat === categoryFilter) {
-                      if (!inserted) {
-                        result.push(...orderedIds);
-                        inserted = true;
-                      }
-                    } else {
-                      result.push(item.id);
-                    }
-                  }
-                  fullIds = result;
-                }
-                const data = await window.siteEditor.catalog.reorder(fullIds);
+                const data = await window.siteEditor.catalog.reorder(orderedIds);
                 setCatalog(data);
               }}
               onEdit={(p) => setView({ kind: 'edit-product', product: p })}
@@ -567,11 +582,27 @@ export function App() {
           </>
         )}
         {view.kind === 'list' && tab === 'solutions' && (
-          <ProductTable
-            rows={filteredSolutions}
-            visibleColumns={visibleColumns}
-            onEdit={(p) => setView({ kind: 'edit-product', product: p })}
-          />
+          <>
+            {sortKey === 'order' && (
+              <p className="mb-2 text-xs text-slate-500">
+                Drag rows or use ↑↓ to set <code className="text-slate-400">sortIndex</code>
+                {categoryFilter !== 'all'
+                  ? ` for “${categoryFilter}”`
+                  : ' — filter by solution group first so you only renumber that group'}
+                . Publish to update the live site.
+              </p>
+            )}
+            <ProductTable
+              rows={filteredSolutions}
+              visibleColumns={visibleColumns}
+              allowReorder={sortKey === 'order'}
+              onReorder={async (orderedIds) => {
+                const data = await window.siteEditor.catalog.reorderSolutions(orderedIds);
+                setCatalog(data);
+              }}
+              onEdit={(p) => setView({ kind: 'edit-product', product: p })}
+            />
+          </>
         )}
         {view.kind === 'list' && tab === 'knowledge' && (
           <ArticleTable
@@ -603,23 +634,48 @@ function ProductTable({
   onReorder?: (orderedIds: string[]) => Promise<void>;
 }) {
   const [dragId, setDragId] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+
+  async function applyOrder(ids: string[]) {
+    if (!onReorder || busy) return;
+    setBusy(true);
+    try {
+      await onReorder(ids);
+    } finally {
+      setBusy(false);
+    }
+  }
 
   async function moveRow(fromId: string, toId: string) {
-    if (!onReorder || fromId === toId) return;
+    if (fromId === toId) return;
     const ids = rows.map((r) => r.id);
     const from = ids.indexOf(fromId);
     const to = ids.indexOf(toId);
     if (from < 0 || to < 0) return;
     ids.splice(from, 1);
     ids.splice(to, 0, fromId);
-    await onReorder(ids);
+    await applyOrder(ids);
+  }
+
+  async function nudge(id: string, delta: -1 | 1) {
+    const ids = rows.map((r) => r.id);
+    const from = ids.indexOf(id);
+    const to = from + delta;
+    if (from < 0 || to < 0 || to >= ids.length) return;
+    ids.splice(from, 1);
+    ids.splice(to, 0, id);
+    await applyOrder(ids);
   }
 
   return (
     <table className="w-full text-left text-sm">
       <thead className="text-xs uppercase text-slate-500">
         <tr>
-          {allowReorder && <th className="w-8 p-2" />}
+          {allowReorder && <th className="w-8 p-2" title="Drag handle" />}
+          <th className="w-14 p-2" title="sortIndex — lower appears first on the website">
+            #
+          </th>
+          {allowReorder && <th className="w-20 p-2" />}
           {visibleColumns.name && <th className="p-2">Name</th>}
           {visibleColumns.sku && <th className="p-2">SKU</th>}
           {visibleColumns.template && <th className="p-2">Page template</th>}
@@ -628,11 +684,11 @@ function ProductTable({
         </tr>
       </thead>
       <tbody>
-        {rows.map((p) => (
+        {rows.map((p, index) => (
           <tr
             key={p.id}
             className="border-t border-[#2a3142] hover:bg-[#161b26]"
-            draggable={allowReorder}
+            draggable={allowReorder && !busy}
             onDragStart={() => setDragId(p.id)}
             onDragOver={(e) => {
               if (allowReorder) e.preventDefault();
@@ -646,6 +702,33 @@ function ProductTable({
             {allowReorder && (
               <td className="cursor-grab p-2 text-slate-500 select-none" title="Drag to reorder">
                 ⋮⋮
+              </td>
+            )}
+            <td className="p-2 font-mono text-xs text-slate-300" title="sortIndex">
+              {p.sortIndex != null ? p.sortIndex : '—'}
+            </td>
+            {allowReorder && (
+              <td className="p-2">
+                <div className="flex gap-1">
+                  <button
+                    type="button"
+                    className="rounded border border-[#2a3142] px-1.5 py-0.5 text-xs text-slate-300 hover:bg-[#1c2230] disabled:opacity-40"
+                    disabled={busy || index === 0}
+                    title="Move up"
+                    onClick={() => nudge(p.id, -1)}
+                  >
+                    ↑
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded border border-[#2a3142] px-1.5 py-0.5 text-xs text-slate-300 hover:bg-[#1c2230] disabled:opacity-40"
+                    disabled={busy || index === rows.length - 1}
+                    title="Move down"
+                    onClick={() => nudge(p.id, 1)}
+                  >
+                    ↓
+                  </button>
+                </div>
               </td>
             )}
             {visibleColumns.name && <td className="p-2">{p.name}</td>}

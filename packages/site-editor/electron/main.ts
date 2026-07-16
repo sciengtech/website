@@ -18,6 +18,7 @@ import {
   removeArticle,
   removeProduct,
   reorderComponents,
+  reorderSolutions,
   saveArticle,
   saveProduct,
 } from './data-service';
@@ -76,6 +77,9 @@ function registerIpc(): void {
   );
   ipcMain.handle('catalog:reorder', (_e, orderedIds: string[]) =>
     reorderComponents(orderedIds),
+  );
+  ipcMain.handle('catalog:reorderSolutions', (_e, orderedIds: string[]) =>
+    reorderSolutions(orderedIds),
   );
 
   ipcMain.handle('knowledge:load', () => loadKnowledge());

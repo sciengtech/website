@@ -22,6 +22,8 @@ const api: SiteEditorApi = {
     create: (product: CatalogProduct) => ipcRenderer.invoke('catalog:create', product),
     remove: (id: string, type: ProductType) => ipcRenderer.invoke('catalog:remove', id, type),
     reorder: (orderedIds: string[]) => ipcRenderer.invoke('catalog:reorder', orderedIds),
+    reorderSolutions: (orderedIds: string[]) =>
+      ipcRenderer.invoke('catalog:reorderSolutions', orderedIds),
   },
   knowledge: {
     load: () => ipcRenderer.invoke('knowledge:load'),

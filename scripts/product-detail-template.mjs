@@ -181,6 +181,54 @@ function renderSpecTable(header, rows) {
   return `<div class="spec-table-detail"><header>${esc(header)}</header>${body}</div>`;
 }
 
+/** Flexible multi-column table (catalog.customTable), with legacy techSpecs fallback. */
+function renderFlexibleCustomTable(table, fallbackTitle = 'SPECIFICATION SHEET') {
+  const columns = table?.columns || [];
+  const rows = table?.rows || [];
+  if (!rows.length) return '';
+  let colCount = columns.length;
+  for (const row of rows) {
+    if (Array.isArray(row) && row.length > colCount) colCount = row.length;
+  }
+  if (!colCount) return '';
+  const hasContent = rows.some((row) => (row || []).some((cell) => String(cell || '').trim()));
+  if (!hasContent) return '';
+  const title = String(table.title || '').trim() || fallbackTitle;
+  // Column header row is separate from the table title. Hide when no column names are set.
+  const showColHeaders = columns.some((col) => String(col || '').trim());
+  const head = showColHeaders
+    ? `<thead><tr>${Array.from({ length: colCount }, (_, i) => `<th>${esc(String(columns[i] || '').trim())}</th>`).join('')}</tr></thead>`
+    : '';
+  const body = `<tbody>${rows
+    .map(
+      (row) =>
+        `<tr>${Array.from(
+          { length: colCount },
+          (_, i) => `<td>${esc((row && row[i]) || '')}</td>`
+        ).join('')}</tr>`
+    )
+    .join('')}</tbody>`;
+  return `<div class="product-custom-table-section">
+    <div class="spec-table-detail product-custom-table-wrap">
+      <header>${esc(title)}</header>
+      <div class="product-custom-table-scroll">
+        <table class="product-custom-table">${head}${body}</table>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderCustomSpecTable(p, fallbackTitle = 'SPECIFICATION SHEET') {
+  if (p.customTable?.columns?.length) {
+    const flexible = renderFlexibleCustomTable(p.customTable, fallbackTitle);
+    if (flexible) return flexible;
+  }
+  const rows = p.techSpecs?.length ? p.techSpecs : p.keyValueSpecs?.length ? p.keyValueSpecs : null;
+  if (!rows) return '';
+  const title = String(p.specTableTitle || '').trim() || fallbackTitle;
+  return renderSpecTable(title, rows);
+}
+
 function renderOverview(p) {
   const paras = p.overview?.length ? p.overview : p.summary ? [p.summary] : [];
   if (!paras.length) return '';
@@ -340,11 +388,6 @@ function renderSpecSections(p) {
 }
 
 function renderComponentBody(p, base) {
-  const specs =
-    p.techSpecs?.length ? p.techSpecs
-    : !p.specSections?.length && p.keyValueSpecs?.length ? p.keyValueSpecs
-    : null;
-  const specHeader = p.keyValueSpecs?.length && !p.techSpecs?.length ? 'SPECIFICATION SHEET' : 'SPECIFICATION SHEET';
   const note =
     p.customNote ?
       `<p class="product-custom-note">${esc(p.customNote)}</p>`
@@ -352,7 +395,7 @@ function renderComponentBody(p, base) {
 
   return `${renderOverview(p)}
     ${renderTwoColBlocks('Features', p.features, 'Applications', p.applications)}
-    ${specs ? renderSpecTable(specHeader, specs) : ''}
+    ${renderCustomSpecTable(p, 'SPECIFICATION SHEET')}
     ${renderSpecSections(p)}
     ${note}
     ${renderCtas(p, base)}`;
@@ -373,6 +416,8 @@ function renderSolutionBody(p, base) {
     ${demonstrates?.length ? `<div class="product-solution-section"><h2 class="product-section-title">What This Kit Demonstrates</h2>${renderBulletList(demonstrates)}</div>` : ''}
     ${kitIncludes?.length ? `<div class="product-solution-section"><h2 class="product-section-title">What's Included</h2>${renderBulletList(kitIncludes)}</div>` : ''}
     ${capabilities?.length ? `<div class="product-solution-section"><h2 class="product-section-title">Key Capabilities</h2>${renderBulletList(capabilities)}</div>` : ''}
+    ${renderRfqParameters(p)}
+    ${renderCustomSpecTable(p, 'SPECIFICATION SHEET')}
     ${renderCtas(p, base)}`;
 }
 
@@ -393,6 +438,7 @@ function renderCustomSolutionBody(p, base) {
     ${note}
     ${demonstrates.length ? `<div class="product-solution-section"><h2 class="product-section-title">Overview</h2>${renderBulletList(demonstrates)}</div>` : ''}
     ${renderRfqParameters(p)}
+    ${renderCustomSpecTable(p, 'SPECIFICATION SHEET')}
     ${renderCtas(p, base)}`;
 }
 
@@ -401,7 +447,7 @@ function renderHtmlBody(p, base) {
   const content = html ?
     `<div class="product-html-body knowledge-prose">${html}</div>`
   : '<p class="product-empty-note">Product details coming soon.</p>';
-  return `${content}${renderCtas(p, base)}`;
+  return `${content}${renderCustomSpecTable(p, 'SPECIFICATION SHEET')}${renderCtas(p, base)}`;
 }
 
 export function renderProductDetailMain(p, { base, breadcrumbHtml }) {
@@ -420,7 +466,7 @@ export function renderProductDetailMain(p, { base, breadcrumbHtml }) {
       body = `${renderOverview(p)}
         ${renderTwoColBlocks('Features', p.features, 'Applications', p.applications)}
         ${renderVariantTable(p, base)}
-        ${p.techSpecs?.length ? renderSpecTable('TECHNICAL SPECIFICATIONS', p.techSpecs) : ''}
+        ${renderCustomSpecTable(p, 'TECHNICAL SPECIFICATIONS')}
         ${renderCtas(p, base)}`;
       break;
     case 'configurable':
@@ -431,6 +477,7 @@ export function renderProductDetailMain(p, { base, breadcrumbHtml }) {
         ${renderConfigurationOptions(p)}
         ${renderRfqParameters(p)}
         ${renderTwoColBlocks('Features', p.features, 'Applications', p.applications)}
+        ${renderCustomSpecTable(p, 'SPECIFICATION SHEET')}
         ${renderCtas(p, base)}`;
       break;
     case 'rich-page':

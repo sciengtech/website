@@ -16,7 +16,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": null,
         "demonstrates": [
@@ -82,7 +94,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum communication principles.",
         "demonstrates": [
@@ -142,7 +166,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts.",
         "demonstrates": [
@@ -198,7 +234,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": "Designed for Educational, Demonstration, and Classroom Use",
         "demonstrates": [
@@ -257,7 +305,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": "Customized as per user requirements",
         "demonstrates": [],
@@ -307,7 +367,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": "Quantum state tomography platforms for reconstructing and characterizing quantum states in research and education.",
         "demonstrates": [
@@ -357,7 +429,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": "Purpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of optical interference and interferometry concepts.",
         "demonstrates": [
@@ -420,7 +504,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": "Customized as per user requirements",
         "demonstrates": [],
@@ -470,7 +566,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": "Customized as per user requirements",
         "demonstrates": [],
@@ -520,7 +628,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": "Customized as per user requirements",
         "demonstrates": [],
@@ -570,7 +690,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": "Customized as per user requirements",
         "demonstrates": [],
@@ -618,7 +750,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": null,
         "demonstrates": [
@@ -673,7 +817,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": null,
         "demonstrates": [
@@ -734,7 +890,19 @@
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
-      "rfqSections": null,
+      "rfqSections": [
+        {
+          "id": "requirements",
+          "title": "Specify Your Requirements",
+          "parameters": [
+            "Application and experimental goals",
+            "Wavelength / spectral range",
+            "Power, repetition rate, or bandwidth targets",
+            "Integration and mounting requirements",
+            "Timeline and quantity"
+          ]
+        }
+      ],
       "solutionContent": {
         "tagline": "Designed for Educational, Demonstration, and Classroom Use",
         "demonstrates": [

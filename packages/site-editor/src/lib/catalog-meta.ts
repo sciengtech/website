@@ -27,11 +27,13 @@ export const PAGE_TEMPLATES = [
 ] as const;
 
 export function slugify(name: string): string {
-  return name
+  const slug = name
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
     .slice(0, 80);
+  // Non-Latin names would otherwise yield "" and break product create / asset paths.
+  return slug || `item-${Date.now().toString(36)}`;
 }
 
 export function categoryMeta(slug: string) {

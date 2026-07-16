@@ -286,11 +286,12 @@ function categoryRedirectPage(productId, base) {
 }
 
 function sortByIndex(items) {
+  // Stable sort: lower sortIndex first; items without sortIndex stay at end in current order.
   return [...items].sort((a, b) => {
-    const ia = a.sortIndex ?? 999;
-    const ib = b.sortIndex ?? 999;
+    const ia = a.sortIndex == null || a.sortIndex === '' ? Number.MAX_SAFE_INTEGER : Number(a.sortIndex);
+    const ib = b.sortIndex == null || b.sortIndex === '' ? Number.MAX_SAFE_INTEGER : Number(b.sortIndex);
     if (ia !== ib) return ia - ib;
-    return String(a.name || '').localeCompare(String(b.name || ''));
+    return 0;
   });
 }
 

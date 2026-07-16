@@ -55,6 +55,27 @@ function nextGalleryName(destDir: string): string {
   return `image-${String(existing.length + 2).padStart(2, '0')}`;
 }
 
+function clearOtherPrimaries(destDir: string, keepFilename: string): void {
+  if (!existsSync(destDir)) return;
+  for (const name of readdirSync(destDir)) {
+    if (!/^primary\./i.test(name)) continue;
+    if (name === keepFilename) continue;
+    if (!IMAGE_EXTS.has(extname(name).toLowerCase())) continue;
+    unlinkSync(join(destDir, name));
+  }
+}
+
+function sameFileContents(a: string, b: string): boolean {
+  try {
+    if (!existsSync(b)) return false;
+    const left = readFileSync(a);
+    const right = readFileSync(b);
+    return left.length === right.length && left.equals(right);
+  } catch {
+    return false;
+  }
+}
+
 function copyIntoSlot(
   src: string,
   ownerId: string,
@@ -70,7 +91,19 @@ function copyIntoSlot(
   const filename =
     slot === 'primary' ? `primary${ext}` : `${nextGalleryName(destDir)}${ext}`;
   const dest = join(destDir, filename);
-  copyFileSync(src, dest);
+
+  // Replacing primary.png with primary.jpg (etc.) must not leave the old file
+  // forever dirty / listed as an orphan in the product folder.
+  if (slot === 'primary') {
+    clearOtherPrimaries(destDir, filename);
+  }
+
+  // Skip rewrite when bytes are identical — avoids a perpetual dirty git entry
+  // when the user re-selects the same file or the UI re-applies an upload.
+  if (!sameFileContents(src, dest)) {
+    copyFileSync(src, dest);
+  }
+
   return { path: dest, relativePath: relativePrefix(kind, ownerId, filename) };
 }
 

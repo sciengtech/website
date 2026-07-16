@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import type { CatalogProduct } from '@shared/types';
 import {
   CATEGORIES,
@@ -8,14 +8,24 @@ import {
   solutionGroupLabel,
 } from '@/lib/catalog-meta';
 import { StringListEditor } from './StringListEditor';
+import {
+  CustomTableEditor,
+  customTableFromProduct,
+  customTableHasContent,
+} from './CustomTableEditor';
 import { ImageManager } from './ImageManager';
 import { TagsInput } from './TagsInput';
+import { ConfigurationOptionsEditor } from './ConfigurationOptionsEditor';
+import { RfqSectionsEditor } from './RfqSectionsEditor';
 import { VariantCatalogEditor } from './VariantCatalogEditor';
-import { RichTextEditor } from './RichTextEditor';
 import { Button } from './ui/Button';
 import { Input } from './ui/Input';
 import { Textarea } from './ui/Textarea';
 import { Label } from './ui/Label';
+
+const RichTextEditor = lazy(() =>
+  import('./RichTextEditor').then((m) => ({ default: m.RichTextEditor })),
+);
 
 export function ProductForm({
   product,
@@ -28,9 +38,16 @@ export function ProductForm({
   onSave: (p: CatalogProduct) => Promise<void>;
   onCancel: () => void;
 }) {
-  const [draft, setDraft] = useState(product);
+  const [draft, setDraft] = useState(() => ({
+    ...product,
+    images: product.images || [],
+    customTable: customTableFromProduct(product),
+  }));
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
+  const [showCustomTable, setShowCustomTable] = useState(
+    () => customTableHasContent(product.customTable) || Boolean(product.techSpecs?.length),
+  );
 
   function set<K extends keyof CatalogProduct>(key: K, value: CatalogProduct[K]) {
     setDraft((d) => ({ ...d, [key]: value }));
@@ -41,9 +58,33 @@ export function ProductForm({
     setSaving(true);
     setError('');
     try {
-      await onSave(draft);
+      const id = String(draft.id || '').trim();
+      if (!id) throw new Error('Product ID is required');
+      if (!String(draft.name || '').trim()) throw new Error('Product name is required');
+
+      const table = customTableFromProduct(draft);
+      const hasTable = customTableHasContent(table);
+      const next: CatalogProduct = {
+        ...draft,
+        id,
+        images: draft.images || [],
+        customTable: hasTable
+          ? {
+              title: table.title || null,
+              columns: table.columns,
+              rows: table.rows.filter((row) => row.some((cell) => String(cell || '').trim())),
+            }
+          : null,
+        // Avoid duplicate legacy 2-col render once flexible table is in use
+        techSpecs: hasTable ? [] : draft.techSpecs || [],
+        keyValueSpecs: hasTable ? [] : draft.keyValueSpecs || [],
+        specTableTitle: hasTable ? table.title || null : draft.specTableTitle || null,
+      };
+      await onSave(next);
     } catch (err) {
-      setError(err instanceof Error ? err.message : String(err));
+      const message = err instanceof Error ? err.message : String(err);
+      setError(message);
+      console.error('[ProductForm] save failed', err);
     } finally {
       setSaving(false);
     }
@@ -53,20 +94,33 @@ export function ProductForm({
   const isRichPage = draft.pageTemplate === 'rich-page';
 
   return (
-    <form onSubmit={handleSubmit} className={isRichPage ? 'grid gap-6 lg:grid-cols-2' : 'space-y-6'}>
+    <form
+      onSubmit={handleSubmit}
+      autoComplete="off"
+      className={isRichPage ? 'grid gap-6 lg:grid-cols-2' : 'space-y-6'}
+    >
       <div className="space-y-6">
       <div className="grid gap-4 md:grid-cols-2">
         <div>
           <Label>ID</Label>
-          <Input value={draft.id} disabled={!isNew} onChange={(e) => set('id', e.target.value)} />
+          <Input
+            autoComplete="off"
+            value={draft.id}
+            disabled={!isNew}
+            onChange={(e) => set('id', e.target.value)}
+          />
         </div>
         <div>
           <Label>SKU</Label>
-          <Input value={draft.sku} onChange={(e) => set('sku', e.target.value)} />
+          <Input autoComplete="off" value={draft.sku} onChange={(e) => set('sku', e.target.value)} />
         </div>
         <div className="md:col-span-2">
           <Label>Name</Label>
-          <Input value={draft.name} onChange={(e) => set('name', e.target.value)} />
+          <Input
+            autoComplete="off"
+            value={draft.name}
+            onChange={(e) => set('name', e.target.value)}
+          />
         </div>
         <div>
           <Label>Page template</Label>
@@ -88,6 +142,24 @@ export function ProductForm({
               </option>
             ))}
           </select>
+        </div>
+        <div>
+          <Label>Sort index</Label>
+          <Input
+            type="number"
+            min={1}
+            step={1}
+            autoComplete="off"
+            placeholder="e.g. 1 = first on category page"
+            value={draft.sortIndex ?? ''}
+            onChange={(e) => {
+              const v = e.target.value.trim();
+              set('sortIndex', v === '' ? null : Number(v));
+            }}
+          />
+          <p className="mt-1 text-xs text-slate-500">
+            Lower numbers appear first on the live category page. Or drag rows in the list (Manual order).
+          </p>
         </div>
         {isSolution ? (
           <div>
@@ -164,12 +236,37 @@ export function ProductForm({
           <p className="mb-2 text-xs text-slate-500">
             WordPress-style editor — fonts, colors, links, lists, tables, and images. Content appears below the product name and SKU on the live page.
           </p>
-          <RichTextEditor
-            value={draft.htmlBody || ''}
-            onChange={(html) => set('htmlBody', html)}
-          />
+          <Suspense fallback={<p className="text-sm text-slate-500">Loading editor…</p>}>
+            <RichTextEditor
+              value={draft.htmlBody || ''}
+              onChange={(html) => set('htmlBody', html)}
+            />
+          </Suspense>
         </div>
       )}
+
+      <div className="space-y-3 rounded-md border border-[#2a3142] bg-[#0e1118] p-4">
+        <div className="flex items-center justify-between gap-2">
+          <div>
+            <Label>Custom table</Label>
+            <p className="text-xs text-slate-500">Optional multi-column table on the product page.</p>
+          </div>
+          <Button type="button" variant="ghost" onClick={() => setShowCustomTable((v) => !v)}>
+            {showCustomTable ? 'Hide' : 'Show'}
+          </Button>
+        </div>
+        {showCustomTable && (
+          <CustomTableEditor
+            table={draft.customTable || customTableFromProduct(draft)}
+            defaultTitlePlaceholder={
+              draft.pageTemplate === 'variant-catalog'
+                ? 'TECHNICAL SPECIFICATIONS'
+                : 'SPECIFICATION SHEET'
+            }
+            onChange={(table) => set('customTable', table)}
+          />
+        )}
+      </div>
 
       {draft.pageTemplate === 'solution' && draft.solutionContent && (
         <>
@@ -234,34 +331,16 @@ export function ProductForm({
 
       {draft.pageTemplate === 'configurable' && (
         <>
-          <div>
-            <Label>Configuration options (JSON)</Label>
-            <Textarea
-              rows={6}
-              value={JSON.stringify(draft.configurationOptions, null, 2)}
-              onChange={(e) => {
-                try {
-                  set('configurationOptions', JSON.parse(e.target.value));
-                } catch {
-                  /* ignore */
-                }
-              }}
-            />
-          </div>
-          <div>
-            <Label>RFQ sections (JSON)</Label>
-            <Textarea
-              rows={6}
-              value={JSON.stringify(draft.rfqSections, null, 2)}
-              onChange={(e) => {
-                try {
-                  set('rfqSections', JSON.parse(e.target.value));
-                } catch {
-                  /* ignore */
-                }
-              }}
-            />
-          </div>
+          <ConfigurationOptionsEditor
+            productId={draft.id}
+            value={draft.configurationOptions}
+            onChange={(configurationOptions) => set('configurationOptions', configurationOptions)}
+          />
+          <RfqSectionsEditor
+            productId={draft.id}
+            value={draft.rfqSections}
+            onChange={(rfqSections) => set('rfqSections', rfqSections)}
+          />
         </>
       )}
 
@@ -296,7 +375,7 @@ export function ProductForm({
         <Button type="submit" variant="primary" disabled={saving}>
           {saving ? 'Saving…' : 'Save locally'}
         </Button>
-        <Button type="button" onClick={onCancel}>
+        <Button type="button" onClick={onCancel} disabled={saving}>
           Cancel
         </Button>
         {!isNew && (
@@ -305,8 +384,12 @@ export function ProductForm({
             variant="danger"
             onClick={async () => {
               if (!window.confirm(`Delete ${draft.name}?`)) return;
-              await window.siteEditor.catalog.remove(draft.id, draft.type);
-              onCancel();
+              try {
+                await window.siteEditor.catalog.remove(draft.id, draft.type);
+                onCancel();
+              } catch (err) {
+                setError(err instanceof Error ? err.message : String(err));
+              }
             }}
           >
             Delete

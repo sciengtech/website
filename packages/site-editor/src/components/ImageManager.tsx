@@ -1,8 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Button } from './ui/Button';
 
 function normalizePath(p: string): string {
   return p.replace(/\\/g, '/');
+}
+
+function isPrimaryPath(p: string): boolean {
+  return /\/primary\.[^/]+$/i.test(normalizePath(p));
 }
 
 type ImageKind = 'product' | 'knowledge';
@@ -32,6 +36,15 @@ export function ImageManager({
   const [busyPath, setBusyPath] = useState<string | null>(null);
   const [error, setError] = useState('');
   const [dragOver, setDragOver] = useState(false);
+  const [needsSaveHint, setNeedsSaveHint] = useState(false);
+  const boundForId = useRef<string | null>(null);
+  const onChangeRef = useRef(onChange);
+  onChangeRef.current = onChange;
+
+  useEffect(() => {
+    boundForId.current = null;
+    setNeedsSaveHint(false);
+  }, [productId]);
 
   useEffect(() => {
     let cancelled = false;
@@ -45,7 +58,38 @@ export function ImageManager({
       const onDisk = isNew
         ? []
         : await window.siteEditor.images.listForProduct(productId, kind);
-      const paths = [...new Set([...catalogPaths, ...onDisk])];
+      const paths = [...new Set([...catalogPaths, ...onDisk].map(normalizePath))];
+
+      // Disk orphans used to show in the UI without updating form state, so Save
+      // wrote image:null and the PNG stayed forever dirty after Pull/sync.
+      if (!isNew && boundForId.current !== productId) {
+        const catalogSet = new Set(catalogPaths.map(normalizePath));
+        const primaryOnDisk = onDisk.find(isPrimaryPath);
+        let nextImage = image;
+        let nextImages = [...(images || [])];
+        let changed = false;
+
+        if (!image && primaryOnDisk) {
+          nextImage = primaryOnDisk;
+          changed = true;
+        }
+
+        for (const diskPath of onDisk) {
+          const n = normalizePath(diskPath);
+          if (isPrimaryPath(n)) continue;
+          if (catalogSet.has(n)) continue;
+          if (nextImages.some((p) => normalizePath(p) === n)) continue;
+          nextImages.push(diskPath);
+          changed = true;
+        }
+
+        boundForId.current = productId;
+        if (changed) {
+          setNeedsSaveHint(true);
+          onChangeRef.current({ image: nextImage, images: nextImages });
+        }
+      }
+
       const entries = await Promise.all(
         paths.map(async (p) => {
           const url = await window.siteEditor.images.getPreviewUrl(p);
@@ -68,12 +112,16 @@ export function ImageManager({
     slot: 'primary' | 'gallery',
   ) {
     if (!saved.length) return;
+    setNeedsSaveHint(false);
     if (slot === 'primary') {
       const primary = saved[0].relativePath;
       const extra = saved.slice(1).map((s) => s.relativePath);
       onChange({
         image: primary,
-        images: [...(images || []).filter((p) => normalizePath(p) !== normalizePath(primary)), ...extra],
+        images: [
+          ...(images || []).filter((p) => normalizePath(p) !== normalizePath(primary)),
+          ...extra,
+        ],
       });
     } else {
       onChange({
@@ -171,6 +219,11 @@ export function ImageManager({
         </div>
       </div>
       {error && <p className="text-sm text-red-400">{error}</p>}
+      {needsSaveHint && (
+        <p className="text-xs text-amber-400">
+          Image found on disk but not saved to the product yet — click Save locally, then Push.
+        </p>
+      )}
       <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
         {displayPaths.map((path) => {
           const isPrimary = image != null && normalizePath(image) === normalizePath(path);

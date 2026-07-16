@@ -12,6 +12,13 @@ export interface SpecRow {
   value: string;
 }
 
+/** Flexible product-page table: any number of columns. */
+export interface CustomTable {
+  title?: string | null;
+  columns: string[];
+  rows: string[][];
+}
+
 export interface SolutionContent {
   tagline: string | null;
   demonstrates: string[];
@@ -29,6 +36,16 @@ export interface CatalogVariant {
   [key: string]: string | number | undefined;
 }
 
+/** Option groups for configurable products: key → selectable values. */
+export type ConfigurationOptions = Record<string, string[]>;
+
+/** RFQ prompt section shown on configurable product pages. */
+export interface RfqSection {
+  id: string;
+  title: string;
+  parameters: string[];
+}
+
 export interface CatalogProduct {
   id: string;
   sku: string;
@@ -41,9 +58,13 @@ export interface CatalogProduct {
   applications: string[];
   techSpecs: SpecRow[];
   keyValueSpecs: SpecRow[];
+  /** Optional header for legacy 2-col techSpecs table. Prefer customTable.title. */
+  specTableTitle?: string | null;
+  /** Flexible multi-column table shown on any page template when rows exist. */
+  customTable?: CustomTable | null;
   variants: Record<string, unknown>[];
-  configurationOptions: unknown | null;
-  rfqSections: unknown | null;
+  configurationOptions: ConfigurationOptions | null;
+  rfqSections: RfqSection[] | null;
   solutionContent: SolutionContent | null;
   customNote: string | null;
   summary: string;
@@ -61,6 +82,8 @@ export interface CatalogProduct {
   categoryPath?: string;
   solutionGroup?: string;
   solutionUrl?: string;
+  /** Listing order within category / solution group on the live site (lower = first). */
+  sortIndex?: number | null;
   _search: string;
 }
 
@@ -138,6 +161,7 @@ export interface SiteEditorApi {
     create: (product: CatalogProduct) => Promise<CatalogData>;
     remove: (id: string, type: ProductType) => Promise<CatalogData>;
     reorder: (orderedIds: string[]) => Promise<CatalogData>;
+    reorderSolutions: (orderedIds: string[]) => Promise<CatalogData>;
   };
   knowledge: {
     load: () => Promise<KnowledgeData>;
