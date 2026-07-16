@@ -237,7 +237,8 @@ function renderOverview(p) {
 
 function variantColumns(variants) {
   if (!variants.length) return [];
-  const skip = new Set(['sr', 'sku', 'image']);
+  // product_code / set_code are shown via the dedicated Product Code column
+  const skip = new Set(['sr', 'sku', 'image', 'product_code', 'set_code']);
   const keys = Object.keys(variants[0]).filter((k) => !skip.has(k));
   return keys.map((k) => ({
     key: k,

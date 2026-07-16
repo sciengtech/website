@@ -360,13 +360,10 @@
     );
   }
 
-  function variantColumns(variants, opts) {
+  function variantColumns(variants) {
     if (!variants.length) return [];
-    var skip = { sr: 1, sku: 1, image: 1 };
-    if (opts && opts.hideSkuColumn) {
-      skip.product_code = 1;
-      skip.set_code = 1;
-    }
+    // product_code / set_code are shown via the dedicated Product Code column
+    var skip = { sr: 1, sku: 1, image: 1, product_code: 1, set_code: 1 };
     var keys = Object.keys(variants[0]).filter(function (k) {
       return !skip[k];
     });
@@ -384,7 +381,7 @@
     if (!p.variants || !p.variants.length) return '';
     var hideSr = !!p.hideSrColumn;
     var hideSku = !!p.hideSkuColumn;
-    var cols = variantColumns(p.variants, { hideSkuColumn: hideSku });
+    var cols = variantColumns(p.variants);
     var head =
       '<thead><tr>' +
       (hideSr ? '' : '<th>#</th>') +
