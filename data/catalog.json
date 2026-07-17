@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-16",
+  "updated": "2026-07-17",
   "solutions": [
     {
       "id": "entangled-photon-source",
@@ -2615,23 +2615,23 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Hex Locking Thumbscrew\n\nThe thumbscrew can be securely tightened using a standard 5 mm hex key, ensuring a rigid and stable connection for demanding optical applications. Compatible with standard Ø12.7 mm (1/2\") post holders, it is an ideal accessory for optical breadboards, mounting systems, and precision alignment setups.\n\nMaterial: Anodized Aluminum Designed and manufactured in India",
+      "body": "Hex Locking Thumbscrew\n\nThe thumbscrew can be securely tightened using a standard 5 mm hex key, ensuring a rigid and stable connection for demanding optical applications. Compatible wi\n\nThe thumbscrew can be securely tightened using a standard 5 mm hex key, ensuring a rigid and stable connection for deman\n\nThe thumbscrew can be securely tightened using a standard 5 mm hex key, ensuring a rigid and stable connection for demanding optical applications. Compatible with standard Ø12.7 mm (1/2\") post holders, it is an ideal accessory for optical breadboards, mounting systems, and precision alignment setups.\n\nMaterial: Anodized Aluminum Designed and manufactured in India\n\nOptical post holders and mounts\n\nPrecision alignment systems\n\nLaser and photonics setups\n\nResearch and educational laboratories\n\nProcurement: Request Technical Quote\n\nhex locking thumbscrew\n\nopto-mechanics",
       "image": "assets/products/hex-locking-thumbscrew/primary.png",
       "tags": [
         "hex locking thumbscrew",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Hex Locking Thumscrew/Hex Locking Thumbscrew.docx",
-      "_search": "hex-locking-thumbscrew set-hls hex locking thumbscrew component opto-mechanics opto-mechanics the thumbscrew can be securely tightened using a standard 5 mm hex key, ensuring a rigid and stable connection for demanding optical applications. compatible wi the thumbscrew can be securely tightened using a standard 5 mm hex key, ensuring a rigid and stable connection for deman  hex locking thumbscrew opto-mechanics hex locking thumbscrew\n\nthe thumbscrew can be securely tightened using a standard 5 mm hex key, ensuring a rigid and stable connection for demanding optical applications. compatible with standard ø12.7 mm (1/2\") post holders, it is an ideal accessory for optical breadboards, mounting systems, and precision alignment setups.\n\nmaterial: anodized aluminum designed and manufactured in india",
+      "_search": "hex-locking-thumbscrew set-hls hex locking thumbscrew component opto-mechanics opto-mechanics component the thumbscrew can be securely tightened using a standard 5 mm hex key, ensuring a rigid and stable connection for demanding optical applications. compatible wi the thumbscrew can be securely tightened using a standard 5 mm hex key, ensuring a rigid and stable connection for deman  the thumbscrew can be securely tightened using a standard 5 mm hex key, ensuring a rigid and stable connection for demanding optical applications. compatible with standard ø12.7 mm (1/2\") post holders, it is an ideal accessory for optical breadboards, mounting systems, and precision alignment setups. material: anodized aluminum designed and manufactured in india optical post holders and mounts precision alignment systems laser and photonics setups research and educational laboratories hex locking thumbscrew opto-mechanics procurement request technical quote  hex locking thumbscrew\n\nthe thumbscrew can be securely tightened using a standard 5 mm hex key, ensuring a rigid and stable connection for demanding optical applications. compatible wi\n\nthe thumbscrew can be securely tightened using a standard 5 mm hex key, ensuring a rigid and stable connection for deman\n\nthe thumbscrew can be securely tightened using a standard 5 mm hex key, ensuring a rigid and stable connection for demanding optical applications. compatible with standard ø12.7 mm (1/2\") post holders, it is an ideal accessory for optical breadboards, mounting systems, and precision alignment setups.\n\nmaterial: anodized aluminum designed and manufactured in india\n\noptical post holders and mounts\n\nprecision alignment systems\n\nlaser and photonics setups\n\nresearch and educational laboratories\n\nprocurement: request technical quote\n\nhex locking thumbscrew\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
       "images": [
-        "assets/products/hex-locking-thumbscrew/primary.png",
-        "assets/products/hex-locking-thumbscrew/image-02.png",
-        "assets/products/hex-locking-thumbscrew/image-03.png"
+        "assets/products/hex-locking-thumbscrew/primary.png"
       ],
-      "sortIndex": 10
+      "sortIndex": 10,
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "hex-nut",
