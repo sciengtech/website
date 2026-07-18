@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-17",
+  "updated": "2026-07-18",
   "solutions": [
     {
       "id": "entangled-photon-source",
@@ -3951,7 +3951,7 @@
         }
       ],
       "body": "Post Holder\n\nAvailable in various lengths from 20 mm to 150 mm, the post holders feature a spring-loaded clamping mechanism that enables smooth post movement during alignmen\n\n7 configurations available \n\nAdjustable Post Mount\n\nVertical Post Mount\n\nAvailable in various lengths from 20 mm to 150 mm, the post holders feature a spring-loaded clamping mechanism that enables smooth post movement during alignment and firm, repeatable locking once the desired position is achieved. An M6 mounting hole at the base allows direct attachment to optical breadboards and mounting platforms.\n\nDesigned for Ø12.7 mm (1/2\") optical posts\n\nAvailable in lengths from 20 mm to 150 mm\n\nPrecision-machined from Aluminium Alloy 6061\n\nHard black anodized finish for durability and reduced reflections\n\nSpring-loaded 5 mm hex clamping thumbscrew for secure and repeatable locking\n\nProvides smooth post adjustment and stable positioning\n\nVibration-resistant, slip-free holding mechanism\n\nM6 threaded mounting hole for breadboard installation\n\nLightweight yet rigid construction\n\nCorrosion-resistant and scratch-resistant surface\n\nDesigned and manufactured in India\n\nMounting Compatibility\n\nCompatible with standard optical breadboards\n\nDesigned for seamless integration with Ø12.7 mm stainless steel optical posts\n\nSuitable for SciEngTech and other standard optical mounting systems\n\nIdeal for laboratory, photonics, and precision optomechanical assemblies\n\nAvailable with standard base and magnetic base options\n\nOptical and photonics laboratories\n\nLaser alignment and beam steering systems\n\nSpectroscopy and imaging setups\n\nQuantum optics and research experiments\n\nPrecision optomechanical assemblies\n\nEducational and industrial optical systems\n\nFeature: Designed for Ø12.7 mm (1/2\") optical posts\n\nFeature: Available in lengths from 20 mm to 150 mm\n\nFeature: Precision-machined from Aluminium Alloy 6061\n\nFeature: Hard black anodized finish for durability and reduced reflections\n\nFeature: Spring-loaded 5 mm hex clamping thumbscrew for secure and repeatable locking\n\nFeature: Provides smooth post adjustment and stable positioning\n\nFeature: Vibration-resistant, slip-free holding mechanism\n\nFeature: M6 threaded mounting hole for breadboard installation\n\n20\n\nSET-PH-20\n\nSET-PH-20\n\n30\n\nSET-PH-30\n\nSET-PH-30\n\n40\n\nSET-PH-40\n\nSET-PH-40\n\n50\n\nSET-PH-50\n\nSET-PH-50\n\n75\n\nSET-PH-75\n\nSET-PH-75\n\n100\n\nSET-PH-100\n\nSET-PH-100\n\n150\n\nSET-PH-150\n\nSET-PH-150\n\npost holder\n\nopto-mechanics",
-      "image": "assets/products/post-holder/primary.jpg",
+      "image": null,
       "tags": [
         "post holder",
         "opto-mechanics"
@@ -3962,9 +3962,6 @@
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
       "images": [
-        "assets/products/post-holder/primary.jpg",
-        "assets/products/post-holder/image-02.png",
-        "assets/products/post-holder/image-03.png",
         "assets/products/post-holder/image-04.png"
       ],
       "sortIndex": 2,
