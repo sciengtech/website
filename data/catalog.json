@@ -1672,18 +1672,24 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "",
+      "body": "Cage Plate\n\nCage Plate\n\nSET-ITEM\n\nProcurement: Request Technical Quote\n\ncage plate\n\nopto-mechanics",
       "image": null,
       "tags": [
         "cage plate",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Cage Plate/Cage Plate.docx",
-      "_search": "cage-plate set-item cage plate component opto-mechanics opto-mechanics cage plate set-item  cage plate opto-mechanics ",
+      "_search": "cage-plate set-item cage plate component opto-mechanics opto-mechanics component cage plate set-item    cage plate opto-mechanics procurement request technical quote  cage plate\n\ncage plate\n\nset-item\n\nprocurement: request technical quote\n\ncage plate\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
-      "sortIndex": 26
+      "sortIndex": 26,
+      "images": [
+        "assets/products/cage-plate/image-02.png",
+        "assets/products/cage-plate/image-03.png"
+      ],
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "clamping-arm",
@@ -3539,18 +3545,23 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Mountable Tool Kit\n\nThe Tool Kit Organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\nIt includes a complete set of balldrivers and hex keys in the specified sizes. All balldrivers feature high-strength alloy steel blades, ensuring durability and reliable performance in precision optical setups. Caddy does not include hex keys and screw drivers.\n\nProduct Code: SET-TL-Kit",
+      "body": "Mountable Tool Kit\n\nThe Tool Kit Organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\nTable-mountable tool caddy · Balldrivers included\n\nThe Tool Kit Organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\nIt includes a complete set of balldrivers and hex keys in the specified sizes. All balldrivers feature high-strength alloy steel blades, ensuring durability and reliable performance in precision optical setups. Caddy does not include hex keys and screw drivers.\n\nProcurement: Request Technical Quote\n\nmountable tool kit\n\nopto-mechanics",
       "image": null,
       "tags": [
         "mountable tool kit",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/12 piece Mountable Tool Caddy Kit/Mountable Tool Kit.docx",
-      "_search": "mountable-tool-kit set-tl-kit mountable tool kit component opto-mechanics opto-mechanics the tool kit organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments. table-mountable tool caddy · balldrivers included  mountable tool kit opto-mechanics mountable tool kit\n\nthe tool kit organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\nit includes a complete set of balldrivers and hex keys in the specified sizes. all balldrivers feature high-strength alloy steel blades, ensuring durability and reliable performance in precision optical setups. caddy does not include hex keys and screw drivers.\n\nproduct code: set-tl-kit",
+      "_search": "mountable-tool-kit set-tl-kit mountable tool kit component opto-mechanics opto-mechanics component the tool kit organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments. table-mountable tool caddy · balldrivers included    mountable tool kit opto-mechanics procurement request technical quote  mountable tool kit\n\nthe tool kit organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\ntable-mountable tool caddy · balldrivers included\n\nthe tool kit organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\nit includes a complete set of balldrivers and hex keys in the specified sizes. all balldrivers feature high-strength alloy steel blades, ensuring durability and reliable performance in precision optical setups. caddy does not include hex keys and screw drivers.\n\nprocurement: request technical quote\n\nmountable tool kit\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
-      "sortIndex": 30
+      "sortIndex": 30,
+      "images": [
+        "assets/products/mountable-tool-kit/image-02.png"
+      ],
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "optical-post",
