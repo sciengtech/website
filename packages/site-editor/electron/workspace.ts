@@ -111,6 +111,38 @@ async function syncShallow(g: SimpleGit): Promise<void> {
   await g.reset(['--hard', `origin/${REPO.branch}`]);
 }
 
+/**
+ * Fetch latest main and hard-reset onto it, keeping local working-tree edits.
+ * Used by publish so Push works even when GitHub moved ahead (shallow clone).
+ */
+export async function syncRemoteKeepingDirty(g: SimpleGit): Promise<void> {
+  const status = await g.status();
+  if (status.ahead > 0) {
+    // Prior failed push left local commit(s) — turn them back into staged/unstaged work.
+    await g.reset(['--soft', `HEAD~${status.ahead}`]);
+  }
+
+  const porcelain = (await g.raw(['status', '--porcelain=v1', '-uall'])).trim();
+  const hasWork = porcelain.length > 0;
+  if (hasWork) {
+    await g.stash(['push', '-u', '-m', 'site-editor-before-publish']);
+  }
+
+  try {
+    await syncShallow(g);
+  } finally {
+    if (hasWork) {
+      try {
+        await g.stash(['pop']);
+      } catch (err) {
+        throw new Error(
+          `Local edits conflict with newer GitHub changes. Click Pull, resolve conflicts, then Push again. (${redactSecrets(err instanceof Error ? err.message : String(err))})`,
+        );
+      }
+    }
+  }
+}
+
 async function repairInPlace(root: string): Promise<void> {
   const g = bindGit(root);
   await g.fetch(['origin', REPO.branch, '--depth', '1', '--force']);

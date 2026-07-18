@@ -315,8 +315,10 @@ function renderRfqParameters(p) {
   const hintList = hints.length
     ? `<ul class="product-bullet-list rfq-param-list" data-requirements-hints>${hints.map((param) => `<li>${esc(param)}</li>`).join('')}</ul>`
     : '';
+  const buttonLabel =
+    String(p.rfqSections[0]?.title || '').trim() || 'Specify Your Requirements';
   return `<div class="product-rfq-section" data-requirements-box>
-    <button type="button" class="btn btn-outline" data-requirements-toggle>Specify Your Requirements</button>
+    <button type="button" class="btn btn-outline" data-requirements-toggle>${esc(buttonLabel)}</button>
     <div class="requirements-panel" data-requirements-panel hidden>
       <p class="rfq-panel-intro">Describe the configuration, wavelengths, quantities, or other details you need. This note is added to your quote cart.</p>
       ${hintList}

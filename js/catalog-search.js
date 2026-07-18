@@ -43,6 +43,19 @@
     return '';
   }
 
+  /** Prefer primary image; fall back to gallery or first variant image. */
+  function listingImage(p) {
+    if (!p) return null;
+    if (p.image) return p.image;
+    if (p.images && p.images.length) return p.images[0];
+    if (p.variants) {
+      for (var i = 0; i < p.variants.length; i++) {
+        if (p.variants[i].image) return p.variants[i].image;
+      }
+    }
+    return null;
+  }
+
   function load(basePath) {
     if (products) return Promise.resolve(products);
     if (loadPromise) return loadPromise;
@@ -60,12 +73,22 @@
     ]).then(function (pair) {
       var searchData = pair[0];
       var catalogData = pair[1];
-      products = searchData.items || [];
       components = catalogData.components || [];
       byId = Object.create(null);
+      var solutions = catalogData.solutions || [];
+      for (var s = 0; s < solutions.length; s++) {
+        byId[solutions[s].id] = solutions[s];
+      }
       for (var i = 0; i < components.length; i++) {
         byId[components[i].id] = components[i];
       }
+      products = (searchData.items || []).map(function (item) {
+        if (item.image) return item;
+        var full = byId[item.id];
+        var fallback = listingImage(full) || listingImage(item);
+        if (!fallback) return item;
+        return Object.assign({}, item, { image: fallback });
+      });
       tokenIndex = buildTokenIndex(products);
       return products;
     });

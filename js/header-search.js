@@ -17,10 +17,23 @@
       .replace(/"/g, '&quot;');
   }
 
+  function listingImage(p) {
+    if (!p) return null;
+    if (p.image) return p.image;
+    if (p.images && p.images.length) return p.images[0];
+    if (p.variants) {
+      for (var i = 0; i < p.variants.length; i++) {
+        if (p.variants[i].image) return p.variants[i].image;
+      }
+    }
+    return null;
+  }
+
   function thumb(product) {
     var base = window.__SITE_BASE__ || '';
-    if (product.image) {
-      return '<img class="search-result-thumb" src="' + escapeHtml(base + product.image) + '" alt="" loading="lazy" />';
+    var img = listingImage(product);
+    if (img) {
+      return '<img class="search-result-thumb" src="' + escapeHtml(base + img) + '" alt="" loading="lazy" />';
     }
     return '<span class="search-result-thumb search-result-thumb--empty" aria-hidden="true">◇</span>';
   }

@@ -737,6 +737,18 @@ body.product-lightbox-open { overflow: hidden; }
   border-radius: 8px;
   background: var(--bg-light);
 }
+.product-rfq-section {
+  margin: 20px 0 28px;
+}
+.product-rfq-section > .btn {
+  margin-bottom: 0;
+}
+.product-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
 .requirements-textarea {
   width: 100%;
   margin: 12px 0;
@@ -782,7 +794,6 @@ body.product-lightbox-open { overflow: hidden; }
   white-space: nowrap;
   border: 0;
 }
-.product-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
 .btn {
   display: inline-flex;
   align-items: center;

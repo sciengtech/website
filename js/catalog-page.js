@@ -22,6 +22,19 @@
     return base + path;
   }
 
+  /** Prefer primary image; fall back to gallery or first variant image. */
+  function listingImage(p) {
+    if (!p) return null;
+    if (p.image) return p.image;
+    if (p.images && p.images.length) return p.images[0];
+    if (p.variants) {
+      for (var i = 0; i < p.variants.length; i++) {
+        if (p.variants[i].image) return p.variants[i].image;
+      }
+    }
+    return null;
+  }
+
   function itemUrl(p) {
     var base = window.__SITE_BASE__ || '';
     if (p.url) return base + p.url;
@@ -155,8 +168,9 @@
     for (var i = 0; i < list.length; i++) {
       var p = list[i];
       var url = itemUrl(p);
-      var media = p.image
-        ? '<img src="' + escapeHtml(assetUrl(p.image)) + '" alt="' + escapeHtml(p.name) + '" loading="lazy" />'
+      var img = listingImage(p);
+      var media = img
+        ? '<img src="' + escapeHtml(assetUrl(img)) + '" alt="' + escapeHtml(p.name) + '" loading="lazy" />'
         : '<span class="placeholder" aria-hidden="true">◇</span>';
       var typeBadge =
         p.type === 'solution'

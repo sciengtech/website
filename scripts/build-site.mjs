@@ -16,6 +16,18 @@ const catalog = patchSolutionsCatalog(
   JSON.parse(fs.readFileSync(path.join(ROOT, 'data/catalog.json'), 'utf8'))
 );
 
+/** Prefer primary image; fall back to gallery or first variant image for listings. */
+function listingImage(p) {
+  if (p.image) return p.image;
+  if (p.images && p.images.length) return p.images[0];
+  if (p.variants) {
+    for (const v of p.variants) {
+      if (v.image) return v.image;
+    }
+  }
+  return null;
+}
+
 /** Single-product categories link straight to product.html#id (no category hub). */
 const DIRECT_PRODUCT_CATEGORIES = {};
 
@@ -181,7 +193,7 @@ function syncDerivedData(c) {
         p.categoryLabel ||
         (p.solutionGroup ? solutionGroupLabel(p.solutionGroup) : undefined),
       specHighlight: p.specHighlight,
-      image: p.image,
+      image: listingImage(p),
       url: p.solutionUrl || componentProductUrl(p.id, ''),
       _search: p._search,
       featured: p.type === 'solution',
@@ -253,8 +265,9 @@ function productCard(p, linkBase, assetBase, solutionPrefix) {
     p.type === 'solution'
       ? `${linkBase}${solutionPrefix}${p.id}.html`
       : componentProductUrl(p.id, linkBase);
-  const media = p.image
-    ? `<img src="${assetBase}${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" />`
+  const img = listingImage(p);
+  const media = img
+    ? `<img src="${assetBase}${esc(img)}" alt="${esc(p.name)}" loading="lazy" />`
     : '<span class="placeholder" aria-hidden="true">◇</span>';
   return `<a class="product-card" href="${url}">
     <div class="product-card-media">${media}</div>

@@ -264,7 +264,7 @@ export function patchSolutionsCatalog(catalog) {
   ];
 
   for (const s of solutions) {
-    if (!s.rfqSections?.length) s.rfqSections = defaultRfqSections();
+    // Keep rfqSections as stored in catalog (editable from site editor).
     if (!s.solutionContent) {
       s.solutionContent = { tagline: null, demonstrates: [], kitIncludes: [], capabilities: [] };
     }

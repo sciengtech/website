@@ -83,6 +83,11 @@ export function ImageManager({
           changed = true;
         }
 
+        if (!nextImage && nextImages.length) {
+          nextImage = nextImages[0];
+          changed = true;
+        }
+
         boundForId.current = productId;
         if (changed) {
           setNeedsSaveHint(true);
@@ -124,9 +129,10 @@ export function ImageManager({
         ],
       });
     } else {
+      const nextImages = [...(images || []), ...saved.map((s) => s.relativePath)];
       onChange({
-        image,
-        images: [...(images || []), ...saved.map((s) => s.relativePath)],
+        image: image || nextImages[0] || null,
+        images: nextImages,
       });
     }
   }

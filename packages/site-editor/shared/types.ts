@@ -39,7 +39,7 @@ export interface CatalogVariant {
 /** Option groups for configurable products: key → selectable values. */
 export type ConfigurationOptions = Record<string, string[]>;
 
-/** RFQ prompt section shown on configurable product pages. */
+/** RFQ prompt section — when present, shows “Specify Your Requirements” text box on solution/configurable pages. */
 export interface RfqSection {
   id: string;
   title: string;

@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from 'fs';
 import type { SimpleGit } from 'simple-git';
-import { getGit, getWorkspacePaths } from './workspace';
+import { getGit, getWorkspacePaths, syncRemoteKeepingDirty } from './workspace';
 import { REPO } from './config';
 import { loadToken } from './token-store';
 import type { PublishResult } from '../shared/types';
@@ -73,17 +73,40 @@ export async function getDirtySourceFiles(): Promise<string[]> {
   return [...files].sort();
 }
 
+function friendlyPushError(err: unknown): string {
+  const raw = err instanceof Error ? err.message : String(err);
+  if (/rejected|fetch first|non-fast-forward|\[rejected\]/i.test(raw)) {
+    return (
+      'Push rejected: GitHub has newer commits. ' +
+      'Click Pull from GitHub, then Push again. ' +
+      '(Newer builds auto-sync before push.)'
+    );
+  }
+  return raw;
+}
+
 export async function publishChanges(commitMessage: string): Promise<PublishResult> {
   const actionsUrl = REPO.actionsUrl;
   try {
     validateJsonSyntax();
-    const dirty = await getDirtySourceFiles();
-    if (dirty.length === 0) {
-      return { ok: false, actionsUrl, files: [], error: 'No changes to publish' };
-    }
 
     const g = getGit();
     await ensureGitIdentity(g);
+
+    // Shallow clone: land on latest origin/main before committing,
+    // otherwise Push fails with "fetch first" when GitHub moved ahead.
+    await syncRemoteKeepingDirty(g);
+
+    const dirty = await getDirtySourceFiles();
+    if (dirty.length === 0) {
+      return {
+        ok: false,
+        actionsUrl,
+        files: [],
+        error: 'No changes to publish (already up to date with GitHub)',
+      };
+    }
+
     await g.add(dirty);
 
     const cached = (await g.raw(['diff', '--cached', '--name-only']))
@@ -124,7 +147,7 @@ export async function publishChanges(commitMessage: string): Promise<PublishResu
       ok: false,
       actionsUrl,
       files: [],
-      error: err instanceof Error ? err.message : String(err),
+      error: friendlyPushError(err),
     };
   }
 }
