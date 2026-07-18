@@ -1313,18 +1313,23 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Base Mounting Plate for Linear Stage\n\n.\n\nThe base plate provides additional mounting flexibility while offering extra clearance between the translation stage and the work surface. Counterbored clearance holes align with the tapped holes on the base of the stage, allowing mounting in two orthogonal orientations for versatile configuration.\n\nThis plate is compatible with metric versions of the stage. It measures 65.3 mm × 90.5 mm × 10 mm (L × W × H) and ships with two dowel pins. Additionally, it features four alignment holes to ensure precise positioning and maintain mounting orthogonality.\n\nProduct Code: SET-TS-BPM",
+      "body": "Base Mounting Plate for Linear Stage\n\n. The base plate provides additional mounting flexibility while offering extra clearance between the translation stage and the work surface. Counterbored clearance holes align with the tapped holes on the base of the stage, allowing mounting in two orthogonal orientations for versatile configuration.\n\n. The base plate provides additional mounting flexibility while offering extra clearance between the translation stage and the work surface. Counterbored clearance holes align with the tapped holes on\n\n. The base plate provides additional mounting flexibility while offering extra clearance between the translation stage and the work surface. Counterbored clearance holes align with the tapped holes on the base of the stage, allowing mounting in two orthogonal orientations for versatile configuration.\n\nThis plate is compatible with metric versions of the stage. It measures 65.3 mm × 90.5 mm × 10 mm (L × W × H) and ships with two dowel pins. Additionally, it features four alignment holes to ensure precise positioning and maintain mounting orthogonality.\n\nProcurement: Request Technical Quote\n\nbase mounting plate for linear stage\n\nmotion and positioning",
       "image": null,
       "tags": [
         "base mounting plate for linear stage",
         "motion and positioning"
       ],
       "writeupPath": "Motion and Positioning/Linear Stage/Base Mounting Plate for Linear Stages.docx",
-      "_search": "base-mounting-plate-for-linear-stage set-ts-bpm base mounting plate for linear stage component motion-and-positioning motion and positioning . the base plate provides additional mounting flexibility while offering extra clearance between the translation stage and the work surface. counterbored clearance holes align with the tapped holes on the base of the stage, allowing mounting in two orthogonal orientations for versatile configuration. . the base plate provides additional mounting flexibility while offering extra clearance between the translation stage and the work surface. counterbored clearance holes align with the tapped holes on  base mounting plate for linear stage motion and positioning base mounting plate for linear stage\n\n.\n\nthe base plate provides additional mounting flexibility while offering extra clearance between the translation stage and the work surface. counterbored clearance holes align with the tapped holes on the base of the stage, allowing mounting in two orthogonal orientations for versatile configuration.\n\nthis plate is compatible with metric versions of the stage. it measures 65.3 mm × 90.5 mm × 10 mm (l × w × h) and ships with two dowel pins. additionally, it features four alignment holes to ensure precise positioning and maintain mounting orthogonality.\n\nproduct code: set-ts-bpm",
+      "_search": "base-mounting-plate-for-linear-stage set-ts-bpm base mounting plate for linear stage component motion-and-positioning motion and positioning component . the base plate provides additional mounting flexibility while offering extra clearance between the translation stage and the work surface. counterbored clearance holes align with the tapped holes on the base of the stage, allowing mounting in two orthogonal orientations for versatile configuration. . the base plate provides additional mounting flexibility while offering extra clearance between the translation stage and the work surface. counterbored clearance holes align with the tapped holes on    base mounting plate for linear stage motion and positioning procurement request technical quote  base mounting plate for linear stage\n\n. the base plate provides additional mounting flexibility while offering extra clearance between the translation stage and the work surface. counterbored clearance holes align with the tapped holes on the base of the stage, allowing mounting in two orthogonal orientations for versatile configuration.\n\n. the base plate provides additional mounting flexibility while offering extra clearance between the translation stage and the work surface. counterbored clearance holes align with the tapped holes on\n\n. the base plate provides additional mounting flexibility while offering extra clearance between the translation stage and the work surface. counterbored clearance holes align with the tapped holes on the base of the stage, allowing mounting in two orthogonal orientations for versatile configuration.\n\nthis plate is compatible with metric versions of the stage. it measures 65.3 mm × 90.5 mm × 10 mm (l × w × h) and ships with two dowel pins. additionally, it features four alignment holes to ensure precise positioning and maintain mounting orthogonality.\n\nprocurement: request technical quote\n\nbase mounting plate for linear stage\n\nmotion and positioning",
       "category": "motion-and-positioning",
       "categoryLabel": "Motion and Positioning",
       "categoryPath": "/components/motion-and-positioning.html",
-      "sortIndex": 6
+      "sortIndex": 6,
+      "images": [
+        "assets/products/base-mounting-plate-for-linear-stage/image-02.jpeg"
+      ],
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "baseplate",
@@ -3294,32 +3299,7 @@
         "Precision positioning setups",
         "Mechanical testing and calibration"
       ],
-      "techSpecs": [
-        {
-          "label": "Drive Type",
-          "value": "Micrometer Drive"
-        },
-        {
-          "label": "Travel range",
-          "value": "≥ 25 mm"
-        },
-        {
-          "label": "Micrometer Travel",
-          "value": "1.00 inch (≈ 25.4 mm)"
-        },
-        {
-          "label": "Resolution / Lead",
-          "value": "0.5 mm per revolution"
-        },
-        {
-          "label": "Vertical Load Capacity",
-          "value": "≥ 4 kg"
-        },
-        {
-          "label": "Horizontal Load Capacity",
-          "value": "≥ 40 kg"
-        }
-      ],
+      "techSpecs": [],
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
@@ -3354,18 +3334,55 @@
           "value": "≥ 40 kg"
         }
       ],
-      "body": "Linear Stage\n\nM6 Tapped Metric Grid\n\n Resolution of 0.01″ per Division\n\n Model with Micrometer & Adjuster Screws\n\nSciEngTech Linear translation stage is designed for accurate positioning, robust load handling, and flexible mounting in laboratory and industrial setups.\n\nKey Features\n\nSmooth and precise micrometer-driven motion \n\nHigh-resolution positioning with fine engraved graduations \n\nRigid construction for high load capacity \n\nMultiple mounting options for easy integration \n\nAlignment support with precision dowel pins\n\nTechnical Specifications\n\nParameter\n\nSpecifications\n\nDrive Type\n\nMicrometer Drive\n\nTravel range\n\n≥ 25 mm\n\nMicrometer Travel\n\n1.00 inch (≈ 25.4 mm)\n\nResolution / Lead\n\n0.5 mm per revolution\n\nVertical Load Capacity\n\n≥ 4 kg\n\nHorizontal Load Capacity\n\n≥ 40 kg\n\nMechanical & Mounting Details\n\n16 × M6 tapped holes\n\n2 × M6 counterbores for direct mounting \n\nIncludes 2 precision alignment dowel pins for accurate positioning\n\nApplications\n\nOptical alignment systems \n\nLaboratory instrumentation \n\nPrecision positioning setups \n\nMechanical testing and calibration\n\nProduct Code: SET-TS-25",
-      "image": "assets/products/linear-stage/primary.png",
+      "body": "Linear Stage\n\nM6 Tapped Metric Grid Resolution of 0.01″ per Division Model with Micrometer & Adjuster Screws SciEngTech Linear translation stage is designed for accurate positioning, robust load handling, and flexible mounting in laboratory and industrial setups.\n\nSmooth and precise micrometer-driven motion · High-resolution positioning with fine engraved graduations\n\nM6 Tapped Metric Grid Resolution of 0.01″ per Division Model with Micrometer & Adjuster Screws SciEngTech Linear translation stage is designed for accurate positioning, robust load handling, and flexible mounting in laboratory and industrial setups.\n\nSmooth and precise micrometer-driven motion\n\nHigh-resolution positioning with fine engraved graduations\n\nRigid construction for high load capacity\n\nMultiple mounting options for easy integration\n\nAlignment support with precision dowel pins\n\nOptical alignment systems\n\nLaboratory instrumentation\n\nPrecision positioning setups\n\nMechanical testing and calibration\n\nDrive Type: Micrometer Drive\n\nTravel range: ≥ 25 mm\n\nMicrometer Travel: 1.00 inch (≈ 25.4 mm)\n\nResolution / Lead: 0.5 mm per revolution\n\nVertical Load Capacity: ≥ 4 kg\n\nHorizontal Load Capacity: ≥ 40 kg\n\nLabel\n\nValue\n\nDrive Type\n\nMicrometer Drive\n\nTravel range\n\n≥ 25 mm\n\nMicrometer Travel\n\n1.00 inch (≈ 25.4 mm)\n\nResolution / Lead\n\n0.5 mm per revolution\n\nVertical Load Capacity\n\n≥ 4 kg\n\nHorizontal Load Capacity\n\n≥ 40 kg\n\nlinear stage\n\nmotion and positioning",
+      "image": null,
       "tags": [
         "linear stage",
         "motion and positioning"
       ],
       "writeupPath": "Motion and Positioning/Linear Stage/Linear Stage.docx",
-      "_search": "linear-stage set-ts-25 linear stage component motion-and-positioning motion and positioning m6 tapped metric grid resolution of 0.01″ per division model with micrometer & adjuster screws sciengtech linear translation stage is designed for accurate positioning, robust load handling, and flexible mounting in laboratory and industrial setups. smooth and precise micrometer-driven motion · high-resolution positioning with fine engraved graduations  linear stage motion and positioning linear stage\n\nm6 tapped metric grid\n\n resolution of 0.01″ per division\n\n model with micrometer & adjuster screws\n\nsciengtech linear translation stage is designed for accurate positioning, robust load handling, and flexible mounting in laboratory and industrial setups.\n\nkey features\n\nsmooth and precise micrometer-driven motion \n\nhigh-resolution positioning with fine engraved graduations \n\nrigid construction for high load capacity \n\nmultiple mounting options for easy integration \n\nalignment support with precision dowel pins\n\ntechnical specifications\n\nparameter\n\nspecifications\n\ndrive type\n\nmicrometer drive\n\ntravel range\n\n≥ 25 mm\n\nmicrometer travel\n\n1.00 inch (≈ 25.4 mm)\n\nresolution / lead\n\n0.5 mm per revolution\n\nvertical load capacity\n\n≥ 4 kg\n\nhorizontal load capacity\n\n≥ 40 kg\n\nmechanical & mounting details\n\n16 × m6 tapped holes\n\n2 × m6 counterbores for direct mounting \n\nincludes 2 precision alignment dowel pins for accurate positioning\n\napplications\n\noptical alignment systems \n\nlaboratory instrumentation \n\nprecision positioning setups \n\nmechanical testing and calibration\n\nproduct code: set-ts-25",
+      "_search": "linear-stage set-ts-25 linear stage component motion-and-positioning motion and positioning component m6 tapped metric grid resolution of 0.01″ per division model with micrometer & adjuster screws sciengtech linear translation stage is designed for accurate positioning, robust load handling, and flexible mounting in laboratory and industrial setups. smooth and precise micrometer-driven motion · high-resolution positioning with fine engraved graduations  smooth and precise micrometer-driven motion high-resolution positioning with fine engraved graduations rigid construction for high load capacity multiple mounting options for easy integration alignment support with precision dowel pins optical alignment systems laboratory instrumentation precision positioning setups mechanical testing and calibration linear stage motion and positioning drive type micrometer drive travel range ≥ 25 mm micrometer travel 1.00 inch (≈ 25.4 mm) resolution / lead 0.5 mm per revolution vertical load capacity ≥ 4 kg horizontal load capacity ≥ 40 kg  linear stage\n\nm6 tapped metric grid resolution of 0.01″ per division model with micrometer & adjuster screws sciengtech linear translation stage is designed for accurate positioning, robust load handling, and flexible mounting in laboratory and industrial setups.\n\nsmooth and precise micrometer-driven motion · high-resolution positioning with fine engraved graduations\n\nm6 tapped metric grid resolution of 0.01″ per division model with micrometer & adjuster screws sciengtech linear translation stage is designed for accurate positioning, robust load handling, and flexible mounting in laboratory and industrial setups.\n\nsmooth and precise micrometer-driven motion\n\nhigh-resolution positioning with fine engraved graduations\n\nrigid construction for high load capacity\n\nmultiple mounting options for easy integration\n\nalignment support with precision dowel pins\n\noptical alignment systems\n\nlaboratory instrumentation\n\nprecision positioning setups\n\nmechanical testing and calibration\n\ndrive type: micrometer drive\n\ntravel range: ≥ 25 mm\n\nmicrometer travel: 1.00 inch (≈ 25.4 mm)\n\nresolution / lead: 0.5 mm per revolution\n\nvertical load capacity: ≥ 4 kg\n\nhorizontal load capacity: ≥ 40 kg\n\nlabel\n\nvalue\n\ndrive type\n\nmicrometer drive\n\ntravel range\n\n≥ 25 mm\n\nmicrometer travel\n\n1.00 inch (≈ 25.4 mm)\n\nresolution / lead\n\n0.5 mm per revolution\n\nvertical load capacity\n\n≥ 4 kg\n\nhorizontal load capacity\n\n≥ 40 kg\n\nlinear stage\n\nmotion and positioning",
       "category": "motion-and-positioning",
       "categoryLabel": "Motion and Positioning",
       "categoryPath": "/components/motion-and-positioning.html",
-      "sortIndex": 5
+      "sortIndex": 5,
+      "images": [
+        "assets/products/linear-stage/image-02.jpeg"
+      ],
+      "customTable": {
+        "title": null,
+        "columns": [
+          "Label",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Drive Type",
+            "Micrometer Drive"
+          ],
+          [
+            "Travel range",
+            "≥ 25 mm"
+          ],
+          [
+            "Micrometer Travel",
+            "1.00 inch (≈ 25.4 mm)"
+          ],
+          [
+            "Resolution / Lead",
+            "0.5 mm per revolution"
+          ],
+          [
+            "Vertical Load Capacity",
+            "≥ 4 kg"
+          ],
+          [
+            "Horizontal Load Capacity",
+            "≥ 40 kg"
+          ]
+        ]
+      },
+      "specTableTitle": null
     },
     {
       "id": "magnetic-and-non-magnetic-studded-base-adapter",
@@ -4012,18 +4029,23 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Right Angle bracket for Linear Stage\n\nEnables mounting of translation stages in the XZ or XYZ plane \n\nSix dowel pin holes ensure precise orthogonality and repeatable alignment \n\nDimensions (L × W × H): 108 mm × 88 mm × 134 mm \n\nThis component is an anodized aluminum right-angle bracket designed to orient translation stages vertically. It allows users to construct XZ and XYZ positioning systems, expanding standard horizontal configurations into multi-axis setups.\n\nThe base plate features six counterbored holes for M6 cap screws, enabling direct mounting onto an optical table. The vertical face includes:\n\nTwo M6 tapped holes \n\nEight 7.0 mm through holes \n\nDowel pins are included with the base plate, adapter plate, and bracket to ensure accurate alignment and maintain orthogonality between mounted stages.\n\nProduct Code: SET-TS-RAB",
+      "body": "Right Angle bracket for Linear Stage\n\nEnables mounting of translation stages in the XZ or XYZ plane Six dowel pin holes ensure precise orthogonality and repeatable alignment Dimensions (L × W × H): 108 mm × 88 mm × 134 mm This component is an anodized aluminum right-angle bracket designed to orient translation stages vertically. It allows users to construct XZ and XYZ positioning systems, expanding standard horizontal configurations into multi-axis setups.\n\nEnables mounting of translation stages in the XZ or XYZ plane Six dowel pin holes ensure precise orthogonality and repeatable alignment Dimensions (L × W × H): 108 mm × 88 mm × 134 mm This component i\n\nEnables mounting of translation stages in the XZ or XYZ plane Six dowel pin holes ensure precise orthogonality and repeatable alignment Dimensions (L × W × H): 108 mm × 88 mm × 134 mm This component is an anodized aluminum right-angle bracket designed to orient translation stages vertically. It allows users to construct XZ and XYZ positioning systems, expanding standard horizontal configurations into multi-axis setups.\n\nThe base plate features six counterbored holes for M6 cap screws, enabling direct mounting onto an optical table. The vertical face includes: Two M6 tapped holes Eight 7.0 mm through holes Dowel pins are included with the base plate, adapter plate, and bracket to ensure accurate alignment and maintain orthogonality between mounted stages.\n\nProcurement: Request Technical Quote\n\nright angle bracket for linear stage\n\nmotion and positioning",
       "image": null,
       "tags": [
         "right angle bracket for linear stage",
         "motion and positioning"
       ],
       "writeupPath": "Motion and Positioning/Linear Stage/Right angle bracket for Linear stage.docx",
-      "_search": "right-angle-bracket-for-linear-stage set-ts-rab right angle bracket for linear stage component motion-and-positioning motion and positioning enables mounting of translation stages in the xz or xyz plane six dowel pin holes ensure precise orthogonality and repeatable alignment dimensions (l × w × h): 108 mm × 88 mm × 134 mm this component is an anodized aluminum right-angle bracket designed to orient translation stages vertically. it allows users to construct xz and xyz positioning systems, expanding standard horizontal configurations into multi-axis setups. enables mounting of translation stages in the xz or xyz plane six dowel pin holes ensure precise orthogonality and repeatable alignment dimensions (l × w × h): 108 mm × 88 mm × 134 mm this component i  right angle bracket for linear stage motion and positioning right angle bracket for linear stage\n\nenables mounting of translation stages in the xz or xyz plane \n\nsix dowel pin holes ensure precise orthogonality and repeatable alignment \n\ndimensions (l × w × h): 108 mm × 88 mm × 134 mm \n\nthis component is an anodized aluminum right-angle bracket designed to orient translation stages vertically. it allows users to construct xz and xyz positioning systems, expanding standard horizontal configurations into multi-axis setups.\n\nthe base plate features six counterbored holes for m6 cap screws, enabling direct mounting onto an optical table. the vertical face includes:\n\ntwo m6 tapped holes \n\neight 7.0 mm through holes \n\ndowel pins are included with the base plate, adapter plate, and bracket to ensure accurate alignment and maintain orthogonality between mounted stages.\n\nproduct code: set-ts-rab",
+      "_search": "right-angle-bracket-for-linear-stage set-ts-rab right angle bracket for linear stage component motion-and-positioning motion and positioning component enables mounting of translation stages in the xz or xyz plane six dowel pin holes ensure precise orthogonality and repeatable alignment dimensions (l × w × h): 108 mm × 88 mm × 134 mm this component is an anodized aluminum right-angle bracket designed to orient translation stages vertically. it allows users to construct xz and xyz positioning systems, expanding standard horizontal configurations into multi-axis setups. enables mounting of translation stages in the xz or xyz plane six dowel pin holes ensure precise orthogonality and repeatable alignment dimensions (l × w × h): 108 mm × 88 mm × 134 mm this component i    right angle bracket for linear stage motion and positioning procurement request technical quote  right angle bracket for linear stage\n\nenables mounting of translation stages in the xz or xyz plane six dowel pin holes ensure precise orthogonality and repeatable alignment dimensions (l × w × h): 108 mm × 88 mm × 134 mm this component is an anodized aluminum right-angle bracket designed to orient translation stages vertically. it allows users to construct xz and xyz positioning systems, expanding standard horizontal configurations into multi-axis setups.\n\nenables mounting of translation stages in the xz or xyz plane six dowel pin holes ensure precise orthogonality and repeatable alignment dimensions (l × w × h): 108 mm × 88 mm × 134 mm this component i\n\nenables mounting of translation stages in the xz or xyz plane six dowel pin holes ensure precise orthogonality and repeatable alignment dimensions (l × w × h): 108 mm × 88 mm × 134 mm this component is an anodized aluminum right-angle bracket designed to orient translation stages vertically. it allows users to construct xz and xyz positioning systems, expanding standard horizontal configurations into multi-axis setups.\n\nthe base plate features six counterbored holes for m6 cap screws, enabling direct mounting onto an optical table. the vertical face includes: two m6 tapped holes eight 7.0 mm through holes dowel pins are included with the base plate, adapter plate, and bracket to ensure accurate alignment and maintain orthogonality between mounted stages.\n\nprocurement: request technical quote\n\nright angle bracket for linear stage\n\nmotion and positioning",
       "category": "motion-and-positioning",
       "categoryLabel": "Motion and Positioning",
       "categoryPath": "/components/motion-and-positioning.html",
-      "sortIndex": 7
+      "sortIndex": 7,
+      "images": [
+        "assets/products/right-angle-bracket-for-linear-stage/image-02.jpeg"
+      ],
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "rotation-mount",
