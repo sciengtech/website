@@ -3404,7 +3404,10 @@
       ],
       "overview": [],
       "features": [
-        "Available in both magnetic and non-magnetic versions, the adapters feature excellent surface finishing and are engineered for long-term durability in laboratory, industrial, and research environments. The integrated M6 × 20 threaded stud allows secure attachment to Ø12.7 mm (1/2\") post holders."
+        "The integrated M6 × 20 threaded stud allows secure attachment to Ø12.7 mm (1/2\") post holders.",
+        "Available in both magnetic and non-magnetic versions",
+        "Excellent surface finishing",
+        "Engineered for long-term durability in laboratory, industrial, and research environments."
       ],
       "applications": [
         "Optical and photonics laboratories",
@@ -3412,8 +3415,7 @@
         "Precision optomechanical assemblies",
         "Spectroscopy and quantum optics experiments",
         "Research and educational setups",
-        "General optical instrumentation and testing systems",
-        "SET-NMS-PBA-318"
+        "General optical instrumentation and testing systems"
       ],
       "techSpecs": [],
       "keyValueSpecs": [],
@@ -3436,21 +3438,21 @@
       "solutionContent": null,
       "customNote": null,
       "summary": "Available in both magnetic and non-magnetic versions, the adapters feature excellent surface finishing and are engineered for long-term durability in laboratory",
-      "specHighlight": "Available in both magnetic and non-magnetic versions, the adapters feature excellent surface finishing and are engineere",
+      "specHighlight": "2 configurations available",
       "specs": [
         {
           "label": "Procurement",
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Magnetic and Non-Magnetic Studded Base Adapter\n\nAvailable in both magnetic and non-magnetic versions, the adapters feature excellent surface finishing and are engineered for long-term durability in laboratory, industrial, and research environments. The integrated M6 × 20 threaded stud allows secure attachment to Ø12.7 mm (1/2\") post holders.",
+      "body": "Magnetic and Non-Magnetic Studded Base Adapter\n\nAvailable in both magnetic and non-magnetic versions, the adapters feature excellent surface finishing and are engineered for long-term durability in laboratory\n\n2 configurations available\n\nMagnetic Post Adapter\n\nMagnetic Interface Adapter\n\nMagnetic Support Base\n\nMagBas Adapter\n\nThe integrated M6 × 20 threaded stud allows secure attachment to Ø12.7 mm (1/2\") post holders.\n\nAvailable in both magnetic and non-magnetic versions\n\nExcellent surface finishing\n\nEngineered for long-term durability in laboratory, industrial, and research environments.\n\nOptical and photonics laboratories\n\nLaser alignment and beam delivery systems\n\nPrecision optomechanical assemblies\n\nSpectroscopy and quantum optics experiments\n\nResearch and educational setups\n\nGeneral optical instrumentation and testing systems\n\nProcurement: Request Technical Quote\n\nMagnetic studded base adapter\n\nSET-MS-PBA-318\n\nSET-MS-PBA-318\n\nNon-magnetic studded base adapter\n\nSET-NMS-PBA-318\n\nSET-NMS-PBA-318\n\nmagnetic and non magnetic studded base adapter\n\nopto-mechanics",
       "image": "assets/products/magnetic-and-non-magnetic-studded-base-adapter/primary.png",
       "tags": [
         "magnetic and non magnetic studded base adapter",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Magnetic and Non Magnetic BaseAdapter/Magnetic and Non-magnetic Studded Base Adapter.docx",
-      "_search": "magnetic-and-non-magnetic-studded-base-adapter set-ms-pba-318 magnetic and non-magnetic studded base adapter component opto-mechanics opto-mechanics available in both magnetic and non-magnetic versions, the adapters feature excellent surface finishing and are engineered for long-term durability in laboratory available in both magnetic and non-magnetic versions, the adapters feature excellent surface finishing and are engineere magnetic post adapter magnetic interface adapter magnetic support base magbas adapter magnetic and non magnetic studded base adapter opto-mechanics magnetic and non-magnetic studded base adapter\n\navailable in both magnetic and non-magnetic versions, the adapters feature excellent surface finishing and are engineered for long-term durability in laboratory, industrial, and research environments. the integrated m6 × 20 threaded stud allows secure attachment to ø12.7 mm (1/2\") post holders.",
+      "_search": "magnetic-and-non-magnetic-studded-base-adapter set-ms-pba-318 magnetic and non-magnetic studded base adapter component opto-mechanics opto-mechanics component available in both magnetic and non-magnetic versions, the adapters feature excellent surface finishing and are engineered for long-term durability in laboratory 2 configurations available magnetic post adapter magnetic interface adapter magnetic support base magbas adapter the integrated m6 × 20 threaded stud allows secure attachment to ø12.7 mm (1/2\") post holders. available in both magnetic and non-magnetic versions excellent surface finishing engineered for long-term durability in laboratory, industrial, and research environments. optical and photonics laboratories laser alignment and beam delivery systems precision optomechanical assemblies spectroscopy and quantum optics experiments research and educational setups general optical instrumentation and testing systems magnetic and non magnetic studded base adapter opto-mechanics procurement request technical quote 1 magnetic studded base adapter set-ms-pba-318 set-ms-pba-318 2 non-magnetic studded base adapter set-nms-pba-318 set-nms-pba-318 magnetic and non-magnetic studded base adapter\n\navailable in both magnetic and non-magnetic versions, the adapters feature excellent surface finishing and are engineered for long-term durability in laboratory\n\n2 configurations available\n\nmagnetic post adapter\n\nmagnetic interface adapter\n\nmagnetic support base\n\nmagbas adapter\n\nthe integrated m6 × 20 threaded stud allows secure attachment to ø12.7 mm (1/2\") post holders.\n\navailable in both magnetic and non-magnetic versions\n\nexcellent surface finishing\n\nengineered for long-term durability in laboratory, industrial, and research environments.\n\noptical and photonics laboratories\n\nlaser alignment and beam delivery systems\n\nprecision optomechanical assemblies\n\nspectroscopy and quantum optics experiments\n\nresearch and educational setups\n\ngeneral optical instrumentation and testing systems\n\nprocurement: request technical quote\n\nmagnetic studded base adapter\n\nset-ms-pba-318\n\nset-ms-pba-318\n\nnon-magnetic studded base adapter\n\nset-nms-pba-318\n\nset-nms-pba-318\n\nmagnetic and non magnetic studded base adapter\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
@@ -3458,7 +3460,9 @@
         "assets/products/magnetic-and-non-magnetic-studded-base-adapter/primary.png",
         "assets/products/magnetic-and-non-magnetic-studded-base-adapter/image-02.png"
       ],
-      "sortIndex": 8
+      "sortIndex": 8,
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "magnetic-beam-height-ruler",
