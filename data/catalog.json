@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-19",
+  "updated": "2026-07-20",
   "solutions": [
     {
       "id": "entangled-photon-source",
@@ -2050,7 +2050,8 @@
       "pageTemplate": "component",
       "aliases": [],
       "overview": [
-        "The table clamp features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. Its compact design minimizes the footprint, making it suitable for space-constrained configurations."
+        "The table clamp features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. Its compact design minimizes the footprint, making it suitable for space-constrained configurations.",
+        "The maximum thickness of optomechanical components that can be secured with the clamp depends on the length of the screws used for fastening."
       ],
       "features": [],
       "applications": [],
@@ -2069,18 +2070,21 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Compact Variable Height Clamp\n\nThe table clamp features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. Its compact design minimizes the footprint, making it suitable for space-constrained configurations.\n\nThe maximum thickness of optomechanical components that can be secured with the clamp depends on the length of the screws used for fastening.\n\nProduct Code: SET-CVHC",
-      "image": null,
+      "body": "Compact Variable Height Clamp\n\nThe table clamp features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. Its compact design minimizes the footprint, making it suitable for space-constrained configurations.\n\nThe table clamp features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted h\n\nThe table clamp features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. Its compact design minimizes the footprint, making it suitable for space-constrained configurations.\n\nThe maximum thickness of optomechanical components that can be secured with the clamp depends on the length of the screws used for fastening.\n\nProcurement: Request Technical Quote\n\ncompact variable height clamp\n\nopto-mechanics",
+      "image": "assets/products/compact-variable-height-clamp/primary.png",
       "tags": [
         "compact variable height clamp",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Compact Variable Height Clamp/Compact Variable Height Clamp.docx",
-      "_search": "compact-variable-height-clamp set-cvhc compact variable height clamp component opto-mechanics opto-mechanics the table clamp features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. its compact design minimizes the footprint, making it suitable for space-constrained configurations. the table clamp features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted h  compact variable height clamp opto-mechanics compact variable height clamp\n\nthe table clamp features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. its compact design minimizes the footprint, making it suitable for space-constrained configurations.\n\nthe maximum thickness of optomechanical components that can be secured with the clamp depends on the length of the screws used for fastening.\n\nproduct code: set-cvhc",
+      "_search": "compact-variable-height-clamp set-cvhc compact variable height clamp component opto-mechanics opto-mechanics component the table clamp features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. its compact design minimizes the footprint, making it suitable for space-constrained configurations. the table clamp features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted h    compact variable height clamp opto-mechanics procurement request technical quote  compact variable height clamp\n\nthe table clamp features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. its compact design minimizes the footprint, making it suitable for space-constrained configurations.\n\nthe table clamp features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted h\n\nthe table clamp features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. its compact design minimizes the footprint, making it suitable for space-constrained configurations.\n\nthe maximum thickness of optomechanical components that can be secured with the clamp depends on the length of the screws used for fastening.\n\nprocurement: request technical quote\n\ncompact variable height clamp\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
-      "sortIndex": 28
+      "sortIndex": 28,
+      "images": [],
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "cube-beamsplitter-mount",
@@ -4376,13 +4380,14 @@
     },
     {
       "id": "table-clamp-l-shape",
-      "sku": "SET-TABLECLAMPLS",
+      "sku": "SET-CVHC-L",
       "name": "Table Clamp “L” Shape",
       "type": "component",
       "pageTemplate": "component",
       "aliases": [],
       "overview": [
-        "This clamp can be used with optomechanical components with a thickness up to 0.50\"."
+        "L-Shape Table Clamps are used to securely fix posts, mounts, brackets, and opto-mechanical assemblies onto optical tables or breadboards. Their rigid design helps maintain stable positioning during alignment and experimental operation.",
+        "They are suitable for laser setups, optical benches, teaching laboratories, and research instrumentation systems. Our table clamps provide a simple, strong, and reliable solution for mounting and securing optical components."
       ],
       "features": [],
       "applications": [],
@@ -4401,18 +4406,21 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Table Clamp “L” Shape\n\nThis clamp can be used with optomechanical components with a thickness up to 0.50\".",
-      "image": null,
+      "body": "Table Clamp “L” Shape\n\nThis clamp can be used with optomechanical components with a thickness up to 0.50\".\n\nThis clamp can be used with optomechanical components with a thickness up to 0.50\".\n\nL-Shape Table Clamps are used to securely fix posts, mounts, brackets, and opto-mechanical assemblies onto optical tables or breadboards. Their rigid design helps maintain stable positioning during alignment and experimental operation.\n\nThey are suitable for laser setups, optical benches, teaching laboratories, and research instrumentation systems. Our table clamps provide a simple, strong, and reliable solution for mounting and securing optical components.\n\nProcurement: Request Technical Quote\n\ntable clamp l shape\n\nopto-mechanics",
+      "image": "assets/products/table-clamp-l-shape/primary.png",
       "tags": [
         "table clamp l shape",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Clamp/Table Clamp L shape.docx",
-      "_search": "table-clamp-l-shape set-tableclampls table clamp “l” shape component opto-mechanics opto-mechanics this clamp can be used with optomechanical components with a thickness up to 0.50\". this clamp can be used with optomechanical components with a thickness up to 0.50\".  table clamp l shape opto-mechanics table clamp “l” shape\n\nthis clamp can be used with optomechanical components with a thickness up to 0.50\".",
+      "_search": "table-clamp-l-shape set-cvhc-l table clamp “l” shape component opto-mechanics opto-mechanics component this clamp can be used with optomechanical components with a thickness up to 0.50\". this clamp can be used with optomechanical components with a thickness up to 0.50\".    table clamp l shape opto-mechanics procurement request technical quote  table clamp “l” shape\n\nthis clamp can be used with optomechanical components with a thickness up to 0.50\".\n\nthis clamp can be used with optomechanical components with a thickness up to 0.50\".\n\nl-shape table clamps are used to securely fix posts, mounts, brackets, and opto-mechanical assemblies onto optical tables or breadboards. their rigid design helps maintain stable positioning during alignment and experimental operation.\n\nthey are suitable for laser setups, optical benches, teaching laboratories, and research instrumentation systems. our table clamps provide a simple, strong, and reliable solution for mounting and securing optical components.\n\nprocurement: request technical quote\n\ntable clamp l shape\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
-      "sortIndex": 29
+      "sortIndex": 29,
+      "images": [],
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "universal-base-plate",
