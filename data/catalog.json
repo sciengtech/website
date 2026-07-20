@@ -3301,7 +3301,7 @@
         "assets/products/lens-tube-with-retaining-ring/primary.png",
         "assets/products/lens-tube-with-retaining-ring/image-02.png"
       ],
-      "hideSrColumn": true,
+      "hideSrColumn": false,
       "sortIndex": 19,
       "customTable": null,
       "specTableTitle": null
