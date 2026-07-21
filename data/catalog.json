@@ -1114,7 +1114,7 @@
     },
     {
       "id": "aluminium-laser-safety-screen",
-      "sku": "",
+      "sku": "SET-ALSS",
       "name": "Aluminium/Laser Safety Screen",
       "type": "component",
       "pageTemplate": "variant-catalog",
@@ -1123,9 +1123,12 @@
         "Optical Safety Barrier",
         "Optical safety screen"
       ],
-      "overview": [],
+      "overview": [
+        "The screens provide excellent light absorption, corrosion resistance, and long-term durability. ",
+        "Available in both flat and curved configurations, they can be easily positioned around optical assemblies to create effective light barriers and beam shields."
+      ],
       "features": [
-        "Manufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absorption, corrosion resistance, and long-term durability. Available in both flat and curved configurations, they can be easily positioned around optical assemblies to create effective light barriers and beam shields.",
+        "Aluminum screen finished with a durable black anodized coating",
         "Integrated magnets at the base allow convenient placement on optical tables and breadboards, while a central slotted mounting hole enables secure installation on non-magnetic surfaces."
       ],
       "applications": [
@@ -1146,21 +1149,21 @@
       "solutionContent": null,
       "customNote": "Customised size screen can be manfactured as per customer’s experimental set-up",
       "summary": "Manufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absorption, corrosion resistance",
-      "specHighlight": "Manufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absor",
+      "specHighlight": "Manufactured from aluminum and finished with a durable black anodized coating",
       "specs": [
         {
           "label": "Procurement",
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Aluminium/Laser Safety Screen\n\nManufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absorption, corrosion resistance\n\nManufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absor\n\nBeam Block Screen\n\nOptical Safety Barrier\n\nOptical safety screen\n\nManufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absorption, corrosion resistance, and long-term durability. Available in both flat and curved configurations, they can be easily positioned around optical assemblies to create effective light barriers and beam shields.\n\nIntegrated magnets at the base allow convenient placement on optical tables and breadboards, while a central slotted mounting hole enables secure installation on non-magnetic surfaces.\n\nLaser and photonics laboratories\n\nQuantum optics and spectroscopy experiments\n\nOptical alignment and beam steering setups\n\nLight-sensitive measurement systems\n\nEducational and research laboratories\n\nGeneral optomechanical and laser-based experiments\n\nAvailable size 305mm × 305 mm\n\nNote: Customised size screen can be manfactured as per customer’s experimental set-up\n\nProcurement: Request Technical Quote\n\nCustomised size screen can be manfactured as per customer’s experimental set-up\n\naluminium laser safety screen\n\nopto-mechanics",
+      "body": "Aluminium/Laser Safety Screen\n\nManufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absorption, corrosion resistance\n\nManufactured from aluminum and finished with a durable black anodized coating\n\nBeam Block Screen\n\nOptical Safety Barrier\n\nOptical safety screen\n\nThe screens provide excellent light absorption, corrosion resistance, and long-term durability. \n\nAvailable in both flat and curved configurations, they can be easily positioned around optical assemblies to create effective light barriers and beam shields.\n\nAluminum screen finished with a durable black anodized coating\n\nIntegrated magnets at the base allow convenient placement on optical tables and breadboards, while a central slotted mounting hole enables secure installation on non-magnetic surfaces.\n\nLaser and photonics laboratories\n\nQuantum optics and spectroscopy experiments\n\nOptical alignment and beam steering setups\n\nLight-sensitive measurement systems\n\nEducational and research laboratories\n\nGeneral optomechanical and laser-based experiments\n\nAvailable size 305mm × 305 mm\n\nNote: Customised size screen can be manfactured as per customer’s experimental set-up\n\nProcurement: Request Technical Quote\n\nCustomised size screen can be manfactured as per customer’s experimental set-up\n\naluminium laser safety screen\n\nopto-mechanics",
       "image": "assets/products/aluminium-laser-safety-screen/primary.png",
       "tags": [
         "aluminium laser safety screen",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Laser Safety Screen/Laser Safety Screen.docx",
-      "_search": "aluminium-laser-safety-screen  aluminium/laser safety screen component opto-mechanics opto-mechanics variant-catalog manufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absorption, corrosion resistance manufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absor beam block screen optical safety barrier optical safety screen manufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absorption, corrosion resistance, and long-term durability. available in both flat and curved configurations, they can be easily positioned around optical assemblies to create effective light barriers and beam shields. integrated magnets at the base allow convenient placement on optical tables and breadboards, while a central slotted mounting hole enables secure installation on non-magnetic surfaces. laser and photonics laboratories quantum optics and spectroscopy experiments optical alignment and beam steering setups light-sensitive measurement systems educational and research laboratories general optomechanical and laser-based experiments available size 305mm × 305 mm note: customised size screen can be manfactured as per customer’s experimental set-up aluminium laser safety screen opto-mechanics procurement request technical quote  aluminium/laser safety screen\n\nmanufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absorption, corrosion resistance\n\nmanufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absor\n\nbeam block screen\n\noptical safety barrier\n\noptical safety screen\n\nmanufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absorption, corrosion resistance, and long-term durability. available in both flat and curved configurations, they can be easily positioned around optical assemblies to create effective light barriers and beam shields.\n\nintegrated magnets at the base allow convenient placement on optical tables and breadboards, while a central slotted mounting hole enables secure installation on non-magnetic surfaces.\n\nlaser and photonics laboratories\n\nquantum optics and spectroscopy experiments\n\noptical alignment and beam steering setups\n\nlight-sensitive measurement systems\n\neducational and research laboratories\n\ngeneral optomechanical and laser-based experiments\n\navailable size 305mm × 305 mm\n\nnote: customised size screen can be manfactured as per customer’s experimental set-up\n\nprocurement: request technical quote\n\ncustomised size screen can be manfactured as per customer’s experimental set-up\n\naluminium laser safety screen\n\nopto-mechanics",
+      "_search": "aluminium-laser-safety-screen set-alss aluminium/laser safety screen component opto-mechanics opto-mechanics variant-catalog manufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absorption, corrosion resistance manufactured from aluminum and finished with a durable black anodized coating beam block screen optical safety barrier optical safety screen aluminum screen finished with a durable black anodized coating integrated magnets at the base allow convenient placement on optical tables and breadboards, while a central slotted mounting hole enables secure installation on non-magnetic surfaces. laser and photonics laboratories quantum optics and spectroscopy experiments optical alignment and beam steering setups light-sensitive measurement systems educational and research laboratories general optomechanical and laser-based experiments available size 305mm × 305 mm note: customised size screen can be manfactured as per customer’s experimental set-up aluminium laser safety screen opto-mechanics procurement request technical quote  aluminium/laser safety screen\n\nmanufactured from aluminum and finished with a durable black anodized coating, the screens provide excellent light absorption, corrosion resistance\n\nmanufactured from aluminum and finished with a durable black anodized coating\n\nbeam block screen\n\noptical safety barrier\n\noptical safety screen\n\nthe screens provide excellent light absorption, corrosion resistance, and long-term durability. \n\navailable in both flat and curved configurations, they can be easily positioned around optical assemblies to create effective light barriers and beam shields.\n\naluminum screen finished with a durable black anodized coating\n\nintegrated magnets at the base allow convenient placement on optical tables and breadboards, while a central slotted mounting hole enables secure installation on non-magnetic surfaces.\n\nlaser and photonics laboratories\n\nquantum optics and spectroscopy experiments\n\noptical alignment and beam steering setups\n\nlight-sensitive measurement systems\n\neducational and research laboratories\n\ngeneral optomechanical and laser-based experiments\n\navailable size 305mm × 305 mm\n\nnote: customised size screen can be manfactured as per customer’s experimental set-up\n\nprocurement: request technical quote\n\ncustomised size screen can be manfactured as per customer’s experimental set-up\n\naluminium laser safety screen\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
@@ -1799,7 +1802,7 @@
         "OptiClamp Arm"
       ],
       "overview": [
-        "Compact Flexure-Style Mount for Precision Optic Positioning This precision-engineered M4 optic post clamp provides secure mounting, fine height adjustment, and stable flexure-based clamping in a compact stainless steel design. Ideal for platforms, stages, and V-clamp systems requiring reliable and repeatable optic positioning."
+        "Compact Flexure-Style Mount for Precision Optic Positioning. This precision-engineered M4 optic post clamp provides secure mounting, fine height adjustment, and stable flexure-based clamping in a compact stainless steel design. Ideal for platforms, stages, and V-clamp systems requiring reliable and repeatable optic positioning."
       ],
       "features": [
         "M4 Threaded Interface",
@@ -1808,9 +1811,7 @@
         "Nylon-Tipped Optic Setscrew",
         "Protects optic surfaces during tightening",
         "2.0 mm ball driver or hex key used for tightening",
-        "Material",
-        "Fabricated from corrosion-resistant 303 stainless steel",
-        "Material — Fabricated from corrosion-resistant 303 stainless steel"
+        "Fabricated from corrosion-resistant 303 stainless steel"
       ],
       "applications": [],
       "techSpecs": [],
@@ -1820,7 +1821,7 @@
       "rfqSections": null,
       "solutionContent": null,
       "customNote": null,
-      "summary": "Compact Flexure-Style Mount for Precision Optic Positioning This precision-engineered M4 optic post clamp provides secure mounting, fine height adjustment, and stable flexure-based clamping in a compact stainless steel design. Ideal for platforms, stages, and V-clamp systems requiring reliable and repeatable optic positioning.",
+      "summary": "Compact Flexure-Style Mount for Precision Optic Positioning",
       "specHighlight": "M4 Threaded Interface · External post thread: M4",
       "specs": [
         {
@@ -1856,21 +1857,23 @@
           "value": "Fabricated from corrosion-resistant 303 stainless steel"
         }
       ],
-      "body": "Clamping Arm(Mounting Clamp Arm, Support Arm Clamp, Mechanical Clamping Arm, OptiClamp Arm)\n\nCompact Flexure-Style Mount for Precision Optic Positioning\n\nThis precision-engineered M4 optic post clamp provides secure mounting, fine height adjustment, and stable flexure-based clamping in a compact stainless steel design. Ideal for platforms, stages, and V-clamp systems requiring reliable and repeatable optic positioning.\n\nKey Features\n\nM4 Threaded Interface\n\nExternal post thread: M4\n\nBottom interface: M4 threaded stud for mounting to platforms\n\nNylon-Tipped Optic Setscrew\n\nProtects optic surfaces during tightening\n\n2.0 mm ball driver or hex key used for tightening\n\nMaterial\n\nFabricated from corrosion-resistant 303 stainless steel\n\nProduct Code: SET-CA-M4",
+      "body": "Clamping Arm\n\nCompact Flexure-Style Mount for Precision Optic Positioning\n\nM4 Threaded Interface · External post thread: M4\n\nMounting Clamp Arm\n\nSupport Arm Clamp\n\nMechanical Clamping Arm\n\nOptiClamp Arm\n\nCompact Flexure-Style Mount for Precision Optic Positioning. This precision-engineered M4 optic post clamp provides secure mounting, fine height adjustment, and stable flexure-based clamping in a compact stainless steel design. Ideal for platforms, stages, and V-clamp systems requiring reliable and repeatable optic positioning.\n\nM4 Threaded Interface\n\nExternal post thread: M4\n\nBottom interface: M4 threaded stud for mounting to platforms\n\nNylon-Tipped Optic Setscrew\n\nProtects optic surfaces during tightening\n\n2.0 mm ball driver or hex key used for tightening\n\nFabricated from corrosion-resistant 303 stainless steel\n\nFeature: M4 Threaded Interface\n\nFeature: External post thread: M4\n\nFeature: Bottom interface: M4 threaded stud for mounting to platforms\n\nFeature: Nylon-Tipped Optic Setscrew\n\nFeature: Protects optic surfaces during tightening\n\nFeature: 2.0 mm ball driver or hex key used for tightening\n\nFeature: Material\n\nFeature: Fabricated from corrosion-resistant 303 stainless steel\n\nclamping arm\n\nopto-mechanics",
       "image": "assets/products/clamping-arm/primary.png",
       "tags": [
         "clamping arm",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/ClampingArm/Clamping Arm.docx",
-      "_search": "clamping-arm set-ca-m4 clamping arm component opto-mechanics opto-mechanics compact flexure-style mount for precision optic positioning this precision-engineered m4 optic post clamp provides secure mounting, fine height adjustment, and stable flexure-based clamping in a compact stainless steel design. ideal for platforms, stages, and v-clamp systems requiring reliable and repeatable optic positioning. m4 threaded interface · external post thread: m4 mounting clamp arm support arm clamp mechanical clamping arm opticlamp arm clamping arm opto-mechanics clamping arm(mounting clamp arm, support arm clamp, mechanical clamping arm, opticlamp arm)\n\ncompact flexure-style mount for precision optic positioning\n\nthis precision-engineered m4 optic post clamp provides secure mounting, fine height adjustment, and stable flexure-based clamping in a compact stainless steel design. ideal for platforms, stages, and v-clamp systems requiring reliable and repeatable optic positioning.\n\nkey features\n\nm4 threaded interface\n\nexternal post thread: m4\n\nbottom interface: m4 threaded stud for mounting to platforms\n\nnylon-tipped optic setscrew\n\nprotects optic surfaces during tightening\n\n2.0 mm ball driver or hex key used for tightening\n\nmaterial\n\nfabricated from corrosion-resistant 303 stainless steel\n\nproduct code: set-ca-m4",
+      "_search": "clamping-arm set-ca-m4 clamping arm component opto-mechanics opto-mechanics component compact flexure-style mount for precision optic positioning m4 threaded interface · external post thread: m4 mounting clamp arm support arm clamp mechanical clamping arm opticlamp arm m4 threaded interface external post thread: m4 bottom interface: m4 threaded stud for mounting to platforms nylon-tipped optic setscrew protects optic surfaces during tightening 2.0 mm ball driver or hex key used for tightening fabricated from corrosion-resistant 303 stainless steel  clamping arm opto-mechanics feature m4 threaded interface feature external post thread: m4 feature bottom interface: m4 threaded stud for mounting to platforms feature nylon-tipped optic setscrew feature protects optic surfaces during tightening feature 2.0 mm ball driver or hex key used for tightening feature material feature fabricated from corrosion-resistant 303 stainless steel  clamping arm\n\ncompact flexure-style mount for precision optic positioning\n\nm4 threaded interface · external post thread: m4\n\nmounting clamp arm\n\nsupport arm clamp\n\nmechanical clamping arm\n\nopticlamp arm\n\ncompact flexure-style mount for precision optic positioning. this precision-engineered m4 optic post clamp provides secure mounting, fine height adjustment, and stable flexure-based clamping in a compact stainless steel design. ideal for platforms, stages, and v-clamp systems requiring reliable and repeatable optic positioning.\n\nm4 threaded interface\n\nexternal post thread: m4\n\nbottom interface: m4 threaded stud for mounting to platforms\n\nnylon-tipped optic setscrew\n\nprotects optic surfaces during tightening\n\n2.0 mm ball driver or hex key used for tightening\n\nfabricated from corrosion-resistant 303 stainless steel\n\nfeature: m4 threaded interface\n\nfeature: external post thread: m4\n\nfeature: bottom interface: m4 threaded stud for mounting to platforms\n\nfeature: nylon-tipped optic setscrew\n\nfeature: protects optic surfaces during tightening\n\nfeature: 2.0 mm ball driver or hex key used for tightening\n\nfeature: material\n\nfeature: fabricated from corrosion-resistant 303 stainless steel\n\nclamping arm\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
       "images": [
         "assets/products/clamping-arm/primary.png"
       ],
-      "sortIndex": 27
+      "sortIndex": 27,
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "clamping-fork",
@@ -2136,7 +2139,7 @@
       "pageTemplate": "component",
       "aliases": [],
       "overview": [
-        "The table clamp features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. Its compact design minimizes the footprint, making it suitable for space-constrained configurations.",
+        "This product features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. Its compact design minimizes the footprint, making it suitable for space-constrained configurations.",
         "The maximum thickness of optomechanical components that can be secured with the clamp depends on the length of the screws used for fastening."
       ],
       "features": [],
@@ -2148,22 +2151,22 @@
       "rfqSections": null,
       "solutionContent": null,
       "customNote": null,
-      "summary": "The table clamp features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. Its compact design minimizes the footprint, making it suitable for space-constrained configurations.",
-      "specHighlight": "The table clamp features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted h",
+      "summary": "The table clamp features two cap screws",
+      "specHighlight": "Features two cap screws",
       "specs": [
         {
           "label": "Procurement",
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Compact Variable Height Clamp\n\nThe table clamp features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. Its compact design minimizes the footprint, making it suitable for space-constrained configurations.\n\nThe table clamp features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted h\n\nThe table clamp features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. Its compact design minimizes the footprint, making it suitable for space-constrained configurations.\n\nThe maximum thickness of optomechanical components that can be secured with the clamp depends on the length of the screws used for fastening.\n\nProcurement: Request Technical Quote\n\ncompact variable height clamp\n\nopto-mechanics",
+      "body": "Compact Variable Height Clamp\n\nThe table clamp features two cap screws\n\nFeatures two cap screws\n\nThis product features two cap screws: one engages an M6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. Its compact design minimizes the footprint, making it suitable for space-constrained configurations.\n\nThe maximum thickness of optomechanical components that can be secured with the clamp depends on the length of the screws used for fastening.\n\nProcurement: Request Technical Quote\n\ncompact variable height clamp\n\nopto-mechanics",
       "image": "assets/products/compact-variable-height-clamp/primary.png",
       "tags": [
         "compact variable height clamp",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Compact Variable Height Clamp/Compact Variable Height Clamp.docx",
-      "_search": "compact-variable-height-clamp set-cvhc compact variable height clamp component opto-mechanics opto-mechanics component the table clamp features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. its compact design minimizes the footprint, making it suitable for space-constrained configurations. the table clamp features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted h    compact variable height clamp opto-mechanics procurement request technical quote  compact variable height clamp\n\nthe table clamp features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. its compact design minimizes the footprint, making it suitable for space-constrained configurations.\n\nthe table clamp features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted h\n\nthe table clamp features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. its compact design minimizes the footprint, making it suitable for space-constrained configurations.\n\nthe maximum thickness of optomechanical components that can be secured with the clamp depends on the length of the screws used for fastening.\n\nprocurement: request technical quote\n\ncompact variable height clamp\n\nopto-mechanics",
+      "_search": "compact-variable-height-clamp set-cvhc compact variable height clamp component opto-mechanics opto-mechanics component the table clamp features two cap screws features two cap screws    compact variable height clamp opto-mechanics procurement request technical quote  compact variable height clamp\n\nthe table clamp features two cap screws\n\nfeatures two cap screws\n\nthis product features two cap screws: one engages an m6 tapped hole to allow height adjustment, enabling the clamp to accommodate a wide range of setups, while the second passes through a slotted hole to securely fasten the clamp to the optical table. its compact design minimizes the footprint, making it suitable for space-constrained configurations.\n\nthe maximum thickness of optomechanical components that can be secured with the clamp depends on the length of the screws used for fastening.\n\nprocurement: request technical quote\n\ncompact variable height clamp\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
@@ -3674,9 +3677,15 @@
       "aliases": [],
       "overview": [
         "The Tool Kit Organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.",
-        "It includes a complete set of balldrivers and hex keys in the specified sizes. All balldrivers feature high-strength alloy steel blades, ensuring durability and reliable performance in precision optical setups. Caddy does not include hex keys and screw drivers."
+        "The ball drivers and hex key holes are ranged from 1.5cm to 5cm"
       ],
-      "features": [],
+      "features": [
+        "Precision-machined aluminium alloy construction            ",
+        "Black anodized finish for durability and low reflectivity",
+        "Lightweight yet rigid construction for stable support  ",
+        "Corrosion-resistant surface finish",
+        "Designed and manufactured in India "
+      ],
       "applications": [],
       "techSpecs": [],
       "keyValueSpecs": [],
@@ -3686,21 +3695,21 @@
       "solutionContent": null,
       "customNote": null,
       "summary": "The Tool Kit Organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.",
-      "specHighlight": "Table-mountable tool caddy · Balldrivers included",
+      "specHighlight": "Table-mountable tool caddy ",
       "specs": [
         {
           "label": "Procurement",
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Mountable Tool Kit\n\nThe Tool Kit Organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\nTable-mountable tool caddy · Balldrivers included\n\nThe Tool Kit Organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\nIt includes a complete set of balldrivers and hex keys in the specified sizes. All balldrivers feature high-strength alloy steel blades, ensuring durability and reliable performance in precision optical setups. Caddy does not include hex keys and screw drivers.\n\nProcurement: Request Technical Quote\n\nmountable tool kit\n\nopto-mechanics",
+      "body": "Mountable Tool Kit\n\nThe Tool Kit Organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\nTable-mountable tool caddy \n\nThe Tool Kit Organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\nThe ball drivers and hex key holes are ranged from 1.5cm to 5cm\n\nPrecision-machined aluminium alloy construction            \n\nBlack anodized finish for durability and low reflectivity\n\nLightweight yet rigid construction for stable support  \n\nCorrosion-resistant surface finish\n\nDesigned and manufactured in India \n\nProcurement: Request Technical Quote\n\nmountable tool kit\n\nopto-mechanics",
       "image": null,
       "tags": [
         "mountable tool kit",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/12 piece Mountable Tool Caddy Kit/Mountable Tool Kit.docx",
-      "_search": "mountable-tool-kit set-tl-kit mountable tool kit component opto-mechanics opto-mechanics component the tool kit organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments. table-mountable tool caddy · balldrivers included    mountable tool kit opto-mechanics procurement request technical quote  mountable tool kit\n\nthe tool kit organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\ntable-mountable tool caddy · balldrivers included\n\nthe tool kit organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\nit includes a complete set of balldrivers and hex keys in the specified sizes. all balldrivers feature high-strength alloy steel blades, ensuring durability and reliable performance in precision optical setups. caddy does not include hex keys and screw drivers.\n\nprocurement: request technical quote\n\nmountable tool kit\n\nopto-mechanics",
+      "_search": "mountable-tool-kit set-tl-kit mountable tool kit component opto-mechanics opto-mechanics component the tool kit organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments. table-mountable tool caddy   precision-machined aluminium alloy construction             black anodized finish for durability and low reflectivity lightweight yet rigid construction for stable support   corrosion-resistant surface finish designed and manufactured in india   mountable tool kit opto-mechanics procurement request technical quote  mountable tool kit\n\nthe tool kit organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\ntable-mountable tool caddy \n\nthe tool kit organizer is designed for convenient and efficient storage, with the ability to bolt directly onto an optical table for easy access during experiments.\n\nthe ball drivers and hex key holes are ranged from 1.5cm to 5cm\n\nprecision-machined aluminium alloy construction            \n\nblack anodized finish for durability and low reflectivity\n\nlightweight yet rigid construction for stable support  \n\ncorrosion-resistant surface finish\n\ndesigned and manufactured in india \n\nprocurement: request technical quote\n\nmountable tool kit\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
