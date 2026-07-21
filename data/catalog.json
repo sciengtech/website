@@ -1730,13 +1730,18 @@
     },
     {
       "id": "cage-plate",
-      "sku": "",
+      "sku": "SET-CP",
       "name": "Cage Plate",
       "type": "component",
       "pageTemplate": "component",
       "aliases": [],
-      "overview": [],
-      "features": [],
+      "overview": [
+        "They provide a rigid mounting interface for cage rods and allow optical elements to be positioned accurately along a common optical axis."
+      ],
+      "features": [
+        "They are designed for easy integration with cage rods, lens tubes, posts, optical rails, and breadboards.",
+        "The 30 mm cage plate is designed to hold optical components ranging from 5 mm to 1 inch in diameter within a cage assembly."
+      ],
       "applications": [],
       "techSpecs": [],
       "keyValueSpecs": [],
@@ -1745,22 +1750,22 @@
       "rfqSections": null,
       "solutionContent": null,
       "customNote": null,
-      "summary": "Cage Plate",
-      "specHighlight": "SET-ITEM",
+      "summary": "Cage Plates are used to build stable 30 mm and 60 mm cage-based optical systems for precise alignment of lenses, filters, mirrors, beam splitters, and other optical components",
+      "specHighlight": "Cage Plates are used to build stable 30 mm and 60 mm cage-based optical systems for precise alignment of lenses, filters, mirrors, beam splitters, and other optical components",
       "specs": [
         {
           "label": "Procurement",
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Cage Plate\n\nCage Plate\n\nSET-ITEM\n\nProcurement: Request Technical Quote\n\ncage plate\n\nopto-mechanics",
+      "body": "Cage Plate\n\nCage Plates are used to build stable 30 mm and 60 mm cage-based optical systems for precise alignment of lenses, filters, mirrors, beam splitters, and other optical components\n\nCage Plates are used to build stable 30 mm and 60 mm cage-based optical systems for precise alignment of lenses, filters, mirrors, beam splitters, and other optical components\n\nThey provide a rigid mounting interface for cage rods and allow optical elements to be positioned accurately along a common optical axis.\n\nThey are designed for easy integration with cage rods, lens tubes, posts, optical rails, and breadboards.\n\nThe 30 mm cage plate is designed to hold optical components ranging from 5 mm to 1 inch in diameter within a cage assembly.\n\nProcurement: Request Technical Quote\n\ncage plate\n\nopto-mechanics",
       "image": null,
       "tags": [
         "cage plate",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Cage Plate/Cage Plate.docx",
-      "_search": "cage-plate  cage plate component opto-mechanics opto-mechanics component cage plate set-item    cage plate opto-mechanics procurement request technical quote  cage plate\n\ncage plate\n\nset-item\n\nprocurement: request technical quote\n\ncage plate\n\nopto-mechanics",
+      "_search": "cage-plate set-cp cage plate component opto-mechanics opto-mechanics component cage plates are used to build stable 30 mm and 60 mm cage-based optical systems for precise alignment of lenses, filters, mirrors, beam splitters, and other optical components cage plates are used to build stable 30 mm and 60 mm cage-based optical systems for precise alignment of lenses, filters, mirrors, beam splitters, and other optical components  they are designed for easy integration with cage rods, lens tubes, posts, optical rails, and breadboards. the 30 mm cage plate is designed to hold optical components ranging from 5 mm to 1 inch in diameter within a cage assembly.  cage plate opto-mechanics procurement request technical quote  cage plate\n\ncage plates are used to build stable 30 mm and 60 mm cage-based optical systems for precise alignment of lenses, filters, mirrors, beam splitters, and other optical components\n\ncage plates are used to build stable 30 mm and 60 mm cage-based optical systems for precise alignment of lenses, filters, mirrors, beam splitters, and other optical components\n\nthey provide a rigid mounting interface for cage rods and allow optical elements to be positioned accurately along a common optical axis.\n\nthey are designed for easy integration with cage rods, lens tubes, posts, optical rails, and breadboards.\n\nthe 30 mm cage plate is designed to hold optical components ranging from 5 mm to 1 inch in diameter within a cage assembly.\n\nprocurement: request technical quote\n\ncage plate\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
