@@ -207,18 +207,21 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "SciEngTech ‘Quantum Eraser’ Educational Kit\n\nPurpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts. \n\nComplete, Ready-to-Use System: Supplied with all optical and mechanical components, along with a comprehensive instructional manual and structured teaching resources. \n\nConcept-Driven Experimental Platform: Enables analogy of single-photon interference in a Mach–Zehnder interferometer. \n\nDemonstrates Quantum Complementarity: Clearly illustrates the wave–particle duality of light through controlled experimental conditions. \n\nPolarization-Based Which-Path Control: Demonstrates how polarization can “mark” photon paths and how path information can be “erased” to restore interference. \n\nUser-Friendly Assembly: Designed for quick setup, stable alignment, and repeatable results in academic environments. \n\nIntegrated Optical Source: Includes SciEngTech Solutions 520 nm (Green) laser diode with dedicated power supply. \n\nModular Mechanical Architecture \n\nCompact and Laboratory-Efficient Design \n\nProudly Designed and Manufactured in India. \n\nProduct Code: SET-QuantumEraser-EDU",
-      "image": "assets/products/quantum-eraser/primary.png",
+      "body": "SciEngTech ‘Quantum Eraser’ Educational Kit\n\nPurpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts.\n\nEducational quantum optics kit · Request Technical Quote\n\nProcurement: Request Technical Quote\n\nPurpose-Built for Education: Specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts.\n\nConcept-Driven Experimental Platform: Enables analogy of single-photon interference in a Mach–Zehnder interferometer.\n\nDemonstrates Quantum Complementarity: Clearly illustrates the wave–particle duality of light through controlled experimental conditions.\n\nPolarization-Based Which-Path Control: Demonstrates how polarization can “mark” photon paths and how path information can be “erased” to restore interference.\n\nUser-Friendly Assembly: Designed for quick setup, stable alignment, and repeatable results in academic environments.\n\nIntegrated Optical Source: Includes SciEngTech Solutions 520 nm (Green) laser diode with dedicated power supply.\n\nModular Mechanical Architecture\n\nCompact and Laboratory-Efficient Design\n\nComplete, Ready-to-Use System: Supplied with all optical and mechanical components, along with a comprehensive instructional manual and structured teaching resources.\n\nProudly Designed and Manufactured in India.\n\nProudly Designed and Manufactured in India\n\nquantum eraser\n\nquantum set-up\n\n[{\"id\":\"requirements\",\"title\":\"Specify Your Requirements\",\"parameters\":[\"Application and experimental goals\",\"Wavelength / spectral range\",\"Power, repetition rate, or bandwidth targets\",\"Integration and mounting requirements\",\"Timeline and quantity\"]}]",
+      "image": "assets/products/quantum-eraser/primary.jpg",
       "tags": [
         "quantum eraser",
         "quantum set-up"
       ],
       "writeupPath": "Quantum Set-Up/Quantum Eraser/Quantum Eraser.docx",
-      "_search": "quantum-eraser set-quantumeraser-edu sciengtech ‘quantum eraser’ educational kit solution quantum-setups quantum set-ups purpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts. educational quantum optics kit · request technical quote  quantum eraser quantum set-up sciengtech ‘quantum eraser’ educational kit\n\npurpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts. \n\ncomplete, ready-to-use system: supplied with all optical and mechanical components, along with a comprehensive instructional manual and structured teaching resources. \n\nconcept-driven experimental platform: enables analogy of single-photon interference in a mach–zehnder interferometer. \n\ndemonstrates quantum complementarity: clearly illustrates the wave–particle duality of light through controlled experimental conditions. \n\npolarization-based which-path control: demonstrates how polarization can “mark” photon paths and how path information can be “erased” to restore interference. \n\nuser-friendly assembly: designed for quick setup, stable alignment, and repeatable results in academic environments. \n\nintegrated optical source: includes sciengtech solutions 520 nm (green) laser diode with dedicated power supply. \n\nmodular mechanical architecture \n\ncompact and laboratory-efficient design \n\nproudly designed and manufactured in india. \n\nproduct code: set-quantumeraser-edu",
+      "_search": "quantum-eraser set-quantumeraser-edu sciengtech ‘quantum eraser’ educational kit solution  quantum set-ups solution purpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts. educational quantum optics kit · request technical quote    quantum eraser quantum set-up procurement request technical quote  sciengtech ‘quantum eraser’ educational kit\n\npurpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts.\n\neducational quantum optics kit · request technical quote\n\nprocurement: request technical quote\n\npurpose-built for education: specifically engineered for classroom instruction, laboratory demonstrations, and advanced teaching of quantum optics concepts.\n\nconcept-driven experimental platform: enables analogy of single-photon interference in a mach–zehnder interferometer.\n\ndemonstrates quantum complementarity: clearly illustrates the wave–particle duality of light through controlled experimental conditions.\n\npolarization-based which-path control: demonstrates how polarization can “mark” photon paths and how path information can be “erased” to restore interference.\n\nuser-friendly assembly: designed for quick setup, stable alignment, and repeatable results in academic environments.\n\nintegrated optical source: includes sciengtech solutions 520 nm (green) laser diode with dedicated power supply.\n\nmodular mechanical architecture\n\ncompact and laboratory-efficient design\n\ncomplete, ready-to-use system: supplied with all optical and mechanical components, along with a comprehensive instructional manual and structured teaching resources.\n\nproudly designed and manufactured in india.\n\nproudly designed and manufactured in india\n\nquantum eraser\n\nquantum set-up\n\n[{\"id\":\"requirements\",\"title\":\"specify your requirements\",\"parameters\":[\"application and experimental goals\",\"wavelength / spectral range\",\"power, repetition rate, or bandwidth targets\",\"integration and mounting requirements\",\"timeline and quantity\"]}]",
       "solutionGroup": "quantum-setups",
       "categoryLabel": "Quantum Set-Ups",
       "solutionUrl": "solutions/quantum-eraser.html",
-      "sortIndex": 3
+      "sortIndex": 3,
+      "images": [],
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "bomb-tester",
@@ -341,8 +344,8 @@
           "value": "Custom configuration · Request Technical Quote"
         }
       ],
-      "body": "HBT and HOM\n\nHanbury Brown–Twiss (HBT) and Hong–Ou–Mandel (HOM) experimental setups for photon statistics and indistinguishability measurements.\n\nCustomized as per user requirements.",
-      "image": null,
+      "body": "HBT and HOM\n\nHanbury Brown–Twiss (HBT) and Hong–Ou–Mandel (HOM) experimental setups for photon statistics and indistinguishability measurements.\n\nCustomized as per user requirements · Request Technical Quote\n\nHanbury Brown–Twiss (HBT) and Hong–Ou–Mandel (HOM) experimental setups for photon statistics and indistinguishability measurements.\n\nProcurement: Custom configuration · Request Technical Quote\n\nCustomized as per user requirements\n\nEngineering consultation and specification review\n\nTurnkey or modular delivery scoped to your quote\n\nProudly Designed and Manufactured in India\n\nhbt and hom\n\nquantum setups\n\n[{\"id\":\"requirements\",\"title\":\"Specify Your Requirements\",\"parameters\":[\"Application and experimental goals\",\"Wavelength / spectral range\",\"Power, repetition rate, or bandwidth targets\",\"Integration and mounting requirements\",\"Timeline and quantity\"]}]",
+      "image": "assets/products/hbt-and-hom/primary.webp",
       "tags": [
         "hbt and hom",
         "quantum setups"
@@ -351,8 +354,11 @@
       "solutionGroup": "quantum-setups",
       "categoryLabel": "Quantum Set-Ups",
       "solutionUrl": "solutions/hbt-and-hom.html",
-      "_search": "hbt-and-hom set-hbt-hom hbt and hom solution quantum-setups quantum set-ups hanbury brown–twiss (hbt) and hong–ou–mandel (hom) experimental setups for photon statistics and indistinguishability measurements. customized as per user requirements · request technical quote  hbt and hom quantum setups hbt and hom\n\nhanbury brown–twiss (hbt) and hong–ou–mandel (hom) experimental setups for photon statistics and indistinguishability measurements.\n\ncustomized as per user requirements.",
-      "sortIndex": 5
+      "_search": "hbt-and-hom set-hbt-hom hbt and hom solution  quantum set-ups solution hanbury brown–twiss (hbt) and hong–ou–mandel (hom) experimental setups for photon statistics and indistinguishability measurements. customized as per user requirements · request technical quote    hbt and hom quantum setups procurement custom configuration · request technical quote  hbt and hom\n\nhanbury brown–twiss (hbt) and hong–ou–mandel (hom) experimental setups for photon statistics and indistinguishability measurements.\n\ncustomized as per user requirements · request technical quote\n\nhanbury brown–twiss (hbt) and hong–ou–mandel (hom) experimental setups for photon statistics and indistinguishability measurements.\n\nprocurement: custom configuration · request technical quote\n\ncustomized as per user requirements\n\nengineering consultation and specification review\n\nturnkey or modular delivery scoped to your quote\n\nproudly designed and manufactured in india\n\nhbt and hom\n\nquantum setups\n\n[{\"id\":\"requirements\",\"title\":\"specify your requirements\",\"parameters\":[\"application and experimental goals\",\"wavelength / spectral range\",\"power, repetition rate, or bandwidth targets\",\"integration and mounting requirements\",\"timeline and quantity\"]}]",
+      "sortIndex": 5,
+      "images": [],
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "quantum-tomography",
@@ -405,8 +411,8 @@
           "value": "Custom configuration · Request Technical Quote"
         }
       ],
-      "body": "Quantum Tomography\n\nQuantum state tomography platforms for reconstructing and characterizing quantum states in research and education.\n\nConfigured in consultation with SciEngTech engineering.",
-      "image": null,
+      "body": "Quantum Tomography\n\nQuantum state tomography platforms for reconstructing and characterizing quantum states in research and education.\n\nRequest Technical Quote · Engineering consultation available\n\nQuantum state tomography platforms for reconstructing and characterizing quantum states in research and education.\n\nProcurement: Custom configuration · Request Technical Quote\n\nQuantum state tomography platforms for reconstructing and characterizing quantum states in research and education.\n\nConfigured in consultation with SciEngTech engineering.\n\nEngineering consultation and specification review\n\nTurnkey or modular delivery scoped to your quote\n\nProudly Designed and Manufactured in India\n\nquantum tomography\n\nquantum setups\n\n[{\"id\":\"requirements\",\"title\":\"Specify Your Requirements\",\"parameters\":[\"Application and experimental goals\",\"Wavelength / spectral range\",\"Power, repetition rate, or bandwidth targets\",\"Integration and mounting requirements\",\"Timeline and quantity\"]}]",
+      "image": "assets/products/quantum-tomography/primary.webp",
       "tags": [
         "quantum tomography",
         "quantum setups"
@@ -415,8 +421,11 @@
       "solutionGroup": "quantum-setups",
       "categoryLabel": "Quantum Set-Ups",
       "solutionUrl": "solutions/quantum-tomography.html",
-      "_search": "quantum-tomography set-qtom quantum tomography solution quantum-setups quantum set-ups quantum state tomography platforms for reconstructing and characterizing quantum states in research and education. request technical quote · engineering consultation available  quantum tomography quantum setups quantum tomography\n\nquantum state tomography platforms for reconstructing and characterizing quantum states in research and education.\n\nconfigured in consultation with sciengtech engineering.",
-      "sortIndex": 6
+      "_search": "quantum-tomography set-qtom quantum tomography solution  quantum set-ups solution quantum state tomography platforms for reconstructing and characterizing quantum states in research and education. request technical quote · engineering consultation available    quantum tomography quantum setups procurement custom configuration · request technical quote  quantum tomography\n\nquantum state tomography platforms for reconstructing and characterizing quantum states in research and education.\n\nrequest technical quote · engineering consultation available\n\nquantum state tomography platforms for reconstructing and characterizing quantum states in research and education.\n\nprocurement: custom configuration · request technical quote\n\nquantum state tomography platforms for reconstructing and characterizing quantum states in research and education.\n\nconfigured in consultation with sciengtech engineering.\n\nengineering consultation and specification review\n\nturnkey or modular delivery scoped to your quote\n\nproudly designed and manufactured in india\n\nquantum tomography\n\nquantum setups\n\n[{\"id\":\"requirements\",\"title\":\"specify your requirements\",\"parameters\":[\"application and experimental goals\",\"wavelength / spectral range\",\"power, repetition rate, or bandwidth targets\",\"integration and mounting requirements\",\"timeline and quantity\"]}]",
+      "sortIndex": 6,
+      "images": [],
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "michelson-interferometer",
