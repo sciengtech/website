@@ -4917,40 +4917,7 @@
         "Quantum optics teaching and research setups",
         "Scientific and educational laboratories"
       ],
-      "techSpecs": [
-        {
-          "label": "Lens",
-          "value": "Plano-Convex, Bi-Convex, Plano-Concave, Bi-Concave, Achromatic, Cylindrical, Aspheric, and Ball Lenses"
-        },
-        {
-          "label": "Material",
-          "value": "BK7, Fused Silica, Optical Glass, and Specialty Glass"
-        },
-        {
-          "label": "Diameter",
-          "value": "6 mm, 12.7 mm, 25.4 mm, 50.8 mm"
-        },
-        {
-          "label": "Focal length",
-          "value": "Short, Medium, and Long Focal Length Lenses"
-        },
-        {
-          "label": "Coating",
-          "value": "Uncoated, MgF₂, Broadband Anti-Reflection, and Laser-Line AR Coating"
-        },
-        {
-          "label": "Wavelength",
-          "value": "UV, Visible, NIR, and Selected Laser Wavelengths"
-        },
-        {
-          "label": "Mounting",
-          "value": "Mounted and Unmounted Lenses"
-        },
-        {
-          "label": "Compatibility",
-          "value": "Standard Opto-Mechanics"
-        }
-      ],
+      "techSpecs": [],
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
@@ -4965,8 +4932,8 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Lenses\n\nPrecision optical lenses for focusing, collimation, imaging, and beam expansion. Detailed write-up coming soon.\n\nLens: Plano-Convex, Bi-Convex, Plano-Concave, Bi-Concave, Achromatic, Cylindrical, Aspheric, and Ball Lenses\n\nMaterial: BK7, Fused Silica, Optical Glass, and Specialty Glass\n\nDiameter: 6 mm, 12.7 mm, 25.4 mm, 50.8 mm\n\nFocal length: Short, Medium, and Long Focal Length Lenses\n\nCoating: Uncoated, MgF₂, Broadband Anti-Reflection, and Laser-Line AR Coating\n\nWavelength: UV, Visible, NIR, and Selected Laser Wavelengths\n\nMounting: Mounted and Unmounted Lenses\n\nCompatibility: Standard Opto-Mechanics",
-      "image": "assets/slides/03-dielectric-mirror.svg",
+      "body": "Lenses\n\nPrecision optical lenses for focusing, collimation, imaging, and beam expansion. Detailed write-up coming soon.\n\nRequest Technical Quote · Specs below are indicative\n\nOptical Lenses\n\nPlano-Convex\n\nPCX\n\nPCV\n\nPrecision optical lenses for focusing, collimation, imaging, and beam expansion. Detailed write-up coming soon.\n\nSpecification ranges below are indicative. Final configuration, coating, and dimensions are confirmed on quotation.\n\nLens: Plano-Convex, Bi-Convex, Plano-Concave, Bi-Concave, Achromatic, Cylindrical, Aspheric, and Ball Lenses\n\nWavelength: UV, Visible, and NIR\n\nMaterial: BK7, Fused Silica, Optical Glass, and Specialty Optical Materials\n\nCoating: Aluminium, Silver, Chromium, Dielectric, Anti-Reflection, Broadband and Laser-Line, Coated, Uncoated\n\nSize: Standard Diameters, Standard Shapes, and Custom Sizes\n\nMounting Options: Mounted and Unmounted Optics\n\nLaser beam alignment\n\nImaging and spectroscopy\n\nInterferometry\n\nPhotonics experiments\n\nOptical instrumentation\n\nQuantum optics teaching and research setups\n\nScientific and educational laboratories\n\nProcurement: Request Technical Quote\n\nLabel\n\nValue\n\nLens\n\nPlano-Convex, Bi-Convex, Plano-Concave, Bi-Concave, Achromatic, Cylindrical, Aspheric, and Ball Lenses\n\nMaterial\n\nBK7, Fused Silica, Optical Glass, and Specialty Glass\n\nDiameter\n\n6 mm, 12.7 mm, 25.4 mm, 50.8 mm\n\nFocal length\n\nShort, Medium, and Long Focal Length Lenses\n\nCoating\n\nUncoated, MgF₂, Broadband Anti-Reflection, and Laser-Line AR Coating\n\nWavelength\n\nUV, Visible, NIR, and Selected Laser Wavelengths\n\nMounting\n\nMounted and Unmounted Lenses\n\nCompatibility\n\nStandard Opto-Mechanics\n\nlenses\n\noptics\n\noptical components",
+      "image": "assets/products/optical-lenses/primary.png",
       "images": [
         "assets/slides/03-dielectric-mirror.svg"
       ],
@@ -4980,7 +4947,49 @@
       "categoryLabel": "Optics",
       "categoryPath": "/components/optics.html",
       "sortIndex": 1,
-      "_search": "optical-lenses set-lenses lenses component optics optics precision optical lenses for focusing, collimation, imaging, and beam expansion. detailed write-up coming soon. request technical quote · specs below are indicative optical lenses plano-convex pcx pcv lenses optics optical components lenses\n\nprecision optical lenses for focusing, collimation, imaging, and beam expansion. detailed write-up coming soon.\n\nlens: plano-convex, bi-convex, plano-concave, bi-concave, achromatic, cylindrical, aspheric, and ball lenses\n\nmaterial: bk7, fused silica, optical glass, and specialty glass\n\ndiameter: 6 mm, 12.7 mm, 25.4 mm, 50.8 mm\n\nfocal length: short, medium, and long focal length lenses\n\ncoating: uncoated, mgf₂, broadband anti-reflection, and laser-line ar coating\n\nwavelength: uv, visible, nir, and selected laser wavelengths\n\nmounting: mounted and unmounted lenses\n\ncompatibility: standard opto-mechanics"
+      "_search": "optical-lenses set-lenses lenses component optics optics component precision optical lenses for focusing, collimation, imaging, and beam expansion. detailed write-up coming soon. request technical quote · specs below are indicative optical lenses plano-convex pcx pcv lens: plano-convex, bi-convex, plano-concave, bi-concave, achromatic, cylindrical, aspheric, and ball lenses wavelength: uv, visible, and nir material: bk7, fused silica, optical glass, and specialty optical materials coating: aluminium, silver, chromium, dielectric, anti-reflection, broadband and laser-line, coated, uncoated size: standard diameters, standard shapes, and custom sizes mounting options: mounted and unmounted optics laser beam alignment imaging and spectroscopy interferometry photonics experiments optical instrumentation quantum optics teaching and research setups scientific and educational laboratories lenses optics optical components procurement request technical quote  lenses\n\nprecision optical lenses for focusing, collimation, imaging, and beam expansion. detailed write-up coming soon.\n\nrequest technical quote · specs below are indicative\n\noptical lenses\n\nplano-convex\n\npcx\n\npcv\n\nprecision optical lenses for focusing, collimation, imaging, and beam expansion. detailed write-up coming soon.\n\nspecification ranges below are indicative. final configuration, coating, and dimensions are confirmed on quotation.\n\nlens: plano-convex, bi-convex, plano-concave, bi-concave, achromatic, cylindrical, aspheric, and ball lenses\n\nwavelength: uv, visible, and nir\n\nmaterial: bk7, fused silica, optical glass, and specialty optical materials\n\ncoating: aluminium, silver, chromium, dielectric, anti-reflection, broadband and laser-line, coated, uncoated\n\nsize: standard diameters, standard shapes, and custom sizes\n\nmounting options: mounted and unmounted optics\n\nlaser beam alignment\n\nimaging and spectroscopy\n\ninterferometry\n\nphotonics experiments\n\noptical instrumentation\n\nquantum optics teaching and research setups\n\nscientific and educational laboratories\n\nprocurement: request technical quote\n\nlabel\n\nvalue\n\nlens\n\nplano-convex, bi-convex, plano-concave, bi-concave, achromatic, cylindrical, aspheric, and ball lenses\n\nmaterial\n\nbk7, fused silica, optical glass, and specialty glass\n\ndiameter\n\n6 mm, 12.7 mm, 25.4 mm, 50.8 mm\n\nfocal length\n\nshort, medium, and long focal length lenses\n\ncoating\n\nuncoated, mgf₂, broadband anti-reflection, and laser-line ar coating\n\nwavelength\n\nuv, visible, nir, and selected laser wavelengths\n\nmounting\n\nmounted and unmounted lenses\n\ncompatibility\n\nstandard opto-mechanics\n\nlenses\n\noptics\n\noptical components",
+      "customTable": {
+        "title": null,
+        "columns": [
+          "Label",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Lens",
+            "Plano-Convex, Bi-Convex, Plano-Concave, Bi-Concave, Achromatic, Cylindrical, Aspheric, and Ball Lenses"
+          ],
+          [
+            "Material",
+            "BK7, Fused Silica, Optical Glass, and Specialty Glass"
+          ],
+          [
+            "Diameter",
+            "6 mm, 12.7 mm, 25.4 mm, 50.8 mm"
+          ],
+          [
+            "Focal length",
+            "Short, Medium, and Long Focal Length Lenses"
+          ],
+          [
+            "Coating",
+            "Uncoated, MgF₂, Broadband Anti-Reflection, and Laser-Line AR Coating"
+          ],
+          [
+            "Wavelength",
+            "UV, Visible, NIR, and Selected Laser Wavelengths"
+          ],
+          [
+            "Mounting",
+            "Mounted and Unmounted Lenses"
+          ],
+          [
+            "Compatibility",
+            "Standard Opto-Mechanics"
+          ]
+        ]
+      },
+      "specTableTitle": null
     },
     {
       "id": "optical-mirrors",
