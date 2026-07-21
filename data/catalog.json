@@ -5129,44 +5129,7 @@
         "Quantum optics teaching and research setups",
         "Scientific and educational laboratories"
       ],
-      "techSpecs": [
-        {
-          "label": "Beam Splitter",
-          "value": "Plate Beam Splitters, Cube Beam Splitters, Non-Polarizing Beam Splitters, and Polarizing Beam Splitters"
-        },
-        {
-          "label": "Splitting Ratio (R/T)",
-          "value": "50:50, 70:30, 80:20, 90:10"
-        },
-        {
-          "label": "Wavelength Range",
-          "value": "Visible, NIR, Broadband and Laser-Line Wavelength Ranges"
-        },
-        {
-          "label": "Coating",
-          "value": "Broadband Coatings, Laser-Line Coatings, and Anti-Reflection Coated Back Surfaces"
-        },
-        {
-          "label": "Material",
-          "value": "BK7, Fused Silica, Optical Glass, and Specialty Optical Materials"
-        },
-        {
-          "label": "Size",
-          "value": "12.7 mm, 25.4 mm, 50.8 mm, Cube Sizes, and Custom Dimensions"
-        },
-        {
-          "label": "Mounting",
-          "value": "Mounted and Unmounted Beam Splitters"
-        },
-        {
-          "label": "Polarization",
-          "value": "Polarization-Sensitive and Polarization-Insensitive Configurations"
-        },
-        {
-          "label": "Compatibility",
-          "value": "Standard Opto-Mechanics"
-        }
-      ],
+      "techSpecs": [],
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
@@ -5181,10 +5144,11 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Beam Splitters\n\nPlate and cube beam splitters for dividing and combining optical beams. Detailed write-up coming soon.\n\nBeam Splitter: Plate Beam Splitters, Cube Beam Splitters, Non-Polarizing Beam Splitters, and Polarizing Beam Splitters\n\nSplitting Ratio (R/T): 50:50, 70:30, 80:20, 90:10\n\nWavelength Range: Visible, NIR, Broadband and Laser-Line Wavelength Ranges\n\nCoating: Broadband Coatings, Laser-Line Coatings, and Anti-Reflection Coated Back Surfaces\n\nMaterial: BK7, Fused Silica, Optical Glass, and Specialty Optical Materials\n\nSize: 12.7 mm, 25.4 mm, 50.8 mm, Cube Sizes, and Custom Dimensions\n\nMounting: Mounted and Unmounted Beam Splitters\n\nPolarization: Polarization-Sensitive and Polarization-Insensitive Configurations\n\nCompatibility: Standard Opto-Mechanics",
+      "body": "Beam Splitters\n\nPlate and cube beam splitters for dividing and combining optical beams. Detailed write-up coming soon.\n\nRequest Technical Quote · Specs below are indicative\n\nBeamsplitter\n\nCube Beam Splitter\n\nPlate Beam Splitter\n\nPlate and cube beam splitters for dividing and combining optical beams. Detailed write-up coming soon.\n\nSpecification ranges below are indicative. Final configuration, coating, and dimensions are confirmed on quotation.\n\nBeam Splitter: Plate Beam Splitters, Cube Beam Splitters, Non-Polarizing Beam Splitters, and Polarizing Beam Splitters\n\nWavelength: UV, Visible, and NIR\n\nMaterial: BK7, Fused Silica, Optical Glass, and Specialty Optical Materials\n\nCoating: Aluminium, Silver, Chromium, Dielectric, Anti-Reflection, Broadband and Laser-Line, Coated, Uncoated\n\nSize: Standard Diameters, Standard Shapes, and Custom Sizes\n\nMounting Options: Mounted and Unmounted Optics\n\nLaser beam alignment\n\nImaging and spectroscopy\n\nInterferometry\n\nPhotonics experiments\n\nOptical instrumentation\n\nQuantum optics teaching and research setups\n\nScientific and educational laboratories\n\nProcurement: Request Technical Quote\n\nLabel\n\nValue\n\nBeam Splitter\n\nPlate Beam Splitters, Cube Beam Splitters, Non-Polarizing Beam Splitters, and Polarizing Beam Splitters\n\nSplitting Ratio (R/T)\n\n50:50, 70:30, 80:20, 90:10\n\nWavelength Range\n\nVisible, NIR, Broadband and Laser-Line Wavelength Ranges\n\nCoating\n\nBroadband Coatings, Laser-Line Coatings, and Anti-Reflection Coated Back Surfaces\n\nMaterial\n\nBK7, Fused Silica, Optical Glass, and Specialty Optical Materials\n\nSize\n\n12.7 mm, 25.4 mm, 50.8 mm, Cube Sizes, and Custom Dimensions\n\nMounting\n\nMounted and Unmounted Beam Splitters\n\nPolarization\n\nPolarization-Sensitive and Polarization-Insensitive Configurations\n\nCompatibility\n\nStandard Opto-Mechanics\n\nbeam splitters\n\noptics\n\noptical components",
       "image": "assets/slides/03-dielectric-mirror.svg",
       "images": [
-        "assets/slides/03-dielectric-mirror.svg"
+        "assets/slides/03-dielectric-mirror.svg",
+        "assets/products/beam-splitters/image-02.png"
       ],
       "tags": [
         "beam splitters",
@@ -5196,7 +5160,53 @@
       "categoryLabel": "Optics",
       "categoryPath": "/components/optics.html",
       "sortIndex": 3,
-      "_search": "beam-splitters set-beamsplitters beam splitters component optics optics plate and cube beam splitters for dividing and combining optical beams. detailed write-up coming soon. request technical quote · specs below are indicative beamsplitter cube beam splitter plate beam splitter beam splitters optics optical components beam splitters\n\nplate and cube beam splitters for dividing and combining optical beams. detailed write-up coming soon.\n\nbeam splitter: plate beam splitters, cube beam splitters, non-polarizing beam splitters, and polarizing beam splitters\n\nsplitting ratio (r/t): 50:50, 70:30, 80:20, 90:10\n\nwavelength range: visible, nir, broadband and laser-line wavelength ranges\n\ncoating: broadband coatings, laser-line coatings, and anti-reflection coated back surfaces\n\nmaterial: bk7, fused silica, optical glass, and specialty optical materials\n\nsize: 12.7 mm, 25.4 mm, 50.8 mm, cube sizes, and custom dimensions\n\nmounting: mounted and unmounted beam splitters\n\npolarization: polarization-sensitive and polarization-insensitive configurations\n\ncompatibility: standard opto-mechanics"
+      "_search": "beam-splitters set-beamsplitters beam splitters component optics optics component plate and cube beam splitters for dividing and combining optical beams. detailed write-up coming soon. request technical quote · specs below are indicative beamsplitter cube beam splitter plate beam splitter beam splitter: plate beam splitters, cube beam splitters, non-polarizing beam splitters, and polarizing beam splitters wavelength: uv, visible, and nir material: bk7, fused silica, optical glass, and specialty optical materials coating: aluminium, silver, chromium, dielectric, anti-reflection, broadband and laser-line, coated, uncoated size: standard diameters, standard shapes, and custom sizes mounting options: mounted and unmounted optics laser beam alignment imaging and spectroscopy interferometry photonics experiments optical instrumentation quantum optics teaching and research setups scientific and educational laboratories beam splitters optics optical components procurement request technical quote  beam splitters\n\nplate and cube beam splitters for dividing and combining optical beams. detailed write-up coming soon.\n\nrequest technical quote · specs below are indicative\n\nbeamsplitter\n\ncube beam splitter\n\nplate beam splitter\n\nplate and cube beam splitters for dividing and combining optical beams. detailed write-up coming soon.\n\nspecification ranges below are indicative. final configuration, coating, and dimensions are confirmed on quotation.\n\nbeam splitter: plate beam splitters, cube beam splitters, non-polarizing beam splitters, and polarizing beam splitters\n\nwavelength: uv, visible, and nir\n\nmaterial: bk7, fused silica, optical glass, and specialty optical materials\n\ncoating: aluminium, silver, chromium, dielectric, anti-reflection, broadband and laser-line, coated, uncoated\n\nsize: standard diameters, standard shapes, and custom sizes\n\nmounting options: mounted and unmounted optics\n\nlaser beam alignment\n\nimaging and spectroscopy\n\ninterferometry\n\nphotonics experiments\n\noptical instrumentation\n\nquantum optics teaching and research setups\n\nscientific and educational laboratories\n\nprocurement: request technical quote\n\nlabel\n\nvalue\n\nbeam splitter\n\nplate beam splitters, cube beam splitters, non-polarizing beam splitters, and polarizing beam splitters\n\nsplitting ratio (r/t)\n\n50:50, 70:30, 80:20, 90:10\n\nwavelength range\n\nvisible, nir, broadband and laser-line wavelength ranges\n\ncoating\n\nbroadband coatings, laser-line coatings, and anti-reflection coated back surfaces\n\nmaterial\n\nbk7, fused silica, optical glass, and specialty optical materials\n\nsize\n\n12.7 mm, 25.4 mm, 50.8 mm, cube sizes, and custom dimensions\n\nmounting\n\nmounted and unmounted beam splitters\n\npolarization\n\npolarization-sensitive and polarization-insensitive configurations\n\ncompatibility\n\nstandard opto-mechanics\n\nbeam splitters\n\noptics\n\noptical components",
+      "customTable": {
+        "title": null,
+        "columns": [
+          "Label",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Beam Splitter",
+            "Plate Beam Splitters, Cube Beam Splitters, Non-Polarizing Beam Splitters, and Polarizing Beam Splitters"
+          ],
+          [
+            "Splitting Ratio (R/T)",
+            "50:50, 70:30, 80:20, 90:10"
+          ],
+          [
+            "Wavelength Range",
+            "Visible, NIR, Broadband and Laser-Line Wavelength Ranges"
+          ],
+          [
+            "Coating",
+            "Broadband Coatings, Laser-Line Coatings, and Anti-Reflection Coated Back Surfaces"
+          ],
+          [
+            "Material",
+            "BK7, Fused Silica, Optical Glass, and Specialty Optical Materials"
+          ],
+          [
+            "Size",
+            "12.7 mm, 25.4 mm, 50.8 mm, Cube Sizes, and Custom Dimensions"
+          ],
+          [
+            "Mounting",
+            "Mounted and Unmounted Beam Splitters"
+          ],
+          [
+            "Polarization",
+            "Polarization-Sensitive and Polarization-Insensitive Configurations"
+          ],
+          [
+            "Compatibility",
+            "Standard Opto-Mechanics"
+          ]
+        ]
+      },
+      "specTableTitle": null
     },
     {
       "id": "polarizers",
@@ -5230,44 +5240,7 @@
         "Quantum optics teaching and research setups",
         "Scientific and educational laboratories"
       ],
-      "techSpecs": [
-        {
-          "label": "Polarizer",
-          "value": "Linear Polarizers, Glan-Type Polarizers, Cube Polarizers, Wire-Grid Polarizers and Film Polarizers"
-        },
-        {
-          "label": "Wavelength",
-          "value": "Visible, NIR, and Selected Laser Wavelengths"
-        },
-        {
-          "label": "Diameter",
-          "value": "12.7 mm, 25.4 mm, 50.8 mm"
-        },
-        {
-          "label": "Mounting",
-          "value": "Mounted and Unmounted Polarizers"
-        },
-        {
-          "label": "Extinction Ratio",
-          "value": "High-Extinction-Ratio Polarizers Where Required"
-        },
-        {
-          "label": "Coating",
-          "value": "Broadband and Laser-Line Options"
-        },
-        {
-          "label": "Rotation Compatibility",
-          "value": "Compatible with Standard Rotation Mounts"
-        },
-        {
-          "label": "Polarizing Optics",
-          "value": "Polarizing Beam Splitter Cube Options"
-        },
-        {
-          "label": "Compatibility",
-          "value": "Standard Opto-Mechanics"
-        }
-      ],
+      "techSpecs": [],
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
@@ -5282,8 +5255,8 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Polarizers\n\nLinear and cube polarizers for polarization control in research and teaching setups. Detailed write-up coming soon.\n\nPolarizer: Linear Polarizers, Glan-Type Polarizers, Cube Polarizers, Wire-Grid Polarizers and Film Polarizers\n\nWavelength: Visible, NIR, and Selected Laser Wavelengths\n\nDiameter: 12.7 mm, 25.4 mm, 50.8 mm\n\nMounting: Mounted and Unmounted Polarizers\n\nExtinction Ratio: High-Extinction-Ratio Polarizers Where Required\n\nCoating: Broadband and Laser-Line Options\n\nRotation Compatibility: Compatible with Standard Rotation Mounts\n\nPolarizing Optics: Polarizing Beam Splitter Cube Options\n\nCompatibility: Standard Opto-Mechanics",
-      "image": "assets/slides/03-dielectric-mirror.svg",
+      "body": "Polarizers\n\nLinear and cube polarizers for polarization control in research and teaching setups. Detailed write-up coming soon.\n\nRequest Technical Quote · Specs below are indicative\n\nOptical Polarizers\n\nLinear Polarizer\n\nPBS\n\nLinear and cube polarizers for polarization control in research and teaching setups. Detailed write-up coming soon.\n\nSpecification ranges below are indicative. Final configuration, coating, and dimensions are confirmed on quotation.\n\nPolarizer: Linear Polarizers, Glan-Type Polarizers, Cube Polarizers, Wire-Grid Polarizers and Film Polarizers\n\nWavelength: UV, Visible, and NIR\n\nMaterial: BK7, Fused Silica, Optical Glass, and Specialty Optical Materials\n\nCoating: Aluminium, Silver, Chromium, Dielectric, Anti-Reflection, Broadband and Laser-Line, Coated, Uncoated\n\nSize: Standard Diameters, Standard Shapes, and Custom Sizes\n\nMounting Options: Mounted and Unmounted Optics\n\nLaser beam alignment\n\nImaging and spectroscopy\n\nInterferometry\n\nPhotonics experiments\n\nOptical instrumentation\n\nQuantum optics teaching and research setups\n\nScientific and educational laboratories\n\nProcurement: Request Technical Quote\n\nLabel\n\nValue\n\nPolarizer\n\nLinear Polarizers, Glan-Type Polarizers, Cube Polarizers, Wire-Grid Polarizers and Film Polarizers\n\nWavelength\n\nVisible, NIR, and Selected Laser Wavelengths\n\nDiameter\n\n12.7 mm, 25.4 mm, 50.8 mm\n\nMounting\n\nMounted and Unmounted Polarizers\n\nExtinction Ratio\n\nHigh-Extinction-Ratio Polarizers Where Required\n\nCoating\n\nBroadband and Laser-Line Options\n\nRotation Compatibility\n\nCompatible with Standard Rotation Mounts\n\nPolarizing Optics\n\nPolarizing Beam Splitter Cube Options\n\nCompatibility\n\nStandard Opto-Mechanics\n\npolarizers\n\noptics\n\noptical components",
+      "image": "assets/products/polarizers/primary.png",
       "images": [
         "assets/slides/03-dielectric-mirror.svg"
       ],
@@ -5297,7 +5270,53 @@
       "categoryLabel": "Optics",
       "categoryPath": "/components/optics.html",
       "sortIndex": 4,
-      "_search": "polarizers set-polarizers polarizers component optics optics linear and cube polarizers for polarization control in research and teaching setups. detailed write-up coming soon. request technical quote · specs below are indicative optical polarizers linear polarizer pbs polarizers optics optical components polarizers\n\nlinear and cube polarizers for polarization control in research and teaching setups. detailed write-up coming soon.\n\npolarizer: linear polarizers, glan-type polarizers, cube polarizers, wire-grid polarizers and film polarizers\n\nwavelength: visible, nir, and selected laser wavelengths\n\ndiameter: 12.7 mm, 25.4 mm, 50.8 mm\n\nmounting: mounted and unmounted polarizers\n\nextinction ratio: high-extinction-ratio polarizers where required\n\ncoating: broadband and laser-line options\n\nrotation compatibility: compatible with standard rotation mounts\n\npolarizing optics: polarizing beam splitter cube options\n\ncompatibility: standard opto-mechanics"
+      "_search": "polarizers set-polarizers polarizers component optics optics component linear and cube polarizers for polarization control in research and teaching setups. detailed write-up coming soon. request technical quote · specs below are indicative optical polarizers linear polarizer pbs polarizer: linear polarizers, glan-type polarizers, cube polarizers, wire-grid polarizers and film polarizers wavelength: uv, visible, and nir material: bk7, fused silica, optical glass, and specialty optical materials coating: aluminium, silver, chromium, dielectric, anti-reflection, broadband and laser-line, coated, uncoated size: standard diameters, standard shapes, and custom sizes mounting options: mounted and unmounted optics laser beam alignment imaging and spectroscopy interferometry photonics experiments optical instrumentation quantum optics teaching and research setups scientific and educational laboratories polarizers optics optical components procurement request technical quote  polarizers\n\nlinear and cube polarizers for polarization control in research and teaching setups. detailed write-up coming soon.\n\nrequest technical quote · specs below are indicative\n\noptical polarizers\n\nlinear polarizer\n\npbs\n\nlinear and cube polarizers for polarization control in research and teaching setups. detailed write-up coming soon.\n\nspecification ranges below are indicative. final configuration, coating, and dimensions are confirmed on quotation.\n\npolarizer: linear polarizers, glan-type polarizers, cube polarizers, wire-grid polarizers and film polarizers\n\nwavelength: uv, visible, and nir\n\nmaterial: bk7, fused silica, optical glass, and specialty optical materials\n\ncoating: aluminium, silver, chromium, dielectric, anti-reflection, broadband and laser-line, coated, uncoated\n\nsize: standard diameters, standard shapes, and custom sizes\n\nmounting options: mounted and unmounted optics\n\nlaser beam alignment\n\nimaging and spectroscopy\n\ninterferometry\n\nphotonics experiments\n\noptical instrumentation\n\nquantum optics teaching and research setups\n\nscientific and educational laboratories\n\nprocurement: request technical quote\n\nlabel\n\nvalue\n\npolarizer\n\nlinear polarizers, glan-type polarizers, cube polarizers, wire-grid polarizers and film polarizers\n\nwavelength\n\nvisible, nir, and selected laser wavelengths\n\ndiameter\n\n12.7 mm, 25.4 mm, 50.8 mm\n\nmounting\n\nmounted and unmounted polarizers\n\nextinction ratio\n\nhigh-extinction-ratio polarizers where required\n\ncoating\n\nbroadband and laser-line options\n\nrotation compatibility\n\ncompatible with standard rotation mounts\n\npolarizing optics\n\npolarizing beam splitter cube options\n\ncompatibility\n\nstandard opto-mechanics\n\npolarizers\n\noptics\n\noptical components",
+      "customTable": {
+        "title": null,
+        "columns": [
+          "Label",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Polarizer",
+            "Linear Polarizers, Glan-Type Polarizers, Cube Polarizers, Wire-Grid Polarizers and Film Polarizers"
+          ],
+          [
+            "Wavelength",
+            "Visible, NIR, and Selected Laser Wavelengths"
+          ],
+          [
+            "Diameter",
+            "12.7 mm, 25.4 mm, 50.8 mm"
+          ],
+          [
+            "Mounting",
+            "Mounted and Unmounted Polarizers"
+          ],
+          [
+            "Extinction Ratio",
+            "High-Extinction-Ratio Polarizers Where Required"
+          ],
+          [
+            "Coating",
+            "Broadband and Laser-Line Options"
+          ],
+          [
+            "Rotation Compatibility",
+            "Compatible with Standard Rotation Mounts"
+          ],
+          [
+            "Polarizing Optics",
+            "Polarizing Beam Splitter Cube Options"
+          ],
+          [
+            "Compatibility",
+            "Standard Opto-Mechanics"
+          ]
+        ]
+      },
+      "specTableTitle": null
     }
   ],
   "counts": {
