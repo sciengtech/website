@@ -958,18 +958,20 @@
       "pageTemplate": "component",
       "aliases": [],
       "overview": [
-        "The Laser / Fiber Collimator Adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard Ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. The adapter features two nylon-tipped setscrews that provide firm clamping while preventing scratches or damage to the component surface.",
+        "The Laser / Fiber Collimator Adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard Ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. The adapter features a nylon-tipped setscrew that provide firm clamping while preventing scratches or damage to the component surface.",
         "With its robust design and easy adjustment mechanism, the adapter simplifies laser alignment and positioning, making it ideal for research laboratories, educational institutions, and industrial optical systems."
       ],
       "features": [
         "Standard outer diameter: Ø25.4 mm",
-        "Two nylon-tipped setscrews for secure, damage-free clamping",
+        "A nylon-tipped setscrew for secure, damage-free clamping",
         "Enables precise alignment of lasers and optical components",
         "Compatible with standard 1\" optical mounts",
-        "Durable and precision-machined construction",
-        "Adapter helps to hold the laser to align with optical mount. With the help of adapter one can easily align the Laser without any difficult. To ease it 2 nylon tipped setscrews are provided. It helps to hold the collimator/Laser without damaging the surface."
+        "Durable and precision-machined construction"
       ],
-      "applications": [],
+      "applications": [
+        "Adapter helps to hold the laser to align with optical mount",
+        "With the help of adapter one can easily align the Laser without any difficult."
+      ],
       "techSpecs": [],
       "keyValueSpecs": [],
       "variants": [],
@@ -977,8 +979,8 @@
       "rfqSections": null,
       "solutionContent": null,
       "customNote": null,
-      "summary": "The Laser / Fiber Collimator Adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard Ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. The adapter features two nylon-tipped setscrews that provide firm clamping while preventing scratches or damage to the component surface.",
-      "specHighlight": "Standard outer diameter: Ø25.4 mm · Two nylon-tipped setscrews for secure, damage-free clamping",
+      "summary": "The Laser / Fiber Collimator Adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard Ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. The adapter features a nylon-tipped setscrew that provide firm clamping while preventing scratches or damage to the component surface.",
+      "specHighlight": "Standard outer diameter: Ø25.4 mm · A nylon-tipped setscrew for secure, damage-free clamping",
       "specs": [
         {
           "label": "Feature",
@@ -1005,14 +1007,14 @@
           "value": "Adapter helps to hold the laser to align with optical mount. With the help of adapter one can easily align the Laser without any difficult. To ease it 2 nylon tipped setscrews are provided. It helps to hold the collimator/Laser without damaging the surface."
         }
       ],
-      "body": "Adapter\n\nThe Laser / Fiber Collimator Adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard Ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. The adapter features two nylon-tipped setscrews that provide firm clamping while preventing scratches or damage to the component surface.\n\nStandard outer diameter: Ø25.4 mm · Two nylon-tipped setscrews for secure, damage-free clamping\n\nThe Laser / Fiber Collimator Adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard Ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. The adapter features two nylon-tipped setscrews that provide firm clamping while preventing scratches or damage to the component surface.\n\nWith its robust design and easy adjustment mechanism, the adapter simplifies laser alignment and positioning, making it ideal for research laboratories, educational institutions, and industrial optical systems.\n\nStandard outer diameter: Ø25.4 mm\n\nTwo nylon-tipped setscrews for secure, damage-free clamping\n\nEnables precise alignment of lasers and optical components\n\nCompatible with standard 1\" optical mounts\n\nDurable and precision-machined construction\n\nAdapter helps to hold the laser to align with optical mount. With the help of adapter one can easily align the Laser without any difficult. To ease it 2 nylon tipped setscrews are provided. It helps to hold the collimator/Laser without damaging the surface.\n\nFeature: Standard outer diameter: Ø25.4 mm\n\nFeature: Two nylon-tipped setscrews for secure, damage-free clamping\n\nFeature: Enables precise alignment of lasers and optical components\n\nFeature: Compatible with standard 1\" optical mounts\n\nFeature: Durable and precision-machined construction\n\nFeature: Adapter helps to hold the laser to align with optical mount. With the help of adapter one can easily align the Laser without any difficult. To ease it 2 nylon tipped setscrews are provided. It helps to hold the collimator/Laser without damaging the surface.\n\nadapter\n\nopto-mechanics",
+      "body": "Adapter\n\nThe Laser / Fiber Collimator Adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard Ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. The adapter features a nylon-tipped setscrew that provide firm clamping while preventing scratches or damage to the component surface.\n\nStandard outer diameter: Ø25.4 mm · A nylon-tipped setscrew for secure, damage-free clamping\n\nThe Laser / Fiber Collimator Adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard Ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. The adapter features a nylon-tipped setscrew that provide firm clamping while preventing scratches or damage to the component surface.\n\nWith its robust design and easy adjustment mechanism, the adapter simplifies laser alignment and positioning, making it ideal for research laboratories, educational institutions, and industrial optical systems.\n\nStandard outer diameter: Ø25.4 mm\n\nA nylon-tipped setscrew for secure, damage-free clamping\n\nEnables precise alignment of lasers and optical components\n\nCompatible with standard 1\" optical mounts\n\nDurable and precision-machined construction\n\nAdapter helps to hold the laser to align with optical mount\n\nWith the help of adapter one can easily align the Laser without any difficult.\n\nFeature: Standard outer diameter: Ø25.4 mm\n\nFeature: Two nylon-tipped setscrews for secure, damage-free clamping\n\nFeature: Enables precise alignment of lasers and optical components\n\nFeature: Compatible with standard 1\" optical mounts\n\nFeature: Durable and precision-machined construction\n\nFeature: Adapter helps to hold the laser to align with optical mount. With the help of adapter one can easily align the Laser without any difficult. To ease it 2 nylon tipped setscrews are provided. It helps to hold the collimator/Laser without damaging the surface.\n\nadapter\n\nopto-mechanics",
       "image": null,
       "tags": [
         "adapter",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Adapter/Adapter.docx",
-      "_search": "adapter set-adapter adapter component opto-mechanics opto-mechanics component the laser / fiber collimator adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. the adapter features two nylon-tipped setscrews that provide firm clamping while preventing scratches or damage to the component surface. standard outer diameter: ø25.4 mm · two nylon-tipped setscrews for secure, damage-free clamping  standard outer diameter: ø25.4 mm two nylon-tipped setscrews for secure, damage-free clamping enables precise alignment of lasers and optical components compatible with standard 1\" optical mounts durable and precision-machined construction adapter helps to hold the laser to align with optical mount. with the help of adapter one can easily align the laser without any difficult. to ease it 2 nylon tipped setscrews are provided. it helps to hold the collimator/laser without damaging the surface.  adapter opto-mechanics feature standard outer diameter: ø25.4 mm feature two nylon-tipped setscrews for secure, damage-free clamping feature enables precise alignment of lasers and optical components feature compatible with standard 1\" optical mounts feature durable and precision-machined construction feature adapter helps to hold the laser to align with optical mount. with the help of adapter one can easily align the laser without any difficult. to ease it 2 nylon tipped setscrews are provided. it helps to hold the collimator/laser without damaging the surface.  adapter\n\nthe laser / fiber collimator adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. the adapter features two nylon-tipped setscrews that provide firm clamping while preventing scratches or damage to the component surface.\n\nstandard outer diameter: ø25.4 mm · two nylon-tipped setscrews for secure, damage-free clamping\n\nthe laser / fiber collimator adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. the adapter features two nylon-tipped setscrews that provide firm clamping while preventing scratches or damage to the component surface.\n\nwith its robust design and easy adjustment mechanism, the adapter simplifies laser alignment and positioning, making it ideal for research laboratories, educational institutions, and industrial optical systems.\n\nstandard outer diameter: ø25.4 mm\n\ntwo nylon-tipped setscrews for secure, damage-free clamping\n\nenables precise alignment of lasers and optical components\n\ncompatible with standard 1\" optical mounts\n\ndurable and precision-machined construction\n\nadapter helps to hold the laser to align with optical mount. with the help of adapter one can easily align the laser without any difficult. to ease it 2 nylon tipped setscrews are provided. it helps to hold the collimator/laser without damaging the surface.\n\nfeature: standard outer diameter: ø25.4 mm\n\nfeature: two nylon-tipped setscrews for secure, damage-free clamping\n\nfeature: enables precise alignment of lasers and optical components\n\nfeature: compatible with standard 1\" optical mounts\n\nfeature: durable and precision-machined construction\n\nfeature: adapter helps to hold the laser to align with optical mount. with the help of adapter one can easily align the laser without any difficult. to ease it 2 nylon tipped setscrews are provided. it helps to hold the collimator/laser without damaging the surface.\n\nadapter\n\nopto-mechanics",
+      "_search": "adapter set-adapter adapter component opto-mechanics opto-mechanics component the laser / fiber collimator adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. the adapter features a nylon-tipped setscrew that provide firm clamping while preventing scratches or damage to the component surface. standard outer diameter: ø25.4 mm · a nylon-tipped setscrew for secure, damage-free clamping  standard outer diameter: ø25.4 mm a nylon-tipped setscrew for secure, damage-free clamping enables precise alignment of lasers and optical components compatible with standard 1\" optical mounts durable and precision-machined construction adapter helps to hold the laser to align with optical mount with the help of adapter one can easily align the laser without any difficult. adapter opto-mechanics feature standard outer diameter: ø25.4 mm feature two nylon-tipped setscrews for secure, damage-free clamping feature enables precise alignment of lasers and optical components feature compatible with standard 1\" optical mounts feature durable and precision-machined construction feature adapter helps to hold the laser to align with optical mount. with the help of adapter one can easily align the laser without any difficult. to ease it 2 nylon tipped setscrews are provided. it helps to hold the collimator/laser without damaging the surface.  adapter\n\nthe laser / fiber collimator adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. the adapter features a nylon-tipped setscrew that provide firm clamping while preventing scratches or damage to the component surface.\n\nstandard outer diameter: ø25.4 mm · a nylon-tipped setscrew for secure, damage-free clamping\n\nthe laser / fiber collimator adapter is designed to securely mount cylindrical laser sources and fiber collimators into standard ø25.4 mm optical mounts, enabling precise alignment in optical and optomechanical setups. the adapter features a nylon-tipped setscrew that provide firm clamping while preventing scratches or damage to the component surface.\n\nwith its robust design and easy adjustment mechanism, the adapter simplifies laser alignment and positioning, making it ideal for research laboratories, educational institutions, and industrial optical systems.\n\nstandard outer diameter: ø25.4 mm\n\na nylon-tipped setscrew for secure, damage-free clamping\n\nenables precise alignment of lasers and optical components\n\ncompatible with standard 1\" optical mounts\n\ndurable and precision-machined construction\n\nadapter helps to hold the laser to align with optical mount\n\nwith the help of adapter one can easily align the laser without any difficult.\n\nfeature: standard outer diameter: ø25.4 mm\n\nfeature: two nylon-tipped setscrews for secure, damage-free clamping\n\nfeature: enables precise alignment of lasers and optical components\n\nfeature: compatible with standard 1\" optical mounts\n\nfeature: durable and precision-machined construction\n\nfeature: adapter helps to hold the laser to align with optical mount. with the help of adapter one can easily align the laser without any difficult. to ease it 2 nylon tipped setscrews are provided. it helps to hold the collimator/laser without damaging the surface.\n\nadapter\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
@@ -1588,10 +1590,10 @@
     },
     {
       "id": "cage-assembly-rod",
-      "sku": "",
+      "sku": "SET-CR-XX",
       "name": "Cage Assembly Rod",
       "type": "component",
-      "pageTemplate": "component",
+      "pageTemplate": "variant-catalog",
       "aliases": [
         "Optical Cage Rod",
         "Optomechanical cage rods",
@@ -1615,13 +1617,74 @@
       ],
       "techSpecs": [],
       "keyValueSpecs": [],
-      "variants": [],
+      "variants": [
+        {
+          "sr": 1,
+          "product_code": "SET-CR-12.7",
+          "sku": "SET-CR-12.7",
+          "length_in_mm": "12.7"
+        },
+        {
+          "sr": 2,
+          "product_code": "SET-CR-25.4",
+          "sku": "SET-CR-25.4",
+          "length_in_mm": "25.4"
+        },
+        {
+          "sr": 3,
+          "product_code": "SET-CR-38.1",
+          "sku": "SET-CR-38.1",
+          "length_in_mm": "38.1"
+        },
+        {
+          "sr": 4,
+          "product_code": "SET-CR-50.8",
+          "sku": "SET-CR-50.8",
+          "length_in_mm": "50.8"
+        },
+        {
+          "sr": 5,
+          "product_code": "SET-CR-63.5",
+          "sku": "SET-CR-63.5",
+          "length_in_mm": "63.5"
+        },
+        {
+          "sr": 6,
+          "product_code": "SET-CR-76.2",
+          "sku": "SET-CR-76.2",
+          "length_in_mm": "76.2"
+        },
+        {
+          "sr": 7,
+          "product_code": "SET-CR-101.6",
+          "sku": "SET-CR-101.6",
+          "length_in_mm": "101.6"
+        },
+        {
+          "sr": 8,
+          "product_code": "SET-CR-152.4",
+          "sku": "SET-CR-152.4",
+          "length_in_mm": "152.4"
+        },
+        {
+          "sr": 9,
+          "product_code": "SET-CR-203.2",
+          "sku": "SET-CR-203.2",
+          "length_in_mm": "203.2"
+        },
+        {
+          "sr": 10,
+          "product_code": "SET-CR-254",
+          "sku": "SET-CR-254",
+          "length_in_mm": "254"
+        }
+      ],
       "configurationOptions": null,
       "rfqSections": null,
       "solutionContent": null,
       "customNote": null,
       "summary": "Precision-ground stainless steel cage rods designed for seamless integration with standard cage systems. These rods provide reliability, alignment for optical and mechanical assemblies.",
-      "specHighlight": "6 configurations available · SKU from SET-CR-",
+      "specHighlight": "10 configurations available ",
       "specs": [
         {
           "label": "Feature",
@@ -1644,14 +1707,14 @@
           "value": "M4 Threaded studded ends which enables end-to-end connection of multiple rods"
         }
       ],
-      "body": "Cage Assembly Rod\n\nPrecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. These rods provide reliability, alignment for optical and mechanical assemblies.\n\n6 configurations available · SKU from SET-CR-\n\nOptical Cage Rod\n\nOptomechanical cage rods\n\nCage connecting rods\n\nPrecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. These rods provide reliability, alignment for optical and mechanical assemblies.\n\nCompatible with standard 30 mm and 60 mm cage systems\n\nRod Diameter: Ø6 mm\n\nHigh rigidity and corrosion resistance\n\nEasy integration into existing setups\n\nM4 Threaded studded ends which enables end-to-end connection of multiple rods\n\nOptical cage systems\n\nLaser alignment setups\n\nModular opto-mechanical assemblies\n\nResearch and laboratory instrumentation\n\nFeature: Compatible with standard 30 mm and 60 mm cage systems\n\nFeature: Rod Diameter: Ø6 mm\n\nFeature: High rigidity and corrosion resistance\n\nFeature: Easy integration into existing setups\n\nFeature: M4 Threaded studded ends which enables end-to-end connection of multiple rods\n\ncage assembly rod\n\nopto-mechanics",
+      "body": "Cage Assembly Rod\n\nPrecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. These rods provide reliability, alignment for optical and mechanical assemblies.\n\n10 configurations available \n\nOptical Cage Rod\n\nOptomechanical cage rods\n\nCage connecting rods\n\nPrecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. These rods provide reliability, alignment for optical and mechanical assemblies.\n\nCompatible with standard 30 mm and 60 mm cage systems\n\nRod Diameter: Ø6 mm\n\nHigh rigidity and corrosion resistance\n\nEasy integration into existing setups\n\nM4 Threaded studded ends which enables end-to-end connection of multiple rods\n\nOptical cage systems\n\nLaser alignment setups\n\nModular opto-mechanical assemblies\n\nResearch and laboratory instrumentation\n\nFeature: Compatible with standard 30 mm and 60 mm cage systems\n\nFeature: Rod Diameter: Ø6 mm\n\nFeature: High rigidity and corrosion resistance\n\nFeature: Easy integration into existing setups\n\nFeature: M4 Threaded studded ends which enables end-to-end connection of multiple rods\n\nSET-CR-12.7\n\nSET-CR-12.7\n\n12.7\n\nSET-CR-25.4\n\nSET-CR-25.4\n\n25.4\n\nSET-CR-38.1\n\nSET-CR-38.1\n\n38.1\n\nSET-CR-50.8\n\nSET-CR-50.8\n\n50.8\n\nSET-CR-63.5\n\nSET-CR-63.5\n\n63.5\n\nSET-CR-76.2\n\nSET-CR-76.2\n\n76.2\n\nSET-CR-101.6\n\nSET-CR-101.6\n\n101.6\n\nSET-CR-152.4\n\nSET-CR-152.4\n\n152.4\n\nSET-CR-203.2\n\nSET-CR-203.2\n\n203.2\n\nSET-CR-254\n\nSET-CR-254\n\n254\n\ncage assembly rod\n\nopto-mechanics",
       "image": "assets/products/cage-assembly-rod/primary.png",
       "tags": [
         "cage assembly rod",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Cage Assembly Rod/Cage Assembly Rod.docx",
-      "_search": "cage-assembly-rod  cage assembly rod component opto-mechanics opto-mechanics component precision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies. 6 configurations available · sku from set-cr- optical cage rod optomechanical cage rods cage connecting rods compatible with standard 30 mm and 60 mm cage systems rod diameter: ø6 mm high rigidity and corrosion resistance easy integration into existing setups m4 threaded studded ends which enables end-to-end connection of multiple rods optical cage systems laser alignment setups modular opto-mechanical assemblies research and laboratory instrumentation cage assembly rod opto-mechanics feature compatible with standard 30 mm and 60 mm cage systems feature rod diameter: ø6 mm feature high rigidity and corrosion resistance feature easy integration into existing setups feature m4 threaded studded ends which enables end-to-end connection of multiple rods  cage assembly rod\n\nprecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies.\n\n6 configurations available · sku from set-cr-\n\noptical cage rod\n\noptomechanical cage rods\n\ncage connecting rods\n\nprecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies.\n\ncompatible with standard 30 mm and 60 mm cage systems\n\nrod diameter: ø6 mm\n\nhigh rigidity and corrosion resistance\n\neasy integration into existing setups\n\nm4 threaded studded ends which enables end-to-end connection of multiple rods\n\noptical cage systems\n\nlaser alignment setups\n\nmodular opto-mechanical assemblies\n\nresearch and laboratory instrumentation\n\nfeature: compatible with standard 30 mm and 60 mm cage systems\n\nfeature: rod diameter: ø6 mm\n\nfeature: high rigidity and corrosion resistance\n\nfeature: easy integration into existing setups\n\nfeature: m4 threaded studded ends which enables end-to-end connection of multiple rods\n\ncage assembly rod\n\nopto-mechanics",
+      "_search": "cage-assembly-rod set-cr-xx cage assembly rod component opto-mechanics opto-mechanics variant-catalog precision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies. 10 configurations available  optical cage rod optomechanical cage rods cage connecting rods compatible with standard 30 mm and 60 mm cage systems rod diameter: ø6 mm high rigidity and corrosion resistance easy integration into existing setups m4 threaded studded ends which enables end-to-end connection of multiple rods optical cage systems laser alignment setups modular opto-mechanical assemblies research and laboratory instrumentation cage assembly rod opto-mechanics feature compatible with standard 30 mm and 60 mm cage systems feature rod diameter: ø6 mm feature high rigidity and corrosion resistance feature easy integration into existing setups feature m4 threaded studded ends which enables end-to-end connection of multiple rods 1 set-cr-12.7 set-cr-12.7 12.7 2 set-cr-25.4 set-cr-25.4 25.4 3 set-cr-38.1 set-cr-38.1 38.1 4 set-cr-50.8 set-cr-50.8 50.8 5 set-cr-63.5 set-cr-63.5 63.5 6 set-cr-76.2 set-cr-76.2 76.2 7 set-cr-101.6 set-cr-101.6 101.6 8 set-cr-152.4 set-cr-152.4 152.4 9 set-cr-203.2 set-cr-203.2 203.2 10 set-cr-254 set-cr-254 254 cage assembly rod\n\nprecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies.\n\n10 configurations available \n\noptical cage rod\n\noptomechanical cage rods\n\ncage connecting rods\n\nprecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies.\n\ncompatible with standard 30 mm and 60 mm cage systems\n\nrod diameter: ø6 mm\n\nhigh rigidity and corrosion resistance\n\neasy integration into existing setups\n\nm4 threaded studded ends which enables end-to-end connection of multiple rods\n\noptical cage systems\n\nlaser alignment setups\n\nmodular opto-mechanical assemblies\n\nresearch and laboratory instrumentation\n\nfeature: compatible with standard 30 mm and 60 mm cage systems\n\nfeature: rod diameter: ø6 mm\n\nfeature: high rigidity and corrosion resistance\n\nfeature: easy integration into existing setups\n\nfeature: m4 threaded studded ends which enables end-to-end connection of multiple rods\n\nset-cr-12.7\n\nset-cr-12.7\n\n12.7\n\nset-cr-25.4\n\nset-cr-25.4\n\n25.4\n\nset-cr-38.1\n\nset-cr-38.1\n\n38.1\n\nset-cr-50.8\n\nset-cr-50.8\n\n50.8\n\nset-cr-63.5\n\nset-cr-63.5\n\n63.5\n\nset-cr-76.2\n\nset-cr-76.2\n\n76.2\n\nset-cr-101.6\n\nset-cr-101.6\n\n101.6\n\nset-cr-152.4\n\nset-cr-152.4\n\n152.4\n\nset-cr-203.2\n\nset-cr-203.2\n\n203.2\n\nset-cr-254\n\nset-cr-254\n\n254\n\ncage assembly rod\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
@@ -2112,7 +2175,6 @@
         "Suitable for beamsplitter cubes, right-angle prisms, and similar optical components",
         "Open-frame design minimizes handling and contact with optical surfaces",
         "Provides secure and stable mounting for precision optical experiments",
-        "Compatible with standard optical cage systems",
         "M4 threaded hole for direct mounting on Ø12.7 mm (1/2\") optical posts",
         "Precision-machined construction for reliable alignment",
         "Protects optics from accidental damage during setup and operation",
@@ -2133,7 +2195,7 @@
       "rfqSections": null,
       "solutionContent": null,
       "customNote": null,
-      "summary": "The open-frame design allows secure mounting while minimizing direct contact with optical surfaces, helping to protect delicate optics from damage and contamina",
+      "summary": "The open-frame design allows secure mounting while minimizing direct contact with optical surfaces, helping to protect delicate optics from damage",
       "specHighlight": "Compatible with 25.4 mm (1\") and 20.0 mm cube optics · Suitable for beamsplitter cubes, right-angle prisms, and similar optical components",
       "specs": [
         {
@@ -2169,21 +2231,23 @@
           "value": "Protects optics from accidental damage during setup and operation"
         }
       ],
-      "body": "Cube Beamsplitter Mount\n\nThe open-frame design allows secure mounting while minimizing direct contact with optical surfaces, helping to protect delicate optics from damage and contamination during installation and experimentation. The mount is compatible with standard cage systems and can accommodate various cube optics using appropriate adapters.\n\nFor easy integration into laboratory setups, the base incorporates an M4 threaded mounting hole, allowing direct attachment to Ø12.7 mm (1/2\") optical posts.\n\nCompatible with 25.4 mm (1\") and 20.0 mm cube optics\n\nSuitable for beamsplitter cubes, right-angle prisms, and similar optical components\n\nOpen-frame design minimizes handling and contact with optical surfaces\n\nProvides secure and stable mounting for precision optical experiments\n\nCompatible with standard optical cage systems\n\nM4 threaded hole for direct mounting on Ø12.7 mm (1/2\") optical posts",
+      "body": "Cube Beamsplitter Mount\n\nThe open-frame design allows secure mounting while minimizing direct contact with optical surfaces, helping to protect delicate optics from damage\n\nCompatible with 25.4 mm (1\") and 20.0 mm cube optics · Suitable for beamsplitter cubes, right-angle prisms, and similar optical components\n\nOptical Cube Mount\n\nBeamsplitter Cube Holder\n\nCube Optics Mount\n\nThe open-frame design allows secure mounting while minimizing direct contact with optical surfaces, helping to protect delicate optics from damage and contamination during installation and experimentation. The mount is compatible with standard cage systems and can accommodate various cube optics using appropriate adapters.\n\nFor easy integration into laboratory setups, the base incorporates an M4 threaded mounting hole, allowing direct attachment to Ø12.7 mm (1/2\") optical posts.\n\nCompatible with 25.4 mm (1\") and 20.0 mm cube optics\n\nSuitable for beamsplitter cubes, right-angle prisms, and similar optical components\n\nOpen-frame design minimizes handling and contact with optical surfaces\n\nProvides secure and stable mounting for precision optical experiments\n\nM4 threaded hole for direct mounting on Ø12.7 mm (1/2\") optical posts\n\nPrecision-machined construction for reliable alignment\n\nProtects optics from accidental damage during setup and operation\n\nDesigned and manufactured in India\n\nInterferometry and beam-splitting experiments\n\nOptical and photonics research\n\nQuantum optics and quantum communication setups\n\nLaser beam routing and alignment systems\n\nEducational and research laboratories\n\nPrecision optomechanical assemblies and instrumentation\n\nFeature: Compatible with 25.4 mm (1\") and 20.0 mm cube optics\n\nFeature: Suitable for beamsplitter cubes, right-angle prisms, and similar optical components\n\nFeature: Open-frame design minimizes handling and contact with optical surfaces\n\nFeature: Provides secure and stable mounting for precision optical experiments\n\nFeature: Compatible with standard optical cage systems\n\nFeature: M4 threaded hole for direct mounting on Ø12.7 mm (1/2\") optical posts\n\nFeature: Precision-machined construction for reliable alignment\n\nFeature: Protects optics from accidental damage during setup and operation\n\ncube beamsplitter mount\n\nopto-mechanics",
       "image": "assets/products/cube-beamsplitter-mount/primary.png",
       "tags": [
         "cube beamsplitter mount",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Cube Beamsplitter Mount/Cube Beamsplitter Mount.docx",
-      "_search": "cube-beamsplitter-mount set-cbm-25 cube beamsplitter mount component opto-mechanics opto-mechanics the open-frame design allows secure mounting while minimizing direct contact with optical surfaces, helping to protect delicate optics from damage and contamina compatible with 25.4 mm (1\") and 20.0 mm cube optics · suitable for beamsplitter cubes, right-angle prisms, and similar optical components optical cube mount beamsplitter cube holder cube optics mount cube beamsplitter mount opto-mechanics cube beamsplitter mount\n\nthe open-frame design allows secure mounting while minimizing direct contact with optical surfaces, helping to protect delicate optics from damage and contamination during installation and experimentation. the mount is compatible with standard cage systems and can accommodate various cube optics using appropriate adapters.\n\nfor easy integration into laboratory setups, the base incorporates an m4 threaded mounting hole, allowing direct attachment to ø12.7 mm (1/2\") optical posts.\n\ncompatible with 25.4 mm (1\") and 20.0 mm cube optics\n\nsuitable for beamsplitter cubes, right-angle prisms, and similar optical components\n\nopen-frame design minimizes handling and contact with optical surfaces\n\nprovides secure and stable mounting for precision optical experiments\n\ncompatible with standard optical cage systems\n\nm4 threaded hole for direct mounting on ø12.7 mm (1/2\") optical posts",
+      "_search": "cube-beamsplitter-mount set-cbm-25 cube beamsplitter mount component opto-mechanics opto-mechanics component the open-frame design allows secure mounting while minimizing direct contact with optical surfaces, helping to protect delicate optics from damage compatible with 25.4 mm (1\") and 20.0 mm cube optics · suitable for beamsplitter cubes, right-angle prisms, and similar optical components optical cube mount beamsplitter cube holder cube optics mount compatible with 25.4 mm (1\") and 20.0 mm cube optics suitable for beamsplitter cubes, right-angle prisms, and similar optical components open-frame design minimizes handling and contact with optical surfaces provides secure and stable mounting for precision optical experiments m4 threaded hole for direct mounting on ø12.7 mm (1/2\") optical posts precision-machined construction for reliable alignment protects optics from accidental damage during setup and operation designed and manufactured in india interferometry and beam-splitting experiments optical and photonics research quantum optics and quantum communication setups laser beam routing and alignment systems educational and research laboratories precision optomechanical assemblies and instrumentation cube beamsplitter mount opto-mechanics feature compatible with 25.4 mm (1\") and 20.0 mm cube optics feature suitable for beamsplitter cubes, right-angle prisms, and similar optical components feature open-frame design minimizes handling and contact with optical surfaces feature provides secure and stable mounting for precision optical experiments feature compatible with standard optical cage systems feature m4 threaded hole for direct mounting on ø12.7 mm (1/2\") optical posts feature precision-machined construction for reliable alignment feature protects optics from accidental damage during setup and operation  cube beamsplitter mount\n\nthe open-frame design allows secure mounting while minimizing direct contact with optical surfaces, helping to protect delicate optics from damage\n\ncompatible with 25.4 mm (1\") and 20.0 mm cube optics · suitable for beamsplitter cubes, right-angle prisms, and similar optical components\n\noptical cube mount\n\nbeamsplitter cube holder\n\ncube optics mount\n\nthe open-frame design allows secure mounting while minimizing direct contact with optical surfaces, helping to protect delicate optics from damage and contamination during installation and experimentation. the mount is compatible with standard cage systems and can accommodate various cube optics using appropriate adapters.\n\nfor easy integration into laboratory setups, the base incorporates an m4 threaded mounting hole, allowing direct attachment to ø12.7 mm (1/2\") optical posts.\n\ncompatible with 25.4 mm (1\") and 20.0 mm cube optics\n\nsuitable for beamsplitter cubes, right-angle prisms, and similar optical components\n\nopen-frame design minimizes handling and contact with optical surfaces\n\nprovides secure and stable mounting for precision optical experiments\n\nm4 threaded hole for direct mounting on ø12.7 mm (1/2\") optical posts\n\nprecision-machined construction for reliable alignment\n\nprotects optics from accidental damage during setup and operation\n\ndesigned and manufactured in india\n\ninterferometry and beam-splitting experiments\n\noptical and photonics research\n\nquantum optics and quantum communication setups\n\nlaser beam routing and alignment systems\n\neducational and research laboratories\n\nprecision optomechanical assemblies and instrumentation\n\nfeature: compatible with 25.4 mm (1\") and 20.0 mm cube optics\n\nfeature: suitable for beamsplitter cubes, right-angle prisms, and similar optical components\n\nfeature: open-frame design minimizes handling and contact with optical surfaces\n\nfeature: provides secure and stable mounting for precision optical experiments\n\nfeature: compatible with standard optical cage systems\n\nfeature: m4 threaded hole for direct mounting on ø12.7 mm (1/2\") optical posts\n\nfeature: precision-machined construction for reliable alignment\n\nfeature: protects optics from accidental damage during setup and operation\n\ncube beamsplitter mount\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
       "images": [
         "assets/products/cube-beamsplitter-mount/primary.png"
       ],
-      "sortIndex": 24
+      "sortIndex": 24,
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "diode-laser",
@@ -4662,7 +4726,7 @@
       "aliases": [],
       "overview": [
         "Designed for laboratories requiring a simple, reliable, and easy-to-integrate solution for visualizing optical patterns and interference fringes.",
-        "The SciEngTech Viewing Screen is designed for clear observation of interference patterns and optical beam profiles in educational, research, and laboratory experiments. Its matte white surface provides excellent contrast and visibility.",
+        "Its matte white surface provides excellent contrast and visibility.",
         "Manufactured from high-quality Perspex, the screen offers durability, lightweight handling, and consistent optical performance."
       ],
       "features": [
@@ -4720,21 +4784,23 @@
           "value": "Suitable for educational, research, and industrial optical setups"
         }
       ],
-      "body": "Viewing Screen\n\nDesigned for laboratories requiring a simple, reliable, and easy-to-integrate solution for visualizing optical patterns and interference fringes.\n\nThe SciEngTech Viewing Screen is designed for clear observation of interference patterns and optical beam profiles in educational, research, and laboratory experiments. Its matte white surface provides excellent contrast and visibility.\n\nManufactured from high-quality Perspex, the screen offers durability, lightweight handling, and consistent optical performance.\n\nFeatures\n\nWhite viewing surface for enhanced visibility of interference patterns\n\nIdeal for observing laser spots, fringes, and beam profiles\n\nManufactured from high-quality Perspex\n\nM4 tapped hole at the bottom for convenient mounting\n\nCompatible with standard opto-mechanical components and post assemblies\n\nLightweight and durable construction\n\nSuitable for educational, research, and industrial optical setups\n\nApplications\n\nOptical alignment and beam visualization\n\nLaser beam profiling\n\nQuantum optics demonstrations\n\nGeneral laboratory optics experiments\n\nProduct Code: SET-VSC",
+      "body": "Viewing Screen\n\nDesigned for laboratories requiring a simple, reliable, and easy-to-integrate solution for visualizing optical patterns and interference fringes.\n\nWhite viewing surface for enhanced visibility of interference patterns · Ideal for observing laser spots, fringes, and beam profiles\n\nDesigned for laboratories requiring a simple, reliable, and easy-to-integrate solution for visualizing optical patterns and interference fringes.\n\nIts matte white surface provides excellent contrast and visibility.\n\nManufactured from high-quality Perspex, the screen offers durability, lightweight handling, and consistent optical performance.\n\nWhite viewing surface for enhanced visibility of interference patterns\n\nIdeal for observing laser spots, fringes, and beam profiles\n\nManufactured from high-quality Perspex\n\nM4 tapped hole at the bottom for convenient mounting\n\nCompatible with standard opto-mechanical components and post assemblies\n\nLightweight and durable construction\n\nSuitable for educational, research, and industrial optical setups\n\nScreen size: confirm dimensions with quotation (custom sizes available)\n\nOptical alignment and beam visualization\n\nLaser beam profiling\n\nQuantum optics demonstrations\n\nGeneral laboratory optics experiments\n\nFeature: White viewing surface for enhanced visibility of interference patterns\n\nFeature: Ideal for observing laser spots, fringes, and beam profiles\n\nFeature: Manufactured from high-quality Perspex\n\nFeature: M4 tapped hole at the bottom for convenient mounting\n\nFeature: Compatible with standard opto-mechanical components and post assemblies\n\nFeature: Lightweight and durable construction\n\nFeature: Suitable for educational, research, and industrial optical setups\n\nviewing screen\n\nopto-mechanics",
       "image": "assets/products/viewing-screen/primary.png",
       "tags": [
         "viewing screen",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Viewing Screen/Viewing Screen.docx",
-      "_search": "viewing-screen set-vsc viewing screen component opto-mechanics opto-mechanics designed for laboratories requiring a simple, reliable, and easy-to-integrate solution for visualizing optical patterns and interference fringes. white viewing surface for enhanced visibility of interference patterns · ideal for observing laser spots, fringes, and beam profiles  viewing screen opto-mechanics viewing screen\n\ndesigned for laboratories requiring a simple, reliable, and easy-to-integrate solution for visualizing optical patterns and interference fringes.\n\nthe sciengtech viewing screen is designed for clear observation of interference patterns and optical beam profiles in educational, research, and laboratory experiments. its matte white surface provides excellent contrast and visibility.\n\nmanufactured from high-quality perspex, the screen offers durability, lightweight handling, and consistent optical performance.\n\nfeatures\n\nwhite viewing surface for enhanced visibility of interference patterns\n\nideal for observing laser spots, fringes, and beam profiles\n\nmanufactured from high-quality perspex\n\nm4 tapped hole at the bottom for convenient mounting\n\ncompatible with standard opto-mechanical components and post assemblies\n\nlightweight and durable construction\n\nsuitable for educational, research, and industrial optical setups\n\napplications\n\noptical alignment and beam visualization\n\nlaser beam profiling\n\nquantum optics demonstrations\n\ngeneral laboratory optics experiments\n\nproduct code: set-vsc",
+      "_search": "viewing-screen set-vsc viewing screen component opto-mechanics opto-mechanics component designed for laboratories requiring a simple, reliable, and easy-to-integrate solution for visualizing optical patterns and interference fringes. white viewing surface for enhanced visibility of interference patterns · ideal for observing laser spots, fringes, and beam profiles  white viewing surface for enhanced visibility of interference patterns ideal for observing laser spots, fringes, and beam profiles manufactured from high-quality perspex m4 tapped hole at the bottom for convenient mounting compatible with standard opto-mechanical components and post assemblies lightweight and durable construction suitable for educational, research, and industrial optical setups screen size: confirm dimensions with quotation (custom sizes available) optical alignment and beam visualization laser beam profiling quantum optics demonstrations general laboratory optics experiments viewing screen opto-mechanics feature white viewing surface for enhanced visibility of interference patterns feature ideal for observing laser spots, fringes, and beam profiles feature manufactured from high-quality perspex feature m4 tapped hole at the bottom for convenient mounting feature compatible with standard opto-mechanical components and post assemblies feature lightweight and durable construction feature suitable for educational, research, and industrial optical setups  viewing screen\n\ndesigned for laboratories requiring a simple, reliable, and easy-to-integrate solution for visualizing optical patterns and interference fringes.\n\nwhite viewing surface for enhanced visibility of interference patterns · ideal for observing laser spots, fringes, and beam profiles\n\ndesigned for laboratories requiring a simple, reliable, and easy-to-integrate solution for visualizing optical patterns and interference fringes.\n\nits matte white surface provides excellent contrast and visibility.\n\nmanufactured from high-quality perspex, the screen offers durability, lightweight handling, and consistent optical performance.\n\nwhite viewing surface for enhanced visibility of interference patterns\n\nideal for observing laser spots, fringes, and beam profiles\n\nmanufactured from high-quality perspex\n\nm4 tapped hole at the bottom for convenient mounting\n\ncompatible with standard opto-mechanical components and post assemblies\n\nlightweight and durable construction\n\nsuitable for educational, research, and industrial optical setups\n\nscreen size: confirm dimensions with quotation (custom sizes available)\n\noptical alignment and beam visualization\n\nlaser beam profiling\n\nquantum optics demonstrations\n\ngeneral laboratory optics experiments\n\nfeature: white viewing surface for enhanced visibility of interference patterns\n\nfeature: ideal for observing laser spots, fringes, and beam profiles\n\nfeature: manufactured from high-quality perspex\n\nfeature: m4 tapped hole at the bottom for convenient mounting\n\nfeature: compatible with standard opto-mechanical components and post assemblies\n\nfeature: lightweight and durable construction\n\nfeature: suitable for educational, research, and industrial optical setups\n\nviewing screen\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
       "images": [
         "assets/products/viewing-screen/primary.png"
       ],
-      "sortIndex": 22
+      "sortIndex": 22,
+      "customTable": null,
+      "specTableTitle": null
     },
     {
       "id": "washer",
