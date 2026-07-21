@@ -5023,40 +5023,7 @@
         "Quantum optics teaching and research setups",
         "Scientific and educational laboratories"
       ],
-      "techSpecs": [
-        {
-          "label": "Mirror",
-          "value": "Protected Silver, Protected Aluminum, Enhanced Aluminum, Dielectric, and Broadband Mirrors"
-        },
-        {
-          "label": "Substrate",
-          "value": "BK7, Fused Silica, Optical Glass, and Specialty Optical Materials"
-        },
-        {
-          "label": "Diameter",
-          "value": "12.7 mm, 25.4 mm, 50.8 mm"
-        },
-        {
-          "label": "Shape",
-          "value": "Round, Square, Rectangular"
-        },
-        {
-          "label": "Coating",
-          "value": "Visible, NIR, Broadband, and Laser-Line Coatings"
-        },
-        {
-          "label": "Reflectivity",
-          "value": "High-Reflectivity Coatings for Selected Wavelengths"
-        },
-        {
-          "label": "Mounting",
-          "value": "Mounted and Unmounted Mirrors"
-        },
-        {
-          "label": "Compatibility",
-          "value": "Standard Opto-Mechanics"
-        }
-      ],
+      "techSpecs": [],
       "keyValueSpecs": [],
       "variants": [],
       "configurationOptions": null,
@@ -5071,8 +5038,8 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Mirrors\n\nProtected metal and dielectric mirrors for beam steering and high-reflectivity applications. Detailed write-up coming soon.\n\nMirror: Protected Silver, Protected Aluminum, Enhanced Aluminum, Dielectric, and Broadband Mirrors\n\nSubstrate: BK7, Fused Silica, Optical Glass, and Specialty Optical Materials\n\nDiameter: 12.7 mm, 25.4 mm, 50.8 mm\n\nShape: Round, Square, Rectangular\n\nCoating: Visible, NIR, Broadband, and Laser-Line Coatings\n\nReflectivity: High-Reflectivity Coatings for Selected Wavelengths\n\nMounting: Mounted and Unmounted Mirrors\n\nCompatibility: Standard Opto-Mechanics",
-      "image": "assets/slides/03-dielectric-mirror.svg",
+      "body": "Mirrors\n\nProtected metal and dielectric mirrors for beam steering and high-reflectivity applications. Detailed write-up coming soon.\n\nRequest Technical Quote · Specs below are indicative\n\nOptical Mirrors\n\nDielectric Mirror\n\nProtected Aluminum\n\nProtected metal and dielectric mirrors for beam steering and high-reflectivity applications. Detailed write-up coming soon.\n\nSpecification ranges below are indicative. Final configuration, coating, and dimensions are confirmed on quotation.\n\nMirror: Protected Silver, Protected Aluminum, Enhanced Aluminum, Dielectric, and Broadband Mirrors\n\nWavelength: UV, Visible, and NIR\n\nMaterial: BK7, Fused Silica, Optical Glass, and Specialty Optical Materials\n\nCoating: Aluminium, Silver, Chromium, Dielectric, Anti-Reflection, Broadband and Laser-Line, Coated, Uncoated\n\nSize: Standard Diameters, Standard Shapes, and Custom Sizes\n\nMounting Options: Mounted and Unmounted Optics\n\nLaser beam alignment\n\nImaging and spectroscopy\n\nInterferometry\n\nPhotonics experiments\n\nOptical instrumentation\n\nQuantum optics teaching and research setups\n\nScientific and educational laboratories\n\nProcurement: Request Technical Quote\n\nLabel\n\nValue\n\nMirror\n\nProtected Silver, Protected Aluminum, Enhanced Aluminum, Dielectric, and Broadband Mirrors\n\nSubstrate\n\nBK7, Fused Silica, Optical Glass, and Specialty Optical Materials\n\nDiameter\n\n12.7 mm, 25.4 mm, 50.8 mm\n\nShape\n\nRound, Square, Rectangular\n\nCoating\n\nVisible, NIR, Broadband, and Laser-Line Coatings\n\nReflectivity\n\nHigh-Reflectivity Coatings for Selected Wavelengths\n\nMounting\n\nMounted and Unmounted Mirrors\n\nCompatibility\n\nStandard Opto-Mechanics\n\nmirrors\n\noptics\n\noptical components",
+      "image": "assets/products/optical-mirrors/primary.png",
       "images": [
         "assets/slides/03-dielectric-mirror.svg"
       ],
@@ -5086,7 +5053,49 @@
       "categoryLabel": "Optics",
       "categoryPath": "/components/optics.html",
       "sortIndex": 2,
-      "_search": "optical-mirrors set-mirrors mirrors component optics optics protected metal and dielectric mirrors for beam steering and high-reflectivity applications. detailed write-up coming soon. request technical quote · specs below are indicative optical mirrors dielectric mirror protected aluminum mirrors optics optical components mirrors\n\nprotected metal and dielectric mirrors for beam steering and high-reflectivity applications. detailed write-up coming soon.\n\nmirror: protected silver, protected aluminum, enhanced aluminum, dielectric, and broadband mirrors\n\nsubstrate: bk7, fused silica, optical glass, and specialty optical materials\n\ndiameter: 12.7 mm, 25.4 mm, 50.8 mm\n\nshape: round, square, rectangular\n\ncoating: visible, nir, broadband, and laser-line coatings\n\nreflectivity: high-reflectivity coatings for selected wavelengths\n\nmounting: mounted and unmounted mirrors\n\ncompatibility: standard opto-mechanics"
+      "_search": "optical-mirrors set-mirrors mirrors component optics optics component protected metal and dielectric mirrors for beam steering and high-reflectivity applications. detailed write-up coming soon. request technical quote · specs below are indicative optical mirrors dielectric mirror protected aluminum mirror: protected silver, protected aluminum, enhanced aluminum, dielectric, and broadband mirrors wavelength: uv, visible, and nir material: bk7, fused silica, optical glass, and specialty optical materials coating: aluminium, silver, chromium, dielectric, anti-reflection, broadband and laser-line, coated, uncoated size: standard diameters, standard shapes, and custom sizes mounting options: mounted and unmounted optics laser beam alignment imaging and spectroscopy interferometry photonics experiments optical instrumentation quantum optics teaching and research setups scientific and educational laboratories mirrors optics optical components procurement request technical quote  mirrors\n\nprotected metal and dielectric mirrors for beam steering and high-reflectivity applications. detailed write-up coming soon.\n\nrequest technical quote · specs below are indicative\n\noptical mirrors\n\ndielectric mirror\n\nprotected aluminum\n\nprotected metal and dielectric mirrors for beam steering and high-reflectivity applications. detailed write-up coming soon.\n\nspecification ranges below are indicative. final configuration, coating, and dimensions are confirmed on quotation.\n\nmirror: protected silver, protected aluminum, enhanced aluminum, dielectric, and broadband mirrors\n\nwavelength: uv, visible, and nir\n\nmaterial: bk7, fused silica, optical glass, and specialty optical materials\n\ncoating: aluminium, silver, chromium, dielectric, anti-reflection, broadband and laser-line, coated, uncoated\n\nsize: standard diameters, standard shapes, and custom sizes\n\nmounting options: mounted and unmounted optics\n\nlaser beam alignment\n\nimaging and spectroscopy\n\ninterferometry\n\nphotonics experiments\n\noptical instrumentation\n\nquantum optics teaching and research setups\n\nscientific and educational laboratories\n\nprocurement: request technical quote\n\nlabel\n\nvalue\n\nmirror\n\nprotected silver, protected aluminum, enhanced aluminum, dielectric, and broadband mirrors\n\nsubstrate\n\nbk7, fused silica, optical glass, and specialty optical materials\n\ndiameter\n\n12.7 mm, 25.4 mm, 50.8 mm\n\nshape\n\nround, square, rectangular\n\ncoating\n\nvisible, nir, broadband, and laser-line coatings\n\nreflectivity\n\nhigh-reflectivity coatings for selected wavelengths\n\nmounting\n\nmounted and unmounted mirrors\n\ncompatibility\n\nstandard opto-mechanics\n\nmirrors\n\noptics\n\noptical components",
+      "customTable": {
+        "title": null,
+        "columns": [
+          "Label",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Mirror",
+            "Protected Silver, Protected Aluminum, Enhanced Aluminum, Dielectric, and Broadband Mirrors"
+          ],
+          [
+            "Substrate",
+            "BK7, Fused Silica, Optical Glass, and Specialty Optical Materials"
+          ],
+          [
+            "Diameter",
+            "12.7 mm, 25.4 mm, 50.8 mm"
+          ],
+          [
+            "Shape",
+            "Round, Square, Rectangular"
+          ],
+          [
+            "Coating",
+            "Visible, NIR, Broadband, and Laser-Line Coatings"
+          ],
+          [
+            "Reflectivity",
+            "High-Reflectivity Coatings for Selected Wavelengths"
+          ],
+          [
+            "Mounting",
+            "Mounted and Unmounted Mirrors"
+          ],
+          [
+            "Compatibility",
+            "Standard Opto-Mechanics"
+          ]
+        ]
+      },
+      "specTableTitle": null
     },
     {
       "id": "beam-splitters",
