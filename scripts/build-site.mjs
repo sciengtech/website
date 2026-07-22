@@ -157,6 +157,14 @@ function shell({ base, title, desc, main, pageId = '', catalogMode = '', detailP
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="${base}css/site.css" />
   <link rel="stylesheet" href="${base}css/catalog.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9HREEF83R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W9HREEF83R');
+  </script>
 </head>
 <body>
   <div id="site-header"></div>
@@ -846,7 +854,7 @@ function main() {
     <h2>7. Your rights</h2>
     <p>You may request access, correction, or deletion of personal data where applicable under Indian law. Contact <a href="mailto:info@sciengtech.in">info@sciengtech.in</a>.</p>
     <h2>8. Analytics</h2>
-    <p>We may use privacy-respecting analytics (e.g. Google Analytics 4) to measure site usage. You will be notified when analytics is enabled on the production domain.</p>
+    <p>We use Google Analytics 4 on sciengtech.in and related production domains to measure site usage (pages viewed, traffic sources, and similar aggregated metrics). Google may process this data under its terms; see Google's privacy documentation for details.</p>
     <h2>9. Changes</h2>
     <p>We may update this policy. Material changes will be reflected on this page with an updated date.</p>
     <p><em>Last updated: July 2026</em></p>
