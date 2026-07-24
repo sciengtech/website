@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-22",
+  "updated": "2026-07-24",
   "solutions": [
     {
       "id": "entangled-photon-source",
@@ -1992,7 +1992,7 @@
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
       "images": [
-        "assets/products/clamping-fork/primary.png"
+        "assets/products/clamping-fork/image-02.png"
       ],
       "sortIndex": 5,
       "customTable": null,
