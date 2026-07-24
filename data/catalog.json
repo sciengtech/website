@@ -4629,7 +4629,7 @@
         }
       ],
       "body": "Swivel Base Adapter\n\nThis product is designed for laboratories and advanced optical systems where precision and efficiency are paramount, it delivers smooth, controlled 360° rotational positioning for effortless alignment.\n\nThe 360° Swivel Base Adapter is thoughtfully engineered for seamless integration with standard Ø1/2\" post holders featuring 1/4\"-20 (M6) mounting holes. \n\nSwivel Mounting Base\n\nSmooth, precise 360° rotational adjustment\n\nEnhanced layout flexibility in compact optical systems\n\nReduced alignment and setup time\n\nPremium black anodised aluminium construction\n\nFully compatible with all Ø1/2\" post holders\n\nM6 mounting hole allows direct attachment to optical breadboards and mounting platforms\n\nProcurement: Request Technical Quote\n\nswivel base adapter\n\nopto-mechanics",
-      "image": "assets/products/swivel-base-adapter/primary.jpeg",
+      "image": "assets/products/swivel-base-adapter/primary.png",
       "tags": [
         "swivel base adapter",
         "opto-mechanics"
@@ -4639,7 +4639,10 @@
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
-      "images": [],
+      "images": [
+        "assets/products/swivel-base-adapter/image-02.png",
+        "assets/products/swivel-base-adapter/image-03.png"
+      ],
       "sortIndex": 9,
       "customTable": null,
       "specTableTitle": null
