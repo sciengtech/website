@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-27",
+  "updated": "2026-07-29",
   "solutions": [
     {
       "id": "entangled-photon-source",
@@ -2009,18 +2009,17 @@
       "overview": [
         "Maintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. Even microscopic dust particles and contaminants can significantly affect the performance of precision optical systems.",
         "SciEngTech Solutions offers a range of reliable and cost-effective cleanroom accessories and optics cleaning products designed for research laboratories, photonics facilities, laser laboratories, and industrial environments. Our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.",
-        "SciEngTech optics cleaning products are suitable for universities, research laboratories, photonics facilities, semiconductor laboratories, quantum technology laboratories, and industrial optical systems where cleanliness and optical performance are critical.",
-        "Our solutions support: ",
-        "Optics cleaning and maintenance ",
-        "Dust-free laboratory environments ",
-        "Air monitoring applications ",
-        "Precision optical system maintenance ",
-        "Cleanroom laboratory operations Products A. Cotton Tipped Applicators",
-        "# Cotton Tip Applicators",
         "High-quality, lint-minimized cotton applicators designed for cleaning optical components, precision instruments, and hard-to-reach surfaces without causing damage."
       ],
-      "features": [],
-      "applications": [],
+      "features": [
+        "Used for optics cleaning and maintenance ",
+        "Dust-free laboratory environments ",
+        "For precision optical system maintenance "
+      ],
+      "applications": [
+        "Suitable for universities, research laboratories, photonics facilities, semiconductor laboratories",
+        "Quantum technology laboratories, and industrial optical systems where cleanliness and optical performance are critical"
+      ],
       "techSpecs": [],
       "keyValueSpecs": [],
       "variants": [],
@@ -2028,7 +2027,7 @@
       "rfqSections": null,
       "solutionContent": null,
       "customNote": null,
-      "summary": "",
+      "summary": "Length = 15 cm (6'')",
       "specHighlight": "",
       "specs": [
         {
@@ -2036,13 +2035,13 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Cotton Tip Applicators\n\nMaintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. Even microscopic dust particles and contaminants can significantly affect the performance of precision optical systems.\n\nSciEngTech Solutions offers a range of reliable and cost-effective cleanroom accessories and optics cleaning products designed for research laboratories, photonics facilities, laser laboratories, and industrial environments. Our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.\n\nSciEngTech optics cleaning products are suitable for universities, research laboratories, photonics facilities, semiconductor laboratories, quantum technology laboratories, and industrial optical systems where cleanliness and optical performance are critical.\n\nOur solutions support: \n\nOptics cleaning and maintenance \n\nDust-free laboratory environments \n\nAir monitoring applications \n\nPrecision optical system maintenance \n\nCleanroom laboratory operations Products A. Cotton Tipped Applicators\n\n# Cotton Tip Applicators\n\nHigh-quality, lint-minimized cotton applicators designed for cleaning optical components, precision instruments, and hard-to-reach surfaces without causing damage.\n\nProcurement: Request Technical Quote\n\nCotton Tip Applicators",
+      "body": "Cotton Tip Applicators\n\nLength = 15 cm (6'')\n\nMaintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. Even microscopic dust particles and contaminants can significantly affect the performance of precision optical systems.\n\nSciEngTech Solutions offers a range of reliable and cost-effective cleanroom accessories and optics cleaning products designed for research laboratories, photonics facilities, laser laboratories, and industrial environments. Our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.\n\nHigh-quality, lint-minimized cotton applicators designed for cleaning optical components, precision instruments, and hard-to-reach surfaces without causing damage.\n\nUsed for optics cleaning and maintenance \n\nDust-free laboratory environments \n\nFor precision optical system maintenance \n\nSuitable for universities, research laboratories, photonics facilities, semiconductor laboratories\n\nQuantum technology laboratories, and industrial optical systems where cleanliness and optical performance are critical\n\nProcurement: Request Technical Quote\n\nCotton Tip Applicators",
       "image": "assets/products/cleanroom-and-optics-cleaning-solutions/primary.png",
       "tags": [
         "Cotton Tip Applicators"
       ],
       "writeupPath": "Lab Accessories/SET Cleaning Material.docx",
-      "_search": "cleanroom-and-optics-cleaning-solutions set-cta cotton tip applicators component lab-accessories lab accessories component      cotton tip applicators procurement request technical quote  cotton tip applicators\n\nmaintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. even microscopic dust particles and contaminants can significantly affect the performance of precision optical systems.\n\nsciengtech solutions offers a range of reliable and cost-effective cleanroom accessories and optics cleaning products designed for research laboratories, photonics facilities, laser laboratories, and industrial environments. our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.\n\nsciengtech optics cleaning products are suitable for universities, research laboratories, photonics facilities, semiconductor laboratories, quantum technology laboratories, and industrial optical systems where cleanliness and optical performance are critical.\n\nour solutions support: \n\noptics cleaning and maintenance \n\ndust-free laboratory environments \n\nair monitoring applications \n\nprecision optical system maintenance \n\ncleanroom laboratory operations products a. cotton tipped applicators\n\n# cotton tip applicators\n\nhigh-quality, lint-minimized cotton applicators designed for cleaning optical components, precision instruments, and hard-to-reach surfaces without causing damage.\n\nprocurement: request technical quote\n\ncotton tip applicators",
+      "_search": "cleanroom-and-optics-cleaning-solutions set-cta cotton tip applicators component lab-accessories lab accessories component length = 15 cm (6'')   used for optics cleaning and maintenance  dust-free laboratory environments  for precision optical system maintenance  suitable for universities, research laboratories, photonics facilities, semiconductor laboratories quantum technology laboratories, and industrial optical systems where cleanliness and optical performance are critical cotton tip applicators procurement request technical quote  cotton tip applicators\n\nlength = 15 cm (6'')\n\nmaintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. even microscopic dust particles and contaminants can significantly affect the performance of precision optical systems.\n\nsciengtech solutions offers a range of reliable and cost-effective cleanroom accessories and optics cleaning products designed for research laboratories, photonics facilities, laser laboratories, and industrial environments. our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.\n\nhigh-quality, lint-minimized cotton applicators designed for cleaning optical components, precision instruments, and hard-to-reach surfaces without causing damage.\n\nused for optics cleaning and maintenance \n\ndust-free laboratory environments \n\nfor precision optical system maintenance \n\nsuitable for universities, research laboratories, photonics facilities, semiconductor laboratories\n\nquantum technology laboratories, and industrial optical systems where cleanliness and optical performance are critical\n\nprocurement: request technical quote\n\ncotton tip applicators",
       "category": "lab-accessories",
       "categoryLabel": "Lab Accessories",
       "categoryPath": "/components/lab-accessories.html",
@@ -2055,58 +2054,6 @@
       "sortIndex": 1
     },
     {
-      "id": "optics-cleaning-cloth",
-      "sku": "SET-SET-CCO",
-      "name": "Optics Cleaning Cloth",
-      "type": "component",
-      "pageTemplate": "component",
-      "aliases": [],
-      "overview": [
-        "Maintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. Even microscopic dust particles and contaminants can significantly affect the performance of precision optical systems.",
-        "SciEngTech Solutions offers a range of reliable and cost-effective cleanroom accessories and optics cleaning products designed for research laboratories, photonics facilities, laser laboratories, and industrial environments. Our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.",
-        "SciEngTech optics cleaning products are suitable for universities, research laboratories, photonics facilities, semiconductor laboratories, quantum technology laboratories, and industrial optical systems where cleanliness and optical performance are critical.",
-        "Our solutions support:",
-        "Optics cleaning and maintenance",
-        "Dust-free laboratory environments ",
-        "Air monitoring applications ",
-        "Precision optical system maintenance ",
-        "Cleanroom laboratory operations",
-        "# Optics Cleaning Cloth",
-        "Soft, non-abrasive cleaning cloth specially designed for cleaning lenses, mirrors, filters, windows, and other precision optical components without scratching delicate surfaces."
-      ],
-      "features": [],
-      "applications": [],
-      "techSpecs": [],
-      "keyValueSpecs": [],
-      "specTableTitle": null,
-      "customTable": null,
-      "variants": [],
-      "configurationOptions": null,
-      "rfqSections": null,
-      "solutionContent": null,
-      "customNote": null,
-      "summary": "Optics Cleaning Cloth",
-      "specHighlight": "",
-      "specs": [
-        {
-          "label": "Procurement",
-          "value": "Request Technical Quote"
-        }
-      ],
-      "body": "Optics Cleaning Cloth\n\nOptics Cleaning Cloth\n\nMaintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. Even microscopic dust particles and contaminants can significantly affect the performance of precision optical systems.\n\nSciEngTech Solutions offers a range of reliable and cost-effective cleanroom accessories and optics cleaning products designed for research laboratories, photonics facilities, laser laboratories, and industrial environments. Our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.\n\nSciEngTech optics cleaning products are suitable for universities, research laboratories, photonics facilities, semiconductor laboratories, quantum technology laboratories, and industrial optical systems where cleanliness and optical performance are critical.\n\nOur solutions support:\n\nOptics cleaning and maintenance\n\nDust-free laboratory environments \n\nAir monitoring applications \n\nPrecision optical system maintenance \n\nCleanroom laboratory operations\n\n# Optics Cleaning Cloth\n\nSoft, non-abrasive cleaning cloth specially designed for cleaning lenses, mirrors, filters, windows, and other precision optical components without scratching delicate surfaces.\n\nProcurement: Request Technical Quote\n\nOptics Cleaning Cloth",
-      "image": "assets/products/optics-cleaning-cloth/primary.jpeg",
-      "images": [],
-      "tags": [
-        "Optics Cleaning Cloth"
-      ],
-      "writeupPath": null,
-      "sortIndex": 2,
-      "_search": "optics-cleaning-cloth set-set-cco optics cleaning cloth component lab-accessories lab accessories component optics cleaning cloth     optics cleaning cloth procurement request technical quote  optics cleaning cloth\n\noptics cleaning cloth\n\nmaintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. even microscopic dust particles and contaminants can significantly affect the performance of precision optical systems.\n\nsciengtech solutions offers a range of reliable and cost-effective cleanroom accessories and optics cleaning products designed for research laboratories, photonics facilities, laser laboratories, and industrial environments. our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.\n\nsciengtech optics cleaning products are suitable for universities, research laboratories, photonics facilities, semiconductor laboratories, quantum technology laboratories, and industrial optical systems where cleanliness and optical performance are critical.\n\nour solutions support:\n\noptics cleaning and maintenance\n\ndust-free laboratory environments \n\nair monitoring applications \n\nprecision optical system maintenance \n\ncleanroom laboratory operations\n\n# optics cleaning cloth\n\nsoft, non-abrasive cleaning cloth specially designed for cleaning lenses, mirrors, filters, windows, and other precision optical components without scratching delicate surfaces.\n\nprocurement: request technical quote\n\noptics cleaning cloth",
-      "category": "lab-accessories",
-      "categoryLabel": "Lab Accessories",
-      "categoryPath": "/components/lab-accessories.html"
-    },
-    {
       "id": "optics-cleaning-ztissues",
       "sku": "SET-CTO",
       "name": "Optics Cleaning Tissues",
@@ -2114,20 +2061,21 @@
       "pageTemplate": "component",
       "aliases": [],
       "overview": [
-        "Maintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. Even microscopic dust particles and contaminants can significantly affect the performance of precision optical systems.",
         "SciEngTech Solutions offers a range of reliable and cost-effective cleanroom accessories and optics cleaning products designed for research laboratories, photonics facilities, laser laboratories, and industrial environments. Our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.",
-        "SciEngTech optics cleaning products are suitable for universities, research laboratories, photonics facilities, semiconductor laboratories, quantum technology laboratories, and industrial optical systems where cleanliness and optical performance are critical.",
-        "Our solutions support",
-        "Optics cleaning and maintenance",
-        "Dust-free laboratory environments ",
-        "Air monitoring applications",
-        "Precision optical system maintenance ",
-        "Cleanroom laboratory operations",
-        "# Optics Cleaning Tissues",
+        "Maintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. ",
         "Premium lint-free optics cleaning tissues suitable for removing dust, fingerprints, and contaminants from precision optical surfaces. Ideal for use with approved optical cleaning solutions to achieve streak-free cleaning."
       ],
-      "features": [],
-      "applications": [],
+      "features": [
+        "Cleanroom laboratory operations",
+        "Precision optical system maintenance ",
+        "Dust-free laboratory environments ",
+        "Optics cleaning and maintenance"
+      ],
+      "applications": [
+        "Universities,  Quantum technology laboratories",
+        "Research laboratories, photonics facilities, semiconductor laboratories",
+        "Industrial optical systems "
+      ],
       "techSpecs": [],
       "keyValueSpecs": [],
       "specTableTitle": null,
@@ -2138,22 +2086,73 @@
       "solutionContent": null,
       "customNote": null,
       "summary": "Optics Cleaning Tissues",
-      "specHighlight": "",
+      "specHighlight": "7.5cm x 12.5cm (3'' x 5'')",
       "specs": [
         {
           "label": "Procurement",
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Optics Cleaning Tissues\n\nOptics Cleaning Tissues\n\nMaintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. Even microscopic dust particles and contaminants can significantly affect the performance of precision optical systems.\n\nSciEngTech Solutions offers a range of reliable and cost-effective cleanroom accessories and optics cleaning products designed for research laboratories, photonics facilities, laser laboratories, and industrial environments. Our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.\n\nSciEngTech optics cleaning products are suitable for universities, research laboratories, photonics facilities, semiconductor laboratories, quantum technology laboratories, and industrial optical systems where cleanliness and optical performance are critical.\n\nOur solutions support\n\nOptics cleaning and maintenance\n\nDust-free laboratory environments \n\nAir monitoring applications\n\nPrecision optical system maintenance \n\nCleanroom laboratory operations\n\n# Optics Cleaning Tissues\n\nPremium lint-free optics cleaning tissues suitable for removing dust, fingerprints, and contaminants from precision optical surfaces. Ideal for use with approved optical cleaning solutions to achieve streak-free cleaning.\n\nProcurement: Request Technical Quote\n\nOptics Cleaning Tissues",
+      "body": "Optics Cleaning Tissues\n\nOptics Cleaning Tissues\n\n7.5cm x 12.5cm (3'' x 5'')\n\nSciEngTech Solutions offers a range of reliable and cost-effective cleanroom accessories and optics cleaning products designed for research laboratories, photonics facilities, laser laboratories, and industrial environments. Our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.\n\nMaintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. \n\nPremium lint-free optics cleaning tissues suitable for removing dust, fingerprints, and contaminants from precision optical surfaces. Ideal for use with approved optical cleaning solutions to achieve streak-free cleaning.\n\nCleanroom laboratory operations\n\nPrecision optical system maintenance \n\nDust-free laboratory environments \n\nOptics cleaning and maintenance\n\nUniversities,  Quantum technology laboratories\n\nResearch laboratories, photonics facilities, semiconductor laboratories\n\nIndustrial optical systems \n\nProcurement: Request Technical Quote\n\nOptics Cleaning Tissues",
       "image": "assets/products/optics-cleaning-ztissues/primary.jpg",
       "images": [],
       "tags": [
         "Optics Cleaning Tissues"
       ],
       "writeupPath": null,
+      "sortIndex": 2,
+      "_search": "optics-cleaning-ztissues set-cto optics cleaning tissues component lab-accessories lab accessories component optics cleaning tissues 7.5cm x 12.5cm (3'' x 5'')  cleanroom laboratory operations precision optical system maintenance  dust-free laboratory environments  optics cleaning and maintenance universities,  quantum technology laboratories research laboratories, photonics facilities, semiconductor laboratories industrial optical systems  optics cleaning tissues procurement request technical quote  optics cleaning tissues\n\noptics cleaning tissues\n\n7.5cm x 12.5cm (3'' x 5'')\n\nsciengtech solutions offers a range of reliable and cost-effective cleanroom accessories and optics cleaning products designed for research laboratories, photonics facilities, laser laboratories, and industrial environments. our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.\n\nmaintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. \n\npremium lint-free optics cleaning tissues suitable for removing dust, fingerprints, and contaminants from precision optical surfaces. ideal for use with approved optical cleaning solutions to achieve streak-free cleaning.\n\ncleanroom laboratory operations\n\nprecision optical system maintenance \n\ndust-free laboratory environments \n\noptics cleaning and maintenance\n\nuniversities,  quantum technology laboratories\n\nresearch laboratories, photonics facilities, semiconductor laboratories\n\nindustrial optical systems \n\nprocurement: request technical quote\n\noptics cleaning tissues",
+      "category": "lab-accessories",
+      "categoryLabel": "Lab Accessories",
+      "categoryPath": "/components/lab-accessories.html"
+    },
+    {
+      "id": "optics-cleaning-cloth",
+      "sku": "SET-CCO",
+      "name": "Optics Cleaning Cloth",
+      "type": "component",
+      "pageTemplate": "component",
+      "aliases": [],
+      "overview": [
+        "Soft, non-abrasive cleaning cloth specially designed for cleaning lenses, mirrors, filters, windows, and other precision optical components without scratching delicate surfaces.",
+        "Our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components."
+      ],
+      "features": [
+        "Dust-free laboratory environments ",
+        "Optics cleaning and maintenance",
+        "Air monitoring applications ",
+        "Cleanroom laboratory operations"
+      ],
+      "applications": [
+        "Research laboratories, photonics facilities",
+        "Laser laboratories and industrial environments. "
+      ],
+      "techSpecs": [],
+      "keyValueSpecs": [],
+      "specTableTitle": null,
+      "customTable": null,
+      "variants": [],
+      "configurationOptions": null,
+      "rfqSections": null,
+      "solutionContent": null,
+      "customNote": null,
+      "summary": "Optics Cleaning Cloth",
+      "specHighlight": "30 cm x 40 cm (11.8'' x 15.7'')",
+      "specs": [
+        {
+          "label": "Procurement",
+          "value": "Request Technical Quote"
+        }
+      ],
+      "body": "Optics Cleaning Cloth\n\nOptics Cleaning Cloth\n\n30 cm x 40 cm (11.8'' x 15.7'')\n\nSoft, non-abrasive cleaning cloth specially designed for cleaning lenses, mirrors, filters, windows, and other precision optical components without scratching delicate surfaces.\n\nOur products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.\n\nDust-free laboratory environments \n\nOptics cleaning and maintenance\n\nAir monitoring applications \n\nCleanroom laboratory operations\n\nResearch laboratories, photonics facilities\n\nLaser laboratories and industrial environments. \n\nProcurement: Request Technical Quote\n\nOptics Cleaning Cloth",
+      "image": "assets/products/optics-cleaning-cloth/primary.jpeg",
+      "images": [],
+      "tags": [
+        "Optics Cleaning Cloth"
+      ],
+      "writeupPath": null,
       "sortIndex": 3,
-      "_search": "optics-cleaning-ztissues set-cto optics cleaning tissues component lab-accessories lab accessories component optics cleaning tissues     optics cleaning tissues procurement request technical quote  optics cleaning tissues\n\noptics cleaning tissues\n\nmaintaining a clean laboratory environment is essential for ensuring the accuracy of experiments, extending the life of optical components, and improving the quality of research and manufacturing processes. even microscopic dust particles and contaminants can significantly affect the performance of precision optical systems.\n\nsciengtech solutions offers a range of reliable and cost-effective cleanroom accessories and optics cleaning products designed for research laboratories, photonics facilities, laser laboratories, and industrial environments. our products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.\n\nsciengtech optics cleaning products are suitable for universities, research laboratories, photonics facilities, semiconductor laboratories, quantum technology laboratories, and industrial optical systems where cleanliness and optical performance are critical.\n\nour solutions support\n\noptics cleaning and maintenance\n\ndust-free laboratory environments \n\nair monitoring applications\n\nprecision optical system maintenance \n\ncleanroom laboratory operations\n\n# optics cleaning tissues\n\npremium lint-free optics cleaning tissues suitable for removing dust, fingerprints, and contaminants from precision optical surfaces. ideal for use with approved optical cleaning solutions to achieve streak-free cleaning.\n\nprocurement: request technical quote\n\noptics cleaning tissues",
+      "_search": "optics-cleaning-cloth set-cco optics cleaning cloth component lab-accessories lab accessories component optics cleaning cloth 30 cm x 40 cm (11.8'' x 15.7'')  dust-free laboratory environments  optics cleaning and maintenance air monitoring applications  cleanroom laboratory operations research laboratories, photonics facilities laser laboratories and industrial environments.  optics cleaning cloth procurement request technical quote  optics cleaning cloth\n\noptics cleaning cloth\n\n30 cm x 40 cm (11.8'' x 15.7'')\n\nsoft, non-abrasive cleaning cloth specially designed for cleaning lenses, mirrors, filters, windows, and other precision optical components without scratching delicate surfaces.\n\nour products help maintain contamination-free workspaces and ensure the optimum performance of sensitive optical components.\n\ndust-free laboratory environments \n\noptics cleaning and maintenance\n\nair monitoring applications \n\ncleanroom laboratory operations\n\nresearch laboratories, photonics facilities\n\nlaser laboratories and industrial environments. \n\nprocurement: request technical quote\n\noptics cleaning cloth",
       "category": "lab-accessories",
       "categoryLabel": "Lab Accessories",
       "categoryPath": "/components/lab-accessories.html"
