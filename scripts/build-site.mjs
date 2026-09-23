@@ -9,6 +9,7 @@ import { renderProductDetail } from './product-detail-template.mjs';
 import { patchSolutionsCatalog } from './patch-solutions-catalog.mjs';
 import { SOLUTION_GROUPS, solutionGroupLabel } from './solution-groups.mjs';
 import { buildKnowledgePages } from './knowledge-build.mjs';
+import { buildLegacyRedirects } from './legacy-redirects.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -889,6 +890,9 @@ function main() {
   );
 
   cleanLegacyProductPages();
+
+  // Old WordPress / WooCommerce URLs → new pages (static + 404.html fallback)
+  buildLegacyRedirects(ROOT, catalog);
 
   buildSitemapAndRobots();
 
