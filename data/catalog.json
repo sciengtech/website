@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-29",
+  "updated": "2026-09-30",
   "solutions": [
     {
       "id": "entangled-photon-source",
@@ -1732,7 +1732,9 @@
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
       "images": [
-        "assets/products/cage-assembly-rod/primary.png"
+        "assets/products/cage-assembly-rod/primary.png",
+        "assets/products/cage-assembly-rod/image-02.png",
+        "assets/products/cage-assembly-rod/image-03.png"
       ],
       "sortIndex": 25,
       "customTable": null,
