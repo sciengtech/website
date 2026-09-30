@@ -5672,10 +5672,64 @@
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html"
+    },
+    {
+      "id": "rotation-mount-half-inch",
+      "sku": "SET-RM-012",
+      "name": "Rotation Mount - Half Inch",
+      "type": "component",
+      "pageTemplate": "component",
+      "aliases": [],
+      "overview": [
+        "The mount accepts optics up to 5.8 mm thickness and provides a full 360° continuous rotation range for flexible angular adjustment. An engraved angular scale with 2° graduations enables convenient visual setting of the optic orientation, while a top-mounted setscrew allows the selected angle to be securely locked in position. ",
+        "The mount incorporates an SM05 internal thread, making it compatible with standard SM05 lens tubes and retaining-ring-based optic mounting. The optic is secured using an SM05RR-compatible retaining ring, enabling reliable positioning without excessive mechanical stress on the optical element. ",
+        "With compact overall dimensions of approximately 25.4 mm × 22.1 mm × 11.4 mm and a 25.4 mm mounting height, the rotation mount is well suited for dense optical layouts. An M4 mounting tap provides convenient attachment to standard optical posts and opto-mechanical assemblies.",
+        "The mount is suitable for polarization experiments, laser systems, interferometry, spectroscopy, imaging, photonics, and quantum-optics laboratory setups where controlled angular positioning of Ø1/2\" optics is required."
+      ],
+      "features": [
+        "Ø1/2\" optic compatibility",
+        "Maximum optic thickness 5.8 mm",
+        "360° rotation, 2° angular graduations",
+        "Rotation lock, SM05 internal threading",
+        "SM05 lens-tube compatibility, retaining-ring mounting",
+        "25.4 mm optical height and M4 post mounting"
+      ],
+      "applications": [],
+      "techSpecs": [],
+      "keyValueSpecs": [],
+      "specTableTitle": null,
+      "customTable": null,
+      "variants": [],
+      "configurationOptions": null,
+      "rfqSections": null,
+      "solutionContent": null,
+      "customNote": null,
+      "summary": "Rotation Mount - Half Inch",
+      "specHighlight": "Ø1/2\" rotation mount designed for precise angular positioning of small optical components such as waveplates, polarizers, filters, and other Ø1/2\" optics. ",
+      "specs": [
+        {
+          "label": "Procurement",
+          "value": "Request Technical Quote"
+        }
+      ],
+      "body": "Rotation Mount - Half Inch\n\nRotation Mount - Half Inch\n\nØ1/2\" rotation mount designed for precise angular positioning of small optical components such as waveplates, polarizers, filters, and other Ø1/2\" optics. \n\nThe mount accepts optics up to 5.8 mm thickness and provides a full 360° continuous rotation range for flexible angular adjustment. An engraved angular scale with 2° graduations enables convenient visual setting of the optic orientation, while a top-mounted setscrew allows the selected angle to be securely locked in position. \n\nThe mount incorporates an SM05 internal thread, making it compatible with standard SM05 lens tubes and retaining-ring-based optic mounting. The optic is secured using an SM05RR-compatible retaining ring, enabling reliable positioning without excessive mechanical stress on the optical element. \n\nWith compact overall dimensions of approximately 25.4 mm × 22.1 mm × 11.4 mm and a 25.4 mm mounting height, the rotation mount is well suited for dense optical layouts. An M4 mounting tap provides convenient attachment to standard optical posts and opto-mechanical assemblies.\n\nThe mount is suitable for polarization experiments, laser systems, interferometry, spectroscopy, imaging, photonics, and quantum-optics laboratory setups where controlled angular positioning of Ø1/2\" optics is required.\n\nØ1/2\" optic compatibility\n\nMaximum optic thickness 5.8 mm\n\n360° rotation, 2° angular graduations\n\nRotation lock, SM05 internal threading\n\nSM05 lens-tube compatibility, retaining-ring mounting\n\n25.4 mm optical height and M4 post mounting\n\nProcurement: Request Technical Quote\n\n360° Precision Rotation Mount\n\nContinuous Rotation Mount\n\nRotational Stage",
+      "image": "assets/products/rotation-mount-half-inch/primary.png",
+      "images": [],
+      "tags": [
+        "360° Precision Rotation Mount",
+        "Continuous Rotation Mount",
+        "Rotational Stage"
+      ],
+      "writeupPath": null,
+      "sortIndex": 9,
+      "_search": "rotation-mount-half-inch set-rm-012 rotation mount - half inch component motion-and-positioning motion and positioning component rotation mount - half inch ø1/2\" rotation mount designed for precise angular positioning of small optical components such as waveplates, polarizers, filters, and other ø1/2\" optics.   ø1/2\" optic compatibility maximum optic thickness 5.8 mm 360° rotation, 2° angular graduations rotation lock, sm05 internal threading sm05 lens-tube compatibility, retaining-ring mounting 25.4 mm optical height and m4 post mounting  360° precision rotation mount continuous rotation mount rotational stage procurement request technical quote  rotation mount - half inch\n\nrotation mount - half inch\n\nø1/2\" rotation mount designed for precise angular positioning of small optical components such as waveplates, polarizers, filters, and other ø1/2\" optics. \n\nthe mount accepts optics up to 5.8 mm thickness and provides a full 360° continuous rotation range for flexible angular adjustment. an engraved angular scale with 2° graduations enables convenient visual setting of the optic orientation, while a top-mounted setscrew allows the selected angle to be securely locked in position. \n\nthe mount incorporates an sm05 internal thread, making it compatible with standard sm05 lens tubes and retaining-ring-based optic mounting. the optic is secured using an sm05rr-compatible retaining ring, enabling reliable positioning without excessive mechanical stress on the optical element. \n\nwith compact overall dimensions of approximately 25.4 mm × 22.1 mm × 11.4 mm and a 25.4 mm mounting height, the rotation mount is well suited for dense optical layouts. an m4 mounting tap provides convenient attachment to standard optical posts and opto-mechanical assemblies.\n\nthe mount is suitable for polarization experiments, laser systems, interferometry, spectroscopy, imaging, photonics, and quantum-optics laboratory setups where controlled angular positioning of ø1/2\" optics is required.\n\nø1/2\" optic compatibility\n\nmaximum optic thickness 5.8 mm\n\n360° rotation, 2° angular graduations\n\nrotation lock, sm05 internal threading\n\nsm05 lens-tube compatibility, retaining-ring mounting\n\n25.4 mm optical height and m4 post mounting\n\nprocurement: request technical quote\n\n360° precision rotation mount\n\ncontinuous rotation mount\n\nrotational stage",
+      "category": "motion-and-positioning",
+      "categoryLabel": "Motion and Positioning",
+      "categoryPath": "/components/motion-and-positioning.html"
     }
   ],
   "counts": {
     "solutions": 14,
-    "components": 53
+    "components": 54
   }
 }
