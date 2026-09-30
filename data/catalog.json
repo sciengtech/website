@@ -5621,10 +5621,61 @@
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html"
+    },
+    {
+      "id": "post-joist",
+      "sku": "SET-MPJ",
+      "name": "Post Joist",
+      "type": "component",
+      "pageTemplate": "component",
+      "aliases": [
+        "Post Joist"
+      ],
+      "overview": [
+        "The design supports both center-mounted and offset-mounted configurations, giving users flexibility in positioning mirrors, lenses, detectors, and other optical hardware. A centered M4 counterbore is provided for direct post mounting, while two M4 counterbored slots allow secure attachment of additional opto-mechanical components.",
+        "For offset mounting, the component position can be adjusted over a range of approximately 10.16 mm to 35.56 mm from the post center, making the joist useful where standard post placement would otherwise interfere with nearby optics or hardware. ",
+        "The centered mounting post joist is especially suitable for dense optical layouts, laser systems, interferometry, spectroscopy, imaging, photonics, and quantum-optics experiments where compact and flexible mounting is important."
+      ],
+      "features": [
+        "compatibility with Ø1/2\" and Ø1\" posts",
+        "center and offset mounting options",
+        "centered M4 counterbore",
+        " two M4 counterbored mounting slots",
+        " adjustable offset range of 10.16–35.56 mm",
+        " support for multiple components on a single post"
+      ],
+      "applications": [],
+      "techSpecs": [],
+      "keyValueSpecs": [],
+      "specTableTitle": null,
+      "customTable": null,
+      "variants": [],
+      "configurationOptions": null,
+      "rfqSections": null,
+      "solutionContent": null,
+      "customNote": null,
+      "summary": "Centered Mounting Post Joist designed for efficient use of space on crowded optical tables and breadboards. The joist is compatible with both Ø1/2\" and Ø1\" optical posts and allows multiple opto-mechanical components to be supported from a single post.",
+      "specHighlight": "",
+      "specs": [
+        {
+          "label": "Procurement",
+          "value": "Request Technical Quote"
+        }
+      ],
+      "body": "Post Joist\n\nCentered Mounting Post Joist designed for efficient use of space on crowded optical tables and breadboards. The joist is compatible with both Ø1/2\" and Ø1\" optical posts and allows multiple opto-mechanical components to be supported from a single post.\n\nPost Joist\n\nThe design supports both center-mounted and offset-mounted configurations, giving users flexibility in positioning mirrors, lenses, detectors, and other optical hardware. A centered M4 counterbore is provided for direct post mounting, while two M4 counterbored slots allow secure attachment of additional opto-mechanical components.\n\nFor offset mounting, the component position can be adjusted over a range of approximately 10.16 mm to 35.56 mm from the post center, making the joist useful where standard post placement would otherwise interfere with nearby optics or hardware. \n\nThe centered mounting post joist is especially suitable for dense optical layouts, laser systems, interferometry, spectroscopy, imaging, photonics, and quantum-optics experiments where compact and flexible mounting is important.\n\ncompatibility with Ø1/2\" and Ø1\" posts\n\ncenter and offset mounting options\n\ncentered M4 counterbore\n\n two M4 counterbored mounting slots\n\n adjustable offset range of 10.16–35.56 mm\n\n support for multiple components on a single post\n\nProcurement: Request Technical Quote",
+      "image": "assets/products/post-joist/primary.png",
+      "images": [],
+      "tags": [],
+      "writeupPath": null,
+      "sortIndex": 31,
+      "_search": "post-joist set-mpj post joist component opto-mechanics opto-mechanics component centered mounting post joist designed for efficient use of space on crowded optical tables and breadboards. the joist is compatible with both ø1/2\" and ø1\" optical posts and allows multiple opto-mechanical components to be supported from a single post.  post joist compatibility with ø1/2\" and ø1\" posts center and offset mounting options centered m4 counterbore  two m4 counterbored mounting slots  adjustable offset range of 10.16–35.56 mm  support for multiple components on a single post   procurement request technical quote  post joist\n\ncentered mounting post joist designed for efficient use of space on crowded optical tables and breadboards. the joist is compatible with both ø1/2\" and ø1\" optical posts and allows multiple opto-mechanical components to be supported from a single post.\n\npost joist\n\nthe design supports both center-mounted and offset-mounted configurations, giving users flexibility in positioning mirrors, lenses, detectors, and other optical hardware. a centered m4 counterbore is provided for direct post mounting, while two m4 counterbored slots allow secure attachment of additional opto-mechanical components.\n\nfor offset mounting, the component position can be adjusted over a range of approximately 10.16 mm to 35.56 mm from the post center, making the joist useful where standard post placement would otherwise interfere with nearby optics or hardware. \n\nthe centered mounting post joist is especially suitable for dense optical layouts, laser systems, interferometry, spectroscopy, imaging, photonics, and quantum-optics experiments where compact and flexible mounting is important.\n\ncompatibility with ø1/2\" and ø1\" posts\n\ncenter and offset mounting options\n\ncentered m4 counterbore\n\n two m4 counterbored mounting slots\n\n adjustable offset range of 10.16–35.56 mm\n\n support for multiple components on a single post\n\nprocurement: request technical quote",
+      "category": "opto-mechanics",
+      "categoryLabel": "Opto-Mechanics",
+      "categoryPath": "/components/opto-mechanics.html"
     }
   ],
   "counts": {
     "solutions": 14,
-    "components": 52
+    "components": 53
   }
 }
