@@ -5569,10 +5569,62 @@
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html"
+    },
+    {
+      "id": "1-to-1-2-right-angle-post-clamp",
+      "sku": "SET-RAPC",
+      "name": "Ø1\" to Ø1/2\" Right-Angle Post Clamp ",
+      "type": "component",
+      "pageTemplate": "variant-catalog",
+      "aliases": [
+        "The clamp is designed for rigid",
+        "space-efficient opto-mechanical assemblies where precise 90° post mounting is required."
+      ],
+      "overview": [
+        "The Ø1\" post is secured using a flexure-based clamping mechanism, tightened with a 5 mm ball driver, providing firm and repeatable positioning without complicated adjustment. The perpendicular Ø1/2\" post is locked using a convenient thumbscrew mechanism, allowing quick installation and repositioning during optical alignment. The clamp maintains a defined center-to-center post spacing of  25.0 mm for metric configurations, making it suitable for integration with standard optical breadboards, post assemblies, and laboratory opto-mechanics. The thumbscrew mechanism is designed for a maximum torque of 5.65 N·m, providing secure clamping for demanding experimental setups."
+      ],
+      "features": [
+        "Compatibility between Ø1\" and Ø1/2\" optical posts",
+        "Perpendicular 90° mounting",
+        "Flexure-based clamping for the Ø1\" post",
+        "Thumbscrew locking for the Ø1/2\" post",
+        "25 mm center-to-center spacing",
+        "Simple tightening using a 5 mm ball driver"
+      ],
+      "applications": [
+        "Suitable for laser systems, optical benches, photonics experiments, interferometry, imaging systems, spectroscopy, and quantum-optics laboratory setups"
+      ],
+      "techSpecs": [],
+      "keyValueSpecs": [],
+      "specTableTitle": null,
+      "customTable": null,
+      "variants": [],
+      "configurationOptions": null,
+      "rfqSections": null,
+      "solutionContent": null,
+      "customNote": null,
+      "summary": " Ø1\" to Ø1/2\" right-angle post clamp for mounting a standard Ø1/2\" optical post perpendicular to a Ø1\" pedestal post. ",
+      "specHighlight": "SET-RAPC",
+      "specs": [
+        {
+          "label": "Procurement",
+          "value": "Request Technical Quote"
+        }
+      ],
+      "body": "Ø1\" to Ø1/2\" Right-Angle Post Clamp \n\n Ø1\" to Ø1/2\" right-angle post clamp for mounting a standard Ø1/2\" optical post perpendicular to a Ø1\" pedestal post. \n\nSET-RAPC\n\nThe clamp is designed for rigid\n\nspace-efficient opto-mechanical assemblies where precise 90° post mounting is required.\n\nThe Ø1\" post is secured using a flexure-based clamping mechanism, tightened with a 5 mm ball driver, providing firm and repeatable positioning without complicated adjustment. The perpendicular Ø1/2\" post is locked using a convenient thumbscrew mechanism, allowing quick installation and repositioning during optical alignment. The clamp maintains a defined center-to-center post spacing of  25.0 mm for metric configurations, making it suitable for integration with standard optical breadboards, post assemblies, and laboratory opto-mechanics. The thumbscrew mechanism is designed for a maximum torque of 5.65 N·m, providing secure clamping for demanding experimental setups.\n\nCompatibility between Ø1\" and Ø1/2\" optical posts\n\nPerpendicular 90° mounting\n\nFlexure-based clamping for the Ø1\" post\n\nThumbscrew locking for the Ø1/2\" post\n\n25 mm center-to-center spacing\n\nSimple tightening using a 5 mm ball driver\n\nSuitable for laser systems, optical benches, photonics experiments, interferometry, imaging systems, spectroscopy, and quantum-optics laboratory setups\n\nProcurement: Request Technical Quote",
+      "image": "assets/products/1-to-1-2-right-angle-post-clamp/primary.png",
+      "images": [],
+      "tags": [],
+      "writeupPath": null,
+      "sortIndex": 1,
+      "_search": "1-to-1-2-right-angle-post-clamp set-rapc ø1\" to ø1/2\" right-angle post clamp  component opto-mechanics opto-mechanics variant-catalog  ø1\" to ø1/2\" right-angle post clamp for mounting a standard ø1/2\" optical post perpendicular to a ø1\" pedestal post.  set-rapc the clamp is designed for rigid space-efficient opto-mechanical assemblies where precise 90° post mounting is required. compatibility between ø1\" and ø1/2\" optical posts perpendicular 90° mounting flexure-based clamping for the ø1\" post thumbscrew locking for the ø1/2\" post 25 mm center-to-center spacing simple tightening using a 5 mm ball driver suitable for laser systems, optical benches, photonics experiments, interferometry, imaging systems, spectroscopy, and quantum-optics laboratory setups  procurement request technical quote  ø1\" to ø1/2\" right-angle post clamp \n\n ø1\" to ø1/2\" right-angle post clamp for mounting a standard ø1/2\" optical post perpendicular to a ø1\" pedestal post. \n\nset-rapc\n\nthe clamp is designed for rigid\n\nspace-efficient opto-mechanical assemblies where precise 90° post mounting is required.\n\nthe ø1\" post is secured using a flexure-based clamping mechanism, tightened with a 5 mm ball driver, providing firm and repeatable positioning without complicated adjustment. the perpendicular ø1/2\" post is locked using a convenient thumbscrew mechanism, allowing quick installation and repositioning during optical alignment. the clamp maintains a defined center-to-center post spacing of  25.0 mm for metric configurations, making it suitable for integration with standard optical breadboards, post assemblies, and laboratory opto-mechanics. the thumbscrew mechanism is designed for a maximum torque of 5.65 n·m, providing secure clamping for demanding experimental setups.\n\ncompatibility between ø1\" and ø1/2\" optical posts\n\nperpendicular 90° mounting\n\nflexure-based clamping for the ø1\" post\n\nthumbscrew locking for the ø1/2\" post\n\n25 mm center-to-center spacing\n\nsimple tightening using a 5 mm ball driver\n\nsuitable for laser systems, optical benches, photonics experiments, interferometry, imaging systems, spectroscopy, and quantum-optics laboratory setups\n\nprocurement: request technical quote",
+      "category": "opto-mechanics",
+      "categoryLabel": "Opto-Mechanics",
+      "categoryPath": "/components/opto-mechanics.html"
     }
   ],
   "counts": {
     "solutions": 14,
-    "components": 51
+    "components": 52
   }
 }
