@@ -5415,71 +5415,37 @@
       "techSpecs": [],
       "keyValueSpecs": [],
       "specTableTitle": null,
-      "customTable": {
-        "title": null,
-        "columns": [
-          "Sr No",
-          "Length (mm)",
-          "Product Code"
-        ],
-        "rows": [
-          [
-            "1",
-            "12.5",
-            "SET-PP-L12.5"
-          ],
-          [
-            "2",
-            "50.0",
-            "SET-PP-L50.0"
-          ],
-          [
-            "3",
-            "38.0",
-            "SET-PP-L38.0"
-          ],
-          [
-            "4",
-            "50.0",
-            "SET-PP-L50.0"
-          ],
-          [
-            "5",
-            "75.0",
-            "SET-PP-L75.0"
-          ]
-        ]
-      },
+      "customTable": null,
       "variants": [
         {
           "sr": 1,
           "product_code": "SET-PP-L12.5",
           "sku": "SET-PP-L12.5",
-          "image": "assets/products/optical-pedestal-post/primary.png"
+          "image": "assets/products/optical-pedestal-post/image-02.png"
         },
         {
           "sr": 2,
           "product_code": "SET-PP-L25.0",
           "sku": "SET-PP-L25.0",
-          "image": "assets/products/optical-pedestal-post/image-02.png"
+          "image": "assets/products/optical-pedestal-post/image-03.png"
         },
         {
           "sr": 3,
           "product_code": "SET-PP-L38.0",
           "sku": "SET-PP-L38.0",
-          "image": "assets/products/optical-pedestal-post/image-03.png"
+          "image": "assets/products/optical-pedestal-post/image-04.png"
         },
         {
           "sr": 4,
           "product_code": "SET-PP-L50.0",
           "sku": "SET-PP-L50.0",
-          "image": "assets/products/optical-pedestal-post/image-04.png"
+          "image": "assets/products/optical-pedestal-post/image-05.png"
         },
         {
           "sr": 5,
           "product_code": "SET-PP-L75.0",
           "sku": "SET-PP-L75.0",
-          "image": "assets/products/optical-pedestal-post/image-05.png"
+          "image": "assets/products/optical-pedestal-post/image-06.png"
         }
       ],
       "configurationOptions": null,
@@ -5494,18 +5460,19 @@
           "value": "Request Technical Quote"
         }
       ],
-      "body": "Optical  Pedestal Post\n\nOur compact Ø1\" (25 mm) precision-ground stainless-steel pedestal post are designed for stable opto-mechanical mounting and space-efficient optical setups.\n\n\n5 configurations available\n\nØ25 mm diameter\n\nØ6 mm side tool-access hole\n\nSolid stainless-steel construction\n\nOur compact Ø1\" (25 mm) precision-ground stainless-steel pedestal post are designed for stable opto-mechanical mounting and space-efficient optical setups. The post are machined from solid stainless steel for high rigidity and mechanical stability. Tapped holes are provided on both ends, allowing the post to be stacked with additional Ø1\" extension posts or post spacers when greater mounting height is required. The standard version is provided with M4 threaded taps, making it suitable for a wide range of optical and opto-mechanical components. A Ø6 mm side through-hole enables convenient tightening and adjustment using a 5 mm ball driver or compatible spanner wrench. The combination of compact size, stainless-steel construction, stackability, and multiple clamping options makes this pedestal post suitable for laser, optics, photonics, interferometry, and quantum-optics laboratory setups\n\nØ25 mm diameter\n\nAvailable in different lengths\n\nSolid stainless-steel construction\n\nPrecision-ground surface\n\nThreaded holes on both ends\n\nStackable design\n\nPedestal mounting\n\nØ6 mm side tool-access hole\n\nProcurement: Request Technical Quote\n\nSr No\n\nLength (mm)\n\nProduct Code\n\n1\n\n12.5\n\nSET-PP-L12.5\n\n2\n\n50.0\n\nSET-PP-L50.0\n\n3\n\n38.0\n\nSET-PP-L38.0\n\n4\n\n50.0\n\nSET-PP-L50.0\n\n5\n\n75.0\n\nSET-PP-L75.0\n\nSET-PP-L12.5\n\nSET-PP-L12.5\n\nassets/products/optical-pedestal-post/primary.png\n\nSET-PP-L25.0\n\nSET-PP-L25.0\n\nassets/products/optical-pedestal-post/image-02.png\n\nSET-PP-L38.0\n\nSET-PP-L38.0\n\nassets/products/optical-pedestal-post/image-03.png\n\nSET-PP-L50.0\n\nSET-PP-L50.0\n\nassets/products/optical-pedestal-post/image-04.png\n\nSET-PP-L75.0\n\nSET-PP-L75.0\n\nassets/products/optical-pedestal-post/image-05.png",
+      "body": "Optical  Pedestal Post\n\nOur compact Ø1\" (25 mm) precision-ground stainless-steel pedestal post are designed for stable opto-mechanical mounting and space-efficient optical setups.\n\n\n5 configurations available\n\nØ25 mm diameter\n\nØ6 mm side tool-access hole\n\nSolid stainless-steel construction\n\nOur compact Ø1\" (25 mm) precision-ground stainless-steel pedestal post are designed for stable opto-mechanical mounting and space-efficient optical setups. The post are machined from solid stainless steel for high rigidity and mechanical stability. Tapped holes are provided on both ends, allowing the post to be stacked with additional Ø1\" extension posts or post spacers when greater mounting height is required. The standard version is provided with M4 threaded taps, making it suitable for a wide range of optical and opto-mechanical components. A Ø6 mm side through-hole enables convenient tightening and adjustment using a 5 mm ball driver or compatible spanner wrench. The combination of compact size, stainless-steel construction, stackability, and multiple clamping options makes this pedestal post suitable for laser, optics, photonics, interferometry, and quantum-optics laboratory setups\n\nØ25 mm diameter\n\nAvailable in different lengths\n\nSolid stainless-steel construction\n\nPrecision-ground surface\n\nThreaded holes on both ends\n\nStackable design\n\nPedestal mounting\n\nØ6 mm side tool-access hole\n\nProcurement: Request Technical Quote\n\nSET-PP-L12.5\n\nSET-PP-L12.5\n\nassets/products/optical-pedestal-post/image-02.png\n\nSET-PP-L25.0\n\nSET-PP-L25.0\n\nassets/products/optical-pedestal-post/image-03.png\n\nSET-PP-L38.0\n\nSET-PP-L38.0\n\nassets/products/optical-pedestal-post/image-04.png\n\nSET-PP-L50.0\n\nSET-PP-L50.0\n\nassets/products/optical-pedestal-post/image-05.png\n\nSET-PP-L75.0\n\nSET-PP-L75.0\n\nassets/products/optical-pedestal-post/image-06.png",
       "image": "assets/products/optical-pedestal-post/primary.png",
       "images": [
         "assets/products/optical-pedestal-post/image-02.png",
         "assets/products/optical-pedestal-post/image-03.png",
         "assets/products/optical-pedestal-post/image-04.png",
-        "assets/products/optical-pedestal-post/image-05.png"
+        "assets/products/optical-pedestal-post/image-05.png",
+        "assets/products/optical-pedestal-post/image-06.png"
       ],
       "tags": [],
       "writeupPath": null,
       "sortIndex": 1,
-      "_search": "optical-pedestal-post set-pp-lxx optical  pedestal post component opto-mechanics opto-mechanics variant-catalog our compact ø1\" (25 mm) precision-ground stainless-steel pedestal post are designed for stable opto-mechanical mounting and space-efficient optical setups.\n 5 configurations available ø25 mm diameter ø6 mm side tool-access hole solid stainless-steel construction ø25 mm diameter available in different lengths solid stainless-steel construction precision-ground surface threaded holes on both ends stackable design pedestal mounting ø6 mm side tool-access hole   procurement request technical quote 1 set-pp-l12.5 set-pp-l12.5 assets/products/optical-pedestal-post/primary.png 2 set-pp-l25.0 set-pp-l25.0 assets/products/optical-pedestal-post/image-02.png 3 set-pp-l38.0 set-pp-l38.0 assets/products/optical-pedestal-post/image-03.png 4 set-pp-l50.0 set-pp-l50.0 assets/products/optical-pedestal-post/image-04.png 5 set-pp-l75.0 set-pp-l75.0 assets/products/optical-pedestal-post/image-05.png optical  pedestal post\n\nour compact ø1\" (25 mm) precision-ground stainless-steel pedestal post are designed for stable opto-mechanical mounting and space-efficient optical setups.\n\n\n5 configurations available\n\nø25 mm diameter\n\nø6 mm side tool-access hole\n\nsolid stainless-steel construction\n\nour compact ø1\" (25 mm) precision-ground stainless-steel pedestal post are designed for stable opto-mechanical mounting and space-efficient optical setups. the post are machined from solid stainless steel for high rigidity and mechanical stability. tapped holes are provided on both ends, allowing the post to be stacked with additional ø1\" extension posts or post spacers when greater mounting height is required. the standard version is provided with m4 threaded taps, making it suitable for a wide range of optical and opto-mechanical components. a ø6 mm side through-hole enables convenient tightening and adjustment using a 5 mm ball driver or compatible spanner wrench. the combination of compact size, stainless-steel construction, stackability, and multiple clamping options makes this pedestal post suitable for laser, optics, photonics, interferometry, and quantum-optics laboratory setups\n\nø25 mm diameter\n\navailable in different lengths\n\nsolid stainless-steel construction\n\nprecision-ground surface\n\nthreaded holes on both ends\n\nstackable design\n\npedestal mounting\n\nø6 mm side tool-access hole\n\nprocurement: request technical quote\n\nsr no\n\nlength (mm)\n\nproduct code\n\n1\n\n12.5\n\nset-pp-l12.5\n\n2\n\n50.0\n\nset-pp-l50.0\n\n3\n\n38.0\n\nset-pp-l38.0\n\n4\n\n50.0\n\nset-pp-l50.0\n\n5\n\n75.0\n\nset-pp-l75.0\n\nset-pp-l12.5\n\nset-pp-l12.5\n\nassets/products/optical-pedestal-post/primary.png\n\nset-pp-l25.0\n\nset-pp-l25.0\n\nassets/products/optical-pedestal-post/image-02.png\n\nset-pp-l38.0\n\nset-pp-l38.0\n\nassets/products/optical-pedestal-post/image-03.png\n\nset-pp-l50.0\n\nset-pp-l50.0\n\nassets/products/optical-pedestal-post/image-04.png\n\nset-pp-l75.0\n\nset-pp-l75.0\n\nassets/products/optical-pedestal-post/image-05.png",
+      "_search": "optical-pedestal-post set-pp-lxx optical  pedestal post component opto-mechanics opto-mechanics variant-catalog our compact ø1\" (25 mm) precision-ground stainless-steel pedestal post are designed for stable opto-mechanical mounting and space-efficient optical setups.\n 5 configurations available ø25 mm diameter ø6 mm side tool-access hole solid stainless-steel construction ø25 mm diameter available in different lengths solid stainless-steel construction precision-ground surface threaded holes on both ends stackable design pedestal mounting ø6 mm side tool-access hole   procurement request technical quote 1 set-pp-l12.5 set-pp-l12.5 assets/products/optical-pedestal-post/image-02.png 2 set-pp-l25.0 set-pp-l25.0 assets/products/optical-pedestal-post/image-03.png 3 set-pp-l38.0 set-pp-l38.0 assets/products/optical-pedestal-post/image-04.png 4 set-pp-l50.0 set-pp-l50.0 assets/products/optical-pedestal-post/image-05.png 5 set-pp-l75.0 set-pp-l75.0 assets/products/optical-pedestal-post/image-06.png optical  pedestal post\n\nour compact ø1\" (25 mm) precision-ground stainless-steel pedestal post are designed for stable opto-mechanical mounting and space-efficient optical setups.\n\n\n5 configurations available\n\nø25 mm diameter\n\nø6 mm side tool-access hole\n\nsolid stainless-steel construction\n\nour compact ø1\" (25 mm) precision-ground stainless-steel pedestal post are designed for stable opto-mechanical mounting and space-efficient optical setups. the post are machined from solid stainless steel for high rigidity and mechanical stability. tapped holes are provided on both ends, allowing the post to be stacked with additional ø1\" extension posts or post spacers when greater mounting height is required. the standard version is provided with m4 threaded taps, making it suitable for a wide range of optical and opto-mechanical components. a ø6 mm side through-hole enables convenient tightening and adjustment using a 5 mm ball driver or compatible spanner wrench. the combination of compact size, stainless-steel construction, stackability, and multiple clamping options makes this pedestal post suitable for laser, optics, photonics, interferometry, and quantum-optics laboratory setups\n\nø25 mm diameter\n\navailable in different lengths\n\nsolid stainless-steel construction\n\nprecision-ground surface\n\nthreaded holes on both ends\n\nstackable design\n\npedestal mounting\n\nø6 mm side tool-access hole\n\nprocurement: request technical quote\n\nset-pp-l12.5\n\nset-pp-l12.5\n\nassets/products/optical-pedestal-post/image-02.png\n\nset-pp-l25.0\n\nset-pp-l25.0\n\nassets/products/optical-pedestal-post/image-03.png\n\nset-pp-l38.0\n\nset-pp-l38.0\n\nassets/products/optical-pedestal-post/image-04.png\n\nset-pp-l50.0\n\nset-pp-l50.0\n\nassets/products/optical-pedestal-post/image-05.png\n\nset-pp-l75.0\n\nset-pp-l75.0\n\nassets/products/optical-pedestal-post/image-06.png",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html"
