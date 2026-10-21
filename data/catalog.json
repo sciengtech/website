@@ -1633,63 +1633,75 @@
       "variants": [
         {
           "sr": 1,
-          "product_code": "SET-CR-12.7",
-          "sku": "SET-CR-12.7",
-          "length_in_mm": "12.7"
+          "product_code": "SET-CR-12",
+          "sku": "SET-CR-12",
+          "length_in_mm": "12.7 (0.5'')"
         },
         {
           "sr": 2,
-          "product_code": "SET-CR-25.4",
-          "sku": "SET-CR-25.4",
-          "length_in_mm": "25.4"
+          "product_code": "SET-CR-25",
+          "sku": "SET-CR-25",
+          "length_in_mm": "25.4 (1'')"
         },
         {
           "sr": 3,
-          "product_code": "SET-CR-38.1",
-          "sku": "SET-CR-38.1",
-          "length_in_mm": "38.1"
+          "product_code": "SET-CR-38",
+          "sku": "SET-CR-38",
+          "length_in_mm": "38.1 (1.5'')"
         },
         {
           "sr": 4,
-          "product_code": "SET-CR-50.8",
-          "sku": "SET-CR-50.8",
-          "length_in_mm": "50.8"
+          "product_code": "SET-CR-51",
+          "sku": "SET-CR-51",
+          "length_in_mm": "50.8 (2'')"
         },
         {
           "sr": 5,
-          "product_code": "SET-CR-63.5",
-          "sku": "SET-CR-63.5",
-          "length_in_mm": "63.5"
+          "product_code": "SET-CR-64",
+          "sku": "SET-CR-64",
+          "length_in_mm": "63.5 (2.5'')"
         },
         {
           "sr": 6,
-          "product_code": "SET-CR-76.2",
-          "sku": "SET-CR-76.2",
-          "length_in_mm": "76.2"
+          "product_code": "SET-CR-76",
+          "sku": "SET-CR-76",
+          "length_in_mm": "76.2 (3'')"
         },
         {
           "sr": 7,
-          "product_code": "SET-CR-101.6",
-          "sku": "SET-CR-101.6",
-          "length_in_mm": "101.6"
+          "product_code": "SET-CR-102",
+          "sku": "SET-CR-102",
+          "length_in_mm": "101.6 (4'')"
         },
         {
           "sr": 8,
-          "product_code": "SET-CR-152.4",
-          "sku": "SET-CR-152.4",
-          "length_in_mm": "152.4"
+          "product_code": "SET-CR-152",
+          "sku": "SET-CR-152",
+          "length_in_mm": "152.4 (6'')"
         },
         {
           "sr": 9,
-          "product_code": "SET-CR-203.2",
-          "sku": "SET-CR-203.2",
-          "length_in_mm": "203.2"
+          "product_code": "SET-CR-203",
+          "sku": "SET-CR-203",
+          "length_in_mm": "203.2 (8'')"
         },
         {
           "sr": 10,
           "product_code": "SET-CR-254",
           "sku": "SET-CR-254",
-          "length_in_mm": "254"
+          "length_in_mm": "254 (10'')"
+        },
+        {
+          "sr": 11,
+          "product_code": "SET-CR-279",
+          "sku": "SET-CR-279",
+          "length_in_mm": "279.4 (11'')"
+        },
+        {
+          "sr": 12,
+          "product_code": "SET-CR-305",
+          "sku": "SET-CR-305",
+          "length_in_mm": "304.8 (12'')"
         }
       ],
       "configurationOptions": null,
@@ -1720,14 +1732,14 @@
           "value": "M4 Threaded studded ends which enables end-to-end connection of multiple rods"
         }
       ],
-      "body": "Cage Assembly Rod\n\nPrecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. These rods provide reliability, alignment for optical and mechanical assemblies.\n\n10 configurations available \n\nOptical Cage Rod\n\nOptomechanical cage rods\n\nCage connecting rods\n\nPrecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. These rods provide reliability, alignment for optical and mechanical assemblies.\n\nCompatible with standard 30 mm and 60 mm cage systems\n\nRod Diameter: Ø6 mm\n\nHigh rigidity and corrosion resistance\n\nEasy integration into existing setups\n\nM4 Threaded studded ends which enables end-to-end connection of multiple rods\n\nOptical cage systems\n\nLaser alignment setups\n\nModular opto-mechanical assemblies\n\nResearch and laboratory instrumentation\n\nFeature: Compatible with standard 30 mm and 60 mm cage systems\n\nFeature: Rod Diameter: Ø6 mm\n\nFeature: High rigidity and corrosion resistance\n\nFeature: Easy integration into existing setups\n\nFeature: M4 Threaded studded ends which enables end-to-end connection of multiple rods\n\nSET-CR-12.7\n\nSET-CR-12.7\n\n12.7\n\nSET-CR-25.4\n\nSET-CR-25.4\n\n25.4\n\nSET-CR-38.1\n\nSET-CR-38.1\n\n38.1\n\nSET-CR-50.8\n\nSET-CR-50.8\n\n50.8\n\nSET-CR-63.5\n\nSET-CR-63.5\n\n63.5\n\nSET-CR-76.2\n\nSET-CR-76.2\n\n76.2\n\nSET-CR-101.6\n\nSET-CR-101.6\n\n101.6\n\nSET-CR-152.4\n\nSET-CR-152.4\n\n152.4\n\nSET-CR-203.2\n\nSET-CR-203.2\n\n203.2\n\nSET-CR-254\n\nSET-CR-254\n\n254\n\ncage assembly rod\n\nopto-mechanics",
+      "body": "Cage Assembly Rod\n\nPrecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. These rods provide reliability, alignment for optical and mechanical assemblies.\n\n10 configurations available \n\nOptical Cage Rod\n\nOptomechanical cage rods\n\nCage connecting rods\n\nPrecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. These rods provide reliability, alignment for optical and mechanical assemblies.\n\nCompatible with standard 30 mm and 60 mm cage systems\n\nRod Diameter: Ø6 mm\n\nHigh rigidity and corrosion resistance\n\nEasy integration into existing setups\n\nM4 Threaded studded ends which enables end-to-end connection of multiple rods\n\nOptical cage systems\n\nLaser alignment setups\n\nModular opto-mechanical assemblies\n\nResearch and laboratory instrumentation\n\nFeature: Compatible with standard 30 mm and 60 mm cage systems\n\nFeature: Rod Diameter: Ø6 mm\n\nFeature: High rigidity and corrosion resistance\n\nFeature: Easy integration into existing setups\n\nFeature: M4 Threaded studded ends which enables end-to-end connection of multiple rods\n\nSET-CR-12\n\nSET-CR-12\n\n12.7 (0.5'')\n\nSET-CR-25\n\nSET-CR-25\n\n25.4 (1'')\n\nSET-CR-38\n\nSET-CR-38\n\n38.1 (1.5'')\n\nSET-CR-51\n\nSET-CR-51\n\n50.8 (2'')\n\nSET-CR-64\n\nSET-CR-64\n\n63.5 (2.5'')\n\nSET-CR-76\n\nSET-CR-76\n\n76.2 (3'')\n\nSET-CR-102\n\nSET-CR-102\n\n101.6 (4'')\n\nSET-CR-152\n\nSET-CR-152\n\n152.4 (6'')\n\nSET-CR-203\n\nSET-CR-203\n\n203.2 (8'')\n\nSET-CR-254\n\nSET-CR-254\n\n254 (10'')\n\nSET-CR-279\n\nSET-CR-279\n\n279.4 (11'')\n\nSET-CR-305\n\nSET-CR-305\n\n304.8 (12'')\n\ncage assembly rod\n\nopto-mechanics",
       "image": "assets/products/cage-assembly-rod/primary.png",
       "tags": [
         "cage assembly rod",
         "opto-mechanics"
       ],
       "writeupPath": "Opto-Mechanics/Cage Assembly Rod/Cage Assembly Rod.docx",
-      "_search": "cage-assembly-rod set-cr-xx cage assembly rod component opto-mechanics opto-mechanics variant-catalog precision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies. 10 configurations available  optical cage rod optomechanical cage rods cage connecting rods compatible with standard 30 mm and 60 mm cage systems rod diameter: ø6 mm high rigidity and corrosion resistance easy integration into existing setups m4 threaded studded ends which enables end-to-end connection of multiple rods optical cage systems laser alignment setups modular opto-mechanical assemblies research and laboratory instrumentation cage assembly rod opto-mechanics feature compatible with standard 30 mm and 60 mm cage systems feature rod diameter: ø6 mm feature high rigidity and corrosion resistance feature easy integration into existing setups feature m4 threaded studded ends which enables end-to-end connection of multiple rods 1 set-cr-12.7 set-cr-12.7 12.7 2 set-cr-25.4 set-cr-25.4 25.4 3 set-cr-38.1 set-cr-38.1 38.1 4 set-cr-50.8 set-cr-50.8 50.8 5 set-cr-63.5 set-cr-63.5 63.5 6 set-cr-76.2 set-cr-76.2 76.2 7 set-cr-101.6 set-cr-101.6 101.6 8 set-cr-152.4 set-cr-152.4 152.4 9 set-cr-203.2 set-cr-203.2 203.2 10 set-cr-254 set-cr-254 254 cage assembly rod\n\nprecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies.\n\n10 configurations available \n\noptical cage rod\n\noptomechanical cage rods\n\ncage connecting rods\n\nprecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies.\n\ncompatible with standard 30 mm and 60 mm cage systems\n\nrod diameter: ø6 mm\n\nhigh rigidity and corrosion resistance\n\neasy integration into existing setups\n\nm4 threaded studded ends which enables end-to-end connection of multiple rods\n\noptical cage systems\n\nlaser alignment setups\n\nmodular opto-mechanical assemblies\n\nresearch and laboratory instrumentation\n\nfeature: compatible with standard 30 mm and 60 mm cage systems\n\nfeature: rod diameter: ø6 mm\n\nfeature: high rigidity and corrosion resistance\n\nfeature: easy integration into existing setups\n\nfeature: m4 threaded studded ends which enables end-to-end connection of multiple rods\n\nset-cr-12.7\n\nset-cr-12.7\n\n12.7\n\nset-cr-25.4\n\nset-cr-25.4\n\n25.4\n\nset-cr-38.1\n\nset-cr-38.1\n\n38.1\n\nset-cr-50.8\n\nset-cr-50.8\n\n50.8\n\nset-cr-63.5\n\nset-cr-63.5\n\n63.5\n\nset-cr-76.2\n\nset-cr-76.2\n\n76.2\n\nset-cr-101.6\n\nset-cr-101.6\n\n101.6\n\nset-cr-152.4\n\nset-cr-152.4\n\n152.4\n\nset-cr-203.2\n\nset-cr-203.2\n\n203.2\n\nset-cr-254\n\nset-cr-254\n\n254\n\ncage assembly rod\n\nopto-mechanics",
+      "_search": "cage-assembly-rod set-cr-xx cage assembly rod component opto-mechanics opto-mechanics variant-catalog precision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies. 10 configurations available  optical cage rod optomechanical cage rods cage connecting rods compatible with standard 30 mm and 60 mm cage systems rod diameter: ø6 mm high rigidity and corrosion resistance easy integration into existing setups m4 threaded studded ends which enables end-to-end connection of multiple rods optical cage systems laser alignment setups modular opto-mechanical assemblies research and laboratory instrumentation cage assembly rod opto-mechanics feature compatible with standard 30 mm and 60 mm cage systems feature rod diameter: ø6 mm feature high rigidity and corrosion resistance feature easy integration into existing setups feature m4 threaded studded ends which enables end-to-end connection of multiple rods 1 set-cr-12 set-cr-12 12.7 (0.5'') 2 set-cr-25 set-cr-25 25.4 (1'') 3 set-cr-38 set-cr-38 38.1 (1.5'') 4 set-cr-51 set-cr-51 50.8 (2'') 5 set-cr-64 set-cr-64 63.5 (2.5'') 6 set-cr-76 set-cr-76 76.2 (3'') 7 set-cr-102 set-cr-102 101.6 (4'') 8 set-cr-152 set-cr-152 152.4 (6'') 9 set-cr-203 set-cr-203 203.2 (8'') 10 set-cr-254 set-cr-254 254 (10'') 11 set-cr-279 set-cr-279 279.4 (11'') 12 set-cr-305 set-cr-305 304.8 (12'') cage assembly rod\n\nprecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies.\n\n10 configurations available \n\noptical cage rod\n\noptomechanical cage rods\n\ncage connecting rods\n\nprecision-ground stainless steel cage rods designed for seamless integration with standard cage systems. these rods provide reliability, alignment for optical and mechanical assemblies.\n\ncompatible with standard 30 mm and 60 mm cage systems\n\nrod diameter: ø6 mm\n\nhigh rigidity and corrosion resistance\n\neasy integration into existing setups\n\nm4 threaded studded ends which enables end-to-end connection of multiple rods\n\noptical cage systems\n\nlaser alignment setups\n\nmodular opto-mechanical assemblies\n\nresearch and laboratory instrumentation\n\nfeature: compatible with standard 30 mm and 60 mm cage systems\n\nfeature: rod diameter: ø6 mm\n\nfeature: high rigidity and corrosion resistance\n\nfeature: easy integration into existing setups\n\nfeature: m4 threaded studded ends which enables end-to-end connection of multiple rods\n\nset-cr-12\n\nset-cr-12\n\n12.7 (0.5'')\n\nset-cr-25\n\nset-cr-25\n\n25.4 (1'')\n\nset-cr-38\n\nset-cr-38\n\n38.1 (1.5'')\n\nset-cr-51\n\nset-cr-51\n\n50.8 (2'')\n\nset-cr-64\n\nset-cr-64\n\n63.5 (2.5'')\n\nset-cr-76\n\nset-cr-76\n\n76.2 (3'')\n\nset-cr-102\n\nset-cr-102\n\n101.6 (4'')\n\nset-cr-152\n\nset-cr-152\n\n152.4 (6'')\n\nset-cr-203\n\nset-cr-203\n\n203.2 (8'')\n\nset-cr-254\n\nset-cr-254\n\n254 (10'')\n\nset-cr-279\n\nset-cr-279\n\n279.4 (11'')\n\nset-cr-305\n\nset-cr-305\n\n304.8 (12'')\n\ncage assembly rod\n\nopto-mechanics",
       "category": "opto-mechanics",
       "categoryLabel": "Opto-Mechanics",
       "categoryPath": "/components/opto-mechanics.html",
