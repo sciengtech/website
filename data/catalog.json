@@ -5830,10 +5830,68 @@
       "category": "optics",
       "categoryLabel": "Optics",
       "categoryPath": "/components/optics.html"
+    },
+    {
+      "id": "quarter-wave-plate-with-mount-1",
+      "sku": "SET-QWP-780",
+      "name": "Quarter-wave plate with mount Ø1\"",
+      "type": "component",
+      "pageTemplate": "component",
+      "aliases": [],
+      "overview": [
+        "Clear Aperture : Ø22.8 mm (Ø0.90\")",
+        "Optic Diameter : 25.4 mm ± 0.2 mm (1.00\" ± 0.008\")",
+        "Optic Thickness : 3.2mm",
+        "Housing Diameter : 30.5 mm (1.20\")",
+        "Housing Thickness : 11.4 mm (0.45\")",
+        "Housing Threads : Internal and External SM1 (1.035\"-40)",
+        "Design Wavelength : 780mm",
+        "Transmission at Design Wavelength : ≥97%",
+        "Operating Temperature Range : -20 to 60 °C",
+        "Beam Deviation : <20 arcmin"
+      ],
+      "features": [
+        "Broadband AR Coating Range : 650 - 1050 nm",
+        "Average Reflectance (Per Coated Surface) : <0.5%",
+        "Retardance Accuracy : <λ/100",
+        "Retardance Uniformity (RMS)b : <5 nm",
+        "Material : Liquid Crystal Polymer, N-BK7 Glass Plates",
+        "Transmitted Wavefront Error : <λ/4 @ 633 nm",
+        "Surface Quality : 60-40 Scratch-Dig",
+        "Temperature Stability at Design Wavelength : <(λ/5000)/°C"
+      ],
+      "applications": [],
+      "techSpecs": [],
+      "keyValueSpecs": [],
+      "specTableTitle": null,
+      "customTable": null,
+      "variants": [],
+      "configurationOptions": null,
+      "rfqSections": null,
+      "solutionContent": null,
+      "customNote": null,
+      "summary": "Quarter-wave plate with mount Ø1\"",
+      "specHighlight": "",
+      "specs": [
+        {
+          "label": "Procurement",
+          "value": "Request Technical Quote"
+        }
+      ],
+      "body": "Quarter-wave plate with mount Ø1\"\n\nQuarter-wave plate with mount Ø1\"\n\nClear Aperture : Ø22.8 mm (Ø0.90\")\n\nOptic Diameter : 25.4 mm ± 0.2 mm (1.00\" ± 0.008\")\n\nOptic Thickness : 3.2mm\n\nHousing Diameter : 30.5 mm (1.20\")\n\nHousing Thickness : 11.4 mm (0.45\")\n\nHousing Threads : Internal and External SM1 (1.035\"-40)\n\nDesign Wavelength : 780mm\n\nTransmission at Design Wavelength : ≥97%\n\nOperating Temperature Range : -20 to 60 °C\n\nBeam Deviation : <20 arcmin\n\nBroadband AR Coating Range : 650 - 1050 nm\n\nAverage Reflectance (Per Coated Surface) : <0.5%\n\nRetardance Accuracy : <λ/100\n\nRetardance Uniformity (RMS)b : <5 nm\n\nMaterial : Liquid Crystal Polymer, N-BK7 Glass Plates\n\nTransmitted Wavefront Error : <λ/4 @ 633 nm\n\nSurface Quality : 60-40 Scratch-Dig\n\nTemperature Stability at Design Wavelength : <(λ/5000)/°C\n\nProcurement: Request Technical Quote",
+      "image": "assets/products/quarter-wave-plate-with-mount-1/primary.png",
+      "images": [],
+      "tags": [],
+      "writeupPath": null,
+      "sortIndex": 6,
+      "_search": "quarter-wave-plate-with-mount-1 set-qwp-780 quarter-wave plate with mount ø1\" component optics optics component quarter-wave plate with mount ø1\"   broadband ar coating range : 650 - 1050 nm average reflectance (per coated surface) : <0.5% retardance accuracy : <λ/100 retardance uniformity (rms)b : <5 nm material : liquid crystal polymer, n-bk7 glass plates transmitted wavefront error : <λ/4 @ 633 nm surface quality : 60-40 scratch-dig temperature stability at design wavelength : <(λ/5000)/°c   procurement request technical quote  quarter-wave plate with mount ø1\"\n\nquarter-wave plate with mount ø1\"\n\nclear aperture : ø22.8 mm (ø0.90\")\n\noptic diameter : 25.4 mm ± 0.2 mm (1.00\" ± 0.008\")\n\noptic thickness : 3.2mm\n\nhousing diameter : 30.5 mm (1.20\")\n\nhousing thickness : 11.4 mm (0.45\")\n\nhousing threads : internal and external sm1 (1.035\"-40)\n\ndesign wavelength : 780mm\n\ntransmission at design wavelength : ≥97%\n\noperating temperature range : -20 to 60 °c\n\nbeam deviation : <20 arcmin\n\nbroadband ar coating range : 650 - 1050 nm\n\naverage reflectance (per coated surface) : <0.5%\n\nretardance accuracy : <λ/100\n\nretardance uniformity (rms)b : <5 nm\n\nmaterial : liquid crystal polymer, n-bk7 glass plates\n\ntransmitted wavefront error : <λ/4 @ 633 nm\n\nsurface quality : 60-40 scratch-dig\n\ntemperature stability at design wavelength : <(λ/5000)/°c\n\nprocurement: request technical quote",
+      "category": "optics",
+      "categoryLabel": "Optics",
+      "categoryPath": "/components/optics.html"
     }
   ],
   "counts": {
     "solutions": 14,
-    "components": 56
+    "components": 57
   }
 }
