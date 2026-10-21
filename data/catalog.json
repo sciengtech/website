@@ -5726,10 +5726,57 @@
       "category": "motion-and-positioning",
       "categoryLabel": "Motion and Positioning",
       "categoryPath": "/components/motion-and-positioning.html"
+    },
+    {
+      "id": "laser-viewing-card",
+      "sku": "SET-LVC-NIR",
+      "name": "Laser Viewing Card",
+      "type": "component",
+      "pageTemplate": "component",
+      "aliases": [],
+      "overview": [
+        "Absorption Wavelength Range (Stimulation) : 700 - 1400 nm",
+        "Absorption Wavelength Range (Charging) : 440 - 560 nm",
+        "Emission Wavelength Range : 550 - 700 nm"
+      ],
+      "features": [
+        "Active Region : 2.10\" x 1.20\" (53.3 mm x 30.5 mm)",
+        "Overall : 2.10\" x 3.40\" (53.3 mm x 86.4 mm)",
+        "Charging Required for Emission : Yes",
+        "Damage Threshold: Single 7 ns Pulse @ 1064 nm : 35 MW/cm²"
+      ],
+      "applications": [],
+      "techSpecs": [],
+      "keyValueSpecs": [],
+      "specTableTitle": null,
+      "customTable": null,
+      "variants": [],
+      "configurationOptions": null,
+      "rfqSections": null,
+      "solutionContent": null,
+      "customNote": null,
+      "summary": "Laser Viewing Card",
+      "specHighlight": "",
+      "specs": [
+        {
+          "label": "Procurement",
+          "value": "Request Technical Quote"
+        }
+      ],
+      "body": "Laser Viewing Card\n\nLaser Viewing Card\n\nAbsorption Wavelength Range (Stimulation) : 700 - 1400 nm\n\nAbsorption Wavelength Range (Charging) : 440 - 560 nm\n\nEmission Wavelength Range : 550 - 700 nm\n\nActive Region : 2.10\" x 1.20\" (53.3 mm x 30.5 mm)\n\nOverall : 2.10\" x 3.40\" (53.3 mm x 86.4 mm)\n\nCharging Required for Emission : Yes\n\nDamage Threshold: Single 7 ns Pulse @ 1064 nm : 35 MW/cm²\n\nProcurement: Request Technical Quote",
+      "image": "assets/products/laser-viewing-card/primary.png",
+      "images": [],
+      "tags": [],
+      "writeupPath": null,
+      "sortIndex": 4,
+      "_search": "laser-viewing-card set-lvc-nir laser viewing card component lab-accessories lab accessories component laser viewing card   active region : 2.10\" x 1.20\" (53.3 mm x 30.5 mm) overall : 2.10\" x 3.40\" (53.3 mm x 86.4 mm) charging required for emission : yes damage threshold: single 7 ns pulse @ 1064 nm : 35 mw/cm²   procurement request technical quote  laser viewing card\n\nlaser viewing card\n\nabsorption wavelength range (stimulation) : 700 - 1400 nm\n\nabsorption wavelength range (charging) : 440 - 560 nm\n\nemission wavelength range : 550 - 700 nm\n\nactive region : 2.10\" x 1.20\" (53.3 mm x 30.5 mm)\n\noverall : 2.10\" x 3.40\" (53.3 mm x 86.4 mm)\n\ncharging required for emission : yes\n\ndamage threshold: single 7 ns pulse @ 1064 nm : 35 mw/cm²\n\nprocurement: request technical quote",
+      "category": "lab-accessories",
+      "categoryLabel": "Lab Accessories",
+      "categoryPath": "/components/lab-accessories.html"
     }
   ],
   "counts": {
     "solutions": 14,
-    "components": 54
+    "components": 55
   }
 }
